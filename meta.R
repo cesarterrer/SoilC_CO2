@@ -11,6 +11,7 @@ df = df %>% filter(Experiment != "") %>% rename(biomass=yi) # Remove empty rows
 df$id <- with(df,paste0(Experiment,sep="_",N,sep="_",Myc)) # Create ID column
 df <- droplevels(df)
 
+
 # Calculate SD from SE as SE * sqrt(n)
 df <- df %>%  
   mutate (amb.sd=ifelse(SE.SD == "se" | SE.SD == "SE", amb.se * sqrt(amb.n),amb.se),
@@ -20,6 +21,7 @@ df <- df %>%
 df <- df %>%
   group_by(id) %>%
   filter(row_number()==n())
+
 
 # Weights based on the number of years and n of the experiments
 df$weightsTime <- with(df, ((amb.n * elev.n)/(amb.n + elev.n)) + ((nyears^2)/(2*nyears)))
