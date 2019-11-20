@@ -25,59 +25,8 @@ nord <- read_palette("~/OneDrive/OneDrive - Universitat Autònoma de Barcelona/I
 
 # Increment
 abs <- raster("maps/CO2absEffect.tif")  # Mg
-relat <- raster("maps/CO2relEffect.tif")  # %
-soc <- raster("maps/sol_organic.carbon.stock_025degrees.tif") # kg/m2
-socMgHa <- soc*10 # Mg/ha == tonnes/ha
-socMgHa.mean <- cellStats(socMgHa,"mean", na.rm=T)
-relMgHa <- socMgHa.mean * relat/100 # increase in soil C in Mg/ha
-a_abs <- area(abs)
-absMgHa <- overlay(abs, a_abs, fun=function(x,y) x/(y*100))
-#soc_pixel <- 2174201 #Average MgC per pixel at 0-10cm from SoilGrids
-#relatMg <- soc_pixel * relat/100 # Mg
-#cellStats(relatMg,"sum", na.rm=T) * 10^(-9) # eCO2-driven soil C increment
-#a_abs <- area(abs)
-#a_rel <- area(relat)
-#relatMgHa <- overlay(relatMg, a_rel, fun=function(x,y) x/(y*100)) # Mg/ha
-#absMgHa <- overlay(abs, a_abs, fun=function(x,y) x/(y*100))
-#crs(inc2) <- "+proj=longlat"
-#abs.df = as.data.frame(absMgHa,xy=TRUE)
-#colnames(abs.df) <- c('x','y', 'absMgHa')
-#inc2p <- projectRaster(inc2,crs="+proj=eqearth",over=T)
-#inc2.df = as.data.frame(inc2p,xy=TRUE)
-#colnames(inc2.df) <- c('x','y', 'inc2')
+abs.df = as.data.frame(abs,xy=TRUE)
 
-# temperate band
-temperate <- raster(extent(-180, 180, -90, 90), res=0.25); values(temperate)<-1
-projection(temperate)<-CRS("+proj=longlat +datum=WGS84 +no_defs    +ellps=WGS84 +towgs84=0,0,0")
-temperate.df = as.data.frame(temperate,xy=TRUE)
-temperate.df$layer <- with(temperate.df,ifelse(y<=66.5 & y>=23.5 | y>=-66.5 & y<=-23.5,1,NA))
-temperate<- rasterFromXYZ(temperate.df)
-projection(temperate)<-CRS("+proj=longlat +datum=WGS84 +no_defs    +ellps=WGS84 +towgs84=0,0,0")
-#temperate <- projectRaster(temperate,crs="+proj=eqearth",over=T)
-
-# Temperate map
-# https://www.nature.com/articles/sdata2018214
-koppen <- raster("maps/Beck_KG_V1_present_0p5.tif")
-koppen <- resample(koppen,relat, method="ngb")
-koppen[koppen < 5] <- NA # Tropical and arid
-koppen[koppen > 26] <- NA # Cold (no dry season) and polar
-koppen[koppen > 16 & koppen < 21 ] <- NA # Cold dry summer
-#koppen <- projectRaster(koppen,crs="+proj=eqearth",over=T)
-
-### MASK ###
-abs_temp<- mask(absMgHa,koppen)
-abs_temp<- mask(abs_temp,temperate)
-abs.temp.df = as.data.frame(abs_temp,xy=TRUE)
-
-relMgHa_temp<- mask(relMgHa,koppen)
-relMgHa_temp<- mask(relMgHa_temp,temperate)
-rel.temp.df = as.data.frame(relMgHa_temp,xy=TRUE)
-a_rel <- area(rel_temp) # get area of projected raster.
-relMg_temp <- rel_temp * a_rel * 100 # area is in km2 multiply by 100 to get ha 
-cellStats(relMg_temp,"sum", na.rm=T) * 10^(-9)   # Pg soil C at 0-10cm
-
-rel_temp <- mask(relat,koppen)
-rel_temp<- mask(rel_temp,temperate)
 # map the bbox
 bbox <- shapefile("~/OneDrive/OneDrive - Universitat Autònoma de Barcelona/IIASA/maps/ne_110m_wgs84_bounding_box.VERSION/ne_110m_wgs84_bounding_box.shp") 
 bbox_df<- fortify(bbox)
@@ -96,15 +45,6 @@ wmap_wgs_df <- fortify(wmap)
 ocean <- readOGR(dsn="~/OneDrive/OneDrive - Universitat Autònoma de Barcelona/IIASA/maps/ne_50m_ocean", layer="ne_50m_ocean")
 #ocean <- spTransform(ocean, CRS("+proj=eqearth"))
 oceanmap_df <- fortify(ocean)
-
-#wmap_wgs <- crop(wmap_wgs, extent(inc2p))
-#p <- as(extent(inc2p), "SpatialPolygons")
-#wmap_int <- gIntersection(wmap_wgs, bbox_robin)
-#oceanmap <- gDifference(bbox_robin, wmap_int)
-#image(inc2p)
-#plot(oceanmap, add = TRUE, col = "light blue")
-#crs(oceanmap) <- "+proj=eqearth"
-#oceanmap_df <- fortify(oceanmap)
 
 # graticule (Robin)
 grat <- shapefile("~/OneDrive/OneDrive - Universitat Autònoma de Barcelona/IIASA/maps/ne_110m_graticules_30.VERSION/ne_110m_graticules_30.shp") 
@@ -142,7 +82,7 @@ show_col(temperature)
 
 p1 <- ggplot()+ 
   geom_polypath(data=oceanmap_df, aes(long,lat,group=group),fill= nord["nord5"], size = 0.1) +
-  geom_raster(data=rel.temp.df,aes(x,y,fill=CO2relEffect)) +
+  geom_raster(data=abs.df,aes(x,y,fill=CO2abslEffect_RF_tha)) +
   geom_polypath(data=wmap_wgs_df, aes(long,lat,group=group),fill="transparent", color="black", size = 0.1) +
   geom_polygon(data=bbox_df, aes(x=long, y=lat), colour=nord["nord3"], fill="transparent", size = 0.3) +
   scale_fill_gradientn(colours = cpt(pal = "arendal_temperature", rev=T, n=10),
