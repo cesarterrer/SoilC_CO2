@@ -1,3 +1,12 @@
+library(devtools)
+dev_mode(TRUE)
+install_github("hadley/scales", force=TRUE)
+# main branch of development
+install_github("hadley/ggplot2")
+# (Optional) install_github("ggplot2", "kohske", "feature/new-guides-with-gtable")
+# Exit dev mode
+dev_mode(FALSE)
+library(ggplot2)
 library(raster)
 library(RColorBrewer)
 library(grid)
@@ -76,49 +85,68 @@ theme_opts <- list(theme(panel.grid.minor = element_blank(),
                          legend.text = element_text(margin = margin(t = .2, unit = "lines"))
 ))
 
-find_cpt("temperature")
-temperature <- cpt(pal = "arendal_temperature", rev=T)
-show_col(temperature)
-#show_col(viridis_white)
+discrete_gradient_pal <- function(colours, bins = 14) {
+  ramp <- scales::colour_ramp(colours)
+  
+  function(x) {
+    if (length(x) == 0) return(character())
+    
+    i <- floor(x * bins)
+    i <- ifelse(i > bins-1, bins-1, i)
+    ramp(i/(bins-1))
+  }
+}
 
-p1 <- ggplot()+ 
+scale_fill_discrete_gradient <- function(..., colours, bins = 14, na.value = "transparent", guide = "colourbar", aesthetics = "fill", colors)  {
+  colours <- if (missing(colours)) 
+    colors
+  else colours
+  continuous_scale(
+    aesthetics,
+    "discrete_gradient",
+    discrete_gradient_pal(colours, bins),
+    na.value = na.value,
+    guide = guide,
+    ...
+  )
+}
+
+find_cpt("temperature")
+#myinterval <- seq(-3,11,1)
+#abs.df$colbreaks <- findInterval(abs.df$CO2abslEffect_RF_tha, vec = myinterval)
+mycols <- cpt(pal = "arendal_temperature", rev=T, n=15)
+mycols <- mycols[2:15]
+#mycols[4] <- "#ffffff"
+show_col(mycols)
+
+p <- ggplot()+ 
   geom_polypath(data=oceanmap_df, aes(long,lat,group=group),fill= nord["nord5"], size = 0.1) +
   geom_raster(data=abs.df,aes(x,y,fill=CO2abslEffect_RF_tha)) +
   geom_polypath(data=wmap_wgs_df, aes(long,lat,group=group),fill="transparent", color="black", size = 0.1) +
   geom_polygon(data=bbox_df, aes(x=long, y=lat), colour=nord["nord3"], fill="transparent", size = 0.3) +
-  scale_fill_gradientn(colours = cpt(pal = "arendal_temperature", rev=T, n=10),
-                       values = rescale(c(-1,0,3,5)),
-                       na.value="transparent") +
-  xlab(expression(paste("Change in soil C stocks (Mg ", ha^-1,")", sep=""))) +
+  scale_fill_discrete_gradient(
+    colours = mycols,
+    #breaks=-3:11,
+    breaks=c(-2,0,2,4,6,8,10),
+    limits = c(-3, 11),
+    guide = guide_colourbar(nbin = 100, raster = FALSE, frame.colour = "black", ticks.colour = NA)) +
+  xlab(expression(paste("Change in soil C stocks  (Mg ", ha^-1,")", " in response to ", CO[2] ,sep=""))) +
   coord_equal() + 
   theme_classic(base_size = 12) + 
   theme_opts
-p1
-save_plot("graphs/CO2absEffect.pdf", p1, base_aspect_ratio = 1.5, dpi=300)
-save_plot("graphs/CO2absEffect.png", p1, dpi= 1200,type = "cairo-png",base_aspect_ratio = 1.5)
+p
 
-display_carto_all() # library(rcartocolor)
-my_colors = (carto_pal(4, "Earth"))
-hcl_palettes(plot = TRUE) # library(colorspace)
-my_colors = diverging_hcl(4, palette = "Blue-Red 3", rev=TRUE)
-find_cpt("sunshine_diff_12lev") # library(cptcity)
-my_colors = cpt(pal = "ncl_sunshine_diff_12lev",  n=5, rev=T)
-show_col(my_colors)
+scale_fill_gradientn(colours = mycols, 
+                     #labels = seq(-3, 11, by = 1), 
+                     na.value="transparent")
+  
+scale_fill_gradientn(colours = cpt(pal = "arendal_temperature", rev=T, n=7),
+                     values = rescale(c(-3,-1.5,.5,2.5,5,7.5,10)),
+                     na.value="transparent")
 
-ggplot()+ 
-  geom_polypath(data=oceanmap_df, aes(long,lat,group=group),fill= nord["nord5"], size = 0.1) +
-  #geom_raster(data=rel.temp.df,aes(x,y,fill=CO2relEffect)) +
-  layer_spatial(data=relMgHa_temp) +
-  geom_polypath(data=wmap_wgs_df, aes(long,lat,group=group),fill="transparent", color="black", size = 0.1) +
-  geom_polygon(data=bbox_df, aes(x=long, y=lat), colour=nord["nord3"], fill="transparent", size = 0.3) +
-  scale_fill_gradientn(colours = my_colors,
-                       values = rescale(c(-1,-0.5,0,0.1,8)),
-                       na.value="transparent") +
-  xlab(expression(paste("Change in soil C (Mg ", ha^-1,")", sep=""))) +
-  #coord_equal() + 
-  coord_sf() +
-  theme_classic(base_size = 12) + 
-  theme_opts
+save_plot("graphs/CO2absEffect.pdf", p, base_aspect_ratio = 1.5, dpi=300)
+save_plot("graphs/CO2absEffect.png", p, dpi= 1200,type = "cairo-png",base_aspect_ratio = 1.5)
+
 
 ###################
 ### ZONAL STATS ###
