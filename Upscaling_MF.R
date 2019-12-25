@@ -14,11 +14,13 @@ dat <- filter(dat, nyears >= 0.5)
 dat$myc <- with(dat, ifelse(Myc=="ECM", 100,0))
 
 #################### META FOREST #################
-X.abs <- dat[, c("abs","abs.var", "N", "amb", "biomass","myc","Depth..cm.")] %>% 
-  rename(yi=abs, vi=abs.var, "Nitrogen.fertilization"=N, "Effect.biomass"=biomass, "Cstock" = amb, "Soil.depth"=Depth..cm.)
+X.abs <- dat[, c("abs","abs.var", "N", "amb", "biomass","myc","Depth..cm.","nyears","Experiment_type","Disturbance","Ecosystem.type")] %>% 
+  rename(yi=abs, vi=abs.var, "Nitrogen.fertilization"=N, "Effect.biomass"=biomass, "Cstock" = amb, "Soil.depth"=Depth..cm.,
+         "Duration"=nyears,  "Experiment.type"=Experiment_type)
 #Set random seed
 set.seed(4)
-forest.abs <- MetaForest(yi ~ ., 
+forest.abs <- MetaForest(yi ~ Effect.biomass + Cstock + Soil.depth + myc + Nitrogen.fertilization + 
+                        Duration + Experiment.type + Disturbance + Ecosystem.type, 
                          data = X.abs,
                          whichweights = "unif", mtry = 3, min.node.size = 2,
                          num.trees = 5000)
@@ -30,6 +32,8 @@ forest.inbag <- MetaForest(yi ~ .,
 forest.abs$forest$r.squared
 plot(forest.abs)
 VarImpPlot(forest.abs)
+PartialDependence(forest.abs, vars = names(forest.abs$forest$variable.importance)[order(forest.abs$forest$variable.importance, decreasing = TRUE)],
+                  rawdata=TRUE, plot_int = TRUE)
 # Raster layers
 biomass <- raster("~/OneDrive/OneDrive - Universitat Autònoma de Barcelona/IIASA/Upscaling_Biomass/Maps/CO2relEffect.tif")
 biomass[is.na(biomass)] <- 0
@@ -37,16 +41,25 @@ antiperc <- function(x) log(x/100 + 1)
 biomass <- antiperc(biomass)
 soc <- raster("~/OneDrive/OneDrive - Universitat Autònoma de Barcelona/IIASA/maps/SOC_015cm_aggregated0p25_gm2.tif")
 fert <- raster("~/OneDrive/OneDrive - Universitat Autònoma de Barcelona/IIASA/maps/ESA_Nfertilization.tif")
+disturbance <- raster("~/OneDrive/OneDrive - Universitat Autònoma de Barcelona/IIASA/maps/ESA_Disturbance.tif")
+ecotype <- raster("~/OneDrive/OneDrive - Universitat Autònoma de Barcelona/IIASA/maps/ESA_EcosystemType.tif")
 ecm <- raster("~/OneDrive/OneDrive - Universitat Autònoma de Barcelona/IIASA/maps/myco_maps_Dec2017/MycDistrEM_current_all.tif")
 er <- raster("~/OneDrive/OneDrive - Universitat Autònoma de Barcelona/IIASA/maps/myco_maps_Dec2017/MycDistrER_current_all.tif")
 am <- raster("~/OneDrive/OneDrive - Universitat Autònoma de Barcelona/IIASA/maps/myco_maps_Dec2017/MycDistrAM_current_all.tif")
 nm <- raster("~/OneDrive/OneDrive - Universitat Autònoma de Barcelona/IIASA/maps/myco_maps_Dec2017/MycDistrNM_current_all.tif")
 myc <- ecm+er # SUM ECM and Ericoid
 myc <- resample(myc,biomass,method="bilinear")
-s<- stack(biomass, soc, fert, myc)
+s<- stack(biomass, soc, fert, myc, disturbance, ecotype)
 s.df <- as.data.frame(s,xy=TRUE) %>% rename("Nitrogen.fertilization"=ESA_Nfertilization_category, "Effect.biomass"=layer.1, 
-                                            "Cstock" = SOC_015cm_aggregated0p25_gm2, "myc" = layer.2) %>%
-  mutate(Nitrogen.fertilization=factor(Nitrogen.fertilization), Soil.depth=20)
+                                            "Cstock" = SOC_015cm_aggregated0p25_gm2, "myc" = layer.2, 
+                                            "Disturbance"=ESA_Disturbance_category, "Ecosystem.type"=ESA_EcosystemType_category) %>%
+  mutate(Nitrogen.fertilization=factor(Nitrogen.fertilization), 
+         Soil.depth=30,
+         Duration=mean(dat$nyears),
+         Experiment.type="FACE",
+         Disturbance=factor(Disturbance),
+         Ecosystem.type=factor(Ecosystem.type))
+
 
 #test<- data.frame(Effect.biomass=c(01,0,0.25), Cstock=c(1000,5000,10000), Nitrogen.fertilization=c("Nhigh","Nhigh","low"))
 #test<- data.frame(Effect.biomass=c(rep(01,10),rep(0,10),rep(0.25,10)), Cstock=rep(1000,30), Nitrogen.fertilization=rep("Nhigh",30))

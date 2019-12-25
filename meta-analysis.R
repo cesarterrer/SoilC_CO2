@@ -13,9 +13,14 @@ make_pct <- function(x) (exp(x) - 1) * 100
 #dat <- read.csv("soilC_meta.csv")
 dat <- filter(dat, biomass != "NA") # Remove experiments with missing biomass data
 dat <- filter(dat, nyears >= 0.5) # Remove experiments of less than 6 months duration
+dat$obs <- 1:nrow(dat)
+
+### Global effect of eCO2 on SOC
+global <- rma.mv(yi, vi, data=dat, random = ~ 1 | Site / obs)
+make_pct(coef(summary(global)))
 
 # Nitrogen
-Nm <- rma(yi, vi, data=dat, mods=~N -1, knha=TRUE)
+Nm <- rma.mv(yi, vi, data=dat, mods=~N -1, random = ~ 1 | Site / obs)
 Nm
 Nm.n <- dat %>%  group_by(N) %>% summarise(n = n())
 Nm.df <- coef(summary(Nm)) %>% mutate(type="Nitrogen fertilization", 
@@ -24,28 +29,28 @@ Nm.df <- coef(summary(Nm)) %>% mutate(type="Nitrogen fertilization",
 
 
 # Ecosystem.type
-Ecom <- rma(yi, vi, data=dat, mods=~Ecosystem.type -1, knha=TRUE, subset= Ecosystem.type !="Wetland")
+Ecom <- rma.mv(yi, vi, data=dat, mods=~Ecosystem.type -1,  random = ~ 1 | Site / obs, subset= Ecosystem.type !="Wetland")
 Ecom
 Ecom.n <- dat %>%  group_by(Ecosystem.type) %>% summarise(n = n())
 Ecom.df <- coef(summary(Ecom)) %>% mutate(type="Ecosystem type", 
                                           factor=levels(dat$Ecosystem.type)[1:4],
                                           size=Ecom.n$n[1:4])
 # Experiment.type
-Expm <- rma(yi, vi, data=dat, mods=~Experiment_type -1, knha=TRUE)
+Expm <- rma.mv(yi, vi, data=dat, mods=~Experiment_type -1,  random = ~ 1 | Site / obs)
 Expm
 Expm.n <- dat %>%  group_by(Experiment_type) %>% summarise(n = n())
 Expm.df <- coef(summary(Expm)) %>% mutate(type="Experiment type", 
                                               factor=levels(dat$Experiment_type),
                                               size=Expm.n$n)
 # Biome
-Biomem <- rma(yi, vi, data=dat, mods=~Biome -1, knha=TRUE)
+Biomem <- rma.mv(yi, vi, data=dat, mods=~Biome -1,  random = ~ 1 | Site / obs)
 Biomem
 Biomem.n <- dat %>%  group_by(Biome) %>% summarise(n = n())
 Biomem.df <- coef(summary(Biomem)) %>% mutate(type="Biome", 
                                                           factor=levels(dat$Biome),
                                                           size=Biomem.n$n)
 # Disturbance
-Disturbancem <- rma(yi, vi, data=dat, mods=~Disturbance -1, knha=TRUE)
+Disturbancem <- rma.mv(yi, vi, data=dat, mods=~Disturbance -1,  random = ~ 1 | Site / obs)
 Disturbancem
 Disturbancem.n <- dat %>%  group_by(Disturbance) %>% summarise(n = n())
 Disturbancem.df <- coef(summary(Disturbancem)) %>% mutate(type="Disturbance", 
@@ -53,7 +58,7 @@ Disturbancem.df <- coef(summary(Disturbancem)) %>% mutate(type="Disturbance",
                                           size=Disturbancem.n$n)
 
 # Myc
-Mycm <- rma(yi, vi, data=dat, mods=~Myc -1, knha=TRUE, subset= Myc != "NM")
+Mycm <- rma.mv(yi, vi, data=dat, mods=~Myc -1,  random = ~ 1 | Site / obs, subset= Myc != "NM")
 Mycm.n <- dat %>%  group_by(Myc) %>% summarise(n = n()) %>% filter(Myc != "NM")
 Mycm.df <- coef(summary(Mycm)) %>% mutate(type="Nutrient-acquisition strategy", 
                                           factor=c("AM","EcM","ER","N-fixer"),

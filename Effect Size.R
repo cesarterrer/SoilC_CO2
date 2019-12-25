@@ -6,7 +6,7 @@ library(ggplot2)
 library(metagear)
 make_pct <- function(x) (exp(x) - 1) * 100
 
-df <- read.csv("soilC - combined.csv",na.strings = "")
+df <- read.csv("soilC - combined.csv",na.strings =c("","NA"))
 df = df %>% filter(Experiment != "") %>% rename(biomass=yi) # Remove empty rows
 df$id <- with(df,paste0(Experiment,sep="_",N,sep="_",Myc)) # Create ID column
 df <- droplevels(df)

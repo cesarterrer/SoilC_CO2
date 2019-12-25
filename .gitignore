@@ -2,3 +2,7 @@
 .Rhistory
 .RData
 .Ruserdata
+graphs/
+mf_cv.RData
+ESA_Fertilization.R
+Summary_Biomes.csv

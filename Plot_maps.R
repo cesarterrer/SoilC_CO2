@@ -1,6 +1,4 @@
 library(devtools)
-install_github("hadley/ggplot2")
-# (Optional) install_github("ggplot2", "kohske", "feature/new-guides-with-gtable")
 library(ggplot2)
 library(raster)
 library(RColorBrewer)
@@ -12,6 +10,7 @@ library(cowplot)
 library(scales)
 library(viridis)
 library(swatches)
+devtools::install_github("hrbrmstr/ggalt")
 library(ggalt)
 library(nord)
 library(ggpolypath)
@@ -24,38 +23,38 @@ library(ggspatial)
 library(rcartocolor)
 library(colorspace)
 library(tibble)
+library(mapproj)
 #library(sf)
 options(bitmapType="cairo")
 nord <- read_palette("~/OneDrive/OneDrive - Universitat Autònoma de Barcelona/IIASA/nord.ase")
 
 # Increment
 abs <- raster("maps/CO2abslEffect_RF_tha.tif")  # Mg/ha
+abs <- projectRaster(abs,crs="+proj=eqearth",over=T)
 abs.df = as.data.frame(abs,xy=TRUE)
+range(abs.df$CO2abslEffect_RF_tha, na.rm=T)
 
 # map the bbox
 bbox <- shapefile("~/OneDrive/OneDrive - Universitat Autònoma de Barcelona/IIASA/maps/ne_110m_wgs84_bounding_box.VERSION/ne_110m_wgs84_bounding_box.shp") 
+bbox <- spTransform(bbox, CRS("+proj=eqearth"))
 bbox_df<- fortify(bbox)
-#bbox_robin <- spTransform(bbox, CRS("+proj=eqearth"))  # reproject bounding box
-#bbox_robin_df <- fortify(bbox_robin)
 
 # Coastlines
 wmap <- readOGR(dsn="~/OneDrive/OneDrive - Universitat Autònoma de Barcelona/IIASA/maps/ne_50m_land", layer="ne_50m_land")
 # http://www.naturalearthdata.com/downloads/
-wmap_wgs_df <- fortify(wmap)
-#wmap_wgs <- spTransform(wmap, CRS("+proj=eqearth"))
-#wmap_wgs_df <- fortify(wmap_wgs)
+wmap_wgs <- spTransform(wmap, CRS("+proj=eqearth"))
+wmap_wgs_df <- fortify(wmap_wgs)
 
 # Ocean
 # http://www.naturalearthdata.com/downloads/
 ocean <- readOGR(dsn="~/OneDrive/OneDrive - Universitat Autònoma de Barcelona/IIASA/maps/ne_50m_ocean", layer="ne_50m_ocean")
-#ocean <- spTransform(ocean, CRS("+proj=eqearth"))
+ocean <- spTransform(ocean, CRS("+proj=eqearth"))
 oceanmap_df <- fortify(ocean)
 
 # graticule (Robin)
 grat <- shapefile("~/OneDrive/OneDrive - Universitat Autònoma de Barcelona/IIASA/maps/ne_110m_graticules_30.VERSION/ne_110m_graticules_30.shp") 
+grat<- spTransform(grat, CRS("+proj=eqearth"))  # reproject graticule
 grat_df <- fortify(grat)
-#grat_robin <- spTransform(grat, CRS("+proj=eqearth"))  # reproject graticule
-#grat_df_robin <- fortify(grat_robin)
 
 # create a blank ggplot theme
 theme_opts <- list(theme(panel.grid.minor = element_blank(),
@@ -80,7 +79,7 @@ theme_opts <- list(theme(panel.grid.minor = element_blank(),
                          legend.text = element_text(margin = margin(t = .2, unit = "lines"))
 ))
 
-discrete_gradient_pal <- function(colours, bins = 14) {
+discrete_gradient_pal <- function(colours, bins = 11) {
   ramp <- scales::colour_ramp(colours)
   
   function(x) {
@@ -92,7 +91,7 @@ discrete_gradient_pal <- function(colours, bins = 14) {
   }
 }
 
-scale_fill_discrete_gradient <- function(..., colours, bins = 14, na.value = "transparent", guide = "colourbar", aesthetics = "fill", colors)  {
+scale_fill_discrete_gradient <- function(..., colours, bins = 11, na.value = "transparent", guide = "colourbar", aesthetics = "fill", colors)  {
   colours <- if (missing(colours)) 
     colors
   else colours
@@ -109,8 +108,8 @@ scale_fill_discrete_gradient <- function(..., colours, bins = 14, na.value = "tr
 find_cpt("temperature")
 #myinterval <- seq(-3,11,1)
 #abs.df$colbreaks <- findInterval(abs.df$CO2abslEffect_RF_tha, vec = myinterval)
-mycols <- cpt(pal = "arendal_temperature", rev=T, n=15)
-mycols <- mycols[2:15]
+mycols <- cpt(pal = "arendal_temperature", rev=T, n=12)
+mycols <- mycols[2:11]
 #mycols[4] <- "#ffffff"
 show_col(mycols)
 
@@ -120,25 +119,90 @@ p <- ggplot()+
   geom_polypath(data=wmap_wgs_df, aes(long,lat,group=group),fill="transparent", color="black", size = 0.1) +
   geom_polygon(data=bbox_df, aes(x=long, y=lat), colour=nord["nord3"], fill="transparent", size = 0.3) +
   scale_fill_discrete_gradient(
+    bins = 10,
     colours = mycols,
     #breaks=-3:11,
     breaks=c(-2,0,2,4,6,8,10),
-    limits = c(-3, 11),
+    limits = c(-2, 8),
     guide = guide_colourbar(nbin = 100, raster = FALSE, frame.colour = "black", ticks.colour = NA)) +
   xlab(expression(paste("Change in soil C stocks  (Mg ", ha^-1,")", " in response to ", CO[2] ,sep=""))) +
   coord_equal() + 
-  theme_classic(base_size = 12) + 
+  theme_classic(base_size = 10) + 
   theme_opts
 p
 
-scale_fill_gradientn(colours = mycols, 
-                     #labels = seq(-3, 11, by = 1), 
-                     na.value="transparent")
-  
-scale_fill_gradientn(colours = cpt(pal = "arendal_temperature", rev=T, n=7),
-                     values = rescale(c(-3,-1.5,.5,2.5,5,7.5,10)),
-                     na.value="transparent")
-
 save_plot("graphs/CO2absEffect.pdf", p, base_aspect_ratio = 1.5, dpi=300)
 save_plot("graphs/CO2absEffect.png", p, dpi= 1200,type = "cairo-png",base_aspect_ratio = 1.5)
+
+##### BIOMASS #####
+biomass <- raster("~/OneDrive/OneDrive - Universitat Autònoma de Barcelona/IIASA/Upscaling_Biomass/Maps/CO2absEffect.tif")  # Mg
+biomass[is.na(biomass)] <- 0
+biomass.se <- raster("~/OneDrive/OneDrive - Universitat Autònoma de Barcelona/IIASA/Upscaling_Biomass/Maps/CO2absSE.tif")
+biomass.se[is.na(biomass.se)] <- 0
+esa.pan <- raster("~/OneDrive/OneDrive - Universitat Autònoma de Barcelona/IIASA/maps/ESA_PANratios.tif")
+total.s <- stack(esa.pan,biomass,biomass.se)
+total.df <- as.data.frame(total.s,xy=TRUE)
+#Calculate the increase in TOTAL BIOMASS using TB ratios from Liu et al.
+library("readxl")
+ratios <- read_excel("~/OneDrive/OneDrive - Universitat Autònoma de Barcelona/IIASA/TBratio.xlsx", col_types = c("text", "numeric", "numeric", "guess", "guess"))
+total.df <- merge(total.df,ratios, "ESA_PANratios_category")
+total.df$TotBiom <- round(total.df$CO2absEffect * total.df$TBratio,2)
+total.df$TotBiomSE <- round(total.df$CO2absSE * total.df$TBratio,2)
+total.biomass <- rasterFromXYZ(total.df[,c("x", "y", "TotBiom")],crs="+proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0")
+total.biomass.se <- rasterFromXYZ(total.df[,c("x", "y", "TotBiomSE")],crs="+proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0")
+writeRaster(total.biomass,"~/OneDrive/OneDrive - Universitat Autònoma de Barcelona/IIASA/Upscaling_Biomass/Maps/CO2absEffect_TotalBiomass.tif",overwrite=TRUE)
+writeRaster(total.biomass.se,"~/OneDrive/OneDrive - Universitat Autònoma de Barcelona/IIASA/Upscaling_Biomass/Maps/CO2absSE_TotalBiomass.tif",overwrite=TRUE)
+
+total.biomass.a <- area(total.biomass)
+total.biomasstha <- overlay(total.biomass, total.biomass.a, fun=function(x,y) x/(y*100)) # Mg/ha
+crs(total.biomasstha) <- "+proj=longlat"
+total.biomasstha<- projectRaster(total.biomasstha,crs="+proj=eqearth",over=T)
+biomass.df = as.data.frame(total.biomasstha,xy=TRUE)
+
+##### ECOSYSTEM C ######
+eco <- abs + total.biomasstha
+eco.df = as.data.frame(eco,xy=TRUE)
+range(eco.df$layer,na.rm=T)
+
+my_viridis <- c("#FFFFFF", viridis(n=9, direction=-1))
+show_col(my_viridis)
+
+p2 <- ggplot()+ 
+  geom_polypath(data=oceanmap_df, aes(long,lat,group=group),fill= nord["nord5"], size = 0.1) +
+  geom_raster(data=eco.df,aes(x,y,fill=layer)) +
+  geom_polypath(data=wmap_wgs_df, aes(long,lat,group=group),fill="transparent", color="black", size = 0.1) +
+  geom_polygon(data=bbox_df, aes(x=long, y=lat), colour=nord["nord3"], fill="transparent", size = 0.3) +
+  scale_fill_discrete_gradient(
+    bins = 10,
+    colours = my_viridis,
+    #breaks=-3:11,
+    breaks=c(0,10,20,30,40,50),
+    limits = c(0, 50),
+    guide = guide_colourbar(nbin = 100, raster = FALSE, frame.colour = "black", ticks.colour = NA)) +
+  xlab(expression(paste("Change in ecosystem C stocks  (Mg ", ha^-1,")", " in response to ", CO[2] ,sep=""))) +
+  coord_equal() + 
+  theme_classic(base_size = 10) + 
+  theme_opts
+p2
+
+save_plot("graphs/CO2absEffect_Ecosystem.pdf", p2, base_aspect_ratio = 1.5, dpi=300)
+save_plot("graphs/CO2absEffect_Ecosystem.png", p2, dpi= 1200,type = "cairo-png",base_aspect_ratio = 1.5)
+
+# FIGURE 3
+fig3 <- plot_grid( p + theme(plot.margin = unit(c(0,-.5,-1,-.5), "cm")) + xlab(expression(paste(eCO[2], " effect on soil C stocks (Mg ", ha^-1,")" ,sep=""))), 
+                  p2 + theme(plot.margin = unit(c(-1,-.5,0,-.5), "cm")) + xlab(expression(paste(eCO[2], " effect on ecosystem C stocks (Mg ", ha^-1,")" ,sep=""))), 
+                                 align = 'h', 
+                                 #label_size = 8,
+                                 labels = "auto",
+                                 hjust = -3, 
+                                 #vjust= 4,
+                                 nrow = 2,
+                                 ncol=1
+)
+
+save_plot("graphs/Fig3.png", fig3, dpi=1200, base_width = 210/2, base_height = ((3/5)*210)/2, units="mm", nrow=2, ncol = 1,type = "cairo-png")
+save_plot("graphs/Fig3.pdf", fig3, dpi=600, base_width = 210/2, base_height = ((3/5)*210)/2, units="mm",nrow=2, ncol = 1, device = cairo_pdf, fallback_resolution = 1200)
+save_plot("graphs/Fig3.eps", fig3, dpi=600, base_width = 210/2, base_height = ((3/5)*210)/2, units="mm",nrow=2, ncol = 1, device = cairo_ps, fallback_resolution = 1200)
+
+
 

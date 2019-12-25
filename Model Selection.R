@@ -1,4 +1,7 @@
 source("Effect Size.R")
+install_github("cjvanlissa/metaforest")
+library(metaforest)
+library(caret)
 library(ggplot2)
 library(cowplot)
 library(ggrepel)
@@ -19,17 +22,15 @@ data <- dat %>% rename ("Ecosystem.type"=Ecosystem.type , "Duration"=nyears,  "E
   mutate( Cstock = amb) %>% # Standing C stocks
   filter(Symbiotic.type != "NM") # Remove NM species (only 1)
 
-moderators <- c("Ecosystem.type", "Duration",  "Symbiotic.type", "Effect.biomass", 
+moderators <- c("Ecosystem.type", "Duration",  "Symbiotic.type", "Effect.biomass", "MAT", "MAP",
                 "Experiment.type","Disturbance","Nitrogen.fertilization","Cstock","Soil.depth")
 
 ########################### MODEL SELECTION #####################
 
 ####---------------------------------------------- META-FOREST ----------------------------------------------####
-install_github("cjvanlissa/metaforest")
-library(metaforest)
-library(caret)
 
 ###-------------- OPTIMIZATION --------------###
+### RELATIVE###
 # Set up 10-fold grouped (=clustered) CV
 cv_folds <- trainControl(method = "cv", 10)
 # Set up a tuning grid for the three tuning parameters of MetaForest
@@ -61,17 +62,50 @@ cairo_pdf("graphs/VI_metaforest.pdf", width = 8.27)
 VarImpPlot(final)
 dev.off()
 
-cairo_pdf("graphs/PartialDependence.pdf", width = 8.27)
+cairo_pdf("graphs/PartialDependence_Relative.pdf", width = 8.27)
 PartialDependence(final, vars = names(final$forest$variable.importance)[order(final$forest$variable.importance, decreasing = TRUE)],
                   rawdata=TRUE, plot_int = TRUE)
 dev.off()
+
+################ ABSOLUTE ###############
+# Select only moderators and vi
+Y <- data[, c("abs.var", moderators)] %>% rename(vi=abs.var)
+# Train the model
+mf_cv_abs <- train(y = data$abs,
+               x = Y,
+               method = ModelInfo_mf(),
+               trControl = cv_folds,
+               tuneGrid = tuning_grid,
+               num.trees = 20000)
+saveRDS(mf_cv_abs, "mf_cv_abs.RData")
+# Check result
+mf_cv_abs
+# Cross-validated R2 of the final model:
+mf_cv_abs$results[which.min(mf_cv_abs$results$RMSE), ]$Rsquared
+# Extract final model
+final_abs <- mf_cv_abs$finalModel
+# Plot convergence
+plot(final_abs)
+# OOB  R2 of the final model:
+final_abs$forest$r.squared
+# Plot variable importance
+cairo_pdf("graphs/VI_Abs_metaforest.pdf", width = 8.27)
+VarImpPlot(final_abs)
+dev.off()
+
+cairo_pdf("graphs/PartialDependence_Absolute.pdf", width = 8.27)
+PartialDependence(final_abs, vars = names(final_abs$forest$variable.importance)[order(final_abs$forest$variable.importance, decreasing = TRUE)],
+                  rawdata=TRUE, plot_int = TRUE)
+dev.off()
+
+
 
 #####-------------- SIMPLE --------------#####
 #### Relative effect ####
 X.rel <- data[, c("yi","vi", moderators)]
 forest.rel <- MetaForest(yi ~ .,
                          data = X.rel,
-                         whichweights = "unif", mtry = 4, min.node.size = 2,
+                         whichweights = "unif", mtry = 6, min.node.size = 6,
                          num.trees = 30000)
 
 forest.rel$forest$r.squared

@@ -3,42 +3,67 @@ library(ggplot2)
 library(cowplot)
 library(ggrepel)
 library(rcartocolor)
+theme_set(theme_cowplot(font_size=5))
 options(bitmapType="cairo")
 # display_carto_all()
 display_carto_pal(12, "Bold")
 mycols <- carto_pal(12, "Bold")[c(4,2,1,7)]
 mycols2 <- carto_pal(12, "Bold")[c(7,8)]
+mycols3 <- carto_pal(12, "Bold")[c(1,3)]
 mycols_vegsoil <- carto_pal(12, "Bold")[c(2,4)]
 make_pct <- function(x) (exp(x) - 1) * 100
 
 #dat <- read.csv("soilC_meta.csv")
 dat <- filter(dat, biomass != "NA") # Remove experiments with missing biomass data
 dat <- filter(dat, nyears >= 0.5) # Remove experiments of less than 6 months duration
-
-
-filtered <- filter(dat, N=="Nlow", Experiment_type != "Chamber", Disturbance=="intact")
-filtered$obs <- 1:nrow(filtered)
-fertilized <- filter(dat, N=="Nhigh")
+dat$obs <- 1:nrow(dat)
+dat <- dat %>% mutate(Myc= recode(Myc, Nfixer = "N-fixer"), N=recode(N,Nlow = "non-fertilized",Nhigh = "N-fertilized"))
+filtered <- filter(dat, N=="non-fertilized", Experiment_type != "Chamber", Disturbance=="intact")
+fertilized <- filter(dat, N=="N-fertilized", Experiment_type != "Chamber", Disturbance=="intact")
+intact <- filter(dat, Experiment_type != "Chamber", Disturbance=="intact")
 ## BIOMASS ##
-summary(rma(yi, vi, mods= ~biomass * Myc + amb + Depth..cm., data=filtered, knha=TRUE, control=list(stepadj=0.5)))
-
-#mod <- rma.mv(yi, vi, mods= ~biomass + amb + Depth..cm.,data=filtered, random = ~ 1 | Site / obs)
-mod <- rma.mv(yi, vi, mods= ~biomass,data=filtered, random = ~ 1 | Site / obs)
-summary(mod) 
-
+summary(intact.m<-rma.mv(yi, vi, mods= ~biomass*N, data=intact,  random = ~ 1 | Site / obs)) # Significant interaction
+summary(rma(yi, vi, mods= ~biomass, data=fertilized, knha=TRUE))
+summary(rma(yi, vi, mods= ~biomass, data=filtered, knha=TRUE)) # In natural soils, Biomass alone explains...
+# UNFERTILIZED
 Brange <- seq(min(filtered$biomass), max(filtered$biomass), .001)
-Biomass.new <- data.frame(biomass = Brange, 
-                          #Myc=factor("AM", levels=c("AM","ECM","ER", "Nfixer")),
-                          amb = mean(filtered$amb),
-                          Depth..cm.=15)
-Biomass_mods <- model.matrix(~ biomass + amb + Depth..cm., Biomass.new)[,-1]
-preds <- as.data.frame(predict(mod, newmods = Biomass_mods, addx=T, transf=make_pct))
-preds <- as.data.frame(predict(mod, newmods = Brange,addx=T, transf=make_pct))
+unfert.new <- data.frame(biomass = Brange, N=factor("non-fertilized", levels=c("N-fertilized","non-fertilized")))
+unfert.mods <- model.matrix(~ biomass*N, unfert.new)[,-1]
+unfert.pred <- as.data.frame(predict(intact.m, newmods = unfert.mods, addx=T, transf=make_pct))
 
-p1 <- ggplot(preds, aes(make_pct(X.biomass), pred)) + 
+p1 <- ggplot(unfert.pred, aes(make_pct(X.biomass), pred)) + 
   geom_point(data=filtered,
              col=carto_pal(12, "Bold")[3], show.legend = FALSE,
              aes(y=make_pct(yi), x=make_pct(biomass), col=Myc,
+                 size=1/vi)) + 
+  #geom_point(colour="red",data=fertilized,aes(make_pct(biomass), make_pct(yi)))+
+  geom_line (size=0.8) + 
+  #geom_line (data=predsfert,aes(make_pct(X.rcs.biomass..knots.biomass), pred), size=0.8, col="red") + 
+  geom_ribbon(aes(ymax= ci.ub, ymin=ci.lb), alpha=0.1) +
+  labs(x=expression(paste(CO[2]," effect on biomass carbon (%)", sep="")),
+       y=expression(paste(CO[2]," effect on soil carbon (%)", sep=""))) +
+  scale_size(range = c(1, 6)) +
+  geom_hline(yintercept = 0, lty=2, size=1) + 
+  geom_vline(xintercept = 0, lty=2, size=1) + theme_classic() + 
+  guides(size=FALSE,col = guide_legend(title = NULL)) + 
+  #scale_x_continuous(breaks = seq(-15, 75, by = 15), limits = c(-15,75)) +
+  #scale_y_continuous(breaks = seq(-20, 40, by = 10), limits = c(-23,40)) +
+  #geom_text_repel(data=limited, aes(y=make_pct(yi), x=make_pct(biomass),label=Experiment)) +
+  theme_cowplot()
+p1
+save_plot("graphs/regression.png",p1, type = "cairo-png",base_aspect_ratio = 1.3)
+
+# FERTILIZED
+library(rms)
+knots <- c(-0.1,0.1,0.2)
+modfert <- rma.mv(yi, vi, mods= ~rcs(biomass, knots), data=fertilized, random = ~ 1 | Site / obs)
+Brange.fert <- seq(min(fertilized$biomass), max(fertilized$biomass), .001)
+fert.pred <- as.data.frame(predict(modfert, newmods = rcspline.eval(Brange.fert, knots, inclx=TRUE),addx=T, transf=make_pct))
+
+fert.p <- ggplot(fert.pred, aes(X.rcs.biomass..knots.biomass, pred)) + 
+  geom_point(data=fertilized,
+             col=carto_pal(12, "Bold")[3], show.legend = FALSE,
+             aes(y=make_pct(yi), x=biomass, col=Myc,
                  size=1/vi)) + 
   geom_line (size=0.8) + 
   geom_ribbon(aes(ymax= ci.ub, ymin=ci.lb), alpha=0.1) +
@@ -48,15 +73,11 @@ p1 <- ggplot(preds, aes(make_pct(X.biomass), pred)) +
   geom_hline(yintercept = 0, lty=2, size=1) + 
   geom_vline(xintercept = 0, lty=2, size=1) + theme_classic() + 
   guides(size=FALSE,col = guide_legend(title = NULL)) + 
-  scale_x_continuous(breaks = seq(-15, 75, by = 15)) +
-  scale_y_continuous(breaks = seq(-20, 40, by = 10), limits = c(-23,40)) +
   #geom_text_repel(data=limited, aes(y=make_pct(yi), x=make_pct(biomass),label=Experiment)) +
-  #theme_minimal() + theme(panel.grid.major.x = element_blank())
   theme_cowplot()
-p1
-save_plot("graphs/regression.png",p1, type = "cairo-png",base_aspect_ratio = 1.3)
+save_plot("graphs/regression_fertilized.png",fert.p, type = "cairo-png",base_aspect_ratio = 1.3)
 
-## BIOMASS * MYC ##
+## SOC ~ BIOMASS * MYC ##
 p12 <- ggplot(preds, aes(make_pct(X.biomass), pred)) + 
   geom_point(data=filtered,
              #col="#7fc97f", show.legend = FALSE,
@@ -81,15 +102,19 @@ p12
 save_plot("graphs/regression2.png",p12, type = "cairo-png",base_aspect_ratio = 1.3)
 
 ## SOC ~ MYC ##
-mod.myc <- rma(yi, vi, mods= ~Myc -1,data=filtered, control=list(stepadj=0.5), knha=TRUE)
+mod.myc <- rma.mv(yi, vi, mods= ~Myc -1,data=filtered, random = ~ 1 | Site / obs)
 mod.myc.n <- filtered%>%  group_by(Myc) %>% summarise(n = n())
-mod.myc.df <- coef(summary(mod.myc)) %>% mutate(factor=c("AM","ECM","ER","Nfixer"),
-                                                size=mod.myc.n$n,
+mod.highN <- rma.mv(yi, vi, mods= ~Myc,data=fertilized, random = ~ 1 | Site / obs) # Myc not important under high N, p=0.9404
+mod.highN <- rma.mv(yi, vi,data=fertilized, random = ~ 1 | Site / obs) # Myc not important under high N, p=0.9404
+mod.myc.df <- bind_rows(coef(summary(mod.myc)), coef(summary(mod.highN))) %>% 
+  mutate(factor=c("AM","ECM","ER","N-fixer","N-fertilized"),
+                                                size=c(mod.myc.n$n,nrow(fertilized)),
                                                 group="Soils")
 
 p2 <- ggplot(mod.myc.df, aes(x=factor, y=make_pct(estimate))) +
   #geom_crossbar(aes(ymin=make_pct(ci.lb), ymax=make_pct(ci.ub), fill=factor), fill = "grey80",alpha = 0.6, width = 0.5) +
   geom_jitter(data=filtered, aes(x=Myc, y= make_pct(yi), size = 1/vi, col=Myc), position = position_jitter(w = 0.2, h = 0), alpha = 0.8) +
+  geom_jitter(data=fertilized, aes(x=N, y= make_pct(yi), size = 1/vi),col=carto_pal(12, "Bold")[5],  position = position_jitter(w = 0.2, h = 0), alpha = 0.8) +
   scale_color_manual(values=mycols) +
   scale_size(range = c(1, 6)) +
   #geom_point(color = 'black', pch=21,size=5, fill="black")+
@@ -114,15 +139,18 @@ save_plot("graphs/Fig2.pdf", prow, ncol=2, nrow=1, base_width=3.5, device = cair
 save_plot("graphs/Fig2.png", prow, ncol=2, nrow=1, dpi= 800, base_width=3.5,type = "cairo-png")
 
 ### Biomass ~ Myc ###
-mod.biomass.myc <- rma(biomass, vi, mods= ~Myc -1,data=filtered, control=list(stepadj=0.5), knha=TRUE)
+mod.biomass.myc <- rma.mv(biomass, vi, mods= ~Myc -1,data=filtered, random = ~ 1 | Site / obs)
 mod.biomass.myc.n <- filtered%>%  group_by(Myc) %>% summarise(n = n())
-mod.biomass.myc.df <- coef(summary(mod.biomass.myc)) %>% mutate(factor=c("AM","ECM","ER","Nfixer"),
-                                                                size=mod.biomass.myc.n$n,
+mod.biomass.highN <- rma.mv(biomass, vi,data=fertilized, random = ~ 1 | Site / obs)
+mod.biomass.myc.df <- bind_rows(coef(summary(mod.biomass.myc)), coef(summary(mod.biomass.highN)) ) %>% 
+  mutate(factor=c("AM","ECM","ER","N-fixer","N-fertilized"),
+                                                                size=c(mod.biomass.myc.n$n, nrow(fertilized)),
                                                                 group="Plants")
 all <- full_join(mod.myc.df,mod.biomass.myc.df)
 
 p2b <- ggplot(mod.biomass.myc.df, aes(x=factor, y=make_pct(estimate))) +
   geom_jitter(data=filtered, aes(x=Myc, y= make_pct(biomass), size = 1/vi, col=Myc), position = position_jitter(w = 0.2, h = 0), alpha = 0.8) +
+  geom_jitter(data=fertilized, aes(x=N, y= make_pct(biomass), size = 1/vi),col=carto_pal(12, "Bold")[5],  position = position_jitter(w = 0.2, h = 0), alpha = 0.8) +
   scale_color_manual(values=mycols) +
   scale_size(range = c(1, 6)) +
   #geom_point(color = 'black', pch=21,size=5, fill="black")+
@@ -145,14 +173,14 @@ meta <- plot_grid(p2b + xlab(NULL), p2,
 
 
 ### biomas&soil ~ Myc 1-plot ###
-myco <- ggplot(filter(all, factor!="Nfixer", factor!="ER"), aes(x=factor, y=make_pct(estimate), color=group, group=group)) +
+myco <- ggplot(filter(all, factor!="N-fixer", factor!="ER"), aes(x=factor, y=make_pct(estimate), color=group, group=group)) +
   geom_hline(yintercept = 0, lty=2, size=1) + 
   scale_color_manual(values=mycols_vegsoil) +
   geom_pointrange(aes(ymin=make_pct(ci.lb), ymax=make_pct(ci.ub)), 
                   position = position_dodge(width = 0),  size=1) +
   ylab(expression(paste(CO[2]," effect on C pools (%)", sep=""))) + xlab("Nutrient-acquisition strategy") +
-  scale_y_continuous(breaks = seq(-20, 40, by = 10), limits = c(-23,40)) +
-  theme_cowplot() +
+  #scale_y_continuous(breaks = seq(-20, 40, by = 10), limits = c(-23,40)) +
+  theme_cowplot(font_size=10) +
   theme(legend.title = element_blank(),legend.direction = "horizontal",
         legend.position = c(0, 0.95))
 myco
@@ -169,42 +197,71 @@ save_plot("graphs/Fig2v2.pdf", plot_final, ncol=2, nrow=1, base_width=3.5, devic
 save_plot("graphs/Fig2v2.png", plot_final, ncol=2, nrow=1, dpi= 800, base_width=3.5, type = "cairo-png")
 
 #### N UPTAKE boxplot ####
+mean_size <- 3
 nup <-read.csv("Nup.csv") %>% filter(NFERT == "Nlow", myc != "N-fixing")
 
-nup.p <- ggplot(nup, aes(myc, make_pct(Nupr), fill=myc)) + 
+nup.p <- ggplot(nup, aes(myc, make_pct(Nupr))) + 
   geom_hline(yintercept = 0, lty=2, size=1) + 
-  geom_boxplot(alpha=0.7) +
-  stat_summary(fun=mean, geom="point", shape=23, size=4, fill="black") +
+  geom_boxplot(alpha=0.7, fill=mycols_vegsoil[1]) +
+  #stat_summary(fun=mean, geom="point", shape=23, size=4, fill="black") +
   #geom_violin() +
   #geom_point(aes(fill=myc),size=3,shape = 21, position = position_jitter(width = 0.01)) +
-  geom_dotplot(aes(fill=myc),binaxis='y', stackdir='center', dotsize=1, binwidth = 2) +
-  scale_color_manual(values=mycols2) +
-  scale_fill_manual(values=mycols2) +
+  #geom_dotplot(aes(fill=myc),binaxis='y', stackdir='center', dotsize=1, binwidth = 2) +
+  stat_summary(fun = "mean", geom = "point",  size=mean_size,shape=18, colour="red") +
+  stat_summary(fun.data = mean_se, geom = "errorbar",width=.1, colour="red") +
+  #scale_color_manual(values=mycols2) +
+  #scale_fill_manual(values=mycols2) +
   ylab(expression(paste(CO[2]," effect on N-uptake (%)", sep=""))) + xlab("Nutrient-acquisition strategy") +
-  scale_y_continuous(breaks = seq(-20, 40, by = 10), limits = c(-23,40)) +
-  theme_cowplot() +
+  #scale_y_continuous(breaks = seq(-20, 40, by = 10), limits = c(-23,40)) +
+  theme_cowplot(font_size=10) +
   theme(legend.position="none")
 
 #### Fine-root boxplot ####
-fr.p <- ggplot(nup, aes(myc, make_pct(FR), fill=myc)) + 
+fr.p <- ggplot(nup, aes(myc, make_pct(FR))) + 
   geom_hline(yintercept = 0, lty=2, size=1) + 
-  geom_boxplot(alpha=0.7) +
-  stat_summary(fun=mean, geom="point", shape=23, size=4, fill="black") +
+  geom_boxplot(alpha=0.7, fill=mycols_vegsoil[1]) +
+  #stat_summary(fun=mean, geom="point", shape=23, size=4, fill="black") +
   #geom_violin() +
   #geom_point(aes(fill=myc),size=3,shape = 21, position = position_jitter(width = 0.01)) +
-  geom_dotplot(aes(fill=myc),binaxis='y', stackdir='center', dotsize=1, binwidth = 2) +
-  scale_color_manual(values=mycols2) +
-  scale_fill_manual(values=mycols2) +
+  #geom_dotplot(aes(fill=myc),binaxis='y', stackdir='center', dotsize=1, binwidth = 2) +
+  stat_summary(fun = "mean", geom = "point",  size=mean_size,shape=18, colour="red") +
+  stat_summary(fun.data = mean_se, geom = "errorbar",width=.1, colour="red") +
+  #scale_color_manual(values=mycols2) +
+  #scale_fill_manual(values=mycols2) +
   ylab(expression(paste(CO[2]," effect on fine-root production (%)", sep=""))) + xlab("Nutrient-acquisition strategy") +
-  scale_y_continuous(breaks = seq(-20, 40, by = 10), limits = c(-23,40)) +
-  theme_cowplot() +
+  #scale_y_continuous(breaks = seq(-20, 40, by = 10), limits = c(-23,40)) +
+  theme_cowplot(font_size=10) +
   theme(legend.position="none")
 
+#### MAOM POM ####
+frac <- read.csv("eCO2 POM-MAOM - Sheet1.csv") %>% mutate(POM=log(POM.elev/POM.amb), MAOM=log(MAOM.elev/MAOM.amb)) %>% 
+  rename(myc=AM...0..ECM...1) %>% tidyr::pivot_longer(cols=POM:MAOM) %>% filter(myc!="N-fixing", N!="Nhigh")
+
+frac.p <- ggplot(frac, aes(myc, make_pct(value))) + 
+  geom_hline(yintercept = 0, lty=2, size=1) + 
+  geom_boxplot(aes(fill=name, color=name),alpha=0.7,position=position_dodge(0.8)) +
+  #stat_summary(fun=mean, geom="point", shape=23, size=4, fill="black") +
+  #geom_violin() +
+  #geom_point(aes(fill=myc),size=3,shape = 21, position = position_jitter(width = 0.01)) +
+  #geom_dotplot(aes(fill=name),binaxis='y', stackdir='center', dotsize=1, binwidth = 2, position=position_dodge(0.8),show.legend = F) +
+  stat_summary(aes(group=name),fun = "mean", geom = "point",  size=mean_size, position=position_dodge(0.8),show.legend = F,shape=18, colour="red") +
+  stat_summary(aes(group=name),fun.data = mean_se, geom = "errorbar",width=.1, position=position_dodge(0.8),show.legend = F, colour="red") +
+  scale_color_manual(values=mycols3) +
+  scale_fill_manual(values=c(mycols_vegsoil[2],mycols_vegsoil[2])) +
+  ylab(expression(paste(CO[2]," effect on soil aggregation (%)", sep=""))) + xlab("Nutrient-acquisition strategy") +
+  #scale_y_continuous(breaks = seq(-20, 40, by = 10), limits = c(-23,50)) +
+  theme_cowplot(font_size=10) +
+  theme(legend.title = element_blank(),legend.direction = "horizontal",
+        legend.position = c(0.95, 0.95), legend.justification = "right")
+
+
 ##### FIG.2 #####
-fig2 <- plot_grid(myco,nup.p,
-                        align="hv",
-                        labels = "auto",
-                        hjust = -2,
+right <- plot_grid(nup.p + xlab(""),frac.p, nrow=2, labels = c("b","c"), align="v", vjust = 1, hjust = .7, label_size=10)
+fig2 <- plot_grid(myco,right,
+                        vjust = 1,
+                        axis = "b",
+                        labels = c("a",""), label_size=10,
+                        rel_widths = c(1, 1),
                         nrow = 1, ncol=2)
-save_plot("graphs/Fig2.pdf", fig2, ncol=2, nrow=1, base_width=3.5, device = cairo_pdf, fallback_resolution = 1200)
-save_plot("graphs/Fig2.png", fig2, ncol=2, nrow=1, dpi= 800, base_width=3.5,type = "cairo-png")
+save_plot("graphs/Fig2.pdf", fig2, ncol=2, nrow=1, base_height = 4, base_width = 3, device = cairo_pdf, fallback_resolution = 1200)
+save_plot("graphs/Fig2.png", fig2, ncol=2, nrow=1, dpi= 800, base_height = 4, base_width = 3, type = "cairo-png")
