@@ -10,7 +10,7 @@ biomass.a <- area(biomass.tpix)
 biomass.tha <- overlay(biomass.tpix, biomass.a, fun=function(x,y) x/(y*100)) # Mg/ha
 eco.tpix <- soil.tpix + biomass.tpix
 eco.tha <- soil.tha + biomass.tha
-soc <- raster("~/OneDrive/OneDrive - Universitat Autònoma de Barcelona/IIASA/maps/SOC_015cm_aggregated0p25_gm2.tif") # g/m2
+soc <- raster("~/OneDrive/OneDrive - Universitat Autònoma de Barcelona/IIASA/maps/SOC_030cm_aggregated0p25_gm2.tif") # g/m2
 soc <- mask(soc, soil.tpix)
 soc.tha <- soc*0.01 # Mg/ha
 soc.a <- area(soc.tha) # get area of projected raster.

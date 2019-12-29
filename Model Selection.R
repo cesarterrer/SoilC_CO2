@@ -21,118 +21,137 @@ data <- dat %>% rename ("Ecosystem.type"=Ecosystem.type , "Duration"=nyears,  "E
                         "Effect.biomass"=biomass, "Nitrogen.fertilization"=N, "Symbiotic.type"=Myc, "Soil.depth"=Depth..cm.) %>%
   mutate( Cstock = amb) %>% # Standing C stocks
   filter(Symbiotic.type != "NM") # Remove NM species (only 1)
-
+data.abs <- data %>% dplyr::select(-yi, -vi) %>% rename(yi=abs, vi=abs.var)
 moderators <- c("Ecosystem.type", "Duration",  "Symbiotic.type", "Effect.biomass", "MAT", "MAP",
-                "Experiment.type","Disturbance","Nitrogen.fertilization","Cstock","Soil.depth")
-
+                "Experiment.type","Disturbance","Nitrogen.fertilization","Cstock","Soil.depth", "FPARmean", "LAImax")
+newnames <- c("Ecosystem type", "Duration",  "Symbiotic type", "Effect biomass", "MAT", "MAP",
+              "Experiment type","Disturbance","Nitrogen fertilization","Soil C stock","Soil depth", "FPAR", "LAI")
+names(newnames) <- moderators
 ########################### MODEL SELECTION #####################
 
 ####---------------------------------------------- META-FOREST ----------------------------------------------####
 
 ###-------------- OPTIMIZATION --------------###
-### RELATIVE###
+set.seed(36326)
+# Check how many iterations metaforest needs to converge
+check_conv <- MetaForest(as.formula(paste0("yi~", paste(moderators, collapse = "+"))),
+                         data = data.abs,
+                         study = "Site",
+                         whichweights = "random",
+                         num.trees = 10000)
+# Plot convergence trajectory
+plot(check_conv)
+
+# Perform recursive preselection
+set.seed(45)
+preselected <- preselect(check_conv, replications = 100, algorithm = "replicate")
+saveRDS(preselected, "preselected_rep.RData")
+p <- plot(preselected, label_elements = newnames)
+ggsave("graphs/preselected.pdf", p, width =  6.875, units = "in")
+ggsave("graphs/preselected.png", p, width =  6.875, units = "in")
+
+# Tune the metaforest analysis
+
 # Set up 10-fold grouped (=clustered) CV
+set.seed(728)
+#cv_folds <- trainControl(index = groupKFold(data$Site, k = 10),method = "cv")
 cv_folds <- trainControl(method = "cv", 10)
+#repeatedcv <- trainControl(index = groupKFold(data$Site, k = 10), method="repeatedcv", number=10, repeats=3)
+repeatedcv <- trainControl(method="repeatedcv", number=10, repeats=3)
 # Set up a tuning grid for the three tuning parameters of MetaForest
 tuning_grid <- expand.grid(whichweights = c("random", "fixed", "unif"),
                            mtry = 2:6,
                            min.node.size = 2:6)
+
+################ ABSOLUTE ###############
 # Select only moderators and vi
-X <- data[, c("vi", moderators)]
+Y <- dplyr::select(data.abs, "vi", preselect_vars(preselected, cutoff = .5))
+selected_mods <- preselect_vars(preselected, cutoff = .5)
+saveRDS(selected_mods, file="preselect_mods.RData")
 # Train the model
-mf_cv <- train(y = data$yi,
-               x = X,
+set.seed(36326)
+mf_cv_abs <- train(y = data.abs$yi,
+               x = Y,
                method = ModelInfo_mf(),
-               trControl = cv_folds,
+               trControl = repeatedcv,
                tuneGrid = tuning_grid,
-               num.trees = 20000)
-saveRDS(mf_cv, "mf_cv.RData")
+               num.trees = 10000)
+saveRDS(mf_cv_abs, "mf_cv_abs.RData")
 # Check result
-mf_cv
+mf_cv_abs # The final values used for the model were whichweights = unif, mtry = 4 and min.node.size = 4
+# Cross-validated R2 of the final model:
+mf_cv_abs$results[which.min(mf_cv_abs$results$RMSE), ]$Rsquared # 0.5292879
+# Extract final model
+forest.abs <- mf_cv_abs$finalModel
+# Plot convergence
+plot(forest.abs)
+# OOB  R2 of the final model:
+forest.abs$forest$r.squared
+# Plot variable importance
+imp.abs <- VarImpPlot(forest.abs,label_elements = newnames)
+ggsave("graphs/VI_Abs_metaforest.pdf", imp.abs, width =  6.875, units = "in")
+ggsave("graphs/VI_Abs_metaforest.png", imp.abs, width =  6.875, units = "in")
+
+# Plot partial dependence
+arr <- as.list(newnames)
+names(arr) <- moderators
+mylabel <- function(val) { return(lapply(val, function(x) arr[x])) }
+
+p <- PartialDependence(forest.abs, vars = names(forest.abs$forest$variable.importance)[order(forest.abs$forest$variable.importance, decreasing = TRUE)], rawdata = T, pi = .95, output = "list", bw = TRUE)
+p <- lapply(p, function(x){
+  x + facet_wrap(~Variable,labeller=mylabel)
+})
+p[[5]] <- p[[5]]+scale_x_discrete(labels = c("N-fert", "non-N-fert"))
+p[[7]] <- p[[7]]+scale_x_discrete(labels = c("Ag", "Gr", "Shr", "For"))
+png("graphs/PartialDependence_Absolute.png",  width = 6.875 , height = 6.8, units = "in", res = 300)
+metaforest:::merge_plots(p)
+dev.off()
+cairo_pdf("graphs/PartialDependence_Absolute.pdf",  width = 6.875 , height = 6.8)
+metaforest:::merge_plots(p)
+dev.off()
+
+################ RELATIVE ###############
+# Select only moderators and vi
+preselected <- readRDS("preselected_rep.RData")
+X <- dplyr::select(data, "vi", "Site", preselect_vars(preselected, cutoff = .5))
+# Train the model
+set.seed(36326)
+mf_cv <- train(y = data$yi,
+                   x = X,
+                   study = "Site",
+                   method = ModelInfo_mf(),
+                   trControl = cv_folds,
+                   tuneGrid = tuning_grid,
+                   num.trees = 7000)
 # Cross-validated R2 of the final model:
 mf_cv$results[which.min(mf_cv$results$RMSE), ]$Rsquared
 # Extract final model
-final <- mf_cv$finalModel
+final <- mf_cv$final
 # Plot convergence
 plot(final)
 # OOB  R2 of the final model:
 final$forest$r.squared
 # Plot variable importance
-cairo_pdf("graphs/VI_metaforest.pdf", width = 8.27)
-VarImpPlot(final)
+imp <- VarImpPlot(final,label_elements = newnames)
+ggsave("graphs/VI_Rel_metaforest.pdf", imp, width =  6.875, units = "in")
+ggsave("graphs/VI_Rel_metaforest.png", imp, width =  6.875, units = "in")
+
+# Plot partial dependence
+arr <- as.list(newnames)
+names(arr) <- moderators
+mylabel <- function(val) { return(lapply(val, function(x) arr[x])) }
+
+p <- PartialDependence(final, vars = names(final$forest$variable.importance)[order(final$forest$variable.importance, decreasing = TRUE)], rawdata = T, pi = .95, output = "list", bw = TRUE)
+p <- lapply(p, function(x){
+  x + facet_wrap(~Variable,labeller=mylabel)
+})
+p[[2]] <- p[[2]]+scale_x_discrete(labels = c("N-fert", "non-N-fert"))
+p[[7]] <- p[[7]]+scale_x_discrete(labels = c("Ag", "Gr", "Shr", "For"))
+png("graphs/PartialDependence_Relative.png",  width = 6.875 , height = 6.8, units = "in", res = 300)
+metaforest:::merge_plots(p)
 dev.off()
-
-cairo_pdf("graphs/PartialDependence_Relative.pdf", width = 8.27)
-PartialDependence(final, vars = names(final$forest$variable.importance)[order(final$forest$variable.importance, decreasing = TRUE)],
-                  rawdata=TRUE, plot_int = TRUE)
-dev.off()
-
-################ ABSOLUTE ###############
-# Select only moderators and vi
-Y <- data[, c("abs.var", moderators)] %>% rename(vi=abs.var)
-# Train the model
-mf_cv_abs <- train(y = data$abs,
-               x = Y,
-               method = ModelInfo_mf(),
-               trControl = cv_folds,
-               tuneGrid = tuning_grid,
-               num.trees = 20000)
-saveRDS(mf_cv_abs, "mf_cv_abs.RData")
-# Check result
-mf_cv_abs
-# Cross-validated R2 of the final model:
-mf_cv_abs$results[which.min(mf_cv_abs$results$RMSE), ]$Rsquared
-# Extract final model
-final_abs <- mf_cv_abs$finalModel
-# Plot convergence
-plot(final_abs)
-# OOB  R2 of the final model:
-final_abs$forest$r.squared
-# Plot variable importance
-cairo_pdf("graphs/VI_Abs_metaforest.pdf", width = 8.27)
-VarImpPlot(final_abs)
-dev.off()
-
-cairo_pdf("graphs/PartialDependence_Absolute.pdf", width = 8.27)
-PartialDependence(final_abs, vars = names(final_abs$forest$variable.importance)[order(final_abs$forest$variable.importance, decreasing = TRUE)],
-                  rawdata=TRUE, plot_int = TRUE)
-dev.off()
-
-
-
-#####-------------- SIMPLE --------------#####
-#### Relative effect ####
-X.rel <- data[, c("yi","vi", moderators)]
-forest.rel <- MetaForest(yi ~ .,
-                         data = X.rel,
-                         whichweights = "unif", mtry = 6, min.node.size = 6,
-                         num.trees = 30000)
-
-forest.rel$forest$r.squared
-cairo_pdf("graphs/VI_RELATIVE.pdf", width = 8.27)
-VarImpPlot(forest.rel)
-dev.off()
-cairo_pdf("graphs/PartialDependence_RELATIVE.pdf", width = 8.27)
-PartialDependence(forest.rel, vars = names(forest.rel$forest$variable.importance)[order(forest.rel$forest$variable.importance, decreasing = TRUE)],
-                  rawdata=TRUE, plot_int = TRUE)
-dev.off()
-
-
-#### Absolute Effect ####
-X.abs <- data[, c("abs","abs.var", moderators)] %>% rename(vi=abs.var)
-
-forest.abs <- MetaForest(abs ~ ., 
-                         data = X.abs,
-                         whichweights = "unif", mtry = 4, min.node.size = 2,
-                         num.trees = 30000)
-
-forest.abs$forest$r.squared
-cairo_pdf("graphs/VI_ABSOLUTE.pdf", width = 8.27)
-VarImpPlot(forest.abs)
-dev.off()
-cairo_pdf("graphs/PartialDependence_ABSOLUTE.pdf", width = 8.27)
-PartialDependence(forest.abs, vars = names(forest.abs$forest$variable.importance)[order(forest.abs$forest$variable.importance, decreasing = TRUE)],
-                  rawdata=TRUE, plot_int = TRUE)
+cairo_pdf("graphs/PartialDependence_Relative.pdf",  width = 6.875 , height = 6.8)
+metaforest:::merge_plots(p)
 dev.off()
 
 ################### ------------------------------------------------------------------------------------------#####################

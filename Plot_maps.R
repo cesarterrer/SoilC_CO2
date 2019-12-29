@@ -30,30 +30,30 @@ nord <- read_palette("~/OneDrive/OneDrive - Universitat Autònoma de Barcelona/I
 
 # Increment
 abs <- raster("maps/CO2abslEffect_RF_tha.tif")  # Mg/ha
-abs <- projectRaster(abs,crs="+proj=eqearth",over=T)
+abs <- projectRaster(abs,crs="+proj=robin",over=T)
 abs.df = as.data.frame(abs,xy=TRUE)
 range(abs.df$CO2abslEffect_RF_tha, na.rm=T)
 
 # map the bbox
 bbox <- shapefile("~/OneDrive/OneDrive - Universitat Autònoma de Barcelona/IIASA/maps/ne_110m_wgs84_bounding_box.VERSION/ne_110m_wgs84_bounding_box.shp") 
-bbox <- spTransform(bbox, CRS("+proj=eqearth"))
+bbox <- spTransform(bbox, CRS("+proj=robin"))
 bbox_df<- fortify(bbox)
 
 # Coastlines
 wmap <- readOGR(dsn="~/OneDrive/OneDrive - Universitat Autònoma de Barcelona/IIASA/maps/ne_50m_land", layer="ne_50m_land")
 # http://www.naturalearthdata.com/downloads/
-wmap_wgs <- spTransform(wmap, CRS("+proj=eqearth"))
+wmap_wgs <- spTransform(wmap, CRS("+proj=robin"))
 wmap_wgs_df <- fortify(wmap_wgs)
 
 # Ocean
 # http://www.naturalearthdata.com/downloads/
 ocean <- readOGR(dsn="~/OneDrive/OneDrive - Universitat Autònoma de Barcelona/IIASA/maps/ne_50m_ocean", layer="ne_50m_ocean")
-ocean <- spTransform(ocean, CRS("+proj=eqearth"))
+ocean <- spTransform(ocean, CRS("+proj=robin"))
 oceanmap_df <- fortify(ocean)
 
 # graticule (Robin)
 grat <- shapefile("~/OneDrive/OneDrive - Universitat Autònoma de Barcelona/IIASA/maps/ne_110m_graticules_30.VERSION/ne_110m_graticules_30.shp") 
-grat<- spTransform(grat, CRS("+proj=eqearth"))  # reproject graticule
+grat<- spTransform(grat, CRS("+proj=robin"))  # reproject graticule
 grat_df <- fortify(grat)
 
 # create a blank ggplot theme
@@ -108,8 +108,8 @@ scale_fill_discrete_gradient <- function(..., colours, bins = 11, na.value = "tr
 find_cpt("temperature")
 #myinterval <- seq(-3,11,1)
 #abs.df$colbreaks <- findInterval(abs.df$CO2abslEffect_RF_tha, vec = myinterval)
-mycols <- cpt(pal = "arendal_temperature", rev=T, n=12)
-mycols <- mycols[2:11]
+mycols <- cpt(pal = "arendal_temperature", rev=T, n=13)
+mycols <- mycols[2:12]
 #mycols[4] <- "#ffffff"
 show_col(mycols)
 
@@ -119,11 +119,11 @@ p <- ggplot()+
   geom_polypath(data=wmap_wgs_df, aes(long,lat,group=group),fill="transparent", color="black", size = 0.1) +
   geom_polygon(data=bbox_df, aes(x=long, y=lat), colour=nord["nord3"], fill="transparent", size = 0.3) +
   scale_fill_discrete_gradient(
-    bins = 10,
+    bins = 11,
     colours = mycols,
     #breaks=-3:11,
-    breaks=c(-2,0,2,4,6,8,10),
-    limits = c(-2, 8),
+    breaks=-1:10,
+    limits = c(-1, 10),
     guide = guide_colourbar(nbin = 100, raster = FALSE, frame.colour = "black", ticks.colour = NA)) +
   xlab(expression(paste("Change in soil C stocks  (Mg ", ha^-1,")", " in response to ", CO[2] ,sep=""))) +
   coord_equal() + 
