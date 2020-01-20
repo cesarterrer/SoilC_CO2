@@ -1,11 +1,15 @@
-Citation,Biome,"AM = 0, ECM = 1",N,Experiment,Site,depth,POM.amb,POM.amb.se,POM Units,POM.amb.n,MAOM.amb,MAOM.amb.se,MAOM Units,MAOM.amb.n,POM.elev,POM.elev.se,POM.elev.n,MAOM.elev,MAOM.elev.se,MAOM.elev.n
-Iversen et al. 2012,Temperate forest,AM,,ORNL FACE,ORNL FACE,0-5,11,1.1,kg C / m3,3,18.5,0.9,kg C / m3,3,13.6,3.7,2,20.1,1.7,2
-Pendall et al. 2011,Grassland,AM,,TasFACE C3,TasFACE,0-5,8.1,0.5,g C /kg soil,3,14.3,1,g C /kg soil,3,10.7,1,3,16.3,1.1,3
-Pendall et al. 2012,Grassland,AM,,TasFACE C4,TasFACE,0-5,10.6,3.3,g C /kg soil,3,16.7,3.2,g C /kg soil,3,15.5,4.3,3,17.4,0.6,3
-Hofmockel et al. 2011,Temperate forest,ECM,,Rhinelander FACE aspen-maple,Rhinelander FACE,0-20,491.37,32.87,g/m2,2,2822,95,g/m2,2,492.05,27.38,2,2938,117,2
-Jastrow et al. 2000,,AM,,KSU opentop,KSU opentop,0-30,5.863398,,,,20.610038,,,,6.976249,,,21.5013035,,
-Jastrow,,N-fixing,Nhigh,SoyFACE,SoyFACE,0-12.5,2.37,,,,21.1132621,,,,2.91,,,21.5914405,,
-Hofmockel et al. 2011,Temperate forest,ECM,,Rhinelander FACE aspen,Rhinelander FACE,0-20,480.7,20.82,g/m2,2,2904,56,g/m2,2,450.72,21.9,2,2848,68,2
-Hofmockel et al. 2011,Temperate forest,ECM,,Rhinelander FACE aspen-birch,Rhinelander FACE,0-20,423.6,24.1,g/m2,2,2714,63,g/m2,2,522.87,46.01,2,2962,118,2
-Lichter et al. 2005,Temperate forest,ECM,,Duke FACE,Duke FACE,0-15,1431.4,134.2,gC/m2,3,326.3,62.7,gC/m2,3,1696.6,164,3,326.9,28.8,3
-Hungate et al. 2013,subtropical woodland,ECM,,Merritt Island,Merritt Island,0-60,2534.6,260.2,g/m2,8,965.8,1026.9,g/m2,8,2394.4,333.3,8,1026.9,330.9,8
+Citation,Biome,Myc,N,Experiment,Site,depth,POM.amb,POM.elev,POM.amb.se,POM.elev.se,POM.amb.n,POM.elev.n,POM Units,MAOM.amb,MAOM.elev,MAOM.amb.se,MAOM.elev.se,MAOM.amb.n,MAOM.elev.n,MAOM Units
+Iversen et al. 2012,Temperate forest,AM,,,ORNL FACE,0-5,11,13.6,1.1,3.7,3,2,kg C / m3,18.5,20.1,0.9,1.7,3,2,kg C / m3
+Pendall et al. 2011,Grassland,AM,,C3,TasFACE,0-5,8.1,10.7,0.5,1,3,3,g C /kg soil,14.3,16.3,1,1.1,3,3,g C /kg soil
+Pendall et al. 2012,Grassland,AM,,C4,TasFACE,0-5,10.6,15.5,3.3,4.3,3,3,g C /kg soil,16.7,17.4,3.2,0.6,3,3,g C /kg soil
+Hofmockel et al. 2015,Temperate forest,AM,,Aspen-Maple,Rhinelander FACE,0-20,1001.07,1036.14,42.72853,36.41627,2,2,g/m2,2800,2909.38,87.5,147.65,2,2,g/m2
+Jastrow et al. 2005 (unpublished data derived from fractionations used in this paper),Grassland,AM,,,KSU open top,0-5,21.04394,25.81026,1.350879,0,6,3,g C/ kg soil,27.83165,26.76812,0.640368,1.219617,6,3,g C/ kg soil
+Six et al. 2001 Plant and Soil,grassland,AM,,Lolium,SwissFACE,0-10,467,638,52,12,3,3,g C / m2,2944,2990,456.9683,439.164,3,3,g C / m2
+Six et al. 2001 Plant and Soil,grassland,AM,,Trifolium,SwissFACE,0-10,641,582,80,45,3,3,g C / m2,2984,3149,607.2924,801.2646,3,3,g C / m2
+Niklaus et al. 2001,grassland,AM,,,Switzerland-bromus grassland,0-10,650,519,53,33,8,8,g C / m2,3090,3147,229,146,8,8,g C / m2
+Allard2005,Grassland,AM,,,New Zealand FACE,0-25,2.7,3.1,0.1,0.1,3,3,g C / kg soil,33.2,34.9,1.2,1.6,3,3,g C / kg soil
+Lichter et al. 2005,Temperate forest,ECM,,,Duke FACE,0-15,2274.9,2573.4,146.0501,233.9501,3,3,gC/m2,326.3,326.9,62.7,28.8,3,3,gC/m2
+Hofmockel et al. 2011,Temperate forest,ECM,,Aspen,Rhinelander FACE,0-20,991.52,968.63,25.82539,27.34204,2,2,g/m2,2887.5,2827.34,43.75,65.63,2,2,g/m2
+Hofmockel et al. 2013,Temperate forest,ECM,,Aspen-Birch,Rhinelander FACE,0-20,913.11,1069.71,29.77181,50.46848,2,2,g/m2,2696.09,2947.66,54.69,136.72,2,2,g/m2
+Hungate et al. 2013,subtropical woodland,ECM,,,Merritt Island,0-60,5247.4,4771.3,555.1693,465.3629,8,8,g/m2,1672.1,1422.9,1033.946,343.4781,8,8,g/m2
+Del Galdo et al. 2006,chaparral,ECM,,,Sky Oaks,0-10,2403,1537,655.8689,273.6786,2,2,g / m2,756,632,76.92204,44.19276,2,2,g / m2

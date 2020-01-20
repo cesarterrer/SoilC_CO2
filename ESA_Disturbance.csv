@@ -1,7 +1,7 @@
 NB_LAB,LCCOwnLabel,ESAagg
 0,No data,NA
-10,"Cropland, rainfed",disturbed
-11,Herbaceous cover,disturbed
+10,"Cropland, rainfed",intact
+11,Herbaceous cover,intact
 12,Tree or shrub cover,intact
 20,"Cropland, irrigated or post-flooding",disturbed
 30,"Mosaic cropland (>50%) / natural vegetation (tree, shrub, herbaceous cover) (<50%)",intact
@@ -28,9 +28,9 @@ NB_LAB,LCCOwnLabel,ESAagg
 151,Sparse tree (<15%),NA
 152,Sparse shrub (<15%),NA
 153,Sparse herbaceous cover (<15%),NA
-160,"Tree cover, flooded, fresh or brakish water",NA
-170,"Tree cover, flooded, saline water",NA
-180,"Shrub or herbaceous cover, flooded, fresh/saline/brakish water",NA
+160,"Tree cover, flooded, fresh or brakish water",intact
+170,"Tree cover, flooded, saline water",intact
+180,"Shrub or herbaceous cover, flooded, fresh/saline/brakish water",intact
 190,Urban areas,NA
 200,Bare areas,NA
 201,Consolidated bare areas,NA

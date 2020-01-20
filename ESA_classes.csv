@@ -28,9 +28,9 @@ NB_LAB,LCCOwnLabel,ESAagg,ESAagg1,ESAagg2
 151,Sparse tree (<15%),NA,NA,NA
 152,Sparse shrub (<15%),NA,NA,NA
 153,Sparse herbaceous cover (<15%),NA,NA,NA
-160,"Tree cover, flooded, fresh or brakish water",NA,NA,NA
-170,"Tree cover, flooded, saline water",NA,NA,NA
-180,"Shrub or herbaceous cover, flooded, fresh/saline/brakish water",NA,NA,NA
+160,"Tree cover, flooded, fresh or brakish water",Tree Stand,NA,NA
+170,"Tree cover, flooded, saline water",Tree Stand,NA,NA
+180,"Shrub or herbaceous cover, flooded, fresh/saline/brakish water",Shrubland,NA,NA
 190,Urban areas,NA,NA,NA
 200,Bare areas,NA,NA,NA
 201,Consolidated bare areas,NA,NA,NA
