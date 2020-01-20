@@ -97,7 +97,7 @@ mylabel <- function(val) { return(lapply(val, function(x) arr[x])) }
 
 pi <- PartialDependence(forest.abs, vars = names(forest.abs$forest$variable.importance)[order(forest.abs$forest$variable.importance, decreasing = TRUE)], rawdata = T, pi = NULL, output = "list",  plot_int = TRUE)
 p <- lapply(pi, function(x){
-  x + facet_wrap(~Variable,labeller=mylabel, nrow=2, ncol = 5) + ylim(c(-500,600))
+  x + facet_wrap(~Variable,labeller=mylabel, nrow=2, ncol = 5) + ylim(c(-300,600))
 })
 p[[7]] <- p[[7]]+scale_x_discrete(labels = c("N-fert.", "non-fert."))
 p[[8]] <- p[[8]]+scale_x_discrete(labels = c("Ag", "Gr", "Shr", "For"))

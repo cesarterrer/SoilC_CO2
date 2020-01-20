@@ -13,9 +13,9 @@ model_data <- left_join(dplyr::select(models, -Cplant),dplyr::select(data,Site,C
 models.p <- ggplot(data, aes(make_pct(Cplant), make_pct(Csoil))) + 
   #geom_point(data=model_data,aes(colour=model), alpha=0.3) + 
   geom_point(data=models,aes(colour=model,shape=site), alpha=0.3,size=3) + 
-  #geom_errorbar(aes(ymin=make_pct(Csoil-SE.soil), ymax=make_pct(Csoil+SE.soil)), width=.1) +
   geom_point(aes(shape=Site),size=3) +
   geom_smooth(method = "lm", se=FALSE, color="black", formula = y ~ x) +
+  stat_smooth(geom='line',data=models,aes(make_pct(Cplant), make_pct(Csoil),colour=model, group=model), alpha=0.3,method = "lm", se=FALSE) +
   scale_shape_manual(values=c(15,16,0,1,2,17)) +
   labs(x=expression(paste(CO[2]," effect on biomass carbon (%)", sep="")),
        y=expression(paste(CO[2]," effect on soil carbon (%)", sep=""))) +
