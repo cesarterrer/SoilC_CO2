@@ -18,9 +18,11 @@ dat <- filter(dat, biomass != "NA") # Remove experiments with missing biomass da
 dat <- filter(dat, nyears >= 0.5) # Remove experiments of less than 6 months duration
 dat$obs <- 1:nrow(dat)
 dat <- dat %>% mutate(Myc= recode(Myc, Nfixer = "N-fixer"), N=recode(N,Nlow = "non-fertilized",Nhigh = "N-fertilized"))
+dplyr::select(dat,Experiment,Experiment_type,Ecosystem.type,nyears,Citation) %>% write.csv("metadata.csv")
 filtered <- filter(dat, N=="non-fertilized", Experiment_type != "Chamber", Disturbance=="intact")
 fertilized <- filter(dat, N=="N-fertilized", Experiment_type != "Chamber", Disturbance=="intact")
 intact <- filter(dat, Experiment_type != "Chamber", Disturbance=="intact")
+
 ## BIOMASS ##
 summary(rma.mv(yi, vi, mods= ~biomass, data=dat,  random = ~ 1 | Site / obs)) # Significant interaction
 summary(rma(yi, vi, mods= ~ amb+biomass+Myc:amb, data=intact, knha=TRUE)) # Significant interaction
@@ -296,10 +298,10 @@ nhigh <- ggplot(filter(all, factor=="N-fertilized"), aes(x=factor, y=make_pct(es
   #scale_y_continuous(breaks = seq(-20, 40, by = 10), limits = c(-23,40)) +
   theme_cowplot(font_size=10) +
   theme(legend.title = element_blank(),legend.direction = "horizontal",
-        legend.position = c(0, 0.95))
+        legend.position = c(0, 0.98))
 plot_Nhigh <- plot_grid(fert.p, nhigh,
                         align="hv",
-                        labels = "auto",
+                        labels = "AUTO",
                         hjust = -2,
                         rel_widths = c(1, 0.5),
                         nrow = 1, ncol=2)

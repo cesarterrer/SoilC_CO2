@@ -30,6 +30,7 @@ Nm.df <- coef(summary(Nm)) %>% mutate(type="Nitrogen fertilization",
 # Ecosystem.type
 Ecom <- rma.mv(yi, vi, data=dat, mods=~Ecosystem.type -1,  random = ~ 1 | Site / obs, subset= Ecosystem.type !="Wetland")
 Ecom
+anova(Ecom, L=c(0,1,0,-1))
 make_pct(coef(summary(Ecom)))
 Ecom.n <- dat %>%  group_by(Ecosystem.type) %>% summarise(n = n())
 Ecom.df <- coef(summary(Ecom)) %>% mutate(type="Ecosystem type", 
@@ -38,6 +39,8 @@ Ecom.df <- coef(summary(Ecom)) %>% mutate(type="Ecosystem type",
 # Experiment.type
 Expm <- rma.mv(yi, vi, data=dat, mods=~Experiment_type -1,  random = ~ 1 | Site / obs)
 Expm
+anova(Expm, L=c(1,-1,0))
+anova(Expm, L=c(1,0,-1))
 make_pct(coef(summary(Expm)))
 Expm.n <- dat %>%  group_by(Experiment_type) %>% summarise(n = n())
 Expm.df <- coef(summary(Expm)) %>% mutate(type="Experiment type", 
@@ -54,6 +57,7 @@ Biomem.df <- coef(summary(Biomem)) %>% mutate(type="Biome",
 # Disturbance
 Disturbancem <- rma.mv(yi, vi, data=dat, mods=~Disturbance -1,  random = ~ 1 | Site / obs)
 Disturbancem
+anova(Disturbancem, L=c(1,-1))
 make_pct(coef(summary(Disturbancem)))
 Disturbancem.n <- dat %>%  group_by(Disturbance) %>% summarise(n = n())
 Disturbancem.df <- coef(summary(Disturbancem)) %>% mutate(type="Disturbance", 
@@ -63,6 +67,7 @@ Disturbancem.df <- coef(summary(Disturbancem)) %>% mutate(type="Disturbance",
 # Myc
 Mycm <- rma.mv(yi, vi, data=dat, mods=~Myc -1,  random = ~ 1 | Site / obs, subset= Myc != "NM")
 Mycm
+anova(Mycm, L=c(1,-1,0,0))
 make_pct(coef(summary(Mycm)))
 Mycm.n <- dat %>%  group_by(Myc) %>% summarise(n = n()) %>% filter(Myc != "NM")
 Mycm.df <- coef(summary(Mycm)) %>% mutate(type="Nutrient-acquisition strategy", 

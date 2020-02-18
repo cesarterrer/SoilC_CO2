@@ -30,8 +30,8 @@ nord <- read_palette("~/OneDrive/OneDrive - Universitat Autònoma de Barcelona/I
 
 # Absolute Effect
 abs <- raster("maps/CO2abslEffect_RF_tha.tif")  # Mg/ha
-abs <- projectRaster(abs,crs="+proj=robin",over=T)
-abs.df = as.data.frame(abs,xy=TRUE)
+abs_robin <- projectRaster(abs,crs="+proj=robin",over=T)
+abs.df = as.data.frame(abs_robin,xy=TRUE)
 range(abs.df$CO2abslEffect_RF_tha, na.rm=T)
 
 # Absolute Error
@@ -76,13 +76,13 @@ theme_opts <- list(theme(panel.grid.minor = element_blank(),
                          plot.title = element_text(size=22),
                          plot.margin = unit(c(.5,-.5,.5,-.5), "lines"), 
                          legend.title = element_blank(),
-                         axis.title.x = element_text(margin = margin(t = -10, r = 0, b = 0, l = 0)),
+                         axis.title.x = element_text(margin = margin(t = -5, r = 0, b = 0, l = 0)),
                          legend.margin=margin(t=-.5, r=0, b=0, l=0, unit="lines"), 
                          legend.position="bottom", 
                          legend.direction = "horizontal",
-                         legend.key.width = unit(1, "cm"), 
-                         legend.key.height = unit(0.2, "cm"),
-                         legend.text = element_text(margin = margin(t = .2, unit = "lines"))
+                         legend.key.width = unit(.7, "cm"), 
+                         legend.key.height = unit(0.1, "cm"),
+                         legend.text = element_text(margin = margin(t = .1, unit = "lines"))
 ))
 
 discrete_gradient_pal <- function(colours, bins = 11) {
@@ -134,14 +134,41 @@ p <- ggplot()+
     guide = guide_colourbar(nbin = 100, raster = FALSE, frame.colour = "black", ticks.colour = NA)) +
   xlab(expression(paste("Change in soil C stock  (Mg ", ha^-1,")", " in response to ", CO[2] ,sep=""))) +
   coord_equal() + 
-  theme_classic(base_size = 10) + 
+  theme_classic(base_size = 8) + 
   theme_opts
 p
 
 save_plot("graphs/CO2absEffect.pdf", p, base_aspect_ratio = 1.5, dpi=300)
 save_plot("graphs/CO2absEffect.png", p, dpi= 1200,type = "cairo-png",base_aspect_ratio = 1.5)
 
-# Uncertainties
+### PERCENTAGE ###
+perc <- raster("maps/CO2relEffect_RF_tha.tif")
+perc_robin <- projectRaster(perc,crs="+proj=robin",over=T)
+perc.df = as.data.frame(perc_robin,xy=TRUE)
+range(perc.df$CO2relEffect_RF_tha, na.rm=T)
+mycols.perc <- cpt(pal = "arendal_temperature", rev=T, n=20)
+show_col(mycols.perc)
+mycols.perc <- mycols.perc[7:20]
+p.perc <- ggplot()+ 
+  geom_polypath(data=oceanmap_df, aes(long,lat,group=group),fill= nord["nord5"], size = 0.1) +
+  geom_raster(data=perc.df,aes(x,y,fill=CO2relEffect_RF_tha)) +
+  geom_polypath(data=wmap_wgs_df, aes(long,lat,group=group),fill="transparent", color="black", size = 0.1) +
+  geom_polygon(data=bbox_df, aes(x=long, y=lat), colour=nord["nord3"], fill="transparent", size = 0.3) +
+  scale_fill_discrete_gradient(
+    bins = 14,
+    colours = mycols.perc,
+    breaks=seq(-5,30,5),
+    limits = c(-5, 30),
+    guide = guide_colourbar(nbin = 100, raster = FALSE, frame.colour = "black", ticks.colour = NA)) +
+  xlab(expression(paste("Change in soil C stock (%) in response to ", CO[2] ,sep=""))) +
+  coord_equal() + 
+  theme_classic(base_size = 8) + 
+  theme_opts
+p.perc
+save_plot("graphs/CO2relEffect.pdf", p.perc, base_aspect_ratio = 1.5, dpi=300)
+save_plot("graphs/CO2relEffect.png", p.perc, dpi= 1200,type = "cairo-png",base_aspect_ratio = 1.5)
+
+### UNCERTAINTIES ###
 uncert.col <- plasma(n=10, direction=-1)
 uncert.col.cequal <- cpt(pal = "imagej_cequal", rev=T, n=10)
 error <- ggplot()+ 
@@ -162,6 +189,31 @@ error <- ggplot()+
   theme_opts
 save_plot("graphs/CO2absEffect_uncertainties.pdf", error, base_aspect_ratio = 1.5, dpi=300)
 save_plot("graphs/CO2absEffect_uncertainties.png", error, dpi= 1200,type = "cairo-png",base_aspect_ratio = 1.5)
+
+# Percentage
+perc.se <- raster("maps/CO2relEffect.SE_RF_tha.tif")
+perc.se_robin <- projectRaster(perc.se,crs="+proj=robin",over=T)
+perc.se.df = as.data.frame(perc.se_robin,xy=TRUE)
+range(perc.se.df$CO2relEffect.SE_RF_tha, na.rm=T)
+uncert.col.se<- cpt(pal = "imagej_cequal", rev=T, n=10)
+error.perc <- ggplot()+ 
+  geom_polypath(data=oceanmap_df, aes(long,lat,group=group),fill= nord["nord5"], size = 0.1) +
+  geom_raster(data=perc.se.df,aes(x,y,fill=CO2relEffect.SE_RF_tha)) +
+  geom_polypath(data=wmap_wgs_df, aes(long,lat,group=group),fill="transparent", color="black", size = 0.1) +
+  geom_polygon(data=bbox_df, aes(x=long, y=lat), colour=nord["nord3"], fill="transparent", size = 0.3) +
+  scale_fill_discrete_gradient(
+    bins = 10,
+    colours = uncert.col.se,
+    #breaks=-3:11,
+    breaks=0:5,
+    limits = c(0, 5),
+    guide = guide_colourbar(nbin = 100, raster = FALSE, frame.colour = "black", ticks.colour = NA)) +
+  xlab("Uncertainty in soil estimate (%)") +
+  coord_equal() + 
+  theme_classic(base_size = 10) + 
+  theme_opts
+save_plot("graphs/CO2relEffect_uncertainties.pdf", error.perc, base_aspect_ratio = 1.5, dpi=300)
+save_plot("graphs/CO2relEffect_uncertainties.png", error.perc, dpi= 1200,type = "cairo-png",base_aspect_ratio = 1.5)
 
 ##### ECOSYSTEM C ######
 eco<- raster("maps/CO2abslEffect_RF_Ecosystem_tha.tif")  # Mg/ha
@@ -220,19 +272,55 @@ p.eco.se <- ggplot()+
   theme_opts
 p.eco.se
 
+### BOXPLOT ###
+library(tidyverse)
+esa <- raster("~/OneDrive/OneDrive - Universitat Autònoma de Barcelona/IIASA/maps/ESA_2012_aggregated0p25.tif")
+legend <- read.csv("ESA_classes.csv")
+s.eco <- stack(esa, abs, perc)
+eco.df <- as.data.frame(s.eco)
+names(eco.df) <- c("ESA", "abs", "perc")
+eco.df <- left_join(eco.df,legend, by=c("ESA" = "NB_LAB")) %>% drop_na()
+
+box.abs <- ggplot(data=eco.df,aes(ESAagg, abs)) + 
+  geom_boxplot(show.legend = F,outlier.alpha = 0.1) +
+  scale_fill_brewer(palette="Set3") +
+  ylab(expression(paste(eCO[2], " effect on soil C (Mg ", ha^-1,")" ,sep="")))+ xlab("") +
+  theme_classic(base_size = 8) +
+  theme(axis.text.x = element_text(size=8,angle = 25, hjust = 1))
+box.rel <- ggplot(data=eco.df,aes(ESAagg, perc)) + 
+  geom_boxplot(show.legend = F,outlier.alpha = 0.1) +
+  scale_fill_brewer(palette="Set3") + 
+  ylab(expression(paste(eCO[2], " effect on soil C (%)" ,sep="")))+ xlab("") +
+  theme_classic(base_size = 8) +
+  theme(axis.text.x = element_text(size=8,angle = 25, hjust = 1))
+boxes <- plot_grid( box.abs + theme(plot.margin = unit(c(0.2,0.1,-1,0), "cm")), 
+                   box.rel + theme(plot.margin = unit(c(-1,0.1,0,0), "cm")), 
+                   align = 'vh', 
+                   label_size = 8,
+                   labels = c("C","D"),
+                   hjust = 2, 
+                   #vjust= 4,
+                   nrow = 2,
+                   ncol=1)
+
 # FIGURE 3
-fig3 <- plot_grid( p + theme(plot.margin = unit(c(0,-.5,-1,-.5), "cm")) + xlab(expression(paste(eCO[2], " effect on soil C stocks (Mg ", ha^-1,")" ,sep=""))), 
-                  p2 + theme(plot.margin = unit(c(-1,-.5,0,-.5), "cm")) + xlab(expression(paste(eCO[2], " effect on ecosystem C stocks (Mg ", ha^-1,")" ,sep=""))), 
-                                 align = 'h', 
-                                 #label_size = 8,
-                                 labels = "AUTO",
-                                 hjust = -3, 
-                                 #vjust= 4,
-                                 nrow = 2,
-                                 ncol=1
+maps <- plot_grid( p + theme(plot.margin = unit(c(0,-.5,-1,-.5), "cm")) + xlab(expression(paste(eCO[2], " effect on soil C (Mg ", ha^-1,")" ,sep=""))), 
+                   p.perc + theme(plot.margin = unit(c(-1,-.5,0,-.5), "cm")) + xlab(expression(paste(eCO[2], " effect on soil C (%)" ,sep=""))), 
+                   align = 'h', 
+                   label_size = 8,
+                   labels = "AUTO",
+                   hjust = -3, 
+                   #vjust= 4,
+                   nrow = 2,
+                   ncol=1
 )
 
-save_plot("graphs/Fig3.png", fig3, dpi=1200, base_width = 210/2, base_height = ((3/5)*210)/2, units="mm", nrow=2, ncol = 1,type = "cairo-png")
+fig3 <- plot_grid(maps+ theme(plot.margin = unit(c(0,0,0,0), "cm")),
+                  boxes + theme(plot.margin = unit(c(0,0,0,0), "cm")),
+                  labels =NULL ,
+                  rel_widths = c(1, .5),
+                  nrow = 1, ncol=2)
+save_plot("graphs/Fig3.png", fig3, dpi=1200, ncol=2, nrow=1, base_height = 4, base_width = 2.5,type = "cairo-png")
 save_plot("graphs/Fig3.pdf", fig3, dpi=600, base_width = 210/2, base_height = ((3/5)*210)/2, units="mm",nrow=2, ncol = 1, device = cairo_pdf, fallback_resolution = 1200)
 save_plot("graphs/Fig3.eps", fig3, dpi=600, base_width = 210/2, base_height = ((3/5)*210)/2, units="mm",nrow=2, ncol = 1, device = cairo_ps, fallback_resolution = 1200)
 

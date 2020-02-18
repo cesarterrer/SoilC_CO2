@@ -6,17 +6,17 @@ NB_LAB,LCCOwnLabel,ESAagg,ESAagg1,ESAagg2
 20,"Cropland, irrigated or post-flooding",Agricultural,Cropland,Cropland
 30,"Mosaic cropland (>50%) / natural vegetation (tree, shrub, herbaceous cover) (<50%)",Agricultural,Cropland,Cropland
 40,"Mosaic natural vegetation (tree, shrub, herbaceous cover) (>50%) / cropland (<50%) ",Grassland,Grassland,Grassland
-50,"Tree cover, broadleaved, evergreen, closed to open (>15%)",Tree Stand,Forest - broadleaved,Forest - broadleaved - evergreen
-60,"Tree cover, broadleaved, deciduous, closed to open (>15%)",Tree Stand,Forest - broadleaved,Forest - broadleaved - deciduous
-61,"Tree cover, broadleaved, deciduous, closed (>40%)",Tree Stand,Forest - broadleaved,Forest - broadleaved - deciduous
-62,"Tree cover, broadleaved, deciduous, open (15-40%)",Tree Stand,Forest - broadleaved,Forest - broadleaved - deciduous
-70,"Tree cover, needleleaved, evergreen, closed to open (>15%)",Tree Stand,Forest - needleleaved,Forest - needleleaved - evergreen
-71,"Tree cover, needleleaved, evergreen, closed (>40%)",Tree Stand,Forest - needleleaved,Forest - needleleaved - evergreen
-72,"Tree cover, needleleaved, evergreen, open (15-40%)",Tree Stand,Forest - needleleaved,Forest - needleleaved - evergreen
-80,"Tree cover, needleleaved, deciduous, closed to open (>15%)",Tree Stand,Forest - needleleaved,Forest - needleleaved - deciduous
-81,"Tree cover, needleleaved, deciduous, closed (>40%)",Tree Stand,Forest - needleleaved,Forest - needleleaved - deciduous
-82,"Tree cover, needleleaved, deciduous, open (15-40%)",Tree Stand,Forest - needleleaved,Forest - needleleaved - deciduous
-90,"Tree cover, mixed leaf type (broadleaved and needleleaved)",Tree Stand,Forest - mixed,Forest - mixed
+50,"Tree cover, broadleaved, evergreen, closed to open (>15%)",Forest,Forest - broadleaved,Forest - broadleaved - evergreen
+60,"Tree cover, broadleaved, deciduous, closed to open (>15%)",Forest,Forest - broadleaved,Forest - broadleaved - deciduous
+61,"Tree cover, broadleaved, deciduous, closed (>40%)",Forest,Forest - broadleaved,Forest - broadleaved - deciduous
+62,"Tree cover, broadleaved, deciduous, open (15-40%)",Forest,Forest - broadleaved,Forest - broadleaved - deciduous
+70,"Tree cover, needleleaved, evergreen, closed to open (>15%)",Forest,Forest - needleleaved,Forest - needleleaved - evergreen
+71,"Tree cover, needleleaved, evergreen, closed (>40%)",Forest,Forest - needleleaved,Forest - needleleaved - evergreen
+72,"Tree cover, needleleaved, evergreen, open (15-40%)",Forest,Forest - needleleaved,Forest - needleleaved - evergreen
+80,"Tree cover, needleleaved, deciduous, closed to open (>15%)",Forest,Forest - needleleaved,Forest - needleleaved - deciduous
+81,"Tree cover, needleleaved, deciduous, closed (>40%)",Forest,Forest - needleleaved,Forest - needleleaved - deciduous
+82,"Tree cover, needleleaved, deciduous, open (15-40%)",Forest,Forest - needleleaved,Forest - needleleaved - deciduous
+90,"Tree cover, mixed leaf type (broadleaved and needleleaved)",Forest,Forest - mixed,Forest - mixed
 100,Mosaic tree and shrub (>50%) / herbaceous cover (<50%),Shrubland,Shrubland,Shrubland
 110,Mosaic herbaceous cover (>50%) / tree and shrub (<50%),Grassland,Grassland,Grassland
 120,Shrubland,Shrubland,Shrubland,Shrubland
@@ -28,8 +28,8 @@ NB_LAB,LCCOwnLabel,ESAagg,ESAagg1,ESAagg2
 151,Sparse tree (<15%),NA,NA,NA
 152,Sparse shrub (<15%),NA,NA,NA
 153,Sparse herbaceous cover (<15%),NA,NA,NA
-160,"Tree cover, flooded, fresh or brakish water",Tree Stand,NA,NA
-170,"Tree cover, flooded, saline water",Tree Stand,NA,NA
+160,"Tree cover, flooded, fresh or brakish water",Forest,NA,NA
+170,"Tree cover, flooded, saline water",Forest,NA,NA
 180,"Shrub or herbaceous cover, flooded, fresh/saline/brakish water",Shrubland,NA,NA
 190,Urban areas,NA,NA,NA
 200,Bare areas,NA,NA,NA

@@ -1,544 +1,544 @@
-ID,Experiment,Site,Site_dependent,Citation,Species,Depth (cm),Depth,date,Experiment_type,Disturbance,N,Myc,Cesar_note,nyears,amb,elev,amb.se,elev.se,amb.n,elev.n,yi,Biome,Ecosystem.type,MAT,MAP,MAPraw,LAImean,LAImax,fPARmean,fPARmax,Latitude,Lat,Longitude,Lon,Biomass data type,total plant biomass.amb,total plant biomass.elev,se_total plant biomass.amb,se_total plant biomass.elev,aboveground biomass.amb,aboveground biomass.elev,se_aboveground biomass.amb,se_aboveground biomass.elev,Description of data source,SE/SD,ambCO2,elevCO2,Assumptions,Notes
-Maricopa_wet_wheat-AM_Nhigh,ArizonaFACE - wheat - high N,Maricopa,Maricopa,Leavitt et al. 2001,,15,0-15 cm,Nov. 1995,FACE,disturbed,Nhigh,AM,,0,1344,1228,52,306,4,4,,Cropland,Agricultural,21.8,750,750,0.23240508,0.299997,0.12022223,0.156,33.0628,N,111.98,W,750,,,,,,,,,fig. 3,sd,370,550,assumed constant BD= 1.48 g/cm3 (Post et al. 1988),
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-Maricopa_wet_wheat-AM_Nhigh,ArizonaFACE - wheat - high N,Maricopa,Maricopa,Leavitt et al. 2001,,15,0-15 cm,May-96,FACE,disturbed,Nhigh,AM,,0.5,1363,1305,55,127,4,4,,Cropland,Agricultural,21.8,750,750,0.23240508,0.299997,0.12022223,0.156,33.0628,N,111.98,W,750,,,,,,,,,fig. 3,sd,370,550,assumed constant BD= 1.48 g/cm3 (Post et al. 1988),
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-Maricopa_wet_wheat-AM_Nhigh,ArizonaFACE - wheat - high N,Maricopa,Maricopa,Leavitt et al. 2001,,15,0-15 cm,Dec. 1996,FACE,disturbed,Nhigh,AM,,1,1254,1264,80,68,3,3,,Cropland,Agricultural,21.8,750,750,0.23240508,0.299997,0.12022223,0.156,33.0628,N,111.98,W,750,,,,,,,,,fig. 3,sd,370,550,assumed constant BD= 1.48 g/cm3 (Post et al. 1988),
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-Maricopa_wet_wheat-AM_Nhigh,ArizonaFACE - wheat - high N,Maricopa,Maricopa,Leavitt et al. 2001,,15,0-15 cm,May-97,FACE,disturbed,Nhigh,AM,,1.5,1258,1400,38,176,4,4,0.05126777975,Cropland,Agricultural,21.8,750,750,0.23240508,0.299997,0.12022223,0.156,33.0628,N,111.98,W,750,,,,,,,,,fig. 3,sd,370,550,assumed constant BD= 1.48 g/cm3 (Post et al. 1988),
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-Not in AGB db,Biosphere 2,Biosphere 2,Biosphere 2,Trueman and Gonzalez-Meler 2005,,25,0-25 cm,average 1999,Chamber,disturbed,Nhigh,AM,,0,5950,6362,,,1,1,,,,,NA,,0.44906959,0.69999301,0.18466666,0.204,32.62,N,110.78,W,,,,,,,,,,fig. 3,,400,800,"assumed constant bulk density: 0.91 g/cm3 for ambient, 0.97 for 800 ppm (table 2)",
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,Biosphere 2,Biosphere 2,Biosphere 2,Trueman and Gonzalez-Meler 2005,,25,0-25 cm,average 2000,Chamber,disturbed,Nhigh,AM,,1,5254,4735,,,1,1,,,,,NA,,0.44906959,0.69999301,0.18466666,0.204,32.62,N,110.78,W,,,,,,,,,,fig. 3,,400,800,"assumed constant bulk density: 0.91 g/cm3 for ambient, 0.97 for 800 ppm (table 2)",
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,Biosphere 2,Biosphere 2,Biosphere 2,Trueman and Gonzalez-Meler 2005,,25,0-25 cm,average 2001,Chamber,disturbed,Nhigh,AM,,2,6084,4785,,,1,1,,,,,NA,,0.44906959,0.69999301,0.18466666,0.204,32.62,N,110.78,W,,,,,,,,,,fig. 3,,400,800,"assumed constant bulk density: 0.91 g/cm3 for ambient, 0.97 for 800 ppm (table 2)",
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,Biosphere 2,Biosphere 2,Biosphere 2,Trueman and Gonzalez-Meler 2005,,25,0-25 cm,average 2002,Chamber,disturbed,Nhigh,AM,,3,5470,4064,,,1,1,,,,,NA,,0.44906959,0.69999301,0.18466666,0.204,32.62,N,110.78,W,,,,,,,,,,fig. 3,,400,800,"assumed constant bulk density: 0.91 g/cm3 for ambient, 0.97 for 800 ppm (table 2)",
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,Biosphere 2,Biosphere 2,Biosphere 2,Trueman and Gonzalez-Meler 2005,,25,0-25 cm,average 2003,Chamber,disturbed,Nhigh,AM,,4,5335,4220,,,1,1,,,,,NA,,0.44906959,0.69999301,0.18466666,0.204,32.62,N,110.78,W,,,,,,,,,,fig. 3,,400,800,"assumed constant bulk density: 0.91 g/cm3 for ambient, 0.97 for 800 ppm (table 2)",
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,China FACE rice - high N - weakly,China FACE,China FACE,Hu et al. 2019,WuYunJing (japonica rice),15,,2012,FACE,intact,Nhigh,AM,,3,2707.6,2756.3,54.52,25.78,3,3,0.08103100889,Cropland,Agricultural,12,204.8,204.8,2.18979287,5.83327484,0.44866666,0.80000001,32.58,N,119.70,E,shoot + root,64.57,70.02,2.008,4.85,,,,,"Fig. 1F (SOC), Fig. 2A,E (Biomass)",SE,390,590,,SOC stock: converted from kg/m2 to g/m2; total plant biomass: root + shoot g/hill
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,China FACE rice - high N - strongly,China FACE,China FACE,Hu et al. 2019,Yangdao 6 Hao (indica rice),15,,2012,FACE,intact,Nhigh,AM,,3,2764.65,2877.72,48.64,50.78,3,3,0.1402189973,Cropland,Agricultural,12,204.8,204.8,2.18979287,5.83327484,0.44866666,0.80000001,32.58,N,119.70,E,shoot + root,72.28,83.16,2.68,7.97,,,,,"Fig. 1F (SOC), Fig. 2A,E (Biomass)",SE,390,590,,SOC stock: converted from kg/m2 to g/m2; total plant biomass: root + shoot g/hill
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-ChinaFACE_LN_weath-AM_Nhigh,China FACE weath - low N,China FACE,China FACE,Zhong et al. 2009,,15,0-15 cm,Mar. 2008,FACE,intact,Nhigh,AM,,3.66,1937,2192,53.94,87,3,3,,Cropland,Agricultural,12,204.8,204.8,2.18979287,5.83327484,0.44866666,0.80000001,32.58,N,119.70,E,,,,,,,,,,table 1,sd,380,580,bulk density: 1.16 g/cm3 f(text),
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-ChinaFACE_LN_weath-AM_Nhigh,China FACE weath - low N,China FACE,China FACE,Zhong et al. 2009,,15,0-15 cm,Jun. 2008,FACE,intact,Nhigh,AM,,4,1937,2123,53.94,104.4,3,3,0.07629751563,Cropland,Agricultural,12,204.8,204.8,2.18979287,5.83327484,0.44866666,0.80000001,32.58,N,119.70,E,,,,,,,,,,table 1,sd,380,580,bulk density: 1.16 g/cm3 f(text),
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-ChinaFACE_HN_weath-AM_Nhigh,China FACE weath - high N,China FACE,China FACE,Zhong et al. 2009,,15,0-15 cm,Mar. 2008,FACE,intact,Nhigh,AM,,3.66,1926,2135,81.78,55.68,3,3,,Cropland,Agricultural,12,204.8,204.8,2.18979287,5.83327484,0.44866666,0.80000001,32.58,N,119.70,E,,,,,,,,,,table 1,sd,380,580,bulk density: 1.16 g/cm3 f(text),
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-ChinaFACE_HN_weath-AM_Nhigh,China FACE weath - high N,China FACE,China FACE,Zhong et al. 2009,,15,0-15 cm,Jun. 2008,FACE,intact,Nhigh,AM,,4,1937,2105,154.86,177.48,3,3,0.1825416999,Cropland,Agricultural,12,204.8,204.8,2.18979287,5.83327484,0.44866666,0.80000001,32.58,N,119.70,E,,,,,,,,,,table 1,sd,380,580,bulk density: 1.16 g/cm3 f(text),
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-SCBG_trop_forest-AM_Nlow,China OTC - low N,China FACE,China FACE,Liu et al. 2011,,20,0-20 cm,Jul. 2005,OTC,disturbed,Nlow,AM,,0.33,1103,1168,,,2,3,,Tropical_Forest,Tree Stand,21.5,1750,1750,2.03146124,2.63330698,0.528,0.63999999,23.33,N,113.50,E,,,,,,,,,,fig. 3,,380,700,"bulk density estimated from final soil C contents (text, page 733 and fig. 3)","SD values reported in fig. 3, but it's not possible to match each SD value with corresponding average"
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-SCBG_trop_forest-AM_Nlow,China OTC - low N,China FACE,China FACE,Liu et al. 2010,,20,0-20 cm,Nov. 2005,OTC,disturbed,Nlow,AM,,0.67,1036,1097,,,2,3,,Tropical_Forest,Tree Stand,21.5,1750,1750,2.03146124,2.63330698,0.528,0.63999999,23.33,N,113.50,E,,,,,,,,,,fig. 3,,380,700,"bulk density estimated from final soil C contents (text, page 733 and fig. 3)","SD values reported in fig. 3, but it's not possible to match each SD value with corresponding average"
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-SCBG_trop_forest-AM_Nlow,China OTC - low N,China FACE,China FACE,Liu et al. 2010,,20,0-20 cm,Apr. 2006,OTC,disturbed,Nlow,AM,,1,1936,2385,,,2,3,,Tropical_Forest,Tree Stand,21.5,1750,1750,2.03146124,2.63330698,0.528,0.63999999,23.33,N,113.50,E,,,,,,,,,,fig. 3,,380,700,"bulk density estimated from final soil C contents (text, page 733 and fig. 3)","SD values reported in fig. 3, but it's not possible to match each SD value with corresponding average"
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-SCBG_trop_forest-AM_Nlow,China OTC - low N,China FACE,China FACE,Liu et al. 2010,,20,0-20 cm,Aug. 2006,OTC,disturbed,Nlow,AM,,1.33,2319,2218,,,2,3,,Tropical_Forest,Tree Stand,21.5,1750,1750,2.03146124,2.63330698,0.528,0.63999999,23.33,N,113.50,E,,,,,,,,,,fig. 3,,380,700,"bulk density estimated from final soil C contents (text, page 733 and fig. 3)","SD values reported in fig. 3, but it's not possible to match each SD value with corresponding average"
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-SCBG_trop_forest-AM_Nlow,China OTC - low N,China FACE,China FACE,Liu et al. 2010,,20,0-20 cm,Nov. 2006,OTC,disturbed,Nlow,AM,,1.66,2060,2051,,,2,3,,Tropical_Forest,Tree Stand,21.5,1750,1750,2.03146124,2.63330698,0.528,0.63999999,23.33,N,113.50,E,,,,,,,,,,fig. 3,,380,700,"bulk density estimated from final soil C contents (text, page 733 and fig. 3)","SD values reported in fig. 3, but it's not possible to match each SD value with corresponding average"
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-SCBG_trop_forest-AM_Nlow,China OTC - low N,China FACE,China FACE,Liu et al. 2010,,20,0-20 cm,Apr. 2007,OTC,disturbed,Nlow,AM,,2,2431,2301,,,2,3,,Tropical_Forest,Tree Stand,21.5,1750,1750,2.03146124,2.63330698,0.528,0.63999999,23.33,N,113.50,E,,,,,,,,,,fig. 3,,380,700,"bulk density estimated from final soil C contents (text, page 733 and fig. 3)","SD values reported in fig. 3, but it's not possible to match each SD value with corresponding average"
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-SCBG_trop_forest-AM_Nlow,China OTC - low N,China FACE,China FACE,Liu et al. 2010,,20,0-20 cm,Aug. 2007,OTC,disturbed,Nlow,AM,,2.33,2263,2361,,,2,3,,Tropical_Forest,Tree Stand,21.5,1750,1750,2.03146124,2.63330698,0.528,0.63999999,23.33,N,113.50,E,,,,,,,,,,fig. 3,,380,700,"bulk density estimated from final soil C contents (text, page 733 and fig. 3)","SD values reported in fig. 3, but it's not possible to match each SD value with corresponding average"
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-SCBG_trop_forest-AM_Nlow,China OTC - low N,China FACE,China FACE,Liu et al. 2010,,20,0-20 cm,Nov. 2007,OTC,disturbed,Nlow,AM,,2.66,2116,2158,,,2,3,,Tropical_Forest,Tree Stand,21.5,1750,1750,2.03146124,2.63330698,0.528,0.63999999,23.33,N,113.50,E,,,,,,,,,,fig. 3,,380,700,"bulk density estimated from final soil C contents (text, page 733 and fig. 3)","SD values reported in fig. 3, but it's not possible to match each SD value with corresponding average"
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-SCBG_trop_forest-AM_Nlow,China OTC - low N,China FACE,China FACE,Liu et al. 2010,,20,0-20 cm,Apr. 2008,OTC,disturbed,Nlow,AM,,3,3625,3315,,,2,3,,Tropical_Forest,Tree Stand,21.5,1750,1750,2.03146124,2.63330698,0.528,0.63999999,23.33,N,113.50,E,,,,,,,,,,fig. 3,,380,700,"bulk density estimated from final soil C contents (text, page 733 and fig. 3)","SD values reported in fig. 3, but it's not possible to match each SD value with corresponding average"
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-SCBG_trop_forest-AM_Nlow,China OTC - low N,China FACE,China FACE,Liu et al. 2010,,20,0-20 cm,Aug. 2008,OTC,disturbed,Nlow,AM,,3.33,3253,3279,,,2,3,,Tropical_Forest,Tree Stand,21.5,1750,1750,2.03146124,2.63330698,0.528,0.63999999,23.33,N,113.50,E,,,,,,,,,,fig. 3,,380,700,"bulk density estimated from final soil C contents (text, page 733 and fig. 3)","SD values reported in fig. 3, but it's not possible to match each SD value with corresponding average"
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-SCBG_trop_forest-AM_Nlow,China OTC - low N,China FACE,China FACE,Liu et al. 2010,,20,0-20 cm,Nov. 2008,OTC,disturbed,Nlow,AM,,3.66,3287,3410,,,2,3,,Tropical_Forest,Tree Stand,21.5,1750,1750,2.03146124,2.63330698,0.528,0.63999999,23.33,N,113.50,E,,,,,,,,,,fig. 3,,380,700,"bulk density estimated from final soil C contents (text, page 733 and fig. 3)","SD values reported in fig. 3, but it's not possible to match each SD value with corresponding average"
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-SCBG_trop_forest-AM_Nlow,China OTC - low N,China FACE,China FACE,"Zhang et al. 2015 (soil), Chen et. al., 2012 (plant)",modeled subtropical forest,20,0-20 cm,April 2005,OTC,disturbed,Nlow,AM,,5,2927.4,3305.16,443.64,439.92,2,3,-0.01344891867,Tropical_Forest,Tree Stand,21.5,1750,1750,2.03146124,2.63330698,0.528,0.63999999,23.33,N,113.50,E,aboveground,,,,,,,,,soil: Fig. 1; plant: Fig. 3,SE,380,700,bulk density estimated from text (pag 144) = 0.9 g/cm3,total plant: above + belowground biomass (kg m-2)
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-SCBG_trop_forest-AM_Nhigh,China OTC - high N,China FACE,China FACE,Liu et al. 2010,,20,0-20 cm,Jul. 2005,OTC,disturbed,Nhigh,AM,,0.33,1201,1198,,,2,3,,Tropical_Forest,Tree Stand,21.5,1750,1750,2.03146124,2.63330698,0.528,0.63999999,23.33,N,113.50,E,,,,,,,,,,fig. 3,,380,700,"bulk density estimated from final soil C contents (text, page 733 and fig. 3)","SD values reported in fig. 3, but it's not possible to match each SD value with corresponding average"
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-SCBG_trop_forest-AM_Nhigh,China OTC - high N,China FACE,China FACE,Liu et al. 2010,,20,0-20 cm,Nov. 2005,OTC,disturbed,Nhigh,AM,,0.67,922,1409,,,2,3,,Tropical_Forest,Tree Stand,21.5,1750,1750,2.03146124,2.63330698,0.528,0.63999999,23.33,N,113.50,E,,,,,,,,,,fig. 3,,380,700,"bulk density estimated from final soil C contents (text, page 733 and fig. 3)","SD values reported in fig. 3, but it's not possible to match each SD value with corresponding average"
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-SCBG_trop_forest-AM_Nhigh,China OTC - high N,China FACE,China FACE,Liu et al. 2010,,20,0-20 cm,Apr. 2006,OTC,disturbed,Nhigh,AM,,1,1930,2373,,,2,3,,Tropical_Forest,Tree Stand,21.5,1750,1750,2.03146124,2.63330698,0.528,0.63999999,23.33,N,113.50,E,,,,,,,,,,fig. 3,,380,700,"bulk density estimated from final soil C contents (text, page 733 and fig. 3)","SD values reported in fig. 3, but it's not possible to match each SD value with corresponding average"
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-SCBG_trop_forest-AM_Nhigh,China OTC - high N,China FACE,China FACE,Liu et al. 2010,,20,0-20 cm,Aug. 2006,OTC,disturbed,Nhigh,AM,,1.33,1951,2514,,,2,3,,Tropical_Forest,Tree Stand,21.5,1750,1750,2.03146124,2.63330698,0.528,0.63999999,23.33,N,113.50,E,,,,,,,,,,fig. 3,,380,700,"bulk density estimated from final soil C contents (text, page 733 and fig. 3)","SD values reported in fig. 3, but it's not possible to match each SD value with corresponding average"
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-SCBG_trop_forest-AM_Nhigh,China OTC - high N,China FACE,China FACE,Liu et al. 2010,,20,0-20 cm,Nov. 2006,OTC,disturbed,Nhigh,AM,,1.66,1587,3054,,,2,3,,Tropical_Forest,Tree Stand,21.5,1750,1750,2.03146124,2.63330698,0.528,0.63999999,23.33,N,113.50,E,,,,,,,,,,fig. 3,,380,700,"bulk density estimated from final soil C contents (text, page 733 and fig. 3)","SD values reported in fig. 3, but it's not possible to match each SD value with corresponding average"
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-SCBG_trop_forest-AM_Nhigh,China OTC - high N,China FACE,China FACE,Liu et al. 2010,,20,0-20 cm,Apr. 2007,OTC,disturbed,Nhigh,AM,,2,2015,3030,,,2,3,,Tropical_Forest,Tree Stand,21.5,1750,1750,2.03146124,2.63330698,0.528,0.63999999,23.33,N,113.50,E,,,,,,,,,,fig. 3,,380,700,"bulk density estimated from final soil C contents (text, page 733 and fig. 3)","SD values reported in fig. 3, but it's not possible to match each SD value with corresponding average"
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-SCBG_trop_forest-AM_Nhigh,China OTC - high N,China FACE,China FACE,Liu et al. 2010,,20,0-20 cm,Aug. 2007,OTC,disturbed,Nhigh,AM,,2.33,2273,2725,,,2,3,,Tropical_Forest,Tree Stand,21.5,1750,1750,2.03146124,2.63330698,0.528,0.63999999,23.33,N,113.50,E,,,,,,,,,,fig. 3,,380,700,"bulk density estimated from final soil C contents (text, page 733 and fig. 3)","SD values reported in fig. 3, but it's not possible to match each SD value with corresponding average"
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-SCBG_trop_forest-AM_Nhigh,China OTC - high N,China FACE,China FACE,Liu et al. 2010,,20,0-20 cm,Nov. 2007,OTC,disturbed,Nhigh,AM,,2.66,2187,2702,,,2,3,,Tropical_Forest,Tree Stand,21.5,1750,1750,2.03146124,2.63330698,0.528,0.63999999,23.33,N,113.50,E,,,,,,,,,,fig. 3,,380,700,"bulk density estimated from final soil C contents (text, page 733 and fig. 3)","SD values reported in fig. 3, but it's not possible to match each SD value with corresponding average"
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-SCBG_trop_forest-AM_Nhigh,China OTC - high N,China FACE,China FACE,Liu et al. 2010,,20,0-20 cm,Apr. 2008,OTC,disturbed,Nhigh,AM,,3,3602,3947,,,2,3,,Tropical_Forest,Tree Stand,21.5,1750,1750,2.03146124,2.63330698,0.528,0.63999999,23.33,N,113.50,E,,,,,,,,,,fig. 3,,380,700,"bulk density estimated from final soil C contents (text, page 733 and fig. 3)","SD values reported in fig. 3, but it's not possible to match each SD value with corresponding average"
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-SCBG_trop_forest-AM_Nhigh,China OTC - high N,China FACE,China FACE,Liu et al. 2010,,20,0-20 cm,Aug. 2008,OTC,disturbed,Nhigh,AM,,3.33,3581,4170,,,2,3,,Tropical_Forest,Tree Stand,21.5,1750,1750,2.03146124,2.63330698,0.528,0.63999999,23.33,N,113.50,E,,,,,,,,,,fig. 3,,380,700,"bulk density estimated from final soil C contents (text, page 733 and fig. 3)","SD values reported in fig. 3, but it's not possible to match each SD value with corresponding average"
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-SCBG_trop_forest-AM_Nhigh,China OTC - high N,China FACE,China FACE,Liu et al. 2010,,20,0-20 cm,Nov. 2008,OTC,disturbed,Nhigh,AM,,3.66,3645,4158,,,2,3,,Tropical_Forest,Tree Stand,21.5,1750,1750,2.03146124,2.63330698,0.528,0.63999999,23.33,N,113.50,E,,,,,,,,,,fig. 3,,380,700,"bulk density estimated from final soil C contents (text, page 733 and fig. 3)","SD values reported in fig. 3, but it's not possible to match each SD value with corresponding average"
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-SCBG_trop_forest-AM_Nhigh,China OTC - high N,China FACE,China FACE,"Zhang et al. 2015 (soil), Chen et. al., 2012 (plant)",modeled subtropical forest,20,0-20 cm,April 2005,OTC,disturbed,Nhigh,AM,zhang.xls,5,3186.42,3695.7,721.56,436.02,2,3,0.18483613,Tropical_Forest,Tree Stand,21.5,1750,1750,2.03146124,2.63330698,0.528,0.63999999,23.33,N,113.50,E,aboveground,,,,,,,,,soil: Fig. 1; plant: Fig. 3,SE,380,700,bulk density estimated from text (pag 144) = 0.9 g/cm3,total plant: above + belowground biomass (kg m-2)
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,DUKE FACE,Duke FACE,Duke FACE,Lichter et al. 2008,,15,0-15 cm,Aug. 1996,FACE,intact,Nlow,ECM,,0,1977,2142,18,94,3,3,,Temperate_Forest,Tree Stand,,NA,,2.54997444,4.89995098,0.58355558,0.81599998,36.2,N,79.15,W,,,,,,,,,,tab. 3,se,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,DUKE FACE,Duke FACE,Duke FACE,Lichter et al. 2008,,15,0-15 cm,Oct. 1999,FACE,intact,Nlow,ECM,,3.17,1902,2208,52,136,3,3,,Temperate_Forest,Tree Stand,,NA,,2.54997444,4.89995098,0.58355558,0.81599998,36.2,N,79.15,W,,,,,,,,,,tab. 3,se,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,DUKE FACE,Duke FACE,Duke FACE,Lichter et al. 2008,,15,0-15 cm,Aug. 2002,FACE,intact,Nlow,ECM,,6,2407,2734,141,96,3,3,,Temperate_Forest,Tree Stand,,NA,,2.54997444,4.89995098,0.58355558,0.81599998,36.2,N,79.15,W,,,,,,,,,,tab. 3,se,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-DUKE_PITA-ECM_Nlow,DUKE FACE,Duke FACE,Duke FACE,Lichter et al. 2008,,15,0-15 cm,Aug. 2006,FACE,intact,Nlow,ECM,,9,2164,2096,152,175,3,3,0.1896534732,Temperate_Forest,Tree Stand,4.9,1140,1140,3.28978181,5.93327379,0.6531111,0.91600001,35.98,N,79.10,W,,,,,,,,,,tab. 3,se,380,570,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,FACTS II - Aspen,Aspen FACE,Aspen FACE,Talhelm et al. 2009,,20,0-20 cm,2001,,,Nlow,ECM,,4,3575,3562,241.79,666.6,3,3,,Temperate_Forest,Tree Stand,,NA,,1.85831475,5.13328218,0.412,0.84799999,45.67,N,89.63,W,,,,,,,,,,pers. comm.,se,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,FACTS II - Aspen,Aspen FACE,Aspen FACE,Talhelm et al. 2009,,20,0-20 cm,2003,,,Nlow,ECM,,6,3625,4435,229.99,188.22,3,3,,Temperate_Forest,Tree Stand,,NA,,1.85831475,5.13328218,0.412,0.84799999,45.67,N,89.63,W,,,,,,,,,,pers. comm.,se,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,FACTS II - Aspen,Aspen FACE,Aspen FACE,Talhelm et al. 2009,,20,0-20 cm,2004,,,Nlow,ECM,,7,3235,3243,283.03,248.96,3,3,,Temperate_Forest,Tree Stand,,NA,,1.85831475,5.13328218,0.412,0.84799999,45.67,N,89.63,W,,,,,,,,,,pers. comm.,se,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,FACTS II - Aspen,Aspen FACE,Aspen FACE,Talhelm et al. 2009,,20,0-20 cm,2005,,,Nlow,ECM,,8,3741,3506,144.36,525.37,3,3,,Temperate_Forest,Tree Stand,,NA,,1.85831475,5.13328218,0.412,0.84799999,45.67,N,89.63,W,,,,,,,,,,pers. comm.,se,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,FACTS II - Aspen,Aspen FACE,Aspen FACE,Talhelm et al. 2009,,20,0-20 cm,2006,,,Nlow,ECM,,9,4243,3841,274.19,637.45,3,3,,Temperate_Forest,Tree Stand,,NA,,1.85831475,5.13328218,0.412,0.84799999,45.67,N,89.63,W,,,,,,,,,,pers. comm.,se,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,FACTS II - Aspen,Aspen FACE,Aspen FACE,Talhelm et al. 2009,,20,0-20 cm,2007,,,Nlow,ECM,,10,4374,3760,164.63,469.34,3,3,,Temperate_Forest,Tree Stand,,NA,,1.85831475,5.13328218,0.412,0.84799999,45.67,N,89.63,W,,,,,,,,,,pers. comm.,se,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,FACTS II - Aspen,Aspen FACE,Aspen FACE,Talhelm et al. 2009,,20,0-20 cm,2008,,,Nlow,ECM,,11,5119,3267,1124.86,74.67,3,3,,Temperate_Forest,Tree Stand,,NA,,1.85831475,5.13328218,0.412,0.84799999,45.67,N,89.63,W,,,,,,,,,,pers. comm.,se,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-Aspen_A-ECM_Nlow,FACTS II - Aspen,Aspen FACE,Aspen FACE,Talhelm et al. 2014,,20,0-20 cm,2009,FACE,intact,Nlow,ECM,"more data in Talhelm 2014, but had to aggregate values for 0-10cm and 10-20cm",11,3318.6,2894,393.72,50.54,3,3,0.2960308576,Temperate_Forest,Tree Stand,4.9,810,810,1.85831475,5.13328218,0.412,0.84799999,45.67,N,89.63,W,,,,,,,,,,Table S2,se,370,532,sum of SE = sqrt(SE1^2 + SE2^2),
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,FACTS II - Aspen/Birch,Aspen FACE,Aspen FACE,Talhelm et al. 2009,,20,0-20 cm,2001,,,Nlow,ECM,,4,3256,3817,283.37,496.63,3,3,,Temperate_Forest,Tree Stand,,NA,,1.85831475,5.13328218,0.412,0.84799999,45.67,N,89.63,W,,,,,,,,,,pers. comm.,se,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,FACTS II - Aspen/Birch,Aspen FACE,Aspen FACE,Talhelm et al. 2009,,20,0-20 cm,2003,,,Nlow,ECM,,6,3347,3274,181.02,99,3,3,,Temperate_Forest,Tree Stand,,NA,,1.85831475,5.13328218,0.412,0.84799999,45.67,N,89.63,W,,,,,,,,,,pers. comm.,se,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,FACTS II - Aspen/Birch,Aspen FACE,Aspen FACE,Talhelm et al. 2009,,20,0-20 cm,2004,,,Nlow,ECM,,7,3408,3457,76.91,286.05,3,3,,Temperate_Forest,Tree Stand,,NA,,1.85831475,5.13328218,0.412,0.84799999,45.67,N,89.63,W,,,,,,,,,,pers. comm.,se,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,FACTS II - Aspen/Birch,Aspen FACE,Aspen FACE,Talhelm et al. 2009,,20,0-20 cm,2005,,,Nlow,ECM,,8,3653,3436,291.24,208.02,3,3,,Temperate_Forest,Tree Stand,,NA,,1.85831475,5.13328218,0.412,0.84799999,45.67,N,89.63,W,,,,,,,,,,pers. comm.,se,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,FACTS II - Aspen/Birch,Aspen FACE,Aspen FACE,Talhelm et al. 2009,,20,0-20 cm,2006,,,Nlow,ECM,,9,4433,4196,1077.46,170.2,3,3,,Temperate_Forest,Tree Stand,,NA,,1.85831475,5.13328218,0.412,0.84799999,45.67,N,89.63,W,,,,,,,,,,pers. comm.,se,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,FACTS II - Aspen/Birch,Aspen FACE,Aspen FACE,Talhelm et al. 2009,,20,0-20 cm,2007,,,Nlow,ECM,,10,4125,3832,837.96,624.94,3,3,,Temperate_Forest,Tree Stand,,NA,,1.85831475,5.13328218,0.412,0.84799999,45.67,N,89.63,W,,,,,,,,,,pers. comm.,se,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,FACTS II - Aspen/Birch,Aspen FACE,Aspen FACE,Talhelm et al. 2009,,20,0-20 cm,2008,,,Nlow,ECM,,11,3484,3946,261.76,984.48,3,3,,Temperate_Forest,Tree Stand,,NA,,1.85831475,5.13328218,0.412,0.84799999,45.67,N,89.63,W,,,,,,,,,,pers. comm.,se,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-Aspen_AB-ECM_Nlow,FACTS II - Aspen/Birch,Aspen FACE,Aspen FACE,Talhelm et al. 2014,,20,0-20 cm,2009,FACE,intact,Nlow,ECM,"more data in Talhelm 2014, but had to aggregate values for 0-10cm and 10-20cm",11,3035.6,2776.7,184.52,227.85,3,3,0.4213936274,Temperate_Forest,Tree Stand,4.9,810,810,1.85831475,5.13328218,0.412,0.84799999,45.67,N,89.63,W,,,,,,,,,,Table S2,se,370,532,sum of SE = sqrt(SE1^2 + SE2^2),
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,GiFACE,GiFACE,GiFACE,Lenhart et al. 2016,,11.3,0-11.3 cm,1998,FACE,intact,Nlow,AM,,0,4155,4215,1372,1040,3,3,,Grassland,Grassland,,NA,,1.5092442,4.49995518,0.50199997,0.824,50.53,N,8.74,E,,,,,,,,,,Table 1,sd,,,assumed bulk density: 1.0 g/cm3,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,GiFACE,GiFACE,GiFACE,Lenhart et al. 2016,,11.3,0-11.3 cm,2004,FACE,intact,Nlow,AM,,6,3620,3500,1315,659,3,3,,Grassland,Grassland,,NA,,1.5092442,4.49995518,0.50199997,0.824,50.53,N,8.74,E,,,,,,,,,,Table 1,sd,,,assumed bulk density: 1.0 g/cm3,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,GiFACE,GiFACE,GiFACE,Lenhart et al. 2016,,11.3,0-11.3 cm,2007,FACE,intact,Nlow,AM,,9,3670,3690,1356,1014,3,3,,Grassland,Grassland,,NA,,1.5092442,4.49995518,0.50199997,0.824,50.53,N,8.74,E,,,,,,,,,,Table 1,sd,,,assumed bulk density: 1.0 g/cm3,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-GiFACE_grassland-AM_Nlow,GiFACE,GiFACE,GiFACE,Keidel et al. 2018,,15,0-15 cm,2013,FACE,intact,Nlow,AM,,13.5,3513,3302,586,57,3,3,0.09071741555,Grassland,Grassland,9.4,645,645,1.41017103,3.83329511,0.48133335,0.80800003,50.53,N,8.68,E,,,,,,,,,,Fig. 4,se,380,456,assumed bulk density: 1.0 g/cm3,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,Hohenheim,Hohenheim,Hohenheim,Marhan et al. 2010,,10,0-10 cm,Mar. 2004,FACE,disturbed,Nhigh,AM,,2,1725,1767,20,46,5,5,,Cropland,Agricultural,,NA,,1.00091588,1.93331397,0.32022223,0.57599998,48.7,N,9.18,E,,,,,,,,,,tab. 2,se,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,Hohenheim,Hohenheim,Hohenheim,Marhan et al. 2010,,10,0-10 cm,Oct. 2004,FACE,disturbed,Nhigh,AM,,2.5,1707,1641,34,39,5,5,,Cropland,Agricultural,,NA,,1.00091588,1.93331397,0.32022223,0.57599998,48.7,N,9.18,E,,,,,,,,,,tab. 2,se,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,Hohenheim,Hohenheim,Hohenheim,Marhan et al. 2010,,10,0-10 cm,Mar. 2005,FACE,disturbed,Nhigh,AM,,3,1805,1744,62,26,5,5,,Cropland,Agricultural,,NA,,1.00091588,1.93331397,0.32022223,0.57599998,48.7,N,9.18,E,,,,,,,,,,tab. 2,se,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,Hohenheim,Hohenheim,Hohenheim,Marhan et al. 2010,,10,0-10 cm,Oct. 2005,FACE,disturbed,Nhigh,AM,,3.5,1567,1588,63,19,5,5,,Cropland,Agricultural,,NA,,1.00091588,1.93331397,0.32022223,0.57599998,48.7,N,9.18,E,,,,,,,,,,tab. 2,se,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,Hohenheim,Hohenheim,Hohenheim,Marhan et al. 2010,,10,0-10 cm,Mar. 2006,FACE,disturbed,Nhigh,AM,,4,1680,1717,23,23,5,5,,Cropland,Agricultural,,NA,,1.00091588,1.93331397,0.32022223,0.57599998,48.7,N,9.18,E,,,,,,,,,,tab. 2,se,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-Hohenheim_weath-AM_Nhigh,Hohenheim,Hohenheim,Hohenheim,Marhan et al. 2010,,10,0-10 cm,Oct. 2006,FACE,disturbed,Nhigh,AM,,4.5,1721,1763,25,12,5,5,0.09809397375,Cropland,Agricultural,15.3,385,385,1.00091588,1.93331397,0.32022223,0.57599998,48.7,N,9.18,E,,,,,,,,,,tab. 2,se,409,537,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,Jasper Ridge - sandstone,Jasper OTC,Jasper OTC,Hungate et al. 1997,,15,0-15 cm,Jan. 1992,OTC,intact,Nlow,AM,,0,2646,2646,,,10,10,,Grassland,Grassland,,NA,,1.16665494,2.13331199,0.47022223,0.57999998,37.4,N,122.21,W,,,,,,,,,,"fig. 1, pers. comm.",,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,Jasper Ridge - sandstone,Jasper OTC,Jasper OTC,Hungate et al. 1997,,15,0-15 cm,May-93,OTC,intact,Nlow,AM,,1.41,2646,2354,393.9,358.1,10,10,,Grassland,Grassland,,NA,,1.16665494,2.13331199,0.47022223,0.57999998,37.4,N,122.21,W,,,,,,,,,,"fig. 1, pers. comm.",sd,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,Jasper Ridge - sandstone,Jasper OTC,Jasper OTC,Hungate et al. 1997,,15,0-15 cm,May-94,OTC,intact,Nlow,AM,,2.41,2252,2339,334.2,322.3,10,10,,Grassland,Grassland,,NA,,1.16665494,2.13331199,0.47022223,0.57999998,37.4,N,122.21,W,,,,,,,,,,"fig. 1, pers. comm.",sd,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,Jasper Ridge - sandstone,Jasper OTC,Jasper OTC,Hungate et al. 1997,,15,0-15 cm,May-95,OTC,intact,Nlow,AM,,3.41,2315,2315,346.2,346.2,10,10,,Grassland,Grassland,,NA,,1.16665494,2.13331199,0.47022223,0.57999998,37.4,N,122.21,W,,,,,,,,,,"fig. 1, pers. comm.",sd,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,Jasper Ridge - sandstone,Jasper OTC,Jasper OTC,Hungate et al. 1997,,15,0-15 cm,May-96,OTC,intact,Nlow,AM,,4.41,2497,2486,,,10,10,,Grassland,Grassland,,NA,,1.16665494,2.13331199,0.47022223,0.57999998,37.4,N,122.21,W,,,,,,,,,,"fig. 1, pers. comm.",,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-Jasper_OTC3_sandstone grassland-AM_Nlow,Jasper Ridge - sandstone,Jasper OTC,Jasper OTC,Hungate et al. 1997,,15,0-15 cm,May-97,OTC,intact,Nlow,AM,,5.41,2612,2750,,,10,10,0.07192345589,Grassland,Grassland,19.3,677,677,1.16665494,2.13331199,0.47022223,0.57999998,37.4,N,122.21,W,,,,,,,,,,"fig. 1, pers. comm.",,360,720,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-Jasper_OTC3_serpentine grassland-AM_Nlow,Jasper Ridge - serpentine,Jasper OTC,Jasper OTC,Hungate et al. 1997,,15,0-15 cm,,OTC,intact,Nlow,AM,,3,1877,1989,107,132,10,10,0.06876268,Grassland,Grassland,19.3,677,677,1.16665494,2.13331199,0.47022223,0.57999998,37.4,N,122.21,W,,,,,,,,,,"fig. 1, pers. comm.",se,360,720,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,JRGCE - Control,Jasper FACE,Jasper FACE,Hungate et al. unpublished,,15,0-15 cm,2000,FACE,intact,Nlow,AM,SE/SD?,2,2384,2344,,,6,6,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,pers. comm.,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,JRGCE - Control,Jasper FACE,Jasper FACE,Hungate et al. unpublished,,15,0-15 cm,2006,FACE,intact,Nlow,AM,SE/SD?,8,2428,2173,,,6,6,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,pers. comm.,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-Jasper_FACE_Cali_grassland-AM_Nlow,JRGCE - Control,Jasper FACE,Jasper FACE,"JasperCsoil.R pers.comm, more years available",,15,0-15 cm,2012,FACE,intact,Nlow,AM,,14,1893.75,2144.713,56.82143,84.21927,6,6,-0.02477074171,Grassland,Grassland,19.3,677,677,1.64350212,2.83330488,0.55355555,0.66399997,37.4,N,122.24,W,,,,,,,,,,pers. comm.,,380,680,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,JRGCE - N,Jasper FACE,Jasper FACE,Hungate et al. unpublished,,15,0-15 cm,2000,FACE,intact,Nhigh,AM,SE/SD?,2,2248,2381,,,6,6,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,pers. comm.,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,JRGCE - N,Jasper FACE,Jasper FACE,Hungate et al. unpublished,,15,0-15 cm,2006,FACE,intact,Nhigh,AM,SE/SD?,8,2552,2329,,,6,6,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,pers. comm.,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-Jasper_FACE_Cali_grassland-AM_Nhigh,JRGCE - N,Jasper FACE,Jasper FACE,JasperCsoil.R pers.comm; more years available,,15,0-15 cm,2012,FACE,intact,Nhigh,AM,,14,2175.075,2251.713,79.74795,125.69286,6,6,0.04563714059,Grassland,Grassland,19.3,677,677,1.64350212,2.83330488,0.55355555,0.66399997,37.4,N,122.24,W,,,,,,,,,,pers. comm.,,380,680,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,Merritt Island,Merritt Island,Merritt Island,Hungate et al. 2013,subtropical oak woodland,100,60-100 cm,May 1996,OTC,intact,Nlow,ECM,,11,5513.1,5025.6,411.5,647.4,8,8,0.5129051254,Temperate_Forest,Tree Stand,,NA,,1.73794556,2.83330488,0.48933333,0.62800002,28.572123,N,80.92,W,aboveground,3511.2,4304.3,102,221.3,,,,,Table 1,SE,,700,,g C m-2
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,Merritt Island,Merritt Island,Merritt Island,Hungate unpublished,,10,0-10 cm,Dec. 1996,FACE,intact,Nlow,ECM,,0.62,1209,1335,453,526,8,8,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,pers. comm.,sd,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,Merritt Island,Merritt Island,Merritt Island,Hungate unpublished,,10,0-10 cm,Jun. 1998,FACE,intact,Nlow,ECM,,2.09,1131,1220,193,281,8,8,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,pers. comm.,sd,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,Merritt Island,Merritt Island,Merritt Island,Hungate unpublished,,10,0-10 cm,Jul. 1998,FACE,intact,Nlow,ECM,,2.17,1264,1292,176,175,8,8,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,pers. comm.,sd,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,Merritt Island,Merritt Island,Merritt Island,Hungate unpublished,,10,0-10 cm,Aug. 1998,FACE,intact,Nlow,ECM,,2.31,1356,1281,312,120,8,8,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,pers. comm.,sd,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,Merritt Island,Merritt Island,Merritt Island,Carney et al. 2007,,10,0-10 cm,Nov. 1998,,,Nlow,ECM,,2.55,1734,1567,130,387,8,8,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,"fig. 1, pers. comm.",sd,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,Merritt Island,Merritt Island,Merritt Island,Carney et al. 2007,,10,0-10 cm,sept. 1999,,,Nlow,ECM,,3.36,1782,1712,490,282,8,8,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,"fig. 1, pers. comm.",sd,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,Merritt Island,Merritt Island,Merritt Island,Carney et al. 2007,,10,0-10 cm,Mar. 2001,,,Nlow,ECM,,4.87,2191,1941,934,306,8,8,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,"fig. 1, pers. comm.",sd,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,Merritt Island,Merritt Island,Merritt Island,Carney et al. 2007,,10,0-10 cm,May-02,,,Nlow,ECM,,6,2099,1741,433,620,8,8,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,"fig. 1, pers. comm.",sd,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,Merritt Island,Merritt Island,Merritt Island,Langley et al. 2009,,10,0-10 cm,May-02,OTC,intact,Nlow,ECM,SE/SD?,6,1999,1628,,,8,8,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,pers. comm.,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-Merrit_Island_Oak-ECM_Nlow,Merritt Island,Merritt Island,Merritt Island,McKinley et al. unpublished,,10,0-10 cm,May-07,OTC,intact,Nlow,ECM,,11,1512,1411,362,333,8,8,0.5129051254,Temperate_Forest,Tree Stand,22.3,1310,1310,1.73794556,2.83330488,0.48933333,0.62800002,28.572123,N,80.92,W,,,,,,,,,,pers. comm.,sd,370,720,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,NewZealandFACE,NewZealandFACE,NewZealandFACE,Ross et al. 2004,,5,0-5 cm,may/oct. 1997,FACE,intact,Nlow,AM,,0,2685,2465,92,113,3,3,,Grassland,Grassland,,NA,,3.48700213,4.96661711,0.77088886,0.86000001,40.23,S,175.27,E,,,,,,,,,,pers. Comm.,se,,,assumed bulk density: 1.0 g/cm3,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,NewZealandFACE,NewZealandFACE,NewZealandFACE,Ross et al. 2004,,5,0-5 cm,may/oct. 1998,FACE,intact,Nlow,AM,,1,2650,2490,70,95,3,3,,Grassland,Grassland,,NA,,3.48700213,4.96661711,0.77088886,0.86000001,40.23,S,175.27,E,,,,,,,,,,table 1,se,,,assumed bulk density: 1.0 g/cm3,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,NewZealandFACE,NewZealandFACE,NewZealandFACE,Ross et al. 2004,,5,0-5 cm,may/oct. 1999,FACE,intact,Nlow,AM,,2,2655,2525,85,105,3,3,,Grassland,Grassland,,NA,,3.48700213,4.96661711,0.77088886,0.86000001,40.23,S,175.27,E,,,,,,,,,,table 1,se,,,assumed bulk density: 1.0 g/cm3,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,NewZealandFACE,NewZealandFACE,NewZealandFACE,Ross et al. 2004,,5,0-5 cm,may/oct. 2000,FACE,intact,Nlow,AM,,3,2675,2565,105,140,3,3,,Grassland,Grassland,,NA,,3.48700213,4.96661711,0.77088886,0.86000001,40.23,S,175.27,E,,,,,,,,,,table 1,se,,,assumed bulk density: 1.0 g/cm3,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,NewZealandFACE,NewZealandFACE,NewZealandFACE,Ross et al. 2004,,5,0-5 cm,may/oct. 2001,FACE,intact,Nlow,AM,,4,2515,2445,70,105,3,3,,Grassland,Grassland,,NA,,3.48700213,4.96661711,0.77088886,0.86000001,40.23,S,175.27,E,,,,,,,,,,table 1,se,,,assumed bulk density: 1.0 g/cm3,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,NewZealandFACE,NewZealandFACE,NewZealandFACE,Ross et al. 2004,,5,0-5 cm,may/oct. 2002,FACE,intact,Nlow,AM,,5,2585,2490,85,95,3,3,,Grassland,Grassland,,NA,,3.48700213,4.96661711,0.77088886,0.86000001,40.23,S,175.27,E,,,,,,,,,,table 1,se,,,assumed bulk density: 1.0 g/cm3,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,NewZealandFACE,NewZealandFACE,NewZealandFACE,Ross et al. 2013,,5,0-5 cm,may/oct. 2003,FACE,intact,Nlow,AM,,6,2519,2510,86,109,3,3,,Grassland,Grassland,,NA,,3.48700213,4.96661711,0.77088886,0.86000001,40.23,S,175.27,E,,,,,,,,,,fig. 3,se,,,assumed bulk density: 1.0 g/cm3,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,NewZealandFACE,NewZealandFACE,NewZealandFACE,Ross et al. 2013,,5,0-5 cm,may/oct. 2004,FACE,intact,Nlow,AM,,7,2599,2534,94,86,3,3,,Grassland,Grassland,,NA,,3.48700213,4.96661711,0.77088886,0.86000001,40.23,S,175.27,E,,,,,,,,,,fig. 3,se,,,assumed bulk density: 1.0 g/cm3,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,NewZealandFACE,NewZealandFACE,NewZealandFACE,Ross et al. 2013,,5,0-5 cm,may/oct. 2005,FACE,intact,Nlow,AM,,8,2659,2659,102,102,3,3,,Grassland,Grassland,,NA,,3.48700213,4.96661711,0.77088886,0.86000001,40.23,S,175.27,E,,,,,,,,,,fig. 3,se,,,assumed bulk density: 1.0 g/cm3,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,NewZealandFACE,NewZealandFACE,NewZealandFACE,Ross et al. 2013,,5,0-5 cm,may/oct. 2006,FACE,intact,Nlow,AM,,9,2657,2722,177,125,3,3,,Grassland,Grassland,,NA,,3.48700213,4.96661711,0.77088886,0.86000001,40.23,S,175.27,E,,,,,,,,,,fig. 3,se,,,assumed bulk density: 1.0 g/cm3,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,NewZealandFACE,NewZealandFACE,NewZealandFACE,Ross et al. 2013,,5,0-5 cm,may/oct. 2007,FACE,intact,Nlow,AM,"values were initially larger in amb than elev, so would be interesting to normalize them, and the final CO2 effect would be larger",10,2722,2822,121,167,3,3,,Grassland,Grassland,,NA,,3.48700213,4.96661711,0.77088886,0.86000001,40.23,S,175.27,E,,,,,,,,,,fig. 3,se,,,assumed bulk density: 1.0 g/cm3,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-NZ_pasture-AM_Nlow,NewZealandFACE,NewZealandFACE,NewZealandFACE,Deng et al. 2016,,5,0-5 cm,,FACE,intact,Nlow,AM,,13,2216.5,2519.5,78.5,90,4,4,0.04918424,Grassland,Grassland,12.9,875,875,3.48700213,4.96661711,0.77088886,0.86000001,40.23,S,175.27,E,ANPP,,,,,26.8,35.112,3.319,3.516,"soil: Fig. 3, plant: Fig. 1",SE,366,475,assumed bulk density: 1.0 g/cm3,"soil: TC %, aboveground biomass: g m-2"
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,New Zealand Greenhouse,New Zealand Greenhouse,New Zealand Greenhouse,Ross et al. 1995,,5,0-5 cm,-,Chamber,disturbed,Nlow,AM,,0,2112.2,2122.4,,,1,1,,Grassland,Grassland,,NA,,3.48700213,4.96661711,0.77088886,0.86000001,40.23,S,175.27,E,,,,,,,,,,fig. 2,,350,700,assumed bulk density: 1.0 g/cm3,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,New Zealand Greenhouse,New Zealand Greenhouse,New Zealand Greenhouse,Ross et al. 1995,,5,0-5 cm,-,Chamber,disturbed,Nlow,AM,,0.25,2122.4,2142.9,,,1,1,,Grassland,Grassland,,NA,,3.48700213,4.96661711,0.77088886,0.86000001,40.23,S,175.27,E,,,,,,,,,,fig. 2,,350,700,assumed bulk density: 1.0 g/cm3,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,New Zealand Greenhouse,New Zealand Greenhouse,New Zealand Greenhouse,Ross et al. 1995,,5,0-5 cm,-,Chamber,disturbed,Nlow,AM,,0.5,1969.4,1979.6,,,1,1,,Grassland,Grassland,,NA,,3.48700213,4.96661711,0.77088886,0.86000001,40.23,S,175.27,E,,,,,,,,,,fig. 2,,350,700,assumed bulk density: 1.0 g/cm3,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,New Zealand Greenhouse,New Zealand Greenhouse,New Zealand Greenhouse,Ross et al. 1995,,5,0-5 cm,-,Chamber,disturbed,Nlow,AM,,0.75,1969.4,2000,,,1,1,0.07076907089,Grassland,Grassland,12.9,875,875,3.48700213,4.96661711,0.77088886,0.86000001,40.23,S,175.27,E,yield,,,,,,,,,fig. 2/Table 1,,350,700,assumed bulk density: 1.0 g/cm3,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,New Zealand OTC - P. radiata,New Zealand OTC,New Zealand OTC,Ross et al. 2006,,10,0-10 cm,Mar. 2000,OTC,intact,Nhigh,ECM,,6,412,530,103.9,155.84,2,2,0.002063984221,Temperate_Forest,Tree Stand,11.8,890,890,0.87036169,1.29998696,0.34244445,0.45199999,43.53,S,172.70,E,foliage,,,,,484,485,1,3,fig. 2,se,362,654,assumed bulk density: 1.0 g/cm3,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,New Zealand OTC - N. fusca,New Zealand OTC,New Zealand OTC,Ross et al. 2006,,10,0-10 cm,Mar. 2000,OTC,intact,Nhigh,ECM,,6,2403,3402,194.81,1103.9,3,3,0.002072539602,Temperate_Forest,Tree Stand,11.8,890,890,0.87036169,1.29998696,0.34244445,0.45199999,43.53,S,172.70,E,foliage,,,,,482,483,1,2,fig. 2,se,362,654,assumed bulk density: 1.0 g/cm3,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,ORNL FACE,ORNL FACE,ORNL FACE,Jastrow et al. 2005,,15,0-15 cm,Oct. 1997,OTC,intact,Nlow,AM,,0,2672,2791,160,110,3,2,,Temperate_Forest,Tree Stand,,NA,,2.6323812,5.59994411,0.5931111,0.89999998,35.9,N,84.33,W,,,,,,,,,,fig. 1b,sd,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,ORNL FACE,ORNL FACE,ORNL FACE,Jastrow et al. 2005,,15,0-15 cm,Nov. 2000,OTC,intact,Nlow,AM,,2.42,2785,2866,141,267,3,2,,Temperate_Forest,Tree Stand,,NA,,2.6323812,5.59994411,0.5931111,0.89999998,35.9,N,84.33,W,,,,,,,,,,fig. 1b,sd,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,ORNL FACE,ORNL FACE,ORNL FACE,Jastrow et al. 2005,,15,0-15 cm,Oct. 2002,OTC,intact,Nlow,AM,,4.33,2730,2991,141,231,3,2,,Temperate_Forest,Tree Stand,,NA,,2.6323812,5.59994411,0.5931111,0.89999998,35.9,N,84.33,W,,,,,,,,,,fig. 1b,sd,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-ORNL_SG-AM_Nlow,ORNL FACE,ORNL FACE,ORNL FACE,Iversen et al. 2012,,15,0-15 cm,Jun-09,FACE,intact,Nlow,AM,,11,3370,3850,100,215,3,2,0.01460053853,Temperate_Forest,Tree Stand,13.9,1371,1371,2.6323812,5.59994411,0.5931111,0.89999998,35.9,N,84.33,W,aboveground,,,,,,,,,tab. 1,se,380,550,Table 1,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,Placerville - low N,Placerville,Placerville,Johnson et al. 2006,,30,0-30 cm,Mar. 1991,OTC,intact,Nlow,ECM,I have  re-extracted values from Fig 4 because previous data seemed not to fit the figure for some reason,0,9210,7885,489,538,3,3,,Temperate_Forest,Tree Stand,,NA,,1.49998498,2.16664505,0.49422222,0.58399999,38.73,N,120.80,W,,,,,,,,,,fig. 4,se,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,Placerville - low N,Placerville,Placerville,Johnson et al. 2006,,30,0-30 cm,Mar. 1993,OTC,intact,Nlow,ECM,I have  re-extracted values from Fig 4 because previous data seemed not to fit the figure for some reason,1.75,8207,7637,321,766,3,3,,Temperate_Forest,Tree Stand,,NA,,1.49998498,2.16664505,0.49422222,0.58399999,38.73,N,120.80,W,,,,,,,,,,fig. 4,se,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-Placerville_P.ponderosa-ECM_Nlow,Placerville - low N,Placerville,Placerville,Johnson et al. 2006,,30,0-30 cm,sept. 1996,OTC,intact,Nlow,ECM,I have  re-extracted values from Fig 4 because previous data seemed not to fit the figure for some reason,5.5,8021,7639,180,534,3,3,0.3074846997,Temperate_Forest,Tree Stand,14.1,1000,1000,1.49998498,2.16664505,0.49422222,0.58399999,38.73,N,120.80,W,,,,,,,,,,fig. 4,se,352,700,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,Placerville - medium N,Placerville,Placerville,Johnson et al. 2006,,30,0-30 cm,Mar. 1991,OTC,intact,Nhigh,ECM,I have  re-extracted values from Fig 4 because previous data seemed not to fit the figure for some reason,0,8450,8444,442,178,3,3,,Temperate_Forest,Tree Stand,,NA,,1.49998498,2.16664505,0.49422222,0.58399999,38.73,N,120.80,W,,,,,,,,,,fig. 4,se,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,Placerville - medium N,Placerville,Placerville,Johnson et al. 2006,,30,0-30 cm,Mar. 1993,OTC,intact,Nhigh,ECM,I have  re-extracted values from Fig 4 because previous data seemed not to fit the figure for some reason,1.75,8311,8022,415,130,3,3,,Temperate_Forest,Tree Stand,,NA,,1.49998498,2.16664505,0.49422222,0.58399999,38.73,N,120.80,W,,,,,,,,,,fig. 4,se,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-PlacervilleMF_P.ponderosa-ECM_Nhigh,Placerville - medium N,Placerville,Placerville,Johnson et al. 2006,,30,0-30 cm,sept. 1996,OTC,intact,Nhigh,ECM,I have  re-extracted values from Fig 4 because previous data seemed not to fit the figure for some reason,5.5,8015,8538,352,178,3,3,0.32930375,Temperate_Forest,Tree Stand,14.1,1000,1000,1.49998498,2.16664505,0.49422222,0.58399999,38.73,N,120.80,W,,,,,,,,,,fig. 4,se,352,700,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,Placerville - high N,Placerville,Placerville,Johnson et al. 2006,,30,0-30 cm,Mar. 1991,OTC,intact,Nhigh,ECM,I have  re-extracted values from Fig 4 because previous data seemed not to fit the figure for some reason,0,8075,7598,413,391,3,3,,Temperate_Forest,Tree Stand,,NA,,1.49998498,2.16664505,0.49422222,0.58399999,38.73,N,120.80,W,,,,,,,,,,fig. 4,se,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,Placerville - high N,Placerville,Placerville,Johnson et al. 2006,,30,0-30 cm,Mar. 1993,OTC,intact,Nhigh,ECM,I have  re-extracted values from Fig 4 because previous data seemed not to fit the figure for some reason,1.75,7537,8618,606,504,3,3,,Temperate_Forest,Tree Stand,,NA,,1.49998498,2.16664505,0.49422222,0.58399999,38.73,N,120.80,W,,,,,,,,,,fig. 4,se,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-PlacervilleF_P.ponderosa-ECM_Nhigh,Placerville - high N,Placerville,Placerville,Johnson et al. 2006,,30,0-30 cm,sept. 1996,OTC,intact,Nhigh,ECM,I have  re-extracted values from Fig 4 because previous data seemed not to fit the figure for some reason,5.5,7479,8246,47,304,3,3,0.1906203596,Temperate_Forest,Tree Stand,14.1,1000,1000,1.49998498,2.16664505,0.49422222,0.58399999,38.73,N,120.80,W,,,,,,,,,,fig. 4,se,352,700,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-PopFACE_alba-mixed_Nhigh,POPFACE - alba,PopFACE,PopFACE,Hoosbeek et al. 2009,,10,0-10 cm,Oct. 2001,FACE,intact,Nlow,ECM,"soil C was higher pre-treatment in ambient, so I have accounted for these differences in EuroPOPFACE_soilC.xlsx",2,1524,1487,119,366,3,3,0.226,Temperate_Forest,Tree Stand,14.1,963.400024,watered,1.30832028,4.7332859,0.51800001,0.83600003,42.37,N,11.80,E,,,,,,,,,,"fig. 5, pers. comm.",sd,385,550,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-PopFACEII_alba-mixed_Nhigh,EUROFACE - alba,PopFACE,PopFACE,Hoosbeek 2015,P. alba L,10,0-10 cm,,FACE,intact,Nhigh,ECM,"pers. comm Hoosbeek EuroFACE soil C N P data.xls. soil C was higher pre-treatment in ambient, so I have accounted for these differences in EuroPOPFACE_soilC.xlsx",6,1677.217,1762.1,61.42702,73.15231,3,3,0.186,Temperate_Forest,Tree Stand,14.1,963.400024,watered,1.30832028,4.7332859,0.51800001,0.83600003,42.37,N,11.80,E,,,,,,,,,,Table 1,SE,370,550,,g m-2
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-PopFACE_eur-mixed_Nhigh,POPFACE - euramericana,PopFACE,PopFACE,Hoosbeek et al. 2009,,10,0-10 cm,Oct. 2001,FACE,intact,Nlow,ECM,"soil C was higher pre-treatment in ambient, so I have accounted for these differences in EuroPOPFACE_soilC.xlsx",2,1405,1171,201,272,3,3,0.29137376,Temperate_Forest,Tree Stand,14.1,963.400024,watered,1.30832028,4.7332859,0.51800001,0.83600003,42.37,N,11.80,E,,,,,,,,,,"fig. 5, pers. comm.",sd,385,550,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-PopFACEII_eur-mixed_Nhigh,POPFACE - euramericana,PopFACE,PopFACE,Hoosbeek 2015,P. euramericana,10,0-10 cm,,FACE,intact,Nhigh,ECM,"pers. comm Hoosbeek EuroFACE soil C N P data.xls. soil C was higher pre-treatment in ambient, so I have accounted for these differences in EuroPOPFACE_soilC.xlsx",6,1622.1,1617.21,64.01,122.52,3,3,0.147,Temperate_Forest,Tree Stand,14.1,963.400024,watered,1.30832028,4.7332859,0.51800001,0.83600003,42.37,N,11.80,E,,,,,,,,,,Table 1,SE,370,550,,g m-2
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-PopFACE_nigra-mixed_Nhigh,POPFACE - nigra,PopFACE,PopFACE,Hoosbeek et al. 2009,,10,0-10 cm,Oct. 2001,FACE,intact,Nlow,ECM,"soil C was higher pre-treatment in ambient, so I have accounted for these differences in EuroPOPFACE_soilC.xlsx",2,1534,1342,240,205,3,3,0.166,Temperate_Forest,Tree Stand,14.1,963.400024,watered,1.30832028,4.7332859,0.51800001,0.83600003,42.37,N,11.80,E,,,,,,,,,,"fig. 5, pers. comm.",sd,385,550,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-PopFACEII_nigra-mixed_Nhigh,POPFACE - nigra,PopFACE,PopFACE,Hoosbeek 2015,P. nigra,10,0-10 cm,,FACE,intact,Nhigh,ECM,"pers. comm Hoosbeek EuroFACE soil C N P data.xls. soil C was higher pre-treatment in ambient, so I have accounted for these differences in EuroPOPFACE_soilC.xlsx",6,1554.75,1715.6,43.07489,116.05,3,3,0.243,Temperate_Forest,Tree Stand,14.1,963.400024,watered,1.30832028,4.7332859,0.51800001,0.83600003,42.37,N,11.80,E,,,,,,,,,,Table 1,SE,370,550,,g m-2
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,Shortgrass Grassland,Shortgrass Grassland,Shortgrass Grassland,Pendall et al. 2004,,10,0-10 cm,Nov. 1995,OTC,intact,Nlow,AM,"soil C was higher pre-treatment in ambient, so I have accounted for these differences in EuroPOPFACE_soilC.xlsx",0,1137,1185,99,219,3,3,,Grassland,Grassland,,NA,,0.17407234,0.33333001,0.078,0.14,40.66,N,104.75,W,,,,,,,,,,appendix,se,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,Shortgrass Grassland,Shortgrass Grassland,Shortgrass Grassland,Pendall et al. 2004,,10,0-10 cm,1998,OTC,intact,Nlow,AM,,2,1096,1103,104,106,3,3,,Grassland,Grassland,,NA,,0.17407234,0.33333001,0.078,0.14,40.66,N,104.75,W,,,,,,,,,,appendix,se,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,Shortgrass Grassland,Shortgrass Grassland,Shortgrass Grassland,Pendall et al. 2004,,10,0-10 cm,1999,OTC,intact,Nlow,AM,,3,998,992,83,248,3,3,,Grassland,Grassland,,NA,,0.17407234,0.33333001,0.078,0.14,40.66,N,104.75,W,,,,,,,,,,appendix,se,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,Shortgrass Grassland,Shortgrass Grassland,Shortgrass Grassland,Pendall et al. 2004,,10,0-10 cm,2000,OTC,intact,Nlow,AM,,4,1214,1197,155,178,3,3,,Grassland,Grassland,,NA,,0.17407234,0.33333001,0.078,0.14,40.66,N,104.75,W,,,,,,,,,,appendix,se,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-"Not in AGB database, but I found data in papers",Shortgrass Grassland,Shortgrass Grassland,Shortgrass Grassland,Pendall et al. 2004,,10,0-10 cm,2001,OTC,intact,Nlow,AM,biomass: root + crown Fig. 1 Pendall et al. 2004.xls,5,1177,1182,156,79,3,3,0.14,Grassland,Grassland,10.6,249,249,0.17407234,0.33333001,0.078,0.14,40.66,N,104.75,W,,,,,,,,,,appendix. Biomass: Fig. 1,se,360,720,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,SoyFACE,SoyFACE,SoyFACE,Moran and Jastrow 2010,,12.5,0-12.5 cm,spring 2001,FACE,disturbed,Nlow,Nfixer,,0,4803,4142,,,3,3,,Cropland,Agricultural,,NA,,1.25183928,5.09994888,0.26377779,0.81199998,40.04,N,88.23,W,,,,,,,,,,pers. comm.,,,,assumed bulk density: 1.24 g/cm3. 1  ring removed from dataset (based authors' advice),
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,SoyFACE,SoyFACE,SoyFACE,Moran and Jastrow 2010,,12.5,0-12.5 cm,spring 2006,FACE,disturbed,Nlow,Nfixer,,5,4671,4100,,,3,3,,Cropland,Agricultural,,NA,,1.25183928,5.09994888,0.26377779,0.81199998,40.04,N,88.23,W,,,,,,,,,,pers. comm.,,,,assumed bulk density: 1.24 g/cm3. 1  ring removed from dataset (based authors' advice),
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-"Not in AGB database, but I found data in papers",SoyFACE,SoyFACE,SoyFACE,Moran and Jastrow 2010,,12.5,0-12.5 cm,spring 2007,FACE,disturbed,Nlow,Nfixer,"biomass data taken from the GCME database, Morgan et al. 2005. N applied to corn, but no to soy",6,4437,3836,,,3,3,0.1465935802,Cropland,Agricultural,13.2,823,823,1.25183928,5.09994888,0.26377779,0.81199998,40.04,N,88.23,W,,,,,,"2002:1185.5, 2003:783.9","2002:1346.8, 2003:925.1",,,pers. comm.,,370,550,assumed bulk density: 1.24 g/cm3. 1  ring removed from dataset (based authors' advice),
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,FACE Stillberg - larix,FACE Stillberg,FACE Stillberg,"soil: Hagedorn et al. 2013, plant: Dawes et. al., 2015",Larix decidua,5,0-5 cm,2000,FACE,intact,Nlow,ECM,,9,2010,1960,85,80,10,10,0.4329889453,Alpine_Forest,Tree Stand,8.8,1150,1150,2.72589874,5.59994411,0.65133333,0.88800001,47.46,N,7.50,E,total,5411,8343,,,,,,,soil: Table 1; plant Table S2,SE,370,545,assumed bulk density: 1.0 g/cm3,"soil: %; Tree biomass: mean of needles, above-ground wood and coarse roots (g)"
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,FACE Stillberg - pinus,FACE Stillberg,FACE Stillberg,"soil: Hagedorn et al. 2013, plant: Dawes et. al., 2015",Pinus mugo ssp. uncinata,5,0-5 cm,2000,FACE,intact,Nlow,ECM,,9,1900,2020,100,85,10,10,0.1989998789,Alpine_Forest,Tree Stand,8.8,1150,1150,2.72589874,5.59994411,0.65133333,0.88800001,47.46,N,7.50,E,total,5500,6711,,,,,,,soil: Table 1; plant Table S2,SE,370,545,assumed bulk density: 1.0 g/cm3,"soil: %; Tree biomass: mean of needles, above-ground wood and coarse roots (g)"
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-Swiss_Lolium-AM_Nlow,SwissFACE- grass - low N,Swiss FACE,Swiss FACE,"De Graaff et al., 2004",,10,0-10 cm,2002,FACE,intact,Nlow,AM,,9,3510,4170,610,800,3,3,-0.02452026137,Grassland,Grassland,12.3,878,878,3.19811606,5.56661081,0.70866668,0.87599999,47.45,N,8.95,E,,,,,,,,,,Table 3,se,350,600,bulk density:1.2 g cm3,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-Swiss_Lolium-AM_Nlow,SwissFACE- grass - low N,Swiss FACE,Swiss FACE,"De Graaff et al., 2007",,10,0-10 cm,2003,FACE,intact,Nlow,AM,,10,3448.8,4653.6,44.4,159.6,3,3,-0.02452026137,Grassland,Grassland,12.3,878,878,3.19811606,5.56661081,0.70866668,0.87599999,47.45,N,8.95,E,,,,,,,,,,Table 3,se,350,600,bulk density:1.2 g cm3,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-Swiss_Lolium-AM_Nhigh,SwissFACE- grass - high N,Swiss FACE,Swiss FACE,"De Graaff et al., 2004",,10,0-10 cm,2002,FACE,intact,Nhigh,AM,,9,3630,4040,550,820,3,3,0.1593556537,Grassland,Grassland,12.3,878,878,3.19811606,5.56661081,0.70866668,0.87599999,47.45,N,8.95,E,,,,,,,,,,Table 3,se,350,600,bulk density:1.2 g cm3,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-Swiss_Lolium-AM_Nhigh,SwissFACE- grass - high N,Swiss FACE,Swiss FACE,"De Graaff et al., 2007",,10,0-10 cm,2003,FACE,intact,Nhigh,AM,,10,3590.4,3694.8,130.8,434.4,3,3,0.1593556537,Grassland,Grassland,12.3,878,878,3.19811606,5.56661081,0.70866668,0.87599999,47.45,N,8.95,E,,,,,,,,,,Table 3,se,350,600,bulk density:1.2 g cm3,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,SwissFACE- clover - low N,Swiss FACE,Swiss FACE,"De Graaff et al., 2004",,10,0-10 cm,2002,FACE,intact,Nlow,Nfixer,Aboveground biomass: Hartwig et al. 2002,9,3260,3710,480,820,3,3,0.5552928314,Grassland,Grassland,12.3,878,878,3.19811606,5.56661081,0.70866668,0.87599999,47.45,N,8.95,E,aboveground,,,,,,,,,Table 3,se,350,600,bulk density:1.2 g cm3,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,SwissFACE- clover - low N,Swiss FACE,Swiss FACE,"De Graaff et al., 2007",,10,0-10 cm,2003,FACE,intact,Nlow,Nfixer,Aboveground biomass: Hartwig et al. 2002,10,3489.6,3230.4,121.2,578.4,3,3,0.5552928314,Grassland,Grassland,12.3,878,878,3.19811606,5.56661081,0.70866668,0.87599999,47.45,N,8.95,E,aboveground,,,,,,,,,Table 3,se,350,600,bulk density:1.2 g cm3,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,SwissFACE- clover - high N,Swiss FACE,Swiss FACE,"De Graaff et al., 2004",,10,0-10 cm,2002,FACE,intact,Nhigh,Nfixer,Aboveground biomass: Hartwig et al. 2002,9,3330,3770,610,680,3,3,0.6075227663,Grassland,Grassland,12.3,878,878,3.19811606,5.56661081,0.70866668,0.87599999,47.45,N,8.95,E,aboveground,,,,,,,,,Table 3,se,350,600,bulk density:1.2 g cm3,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,SwissFACE- clover - high N,Swiss FACE,Swiss FACE,"De Graaff et al., 2007",,10,0-10 cm,2003,FACE,intact,Nhigh,Nfixer,Aboveground biomass: Hartwig et al. 2002,10,3208.8,3698.4,108,344.4,3,3,0.6075227663,Grassland,Grassland,12.3,878,878,3.19811606,5.56661081,0.70866668,0.87599999,47.45,N,8.95,E,aboveground,,,,,,,,,Table 3,se,350,600,bulk density:1.2 g cm3,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,Swiss Greenhouse,Swiss Greenhouse,Swiss Greenhouse,K_rner and Arnone 1992,,20,0-20 cm,-,Chamber,disturbed,Nhigh,AM,,0,1280,1280,23,23,2,2,,Temperate_Forest,Tree Stand,,NA,,1.65553904,3.43329906,0.55644447,0.73199999,47.57,N,8.60,E,,,,,,,,,,table 4,se,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-Basel_tropical1_trop_forest-AM_Nhigh,Swiss Greenhouse,Swiss Greenhouse,Swiss Greenhouse,K_rner and Arnone 1992,,20,0-20 cm,-,Chamber,disturbed,Nhigh,AM,,0.25,1205,980,,,2,2,0.0631964192,Temperate_Forest,Tree Stand,27,1333.30005,watered,1.65553904,3.43329906,0.55644447,0.73199999,47.57,N,8.60,E,,,,,,,,,,table 4,se,340,610,,"se value could potentially be estimated from table 4, but are not directly reported"
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,Tallgrass Grassland,Tallgrass Grassland,Tallgrass Grassland,Rice et al. 1994,,5,0-5 cm,Nov. 1992,OTC,intact,Nhigh,AM,,2.5,2985,2860,,,3,3,,Grassland,Grassland,,NA,,0.88239861,1.93331397,0.35444444,0.56800002,39.12,N,96.35,W,,,,,,,,,,table 1,,,,bulk density = 0.93 g/cm3 (Williams et al. 2000),
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-"Not in AGB database, but I found data in papers",Tallgrass Grassland,Tallgrass Grassland,Tallgrass Grassland,Williams et al. 2000,,5,0-5 cm,Oct. 1996,OTC,intact,Nhigh,AM,AGB data found in Owensby et al. 1999 (Shortgrass Grassland Owensby et al. 1999.xls),8,2181,2372,,,3,3,0.12213002,Grassland,Grassland,15,840,840,0.88239861,1.93331397,0.35444444,0.56800002,39.12,N,96.35,W,,,,,,,,,,table 4,,340,610,bulk density = 0.93 g/cm3 (Williams et al. 2000),
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,UMBS - aspen,UMBS,UMBS,Zak et al. 1993,,15,0-15 cm,May-91,OTC,disturbed,Nhigh,ECM,,0,297,297,82,82,4,4,,Temperate_Forest,Tree Stand,,NA,,1.27035761,3.13330197,0.34400001,0.68400002,45.55,N,84.78,W,,,,,,,,,,text (page 107),se,,,assumed bulk density: 1.0 g/cm3,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-UMBS_Pop_grandidentata-ECM/AM_Nhigh,UMBS - aspen,UMBS,UMBS,Zak et al. 1993,,15,0-15 cm,Oct. 1991,OTC,disturbed,Nhigh,ECM,,0.5,242,290,28,59,4,4,0.0408803529,Temperate_Forest,Tree Stand,6,1031.5,watered,1.27035761,3.13330197,0.34400001,0.68400002,45.55,N,84.78,W,,,,,,,,,,table 2,se,342,692,assumed bulk density: 1.0 g/cm3,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,"WSL - loam, low N",Birmensdorf,Birmensdorf,Hagedorn et al. 2001,,10,0-10 cm,Jan. 1995,OTC,intact,Nhigh,ECM,N medium,0,1511,1511,,,4,4,,Temperate_Forest,Tree Stand,,NA,,1.87868488,3.53329802,0.59866667,0.77600002,47.35,N,8.43,E,,,,,,,,,,"fig. 4, pers. comm.",,370,570,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-Birmensdorf acidic_Fagus sylvatica-ECM_Nlow & Birmensdorf  acidic_Picea abies-ECM_Nlow,"WSL - loam, low N",Birmensdorf,Birmensdorf,Hagedorn et al. 2001,,10,0-10 cm,sept. 1998,OTC,intact,Nhigh,ECM,N medium,3.75,1501,1677,52,35,4,4,-0.03969071809,Temperate_Forest,Tree Stand,9.5,691,691,1.87868488,3.53329802,0.59866667,0.77600002,47.35,N,8.43,E,,,,,,,,,,"fig. 4, pers. comm.",se,370,570,biomass is the mean of 2 species,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,"WSL - loam, high N",Birmensdorf,Birmensdorf,Hagedorn et al. 2001,,10,0-10 cm,Jan. 1995,OTC,intact,Nhigh,ECM,,0,1511,1511,,,4,4,,Temperate_Forest,Tree Stand,,NA,,1.87868488,3.53329802,0.59866667,0.77600002,47.35,N,8.43,E,,,,,,,,,,"fig. 4, pers. comm.",,370,570,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-Birmensdorf acidic_Fagus sylvatica-ECM_Nhigh & Birmensdorf  acidic_Picea abies-ECM_Nhigh,"WSL - loam, high N",Birmensdorf,Birmensdorf,Hagedorn et al. 2001,,10,0-10 cm,sept. 1998,OTC,intact,Nhigh,ECM,,3.75,1689,1763,83,47,4,4,0.02974773393,Temperate_Forest,Tree Stand,9.5,691,691,1.87868488,3.53329802,0.59866667,0.77600002,47.35,N,8.43,E,,,,,,,,,,"fig. 4, pers. comm.",se,370,570,biomass is the mean of 2 species,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,"WSL - sand, low N",Birmensdorf,Birmensdorf,Hagedorn et al. 2001,,10,0-10 cm,Jan. 1995,OTC,intact,Nhigh,ECM,N medium,0,1542,1542,,,4,4,,Temperate_Forest,Tree Stand,,NA,,1.87868488,3.53329802,0.59866667,0.77600002,47.35,N,8.43,E,,,,,,,,,,"fig. 4, pers. comm.",,370,570,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-Birmensdorf calcareous_Fagus sylvatica-ECM_Nlow & Birmensdorf calcareous_Picea abies-ECM_Nlow,"WSL - sand, low N",Birmensdorf,Birmensdorf,Hagedorn et al. 2001,,10,0-10 cm,sept. 1998,OTC,intact,Nhigh,ECM,N medium,3.75,1377,1433,49,37,4,4,0.2331631671,Temperate_Forest,Tree Stand,9.5,691,691,1.87868488,3.53329802,0.59866667,0.77600002,47.35,N,8.43,E,,,,,,,,,,"fig. 4, pers. comm.",se,370,570,biomass is the mean of 2 species,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,"WSL - sand, high N",Birmensdorf,Birmensdorf,Hagedorn et al. 2001,,10,0-10 cm,Jan. 1995,OTC,intact,Nhigh,ECM,,0,1542,1542,,,4,4,,Temperate_Forest,Tree Stand,,NA,,1.87868488,3.53329802,0.59866667,0.77600002,47.35,N,8.43,E,,,,,,,,,,"fig. 4, pers. comm.",,370,570,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-Birmensdorf calcareous_Fagus sylvatica-ECM_Nhigh & Birmensdorf calcareous_Picea abies-ECM_Nhigh,"WSL - sand, high N",Birmensdorf,Birmensdorf,Hagedorn et al. 2001,,10,0-10 cm,sept. 1998,OTC,intact,Nhigh,ECM,,3.75,1322,1396,18,96,4,4,0.2349076727,Temperate_Forest,Tree Stand,9.5,691,691,1.87868488,3.53329802,0.59866667,0.77600002,47.35,N,8.43,E,,,,,,,,,,"fig. 4, pers. comm.",se,370,570,biomass is the mean of 2 species,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-Nevada_pooled_desert_scrub-AM_Nlow,Nevada Desert FACE,Nevada Desert FACE,Nevada Desert FACE,"soil: Koyama et al. 2019; plant: Newingham et. al., 2013","surface soils, L. tridentata",20,0-20,April 1997,FACE,intact,Nlow,AM,,10,745.602,1025.882,151.58,117.832,3,3,-0.0840831,Shrubland,Shrubland,15.4,146,146,0.09536941,0.133332,0.03844444,0.052,36.77,N,115.96,W,,1777.988,1288.586,484.025,140.288,,,,,Fig. 1,SE,380,550,1.43,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,Bangor FACE,Bangor FACE,Bangor FACE,Hoosbeek et al. 2011,,10,0-10 cm,2004,FACE,intact,Nlow,ECM,,1,2828.726,2734.601,38.847,60.537,4,4,,Temperate_Forest,Tree Stand,,NA,,2.38793898,4.93328381,0.61266667,0.83999997,53.23,N,4.02,W,,,,,,,,,,fig 1a,se,330,580,g/m2,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,Bangor FACE,Bangor FACE,Bangor FACE,Hoosbeek et al. 2011,,10,0-10 cm,2005,FACE,intact,Nlow,ECM,,2,2824.916,2751.537,54.759,94.636,4,4,,Temperate_Forest,Tree Stand,,NA,,2.38793898,4.93328381,0.61266667,0.83999997,53.23,N,4.02,W,,,,,,,,,,fig 1a,se,330,580,g/m2,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,Bangor FACE,Bangor FACE,Bangor FACE,Hoosbeek et al. 2011,,10,0-10 cm,2006,FACE,intact,Nlow,ECM,,3,3230.077,2859.549,76.123,78.731,4,4,,Temperate_Forest,Tree Stand,,NA,,2.38793898,4.93328381,0.61266667,0.83999997,53.23,N,4.02,W,,,,,,,,,,fig 1a,se,330,580,g/m2,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,Bangor FACE,Bangor FACE,Bangor FACE,Hoosbeek et al. 2011,,10,0-10 cm,2007,FACE,intact,Nlow,ECM,,4,3163.208,3219.367,87.906,83.4,4,4,,Temperate_Forest,Tree Stand,,NA,,2.38793898,4.93328381,0.61266667,0.83999997,53.23,N,4.02,W,,,,,,,,,,fig 1a,se,330,580,g/m2,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,Bangor FACE,Bangor FACE,Bangor FACE,Hoosbeek et al. 2011,,10,0-10 cm,2008,FACE,intact,Nlow,ECM,,5,3360.469,3286.229,50.41,40.353,4,4,,Temperate_Forest,Tree Stand,,NA,,2.38793898,4.93328381,0.61266667,0.83999997,53.23,N,4.02,W,,,,,,,,,,fig 1a,se,330,580,g/m2,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-Bangor_Alnus-ECM/AM_Nlow,BangorFACE - alnus,Bangor FACE,Bangor FACE,"Hoosbeek 2015 (soil), Smith et al., 2013 pers comm (plant)",Soil Alnus,10,0-10 cm,2008,FACE,intact,Nlow,ECM,,4,3355.8,3142.9,70.6,66.7,4,4,0.25058653,Temperate_Forest,Tree Stand,11.5,1034,1034,2.38793898,4.93328381,0.61266667,0.83999997,53.23,N,4.02,W,,,,,,,,,,Soil: Table 3. Plant: Table 1,SE,380,580,,g m-2
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-Bangor_Betula_pendula-ECM_Nlow,BangorFACE - betula,Bangor FACE,Bangor FACE,"Hoosbeek 2015 (soil), Smith et al., 2013 pers comm (plant)",Soil Betula,10,0-10 cm,2008,FACE,intact,Nlow,ECM,,4,3066,3122.5,393.6,261.4,4,4,0.14632001,Temperate_Forest,Tree Stand,11.5,1034,1034,2.38793898,4.93328381,0.61266667,0.83999997,53.23,N,4.02,W,,,,,,,,,,Soil: Table 3. Plant: Table 1,SE,380,580,,g m-2
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-Bangor_Fagus-ECM_Nlow,BangorFACE - fagus,Bangor FACE,Bangor FACE,"Hoosbeek 2015 (soil), Smith et al., 2013 pers comm (plant)",Soil Fagus,10,0-10 cm,2008,FACE,intact,Nlow,ECM,,4,3687.5,3474.5,149.8,476.4,4,4,0.19956512,Temperate_Forest,Tree Stand,11.5,1034,1034,2.38793898,4.93328381,0.61266667,0.83999997,53.23,N,4.02,W,,,,,,,,,,Soil: Table 3. Plant: Table 1,SE,380,580,,g m-2
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-TasFACE_C3_C4-AM_Nlow,Tas FACE,Tas FACE,Tas FACE,Pendall et al. 2011,,10,0-10 cm,2007,FACE,intact,Nlow,AM,,6,3528,4248,234,288,3,3,0.07209261602,Grassland,Grassland,11.6,560,560,1.0648042,1.76664901,0.37400001,0.54799998,42.7,S,147.27,E,,,,,,,,,,"text, C3 plants only",se,372,550,Bulk density 1.8,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-Ginninderra_pooled_Phalaris_aquatica-AM_Nhigh,Ginninderra,Ginninderra,Ginninderra,unpublished - GlobalDB,,10,0-10 cm,2002,Chamber,disturbed,Nhigh,AM,biomass: Volder et al. 2007,2,1109.6,1138.8,214.62,258.42,3,3,0.02009774388,Grassland,Grassland,14.3,1295.09998,watered,0.94721276,1.49998498,0.4051111,0.50400001,35.22,S,149.13,E,,,,,,,,,,,sd,380,750,bulk density: 1.46 g/cm3 Volder et al 2007,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-Not in AGB db,Sky Oaks,Sky Oaks,Sky Oaks,"Del Galdo et al., 2006",,10,0-10 cm,2003,Chamber,intact,Nlow,ECM,"ECM + AM. Amb=350ppm, elev=650ppm plots only. Biomass data is ROOT biomass data from K.Treseder pers.comm (Sky Oaks root biomass.xls)",6,3397,2494,612,81,2,2,0.331794,Shrubland,Shrubland,12.2,491,491,0.32129309,0.86665797,0.23999999,0.41999999,32.36,N,116.66,W,Root biomass,,,,,,,,,table 1,se,350,650,g/m2,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-Antwerp_OTC_P.sylvestris-ECM_Nlow,Antwerp OTC,Antwerp OTC,Antwerp OTC,"Carnol et al., 2002",,10,0-15 cm,2000,OTC,disturbed,Nlow,ECM,,3.75,1785,1605,426.9,237.15,2,2,0.4929170007,Temperate_Forest,Tree Stand,12,770,770,1.00739729,1.76664901,0.35311112,0.51999998,51.17,N,4.38,E,,,,,,,,,,Tab. 1,sd,380,780,assumed bulk density: 1.0 g/cm3,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-Lancaster_c2_Abies alba -ECM_Nlow,Lancaster - Abies alba,Lancaster,Lancaster,"Heath et al., 2005",,60,pot,,Chamber,disturbed,Nlow,ECM,ambient +300ppm plots,1.25,198.6332,186.2018,9.5185175,4.6087835,3,3,-0.115997349,Temperate_Forest,Tree Stand,13,2258,watered,2.20090389,4.69995308,0.68177778,0.83600003,54.02,N,2.78,W,,,,,,,,,,pers. comm,sd,380,580,g/pot,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-Lancaster_c2f_Abies alba -ECM_Nhigh,Lancaster - Abies alba,Lancaster,Lancaster,"Heath et al., 2005",,60,pot,,Chamber,disturbed,Nhigh,ECM,ambient +300ppm plots,1.25,200.4176,185.4705,5.4056803,3.5226807,3,3,-0.125055918,Temperate_Forest,Tree Stand,13,2258,watered,2.20090389,4.69995308,0.68177778,0.83600003,54.02,N,2.78,W,,,,,,,,,,pers. comm,sd,380,580,g/pot,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-Lancaster_c2_Betula pendula -ECM_Nlow,Lancaster - Betula pendula,Lancaster,Lancaster,"Heath et al., 2005",,60,pot,,Chamber,disturbed,Nlow,ECM,ambient +300ppm plots,1.25,204.1403,196.6413,13.0942344,5.752343,3,3,0.1563764233,Temperate_Forest,Tree Stand,13,2258,watered,2.20090389,4.69995308,0.68177778,0.83600003,54.02,N,2.78,W,,,,,,,,,,pers. comm,sd,380,580,g/pot,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-Lancaster_c2f_Betula pendula -ECM_Nhigh,Lancaster - Betula pendula,Lancaster,Lancaster,"Heath et al., 2005",,60,pot,,Chamber,disturbed,Nhigh,ECM,ambient +300ppm plots,1.25,201.0327,209.3765,1.7492085,6.1540788,3,3,0.3942985115,Temperate_Forest,Tree Stand,13,2258,watered,2.20090389,4.69995308,0.68177778,0.83600003,54.02,N,2.78,W,,,,,,,,,,pers. comm,sd,380,580,g/pot,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-Lancaster_c2_Carpinus betulus -ECM_Nlow,Lancaster - Carpinus betulus,Lancaster,Lancaster,"Heath et al., 2005",,60,pot,,Chamber,disturbed,Nlow,ECM,ambient +300ppm plots,1.25,192.5741,186.1498,6.0535499,3.1052476,3,3,-0.05755012523,Temperate_Forest,Tree Stand,13,2258,watered,2.20090389,4.69995308,0.68177778,0.83600003,54.02,N,2.78,W,,,,,,,,,,pers. comm,sd,380,580,g/pot,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-Lancaster_c2f_Carpinus betulus -ECM_Nhigh,Lancaster - Carpinus betulus,Lancaster,Lancaster,"Heath et al., 2005",,60,pot,,Chamber,disturbed,Nhigh,ECM,ambient +300ppm plots,1.25,197.9919,192.9125,6.8520314,5.6925575,3,3,0.2622658996,Temperate_Forest,Tree Stand,13,2258,watered,2.20090389,4.69995308,0.68177778,0.83600003,54.02,N,2.78,W,,,,,,,,,,pers. comm,sd,380,580,g/pot,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-Lancaster_c2_Fagus sylvatica -ECM_Nlow,Lancaster - Fagus sylvatica,Lancaster,Lancaster,"Heath et al., 2005",,60,pot,,Chamber,disturbed,Nlow,ECM,ambient +300ppm plots,1.25,196.3282,186.5584,3.0090137,4.765485,3,3,0.1871250749,Temperate_Forest,Tree Stand,13,2258,watered,2.20090389,4.69995308,0.68177778,0.83600003,54.02,N,2.78,W,,,,,,,,,,pers. comm,sd,380,580,g/pot,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-Lancaster_c2f_Fagus sylvatica -ECM_Nhigh,Lancaster - Fagus sylvatica,Lancaster,Lancaster,"Heath et al., 2005",,60,pot,,Chamber,disturbed,Nhigh,ECM,ambient +300ppm plots,1.25,193.4781,187.6891,6.1106014,3.1416489,3,3,0.2568661427,Temperate_Forest,Tree Stand,13,2258,watered,2.20090389,4.69995308,0.68177778,0.83600003,54.02,N,2.78,W,,,,,,,,,,pers. comm,sd,380,580,g/pot,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-Lancaster_c2_Pinus sylvestris -ECM_Nlow,Lancaster - Pinus sylvestris,Lancaster,Lancaster,"Heath et al., 2005",,60,pot,,Chamber,disturbed,Nlow,ECM,ambient +300ppm plots,1.25,193.295,188.1157,0.8522622,1.5737757,3,3,0.2645723289,Temperate_Forest,Tree Stand,13,2258,watered,2.20090389,4.69995308,0.68177778,0.83600003,54.02,N,2.78,W,,,,,,,,,,pers. comm,sd,380,580,g/pot,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-Lancaster_c2f_Pinus sylvestris -ECM_Nhigh,Lancaster - Pinus sylvestris,Lancaster,Lancaster,"Heath et al., 2005",,60,pot,,Chamber,disturbed,Nhigh,ECM,ambient +300ppm plots,1.25,196.4128,189.462,5.4397738,1.9266995,3,3,0.4358105188,Temperate_Forest,Tree Stand,13,2258,watered,2.20090389,4.69995308,0.68177778,0.83600003,54.02,N,2.78,W,,,,,,,,,,pers. comm,sd,380,580,g/pot,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-Lancaster_c2_Quercus robur-ECM_Nlow,Lancaster - Quercus robur,Lancaster,Lancaster,"Heath et al., 2005",,60,pot,,Chamber,disturbed,Nlow,ECM,ambient +300ppm plots,1.25,199.3387,190.0763,6.0615273,3.6828426,3,3,0.2204593065,Temperate_Forest,Tree Stand,13,2258,watered,2.20090389,4.69995308,0.68177778,0.83600003,54.02,N,2.78,W,,,,,,,,,,pers. comm,sd,380,580,g/pot,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-Lancaster_c2f_Quercus robur-ECM_Nhigh,Lancaster - Quercus robur,Lancaster,Lancaster,"Heath et al., 2005",,60,pot,,Chamber,disturbed,Nhigh,ECM,ambient +300ppm plots,1.25,204.8002,193.6352,9.6755602,2.4935552,3,3,0.4881364878,Temperate_Forest,Tree Stand,13,2258,watered,2.20090389,4.69995308,0.68177778,0.83600003,54.02,N,2.78,W,,,,,,,,,,pers. comm,sd,380,580,g/pot,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-BioCON_nolegumes_mixed-AM_Nlow,BioCON - Low N,BioCON,BioCON,http://www.cedarcreek.umn.edu/research/data/dataset?ne141,,14,0-10,,FACE,intact,Nlow,AM,,10,1096.102,1121.19,47.88,51.87,3,3,0.06144711427,Grassland,Grassland,5.6,679,679,1.39628232,4.2999568,0.354,0.78399998,45.4,N,93.20,W,,,,,,,,,,web,sd,360,560,http://www.cedarcreek.umn.edu/research/data/dataset?bde141,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-BioCON_nolegumes_mixed-AM_Nhigh,BioCON - High N,BioCON,BioCON,http://www.cedarcreek.umn.edu/research/data/dataset?ne141,,14,0-10,,FACE,intact,Nhigh,AM,,10,1247.23,1220.32,59.85,49.21,3,3,0.1560517384,Grassland,Grassland,5.6,679,679,1.39628232,4.2999568,0.354,0.78399998,45.4,N,93.20,W,,,,,,,,,,web,sd,360,560,http://www.cedarcreek.umn.edu/research/data/dataset?bde141,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-"Not in AGB db, but just added yi",BioCON - legumes - Low N,BioCON,BioCON,http://www.cedarcreek.umn.edu/research/data/dataset?ne141,,14,0-10,,FACE,intact,Nlow,Nfixer,,10,777.92,1027.5,73.44,98.64,3,3,0.11036915,Grassland,Grassland,5.6,679,679,1.39628232,4.2999568,0.354,0.78399998,45.4,N,93.20,W,,,,,,,,,,web,sd,360,560,http://www.cedarcreek.umn.edu/research/data/dataset?bde141,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-"Not in AGB db, but just added yi",BioCON - legumes - High N,BioCON,BioCON,http://www.cedarcreek.umn.edu/research/data/dataset?ne141,,14,0-10,,FACE,intact,Nhigh,Nfixer,,10,971.28,935.88,62.48,62.04,3,3,0.37228308,Grassland,Grassland,5.6,679,679,1.39628232,4.2999568,0.354,0.78399998,45.4,N,93.20,W,,,,,,,,,,web,sd,360,560,http://www.cedarcreek.umn.edu/research/data/dataset?bde141,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-Not in AGB db,Gainesville - Arachis glabrata,Gainesville,Gainesville,"Allen et al., 2006",,20,0-20cm deep soil samples,2001,Chamber,intact,Nhigh,Nfixer,Gainsville Allen et al. 2006.xlsx,6,946,1025.8,33.8,37.8,4,4,0.22500145,Cropland,Agricultural,21.6,2020,2020,1.4518373,1.93331397,0.46911111,0.55199999,29.65,N,82.35,W,Belowground,,,,,,,,,,sd,360,700,assumed bulk density: 1.0 g/cm3. Initial C 4.185 g/kg,SOC GCME
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-Not in AGB db,Gainesville - Paspalum notatum,Gainesville,Gainesville,"Allen et al., 2006",,20,0-20cm deep soil samples,2001,Chamber,intact,Nhigh,AM,Gainsville Allen et al. 2006.xlsx,6,1105.6,1127.4,33.8,40.8,4,4,0.06130575,Cropland,Agricultural,21.6,2020,2020,1.4518373,1.93331397,0.46911111,0.55199999,29.65,N,82.35,W,Belowground,,,,,,,,,,sd,360,700,assumed bulk density: 1.0 g/cm3. Initial C 4.185 g/kg,SOC GCME
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-SwissCentral_OTC_alpine grassland-AM_Nlow,Swiss Central Alps,Swiss Central Alps,Swiss Central Alps,"Niklaus & Korner, 1996",,5,0-5cm,1995,OTC,intact,Nlow,AM,SOC,3.17,1836.1,1908.715,93.36,93.36,12,12,0.03319806941,Grassland,Grassland,0.558333317,168,168,0.17592417,0.83332503,0.01022222,0.076,46.58,N,8.38,E,,,,,,,,,,fig 5,se,355,680,assumed bulk density: 1.0 g/cm3. Initial C 4.185 g/kg,SOC GCME
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-SwissCentral_OTC_alpine grassland-AM_Nhigh,Swiss Central Alps F,Swiss Central Alps,Swiss Central Alps,"Niklaus & Korner, 1996",,5,0-5cm,1995,OTC,intact,Nhigh,AM,SOC,3.17,1825.725,1960.58,124.48,207.47,4,4,0.09908146864,Grassland,Grassland,0.558333317,168,168,0.17592417,0.83332503,0.01022222,0.076,46.58,N,8.38,E,,,,,,,,,,fig 5,se,355,680,assumed bulk density: 1.0 g/cm3. Initial C 4.185 g/kg,SOC GCME
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-Swiss_Jura_bromus_erectus-AM_Nlow,Swiss Jura,Swiss Jura,Swiss Jura,Niklaus et al. 2001,,10,0-10 cm,1999,Chamber,intact,Nlow,AM,SOC,6,4179,4234,242,103,8,8,0.03919726906,Grassland,Grassland,8.7,1063,1063,2.62127018,5.33328009,0.61422223,0.86799997,47.45,N,7.57,E,,,,,,,,,,table 1,se,380,630,g C/m2,SOC GCME
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,CLIMAITE,CLIMAITE,CLIMAITE,Haugwitz et al. 2014,,8,0-8cm,2010,FACE,intact,Nlow,AM,,5,2487.9,2547.4,262.9,338.4,6,6,,Grassland,Grassland,,NA,,1.67776096,5.89994097,0.46377778,0.85600001,55.88,N,11.97,E,,,,,,,,,,table 1,se,380,510,g C/m2,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,CLIMAITE,CLIMAITE,CLIMAITE,Vestergård et al. 2016,Deschampsia flexuosa,10,0-10 cm,2005,FACE,intact,Nlow,AM,"biomass is Deschampsia flexuosa only, Callune is Ericoid",8,3906,4364.8,359.6,409.2,6,6,0.0773332034,Grassland,Grassland,9.7,742,742,1.67776096,5.89994097,0.46377778,0.85600001,55.88,N,11.97,E,,,,,,,,,,Table 1,SE,380,510,bulk density 1.24 g/cm3,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-CLIMAITE_d_Calluna-Deschamps-AM_Nlow,CLIMAITE D,CLIMAITE,CLIMAITE,Dietzen et al. 2019,Deschampsia flexuosa,30,0-30 cm,2013,FACE,intact,Nlow,AM,"biomass is Deschampsia flexuosa only, Callune is Ericoid",8,5000,6150,400,500,6,6,0.10724553,Grassland,Grassland,8,600,600,1.67776096,5.89994097,0.46377778,0.85600001,55.88,N,11.97,E,,,,,,,,,,Fig.2,SE,380,510,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-CLIMAITE_t_Calluna-Deschamps-AM_Nlow,CLIMAITE T,CLIMAITE,CLIMAITE,Dietzen et al. 2019,Deschampsia flexuosa,30,0-30 cm,2013,FACE,intact,Nlow,AM,"biomass is Deschampsia flexuosa only, Callune is Ericoid",8,4900,5600,300,500,6,6,0.1461419,Grassland,Grassland,8,600,600,1.67776096,5.89994097,0.46377778,0.85600001,55.88,N,11.97,E,,,,,,,,,,Fig.2,SE,380,510,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-CLIMAITE_td_Calluna-Deschamps-AM_Nlow,CLIMAITE TD,CLIMAITE,CLIMAITE,Dietzen et al. 2019,Deschampsia flexuosa,30,0-30 cm,2013,FACE,intact,Nlow,AM,"biomass is Deschampsia flexuosa only, Callune is Ericoid",8,4900,6200,400,1000,6,6,0.16395468,Grassland,Grassland,8,600,600,1.67776096,5.89994097,0.46377778,0.85600001,55.88,N,11.97,E,,,,,,,,,,Fig.2,SE,380,510,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,CLIMAITE,CLIMAITE,CLIMAITE,Vestergård et al. 2016,Calluna vulgaris,10,0-10 cm,2005,FACE,intact,Nlow,ER,,8,3906,4364.8,359.6,409.2,6,6,-0.145851877,Shrubland,Shrubland,9.7,742,742,1.67776096,5.89994097,0.46377778,0.85600001,55.88,N,11.97,E,Climaite.R,560,484,122,57.3,,,,,Table 1,SE,380,510,bulk density 1.24 g/cm3,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-CLIMAITE_d_Calluna-Deschamps-AM_Nlow,CLIMAITE D,CLIMAITE,CLIMAITE,Dietzen et al. 2019,Calluna vulgaris,30,0-30 cm,2013,FACE,intact,Nlow,ER,,8,5000,6150,400,500,6,6,-0.1791266659,Shrubland,Shrubland,8,600,600,1.67776096,5.89994097,0.46377778,0.85600001,55.88,N,11.97,E,Climaite.R,500,418,56.8,118,,,,,Fig.2,SE,380,510,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-CLIMAITE_t_Calluna-Deschamps-AM_Nlow,CLIMAITE T,CLIMAITE,CLIMAITE,Dietzen et al. 2019,Calluna vulgaris,30,0-30 cm,2013,FACE,intact,Nlow,ER,,8,4900,5600,300,500,6,6,-0.04225980929,Shrubland,Shrubland,8,600,600,1.67776096,5.89994097,0.46377778,0.85600001,55.88,N,11.97,E,Climaite.R,580,556,118,91.1,,,,,Fig.2,SE,380,510,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-CLIMAITE_td_Calluna-Deschamps-AM_Nlow,CLIMAITE TD,CLIMAITE,CLIMAITE,Dietzen et al. 2019,Calluna vulgaris,30,0-30 cm,2013,FACE,intact,Nlow,ER,,8,4900,6200,400,1000,6,6,-0.1241183927,Shrubland,Shrubland,8,600,600,1.67776096,5.89994097,0.46377778,0.85600001,55.88,N,11.97,E,Climaite.R,574,507,82,119,,,,,Fig.2,SE,380,510,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-UMBS_Pop.trem-ECM/AM_Nlow,MBS - low N,UMBS,UMBS,"Ambus & Robertson, 1999",,15,0-15 cm,,OTC,disturbed,Nlow,ECM,,1.5,510,375,24,70.5,3,3,0.307642815,Temperate_Forest,Tree Stand,8,1031.5,watered,1.39906013,4.2999568,0.32155555,0.86799997,45.57,N,84.67,W,,,,,,,,,,"Tab. 1, personal comm.",sd,367,715,assumed bulk density: 1.0 g/cm3,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-UMBS_Pop.trem-ECM/AM_Nhigh,MBS - high N,UMBS,UMBS,"Ambus & Robertson, 1999",,15,0-15 cm,,OTC,disturbed,Nhigh,ECM,,1.5,1845,2325,435,330,3,3,0.3218150788,Temperate_Forest,Tree Stand,8,1031.5,watered,1.39906013,4.2999568,0.32155555,0.86799997,45.57,N,84.67,W,,,,,,,,,,"Tab. 1, personal comm.",sd,367,715,assumed bulk density: 1.0 g/cm3,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-Not in AGB db,Montalto di Castro,Montalto di Castro,Montalto di Castro,Calabritto et al. 2002,,20,5-20 cm,,OTC,intact,Nlow,ECM,"Dominated by Quercus ilex (ECM), but dense AM shrub component",6.75,3360,2910,477.6505005,404.165808,3,3,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,Tab. 1,sd,363,713,assumed bulk density: 1.0 g/cm3,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-Not in AGB db,USDA Beltsville,USDA Beltsville,USDA Beltsville,Islam et al. 2000,,15,0-15 cm,,OTC,intact,Nlow,AM,low irrigation treatment,1.5,1560,1560,524.9056605,653.0232555,2,2,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,Tab. 1,sd,350,500,assumed bulk density: 1.0 g/cm3,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,PHACE - ambient T,PHACE,PHACE,Carrillo et al. 2018,,15,0-15cm,2005: Pre-treatment,FACE,intact,Nlow,AM,pers.comm: PHACE_2019.R,0,2494.667,2294,102.9,61.77,5,5,,Grassland,Grassland,17.5,384,384,0.23240508,0.566661,0.10022222,0.2,41.18,N,104.90,W,,,,,,,,,,Fig. 1,SE,400,600,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-PHACE_Grassland&shrub&forbs-AM_Nlow,PHACE - ambient T,PHACE,PHACE,Carrillo et al. 2018,,15,0-15cm,2013,FACE,intact,Nlow,AM,pers.comm: PHACE_2019.R,8,2562,2774.667,95.63,209.46,5,5,0.03131451783,Grassland,Grassland,17.5,384,384,0.23240508,0.566661,0.10022222,0.2,41.18,N,104.90,W,,,,,,,,,,Fig. 1,SE,400,600,elev=elev1 + (amb0-elev0),adjust elev measurements for the pre-treatment differences
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,PHACE - elevated T,PHACE,PHACE,Carrillo et al. 2018,,15,0-15cm,2005: Pre-treatment,FACE,intact,Nlow,AM,pers.comm: PHACE_2019.R,0,2672,2532,195.25,255.95,5,5,,Grassland,Grassland,17.5,384,384,0.23240508,0.566661,0.10022222,0.2,41.18,N,104.90,W,,,,,,,,,,Fig. 1,SE,400,600,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-PHACE_t_Grassland&shrub&forbs-AM_Nlow,PHACE - elevated T,PHACE,PHACE,Carrillo et al. 2018,,15,0-15cm,2013,FACE,intact,Nlow,AM,pers.comm: PHACE_2019.R,8,2634,2680,256.33,174.81,5,5,0.1460886864,Grassland,Grassland,17.5,384,384,0.23240508,0.566661,0.10022222,0.2,41.18,N,104.90,W,,,,,,,,,,Fig. 1,SE,400,600,elev=elev1 + (amb0-elev0),adjust elev measurements for the pre-treatment differences
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-Not in AGB db,Rice-FACE - LN,Rice FACE,Rice FACE,"soil: Wu et. al. 2018a, plant Wu et. al. 2018b",japonica rice WYJ 21,20,0-20 cm,2012,FACE,intact,Nlow,AM,,2,3443.112,3855.84,44.544,105.328,3,3,0.01806596021,Cropland,Agricultural,15,1000,1000,2.18979287,5.83327484,0.44866666,0.80000001,32.58,N,119.70,E,aboveground,,,,,40.263,40.997,7.159,3.408,soil: Fig.1. plant: Fig. 2,SE,382,582,assumed bulk density: 1.16 g/cm3,soil (g kg-1); plant = shoot dry weight (g hill-1)
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-Not in AGB db,Rice-FACE - HN,Rice FACE,Rice FACE,"soil: Wu et. al. 2018a, plant Wu et. al. 2018b",japonica rice WYJ 21,20,0-20 cm,2012,FACE,intact,Nhigh,AM,,2,3443.112,3807.352,44.544,43.848,3,3,0.1397406264,Cropland,Agricultural,15,1000,1000,2.18979287,5.83327484,0.44866666,0.80000001,32.58,N,119.70,E,aboveground,,,,,67.311,77.406,10.815,5.823,soil: Fig.1. plant: Fig. 2,SE,382,582,assumed bulk density: 1.16 g/cm3,soil (g kg-1); plant = shoot dry weight (g hill-1)
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-Not in AGB db,Rice-FACE - LN,Rice FACE,Rice FACE,"soil: Wu et. al. 2018a, plant Wu et. al. 2018b",indica rice IIY084,20,0-20 cm,2012,FACE,intact,Nlow,AM,,2,3252.176,3722.44,121.336,15.776,3,3,0.1320571327,Cropland,Agricultural,15,1000,1000,2.18979287,5.83327484,0.44866666,0.80000001,32.58,N,119.70,E,aboveground,,,,,51.759,59.066,5.2,5.264,soil: Fig.1. plant: Fig. 2,SE,382,582,assumed bulk density: 1.16 g/cm3,soil (g kg-1); plant = shoot dry weight (g hill-1)
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-Not in AGB db,Rice-FACE - HN,Rice FACE,Rice FACE,"soil: Wu et. al. 2018a, plant Wu et. al. 2018b",indica rice IIY084,20,0-20 cm,2012,FACE,intact,Nhigh,AM,,2,3252.176,3445.432,121.336,91.64,3,3,0.2017425159,Cropland,Agricultural,15,1000,1000,2.18979287,5.83327484,0.44866666,0.80000001,32.58,N,119.70,E,aboveground,,,,,70.276,85.985,8.55,5.46,soil: Fig.1. plant: Fig. 2,SE,382,582,assumed bulk density: 1.16 g/cm3,soil (g kg-1); plant = shoot dry weight (g hill-1)
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-Not in AGB db,Rice-FACE2 - LN,Rice FACE,Rice FACE,soil: Cheng et al. 2016; plant: Yang et. al. 2009,Wuxingjing 14 (hybrid japonica rice),20,0-20 cm,2011,FACE,intact,Nhigh,AM,,7,3874.4,4176,146.16,406,2,2,0.173821996,Cropland,Agricultural,14.9,980,980,2.18979287,5.83327484,0.44866666,0.80000001,32.58,N,119.70,E,aboveground,,,,,2.56,3.046,0.128,0.144,soil: Table 1. plant: Fig 1b,SE,370,570,assumed bulk density: 1.16 g/cm3,"soil (g C kg-1), plant: dry weight per stem (mg)"
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-Not in AGB db,Rice-FACE2 - HN,Rice FACE,Rice FACE,soil: Cheng et al. 2016; plant: Yang et. al. 2009,Wuxingjing 14 (hybrid japonica rice),20,0-20 cm,2011,FACE,intact,Nhigh,AM,,10,4315.2,4292,361.92,443.12,2,2,0.1193420138,Cropland,Agricultural,14.9,980,980,2.18979287,5.83327484,0.44866666,0.80000001,32.58,N,119.70,E,aboveground,,,,,2.635,2.969,0.226,0.222,soil: Table 1. plant: Fig 1b,SE,370,570,assumed bulk density: 1.16 g/cm3,"soil (g C kg-1), plant: dry weight per stem (mg)"
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-Not in AGB db,Rice-FACE3,Rice FACE,Rice FACE,"Guo et. al., 2015",rice-wheat cropping paddy,15,0-15 cm,June 2004,FACE,intact,Nhigh,AM,,5,3092.154,3485.046,61.77,112.404,3,3,0.1739961805,Cropland,Agricultural,14.9,980,980,2.18979287,5.83327484,0.44866666,0.80000001,32.58,N,119.70,E,total,1.568,1.866,0.043,0.045,,,,,"soil: Fig. 3, Plant: Fig. 1",SE,390,590,assumed bulk density: 1.16 g/cm3,"soil: TOC (g/kg), biomass (kg/m2)"
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-Not in AGB db,T-FACE - ambient T,T-FACE,T-FACE,soil: Chen et al. 2015; plant: Zhang et. al. 2014,rice–wheat annual rotation,20,0-20 cm,April 2011,FACE,intact,Nhigh,AM,,3,3936,4896,312,312,3,3,0.126505476,Cropland,Agricultural,16,1150,1150,0.96295333,1.96664703,0.25177777,0.42399999,31.5,N,120.55,E,aboveground,,,,,2321,2634,248,244,"soil: Table 1, plant Table 3",SE,412,500,assumed bulk density: 1.2 g/cm3,g kg-1
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-Not in AGB db,T-FACE - elevated T,T-FACE,T-FACE,soil: Chen et al. 2015; plant: Zhang et. al. 2014,rice–wheat annual rotation,20,0-20 cm,April 2011,FACE,intact,Nhigh,AM,,3,3840,5136,240,144,3,3,0.1100886569,Cropland,Agricultural,18,1150,1150,0.96295333,1.96664703,0.25177777,0.42399999,31.5,N,120.55,E,aboveground,,,,,1899,2120,148,290,"soil: Table 1, plant Table 3",SE,412,500,assumed bulk density: 1.2 g/cm3,g kg-1
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,OTC Changbai Mountain Research,OTC Changbai Mountain Research,OTC Changbai Mountain Research,"Sun et al. 2017 (soil), 2018 (plant)",Quercus mongolica (oak),10,0-10 cm,2004,OTC,intact,Nlow,ECM,,10,2890,2910,140,270,3,3,0.2527110766,Temperate_Forest,Tree Stand,10.55,745,745,2.02312803,5.73327589,0.39844444,0.88800001,42.4,N,128.10,E,total,2303.3,2910.3,105.9,102.7,,,,,"soil: Table 2, plant: Table 2",SE,320,500,assumed bulk density: 1.0 g/cm3,soil: SOC (g kg-1); plant (g)
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-Not in AGB db,Maoxian Field China,Maoxian Field China,Maoxian Field China,Duan et al. 2015,Abies faxoniana,10,0-10 cm,2006,Chamber,intact,Nlow,ECM,"native soil cores 30 cm in height, 50 cm in length, and 50 cm in width, and were placed in wood containers of the same size with minimal soil disturbance",6,1830,1770,20,10,3,3,-0.01370092179,Subalpine_Forest,Tree Stand,14.2,1081.40002,watered,1.68979788,4.63328695,0.38511112,0.77200001,31.683,N,104.05,E,total,574.316,566.501,14.77,5.366,,,,,Soil: Table 1. Plant: Fig. 1,SE,350,700,assumed bulk density: 1.0 g/cm3,g
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-Not in AGB db,Sichuan - ambient T,Sichuan,Sichuan,Liu and Zang 2019,Abies faxoniana,15,0-15 cm,,Chamber,intact,Nlow,ECM,,6,91.39,103.2,,,2,2,,Subalpine_Forest,Tree Stand,14.2,341,341,1.68979788,4.63328695,0.38511112,0.77200001,31.68,N,104.05,E,,,,,,,,,,Table 1,,350,700,,g/kg
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-Not in AGB db,Sichuan - elevated T,Sichuan,Sichuan,Liu and Zang 2019,Abies faxoniana,15,0-15 cm,,Chamber,intact,Nlow,ECM,,6,60.96,126.46,,,2,2,,Subalpine_Forest,Tree Stand,14.2,341,341,1.68979788,4.63328695,0.38511112,0.77200001,31.68,N,104.05,E,,,,,,,,,,Table 1,,350,700,,g/kg
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,NSW - wheat,NSW,NSW,Xu et al. 2017,wheat (Triticum aestivum L. cv. Yitpi),10,0-10 cm,,Chamber,disturbed,Nhigh,AM,Rhizosphere extractable organic C,0.17,2800,2261.062,,,4,4,0.05556985115,Grassland,Grassland,20,1292.90002,watered,0.93795359,1.89998102,0.4491111,0.58399999,32.183,S,149.55,E,aboveground,14.21,15.03,,,10.5,11.1,,,Soil: Fig 4. Plant: Table 1,SE,400,800,standardised to initial SOC 28 mg g−1,soil: mg C kg-1 soil; dry weight: g column-1
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,NSW - white lupin,NSW,NSW,Xu et al. 2017,white lupin (Lupinus albus L. cv. Kiev),10,0-10 cm,,Chamber,disturbed,Nhigh,AM,Rhizosphere extractable organic C,0.17,2800,3419.70095,,,4,4,0.3078146511,Grassland,Grassland,20,1292.90002,watered,0.93795359,1.89998102,0.4491111,0.58399999,32.183,S,149.55,E,aboveground,8.71,12.53,,,7.13,9.7,,,Soil: Fig 4. Plant: Table 1,SE,400,800,standardised to initial SOC 28 mg g−1,soil: mg C kg-1 soil; dry weight: g column-1
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,SoilFACE Chromosol,SoilFACE,SoilFACE,Xu et al. 2019,pea-canola-wheat rotation,5,0-5 cm,2009,FACE,intact,Nhigh,AM,no plant data,8,40.8,37.5,,,4,4,,Cropland,Agricultural,14.95,462,462,1.2629503,5.56661081,0.15644445,0.25999999,36.75,S,142.10,E,,,,,,,,,,Table 1,,395,550,,mg g-1
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,SoilFACE Vertosoll,SoilFACE,SoilFACE,Xu et al. 2019,pea-canola-wheat rotation,5,0-5 cm,2009,FACE,intact,Nhigh,AM,Jazz: Agface soil is vertosol,8,10.6,11.2,,,4,4,,Cropland,Agricultural,14.95,462,462,1.2629503,5.56661081,0.15644445,0.25999999,36.75,S,142.10,E,,,,,,,,,,Table 1,,390,550,,mg g-1
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,SoilFACE Calcarosoll,SoilFACE,SoilFACE,Xu et al. 2019,pea-canola-wheat rotation,5,0-5 cm,2009,FACE,intact,Nhigh,AM,Jazz: Walpeup is Calcarosoll soil,8,4.3,3.8,,,4,4,,Cropland,Agricultural,14.95,462,462,0.29721925,0.69999301,0.13600001,0.2,35.119,S,142.00,E,,,,,,,,,,Table 1,,390,550,,mg g-1
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,SoilFACE2 Chromosol,SoilFACE,SoilFACE,Jin et al. 2017,"Wheat-pulse rotation (Triticum aestivum L. cv. Yitpi), field pea (Pisum sativum L. cv. PBATwilight) and canola (Brassica napus L. cv. Hyola 50)",10,0-10 cm,2009,FACE,intact,Nhigh,AM,no plant data,7,40.288,37.054,1.304,0.183,4,4,,Cropland,Agricultural,14.95,462.5,462.5,1.2629503,5.56661081,0.15644445,0.25999999,36.75,S,142.10,E,,,,,,,,,,Fig. 4,SE,390,550,,mg kg−1 soil
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,SoilFACE2 Vertosoll,SoilFACE,SoilFACE,Jin et al. 2017,"Wheat-pulse rotation (Triticum aestivum L. cv. Yitpi), field pea (Pisum sativum L. cv. PBATwilight) and canola (Brassica napus L. cv. Hyola 50)",10,0-10 cm,2009,FACE,intact,Nhigh,AM,,7,8.331,8.407,0.408,0.186,4,4,,Cropland,Agricultural,14.95,462.5,462.5,1.2629503,5.56661081,0.15644445,0.25999999,36.75,S,142.10,E,,,,,,,,,,Fig. 4,SE,390,550,,mg kg−1 soil
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,SoilFACE2 Calcarosoll,SoilFACE,SoilFACE,Jin et al. 2017,"Wheat-pulse rotation (Triticum aestivum L. cv. Yitpi), field pea (Pisum sativum L. cv. PBATwilight) and canola (Brassica napus L. cv. Hyola 50)",10,0-10 cm,2009,FACE,intact,Nhigh,AM,no plant data,7,3.247,3.656,0.129,0.286,4,4,,Cropland,Agricultural,14.95,462.5,462.5,0.95276827,3.73329592,0.16111112,0.248,36.75,S,142.11,E,,,,,,,,,,Fig. 4,SE,390,550,,mg kg−1 soil
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,SoilFACE3 Calcarosoll,SoilFACE,SoilFACE,Butterly et al. 2016 Soil Biology and Biochemistry,"wheat, field pea, canola",5,0-5 cm,2009,FACE,disturbed,Nlow,AM,no plant data,5,4.321,5.033,0.08,0.296,4,4,,Cropland,Agricultural,14.95,436,436,0.95276827,3.73329592,0.16111112,0.248,36.75,S,142.11,E,,,,,,,,,,Fig. 1,SD,390,550,,g C kg-1
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,SoilFACE3 Chromosol,SoilFACE,SoilFACE,Butterly et al. 2016 Soil Biology and Biochemistry,"wheat, field pea, canola",5,0-5 cm,2009,FACE,disturbed,Nhigh,AM,no plant data,5,47.239,43.097,2.228,0.763,4,4,,Cropland,Agricultural,14.95,436,436,0.95276827,3.73329592,0.16111112,0.248,36.75,S,142.11,E,,,,,,,,,,Fig. 1,SD,390,550,,g C kg-1
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,SoilFACE3 Vertosoll,SoilFACE,SoilFACE,Butterly et al. 2016 Soil Biology and Biochemistry,"wheat, field pea, canola",5,0-5 cm,2009,FACE,disturbed,Nhigh,AM,,5,11.331,10.092,0.519,0.583,4,4,,Cropland,Agricultural,14.95,436,436,0.95276827,3.73329592,0.16111112,0.248,36.75,S,142.11,E,,,,,,,,,,Fig. 1,SD,390,550,,g C kg-1
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,SoilFACE4 - LN,SoilFACE,SoilFACE,Butterly et al. 2015,field pea (Pisum sativum L.) maturity and filling; bulk soil,10,0-10 cm,2011,FACE,disturbed,Nhigh,Nfixer,,0.5,733.04,722.33,,,4,4,0.2030391754,Cropland,Agricultural,14.95,222,222,1.2629503,5.56661081,0.15644445,0.25999999,36.75,S,142.10,E,aboveground,34.626,41.565,1.686,1.019,32.892,39.682,1.622,0.901,"Soil: Table S3, S4/Plant: Fig. 2",SE,390,550,1.19 g cm−3,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,SoilFACE4 - HN,SoilFACE,SoilFACE,Butterly et al. 2015,field pea (Pisum sativum L.) maturity and filling; bulk soil,10,0-10 cm,2011,FACE,disturbed,Nhigh,Nfixer,,0.5,680.68,736.015,,,4,4,0.2481523968,Cropland,Agricultural,14.95,222,222,1.2629503,5.56661081,0.15644445,0.25999999,36.75,S,142.10,E,aboveground,36.012,43.496,0.586,1.836,34.236,41.405,0.402,1.735,"Soil: Table S3, S4/Plant: Fig. 2",SE,390,550,1.19 g cm−3,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,SoilFACE4 - LN,SoilFACE,SoilFACE,Butterly et al. 2015,wheat (Triticum aestivum L.) maturity and filling; bulk soil,10,0-10 cm,2011,FACE,disturbed,Nhigh,AM,,0.5,708.05,708.05,,,4,4,0.2791514899,Cropland,Agricultural,14.95,222,222,1.2629503,5.56661081,0.15644445,0.25999999,36.75,S,142.10,E,aboveground,44.88,57.984,0.698,2.576,39.177,51.143,0.531,2.028,"Soil: Table S3, S4/Plant: Fig. 2",SE,390,550,1.19 g cm−3,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,SoilFACE4 - HN,SoilFACE,SoilFACE,Butterly et al. 2015,wheat (Triticum aestivum L.) maturity and filling; bulk soil,10,0-10 cm,2011,FACE,disturbed,Nhigh,AM,,0.5,699.72,767.55,,,4,4,0.3585112868,Cropland,Agricultural,14.95,222,222,1.2629503,5.56661081,0.15644445,0.25999999,36.75,S,142.10,E,aboveground,41.253,54.955,0.521,2.078,36.383,47.988,0.402,1.134,"Soil: Table S3, S4/Plant: Fig. 2",SE,390,550,1.19 g cm−3,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,SoilFACE5,SoilFACE,SoilFACE,Butterly et al. 2016 Plant and Soil,wheat (Triticum aestivum cv. Yitpi),10,0-10 cm,2011,FACE,disturbed,Nhigh,AM,,0.17,1500,1520,,,4,4,0.07796154147,Cropland,Agricultural,22.8,737.600037,watered,1.2629503,5.56661081,0.15644445,0.25999999,36.75,S,142.10,E,aboveground,0.524,0.533,0.415,0.415,0.37,0.4,0.23,0.23,"Soil: Table 3, 4; Plant: Table 1, 2",,390,550,Bulk density 1.0 g cm−3,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,SoilFACE5,SoilFACE,SoilFACE,Butterly et al. 2016 Plant and Soil,wheat (Triticum aestivum cv. Yitpi),10,0-10 cm,2011,FACE,disturbed,Nlow,AM,,0.17,1560,1440,,,4,4,-0.03636764417,Cropland,Agricultural,22.8,737.600037,watered,1.2629503,5.56661081,0.15644445,0.25999999,36.75,S,142.10,E,aboveground,1.137,1.049,0.415,0.415,0.84,0.81,0.23,0.23,"Soil: Table 3, 4; Plant: Table 1, 2",,390,550,Bulk density 1.0 g cm−3,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,SoilFACE5 wheat residue-low N,SoilFACE,SoilFACE,Butterly et al. 2016 Plant and Soil,wheat (Triticum aestivum cv. Yitpi),10,0-10 cm,2011,FACE,disturbed,Nlow,AM,,0.17,1920,1870,,,4,4,0.3337731797,Cropland,Agricultural,22.8,737.600037,watered,1.2629503,5.56661081,0.15644445,0.25999999,36.75,S,142.10,E,aboveground,0.74,0.97,0.55,0.55,0.53,0.74,0.28,0.28,"Soil: Table 3, 4; Plant: Table 1, 2",,390,550,Bulk density 1.0 g cm−3,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,SoilFACE5 wheat residue-high N,SoilFACE,SoilFACE,Butterly et al. 2016 Plant and Soil,wheat (Triticum aestivum cv. Yitpi),10,0-10 cm,2011,FACE,disturbed,Nhigh,AM,,0.17,1930,1920,,,4,4,0.2067944133,Cropland,Agricultural,22.8,737.600037,watered,1.2629503,5.56661081,0.15644445,0.25999999,36.75,S,142.10,E,aboveground,2.01,2.46,0.55,0.55,1.48,1.82,0.28,0.28,"Soil: Table 3, 4; Plant: Table 1, 2",,390,550,Bulk density 1.0 g cm−3,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,SoilFACE5 pea residue-low N,SoilFACE,SoilFACE,Butterly et al. 2016 Plant and Soil,wheat (Triticum aestivum cv. Yitpi),10,0-10 cm,2011,FACE,disturbed,Nlow,AM,,0.17,2090,1980,,,4,4,0.1144103512,Cropland,Agricultural,22.8,737.600037,watered,1.2629503,5.56661081,0.15644445,0.25999999,36.75,S,142.10,E,aboveground,2.68,2.92,0.55,0.55,1.98,2.22,0.28,0.28,"Soil: Table 3, 4; Plant: Table 1, 2",,390,550,Bulk density 1.0 g cm−3,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,SoilFACE5 pea residue-high N,SoilFACE,SoilFACE,Butterly et al. 2016 Plant and Soil,wheat (Triticum aestivum cv. Yitpi),10,0-10 cm,2011,FACE,disturbed,Nhigh,AM,,0.17,1770,1920,,,4,4,0.02666824708,Cropland,Agricultural,22.8,737.600037,watered,1.2629503,5.56661081,0.15644445,0.25999999,36.75,S,142.10,E,aboveground,3.03,3.02,0.55,0.55,2.22,2.28,0.28,0.28,"Soil: Table 3, 4; Plant: Table 1, 2",,390,550,Bulk density 1.0 g cm−3,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,SoilFACE5 wheat residue-low N,SoilFACE,SoilFACE,Butterly et al. 2016 Plant and Soil,wheat (Triticum aestivum cv. Yitpi) + N,10,0-10 cm,2011,FACE,disturbed,Nlow,AM,,0.17,2060,2290,,,4,4,0.3586338084,Cropland,Agricultural,22.8,737.600037,watered,1.2629503,5.56661081,0.15644445,0.25999999,36.75,S,142.10,E,aboveground,1.5,1.89,0.55,0.55,1.02,1.46,0.28,0.28,"Soil: Table 3, 4; Plant: Table 1, 2",,390,550,Bulk density 1.0 g cm−3,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,SoilFACE5 wheat residue-high N,SoilFACE,SoilFACE,Butterly et al. 2016 Plant and Soil,wheat (Triticum aestivum cv. Yitpi) + N,10,0-10 cm,2011,FACE,disturbed,Nhigh,AM,,0.17,2020,2000,,,4,4,0.2363887781,Cropland,Agricultural,22.8,737.600037,watered,1.2629503,5.56661081,0.15644445,0.25999999,36.75,S,142.10,E,aboveground,2.78,3.82,0.55,0.55,2.25,2.85,0.28,0.28,"Soil: Table 3, 4; Plant: Table 1, 2",,390,550,Bulk density 1.0 g cm−3,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,SoilFACE5 pea residue-low N,SoilFACE,SoilFACE,Butterly et al. 2016 Plant and Soil,wheat (Triticum aestivum cv. Yitpi) + N,10,0-10 cm,2011,FACE,disturbed,Nlow,AM,,0.17,1850,1980,,,4,4,0.2397381637,Cropland,Agricultural,22.8,737.600037,watered,1.2629503,5.56661081,0.15644445,0.25999999,36.75,S,142.10,E,aboveground,3.11,4.29,0.55,0.55,2.51,3.19,0.28,0.28,"Soil: Table 3, 4; Plant: Table 1, 2",,390,550,Bulk density 1.0 g cm−3,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,SoilFACE5 pea residue-high N,SoilFACE,SoilFACE,Butterly et al. 2016 Plant and Soil,wheat (Triticum aestivum cv. Yitpi) + N,10,0-10 cm,2011,FACE,disturbed,Nhigh,AM,,0.17,2040,1920,,,4,4,0.2846654789,Cropland,Agricultural,22.8,737.600037,watered,1.2629503,5.56661081,0.15644445,0.25999999,36.75,S,142.10,E,aboveground,3.1,4.32,0.55,0.55,2.49,3.31,0.28,0.28,"Soil: Table 3, 4; Plant: Table 1, 2",,390,550,Bulk density 1.0 g cm−3,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,SoilFACE5,SoilFACE,SoilFACE,Butterly et al. 2016 Plant and Soil,field pea (Pisum sativum L.),10,0-10 cm,2011,FACE,disturbed,Nlow,Nfixer,,0.17,1310,1620,,,4,4,0.1541506798,Cropland,Agricultural,22.8,737.600037,watered,1.2629503,5.56661081,0.15644445,0.25999999,36.75,S,142.10,E,aboveground,1.414,1.603,0.415,0.415,1.26,1.47,0.23,0.23,"Soil: Table 3, 4; Plant: Table 1, 2",,390,550,Bulk density 1.0 g cm−3,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,SoilFACE5,SoilFACE,SoilFACE,Butterly et al. 2016 Plant and Soil,field pea (Pisum sativum L.),10,0-10 cm,2011,FACE,disturbed,Nhigh,Nfixer,,0.17,1360,1510,,,4,4,0.08701137699,Cropland,Agricultural,22.8,737.600037,watered,1.2629503,5.56661081,0.15644445,0.25999999,36.75,S,142.10,E,aboveground,2.497,2.639,0.415,0.415,2.2,2.4,0.23,0.23,"Soil: Table 3, 4; Plant: Table 1, 2",,390,550,Bulk density 1.0 g cm−3,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,SoilFACE5 wheat residue-low N,SoilFACE,SoilFACE,Butterly et al. 2016 Plant and Soil,field pea (Pisum sativum L.),10,0-10 cm,2011,FACE,disturbed,Nlow,Nfixer,,0.17,1840,2160,,,4,4,0.1351258655,Cropland,Agricultural,22.8,737.600037,watered,1.2629503,5.56661081,0.15644445,0.25999999,36.75,S,142.10,E,aboveground,2.52,2.87,0.55,0.55,2.35,2.69,0.28,0.28,"Soil: Table 3, 4; Plant: Table 1, 2",,390,550,Bulk density 1.0 g cm−3,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,SoilFACE5 wheat residue-high N,SoilFACE,SoilFACE,Butterly et al. 2016 Plant and Soil,field pea (Pisum sativum L.),10,0-10 cm,2011,FACE,disturbed,Nhigh,Nfixer,,0.17,2100,2010,,,4,4,0.0597192347,Cropland,Agricultural,22.8,737.600037,watered,1.2629503,5.56661081,0.15644445,0.25999999,36.75,S,142.10,E,aboveground,2.79,2.91,0.55,0.55,2.6,2.76,0.28,0.28,"Soil: Table 3, 4; Plant: Table 1, 2",,390,550,Bulk density 1.0 g cm−3,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,SoilFACE5 pea residue-low N,SoilFACE,SoilFACE,Butterly et al. 2016 Plant and Soil,field pea (Pisum sativum L.),10,0-10 cm,2011,FACE,disturbed,Nlow,Nfixer,,0.17,1960,1970,,,4,4,0.2823713855,Cropland,Agricultural,22.8,737.600037,watered,1.2629503,5.56661081,0.15644445,0.25999999,36.75,S,142.10,E,aboveground,2.54,3.31,0.55,0.55,2.36,3.13,0.28,0.28,"Soil: Table 3, 4; Plant: Table 1, 2",,390,550,Bulk density 1.0 g cm−3,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,SoilFACE5 pea residue-high N,SoilFACE,SoilFACE,Butterly et al. 2016 Plant and Soil,field pea (Pisum sativum L.),10,0-10 cm,2011,FACE,disturbed,Nhigh,Nfixer,,0.17,1940,1910,,,4,4,0.1798401659,Cropland,Agricultural,22.8,737.600037,watered,1.2629503,5.56661081,0.15644445,0.25999999,36.75,S,142.10,E,aboveground,2.87,3.4,0.55,0.55,2.69,3.22,0.28,0.28,"Soil: Table 3, 4; Plant: Table 1, 2",,390,550,Bulk density 1.0 g cm−3,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,OTC New Delhi,SoilFACE,SoilFACE,Saha et al. 2016,chickpea (C. arietinum L.; cv. Pusa 1105 - kabuli type),15,0-15 cm,2010,OTC,intact,Nhigh,Nfixer,root weight density at vegetative stage,2,3465.45,3791.55,838.05,753.6,2,2,0.174562546,Cropland,Agricultural,19.5,710,710,0.77499223,1.43331897,0.21377778,0.27599999,28.583,N,77.20,E,root,1160.65,2075.09,,,,,,,"Soil: Table 2/Plant: Table 3, 4",SE,400,580,"amb: 1.51 g cm−3, elev: 1.57 g cm−3","soil: rhizosphere SOC %; plant: mean of 3 plant growth stages (root weight: g cm-3 x 10-5, root length: cm cm-3x10-1; plant weight: dry mass mg plant-1)"
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,FACE NBRI - teak,SoilFACE,SoilFACE,Singh et al. 2018,Tectona grandis (Teak),15,15 cm,2012,FACE,intact,Nhigh,AM,"grown with N-fixing tree, hence Nhigh",3.83,2248.08,2535.72,212.16,240.72,5,5,0.15936355,Tropical_Forest,Tree Stand,25,700,700,1.0722115,1.89998102,0.32022223,0.428,26.916,N,80.98,E,total,49.2,57.7,8.02,9.8,41.7,49,6.5,8.3,Soil: Table 3; Plant: Table 1,SE,395,550,Bulk density 1.36 g cm−3,Soil: TOC g kg-1; Plant: total biomass (kg)
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,FACE NBRI - butea,SoilFACE,SoilFACE,Singh et al. 2018,Butea monosperma (Butea),15,15 cm,2012,FACE,intact,Nlow,Nfixer,,3.83,2144.04,2301.12,189.72,204,5,5,0.09716374845,Tropical_Forest,Tree Stand,25,700,700,1.0722115,1.89998102,0.32022223,0.428,26.916,N,80.98,E,total,4.9,5.4,0.74,0.81,3.2,3.4,0.5,0.6,Soil: Table 3; Plant: Table 1,SE,395,550,Bulk density 1.36 g cm−3,"Soil: TOC g kg-1; Plant: height (m), root weight (kg), above ground biomass & total biomass (kg)"
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,OTC Hyperaba India - 550ppm - C4,SoilFACE,SoilFACE,Srinivasarao et al. 2016,"C4 crops (sorghum, pearl millet) 550 eCO2",20,0-20 cm,2005,OTC,intact,Nhigh,AM,,5,4260,5036,260,300,3,3,0.05705088118,Cropland,Agricultural,26,1161,watered,1.02591562,1.93331397,0.31400001,0.57599998,28,N,78.00,E,total,162.7,172.7,,26.6,,,,,Soil: Table 5/Plant: Table 1,SE,380,550,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,OTC Hyperaba India - 700ppm - C4,SoilFACE,SoilFACE,Srinivasarao et al. 2016,"C4 crops (sorghum, pearl millet) 700 eCO2",20,0-20 cm,2005,OTC,intact,Nhigh,AM,,5,4260,4126,260,250,3,3,0.1660610359,Cropland,Agricultural,26,1161,watered,1.02591562,1.93331397,0.31400001,0.57599998,28,N,78.00,E,total,162.7,192.2,,46.7,,,,,Soil: Table 5/Plant: Table 1,SE,380,550,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,OTC Hyperaba India - 550ppm - C3,SoilFACE,SoilFACE,Srinivasarao et al. 2016,"C3 crops (sunflower, groundnut, pigeonpea, black gram, castor) 550 eCO2",20,0-20 cm,2005,OTC,intact,Nhigh,AM,,5,4260,5036,260,300,3,3,0.1524977869,Cropland,Agricultural,26,1161,watered,1.02591562,1.93331397,0.31400001,0.57599998,28,N,78.00,E,total,482.49,592.26,,137.5,,,,,Soil: Table 5/Plant: Table 2,SE,380,550,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,OTC Hyperaba India - 700ppm - C3,SoilFACE,SoilFACE,Srinivasarao et al. 2016,"C3 crops (sunflower, groundnut, pigeonpea, black gram, castor) 700 eCO2",20,0-20 cm,2005,OTC,intact,Nhigh,AM,,5,4260,4126,260,250,3,3,0.6811817037,Cropland,Agricultural,26,1161,watered,1.02591562,1.93331397,0.31400001,0.57599998,28,N,78.00,E,total,482.49,665.48,,231.7,,,,,Soil: Table 5/Plant: Table 2,SE,380,700,,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,OTC CRRI Cuttack India,SoilFACE,SoilFACE,Bhattacharyya et al. 2014,Rice (Oryza sativa L.),30,0–30 cm,2009,OTC,intact,Nhigh,AM,,1,1848,2016,,,2,2,0.1561420512,Cropland,Agricultural,31.8,1500,1500,1.16387725,1.83331501,0.3011111,0.37200001,20.45,N,85.94,E,aboveground,,,,,645,754,,,Soil: Table 4/Plant: Table 3,,394,550,1.4,soil: g kg-1; total plant: root + shoot biomass (g m-2)
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,OTC CRRI Cuttack India,SoilFACE,SoilFACE,Bhattacharyya et al. 2014,Rice (Oryza sativa L.),30,0–30 cm,2010,OTC,intact,Nhigh,AM,,2,1848,2058,,,2,2,0.1639464815,Cropland,Agricultural,31.8,1500,1500,1.16387725,1.83331501,0.3011111,0.37200001,20.45,N,85.94,E,aboveground,,,,,595,701,,,Soil: Table 4/Plant: Table 3,,394,550,1.4,soil: g kg-1; total plant: root + shoot biomass (g m-2)
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,OTC CRRI Cuttack India,SoilFACE,SoilFACE,Bhattacharyya et al. 2014,Rice (Oryza sativa L.),30,0–30 cm,2011,OTC,intact,Nhigh,AM,,3,1932,2142,,,2,2,0.1854293429,Cropland,Agricultural,31.8,1500,1500,1.16387725,1.83331501,0.3011111,0.37200001,20.45,N,85.94,E,aboveground,,,,,589,709,,,Soil: Table 4/Plant: Table 3,,394,550,1.4,soil: g kg-1; total plant: root + shoot biomass (g m-2)
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-Sapporo - brown soil_Quercus mongolica-ECM_Nhigh,FACE Sapporo - brown soil,SoilFACE,SoilFACE,unpublished,mixed AGB species,5,0-5cm,2013,FACE,intact,Nlow,ECM,"Soil: Soil data in Sapporo FACE.xlsx, modified accounting for pre-treatment differences. Biomass: Average AGB dataset",10,1385,1385,75,95,3,3,0.2971276525,Temperate_Forest,Tree Stand,9.46,1285,1285,1.93794358,4.69995308,0.3431111,0.81999999,43.01,N,141.33,E,aboveground,,,,,,,,,,,370,500,assumed bulk density: 1.0 g/cm3,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-Sapporo - volcanic ash_Fagus crenata-ECM_Nlow,FACE Sapporo - volcanic ash,SoilFACE,SoilFACE,unpublished,Fagus crenata & Quercus mongolica,5,0-5cm,2013,FACE,disturbed,Nlow,ECM,"Soil: Soil data in Sapporo FACE.xlsx, modified accounting for pre-treatment differences. Biomass: Average AGB dataset. This soil was exported from a different site, Eguchi et al. 2008",10,1020,900,65,60,3,3,0.06624861725,Temperate_Forest,Tree Stand,9.3,1150,1150,1.93794358,4.69995308,0.3431111,0.81999999,43.01,N,141.33,E,aboveground,,,,,,,,,,,370,500,assumed bulk density: 1.0 g/cm3,
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
- ,Glasshouse University of Paris XI,Glasshouse University of Paris XI,Glasshouse University of Paris XI,Niboyet et al. 2017,post rewetting: Dactylis glomerata,10,0-10 cm,April 2012,Chamber,disturbed,Nhigh,AM,pot,0.67,220,170,,,6,6,0.2655006515,Grassland,Agricultural,23.9,1076.20007,watered,1.05832279,3.63329697,0.37866667,0.76800001,48.6977,N,21.77,E,aboveground,,,,,553.762,722.152,24.097,29.777,"DOC: Fig. 2, aboveground: Fig.1, shoot & root: Fig. 4",SE,463,702,standardised to initial 0.11% C,DOC: μg g-1 dry soil; plant: g m-2
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,Glasshouse University of Paris XI,Glasshouse University of Paris XI,Glasshouse University of Paris XI,Niboyet et al. 2017,"post rewetting: mixtures (Dactylis glomerata, Lolium perenne, Festuca arundinacea, Trifolium repens)",10,0-10 cm,April 2012,Chamber,disturbed,Nhigh,AM,pot,0.67,220,178,,,6,6,0.2328626574,Grassland,Agricultural,23.9,1076.20007,watered,1.05832279,3.63329697,0.37866667,0.76800001,48.6977,N,21.77,E,aboveground,,,,,547.771,691.401,22.112,43.209,"DOC: Fig. 2, aboveground: Fig.1, shoot & root: Fig. 4",SE,463,702,standardised to initial 0.11% C,DOC: μg g-1 dry soil; plant: g m-2
-,,,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,,,,,,,,,,,,
-,SAWFACE Spain,SAWFACE,SAWFACE,Sanchez-Carrillo et al. 2017,P. australis (Cav.) Trin. ex Steudel (common reed) by Cladium mariscus (L.) Pohl (cut sedge) (<5%),20,0– 20 cm,2013,FACE,disturbed,Nhigh,NM,,2,2718.9,3304,244.3,160.4,6,6,0.21,Wetland,Wetland,,NA,,0.65554899,1.39998603,0.26133335,0.396,39.13,N,5.38,W,aboveground,,,,,1.699,2.2,1.281,1.57,"soil: Figure 8, plant: Figure 2, 3",SE,399,582,,averaged June and October 2013 measurements
+Experiment,Site,Site_dependent,Citation,Species,Depth (cm),Depth,date,Experiment_type,Disturbance,N,Myc,nyears,amb,elev,amb.se,elev.se,amb.n,elev.n,yi,Biome,Ecosystem.type,MAT,MAP,MAPraw,LAImean,LAImax,fPARmean,fPARmax,Latitude,Lat,Longitude,Lon,Description of data source,SE/SD,ambCO2,elevCO2
+ArizonaFACE - wheat - high N,Maricopa,Maricopa,Leavitt et al. 2001,,15,0-15 cm,Nov. 1995,FACE,disturbed,Nhigh,AM,0,1344,1228,52,306,4,4,,Cropland,Agricultural,21.8,750,750,0.23240508,0.299997,0.12022223,0.156,33.0628,N,111.98,W,fig. 3,sd,370,550
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+ArizonaFACE - wheat - high N,Maricopa,Maricopa,Leavitt et al. 2001,,15,0-15 cm,May-96,FACE,disturbed,Nhigh,AM,0.5,1363,1305,55,127,4,4,,Cropland,Agricultural,21.8,750,750,0.23240508,0.299997,0.12022223,0.156,33.0628,N,111.98,W,fig. 3,sd,370,550
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+ArizonaFACE - wheat - high N,Maricopa,Maricopa,Leavitt et al. 2001,,15,0-15 cm,Dec. 1996,FACE,disturbed,Nhigh,AM,1,1254,1264,80,68,3,3,,Cropland,Agricultural,21.8,750,750,0.23240508,0.299997,0.12022223,0.156,33.0628,N,111.98,W,fig. 3,sd,370,550
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+ArizonaFACE - wheat - high N,Maricopa,Maricopa,Leavitt et al. 2001,,15,0-15 cm,May-97,FACE,disturbed,Nhigh,AM,1.5,1258,1400,38,176,4,4,0.05126777975,Cropland,Agricultural,21.8,750,750,0.23240508,0.299997,0.12022223,0.156,33.0628,N,111.98,W,fig. 3,sd,370,550
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Biosphere 2,Biosphere 2,Biosphere 2,Trueman and Gonzalez-Meler 2005,,25,0-25 cm,average 1999,Chamber,disturbed,Nhigh,AM,0,5950,6362,,,1,1,,,,,NA,,0.44906959,0.69999301,0.18466666,0.204,32.62,N,110.78,W,fig. 3,,400,800
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Biosphere 2,Biosphere 2,Biosphere 2,Trueman and Gonzalez-Meler 2005,,25,0-25 cm,average 2000,Chamber,disturbed,Nhigh,AM,1,5254,4735,,,1,1,,,,,NA,,0.44906959,0.69999301,0.18466666,0.204,32.62,N,110.78,W,fig. 3,,400,800
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Biosphere 2,Biosphere 2,Biosphere 2,Trueman and Gonzalez-Meler 2005,,25,0-25 cm,average 2001,Chamber,disturbed,Nhigh,AM,2,6084,4785,,,1,1,,,,,NA,,0.44906959,0.69999301,0.18466666,0.204,32.62,N,110.78,W,fig. 3,,400,800
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Biosphere 2,Biosphere 2,Biosphere 2,Trueman and Gonzalez-Meler 2005,,25,0-25 cm,average 2002,Chamber,disturbed,Nhigh,AM,3,5470,4064,,,1,1,,,,,NA,,0.44906959,0.69999301,0.18466666,0.204,32.62,N,110.78,W,fig. 3,,400,800
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Biosphere 2,Biosphere 2,Biosphere 2,Trueman and Gonzalez-Meler 2005,,25,0-25 cm,average 2003,Chamber,disturbed,Nhigh,AM,4,5335,4220,,,1,1,,,,,NA,,0.44906959,0.69999301,0.18466666,0.204,32.62,N,110.78,W,fig. 3,,400,800
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+China FACE rice - high N - weakly,China FACE,China FACE,Hu et al. 2019,WuYunJing (japonica rice),15,,2012,FACE,intact,Nhigh,AM,3,2707.6,2756.3,54.52,25.78,3,3,0.08103100889,Cropland,Agricultural,12,204.8,204.8,2.18979287,5.83327484,0.44866666,0.80000001,32.58,N,119.70,E,"Fig. 1F (SOC), Fig. 2A,E (Biomass)",SE,390,590
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+China FACE rice - high N - strongly,China FACE,China FACE,Hu et al. 2019,Yangdao 6 Hao (indica rice),15,,2012,FACE,intact,Nhigh,AM,3,2764.65,2877.72,48.64,50.78,3,3,0.1402189973,Cropland,Agricultural,12,204.8,204.8,2.18979287,5.83327484,0.44866666,0.80000001,32.58,N,119.70,E,"Fig. 1F (SOC), Fig. 2A,E (Biomass)",SE,390,590
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+China FACE weath - low N,China FACE,China FACE,Zhong et al. 2009,,15,0-15 cm,Mar. 2008,FACE,intact,Nhigh,AM,3.66,1937,2192,53.94,87,3,3,,Cropland,Agricultural,12,204.8,204.8,2.18979287,5.83327484,0.44866666,0.80000001,32.58,N,119.70,E,table 1,sd,380,580
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+China FACE weath - low N,China FACE,China FACE,Zhong et al. 2009,,15,0-15 cm,Jun. 2008,FACE,intact,Nhigh,AM,4,1937,2123,53.94,104.4,3,3,0.07629751563,Cropland,Agricultural,12,204.8,204.8,2.18979287,5.83327484,0.44866666,0.80000001,32.58,N,119.70,E,table 1,sd,380,580
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+China FACE weath - high N,China FACE,China FACE,Zhong et al. 2009,,15,0-15 cm,Mar. 2008,FACE,intact,Nhigh,AM,3.66,1926,2135,81.78,55.68,3,3,,Cropland,Agricultural,12,204.8,204.8,2.18979287,5.83327484,0.44866666,0.80000001,32.58,N,119.70,E,table 1,sd,380,580
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+China FACE weath - high N,China FACE,China FACE,Zhong et al. 2009,,15,0-15 cm,Jun. 2008,FACE,intact,Nhigh,AM,4,1937,2105,154.86,177.48,3,3,0.1825416999,Cropland,Agricultural,12,204.8,204.8,2.18979287,5.83327484,0.44866666,0.80000001,32.58,N,119.70,E,table 1,sd,380,580
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+China OTC - low N,China FACE,China FACE,Liu et al. 2011,,20,0-20 cm,Jul. 2005,OTC,disturbed,Nlow,AM,0.33,1103,1168,,,2,3,,Tropical_Forest,Tree Stand,21.5,1750,1750,2.03146124,2.63330698,0.528,0.63999999,23.33,N,113.50,E,fig. 3,,380,700
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+China OTC - low N,China FACE,China FACE,Liu et al. 2010,,20,0-20 cm,Nov. 2005,OTC,disturbed,Nlow,AM,0.67,1036,1097,,,2,3,,Tropical_Forest,Tree Stand,21.5,1750,1750,2.03146124,2.63330698,0.528,0.63999999,23.33,N,113.50,E,fig. 3,,380,700
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+China OTC - low N,China FACE,China FACE,Liu et al. 2010,,20,0-20 cm,Apr. 2006,OTC,disturbed,Nlow,AM,1,1936,2385,,,2,3,,Tropical_Forest,Tree Stand,21.5,1750,1750,2.03146124,2.63330698,0.528,0.63999999,23.33,N,113.50,E,fig. 3,,380,700
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+China OTC - low N,China FACE,China FACE,Liu et al. 2010,,20,0-20 cm,Aug. 2006,OTC,disturbed,Nlow,AM,1.33,2319,2218,,,2,3,,Tropical_Forest,Tree Stand,21.5,1750,1750,2.03146124,2.63330698,0.528,0.63999999,23.33,N,113.50,E,fig. 3,,380,700
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+China OTC - low N,China FACE,China FACE,Liu et al. 2010,,20,0-20 cm,Nov. 2006,OTC,disturbed,Nlow,AM,1.66,2060,2051,,,2,3,,Tropical_Forest,Tree Stand,21.5,1750,1750,2.03146124,2.63330698,0.528,0.63999999,23.33,N,113.50,E,fig. 3,,380,700
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+China OTC - low N,China FACE,China FACE,Liu et al. 2010,,20,0-20 cm,Apr. 2007,OTC,disturbed,Nlow,AM,2,2431,2301,,,2,3,,Tropical_Forest,Tree Stand,21.5,1750,1750,2.03146124,2.63330698,0.528,0.63999999,23.33,N,113.50,E,fig. 3,,380,700
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+China OTC - low N,China FACE,China FACE,Liu et al. 2010,,20,0-20 cm,Aug. 2007,OTC,disturbed,Nlow,AM,2.33,2263,2361,,,2,3,,Tropical_Forest,Tree Stand,21.5,1750,1750,2.03146124,2.63330698,0.528,0.63999999,23.33,N,113.50,E,fig. 3,,380,700
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+China OTC - low N,China FACE,China FACE,Liu et al. 2010,,20,0-20 cm,Nov. 2007,OTC,disturbed,Nlow,AM,2.66,2116,2158,,,2,3,,Tropical_Forest,Tree Stand,21.5,1750,1750,2.03146124,2.63330698,0.528,0.63999999,23.33,N,113.50,E,fig. 3,,380,700
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+China OTC - low N,China FACE,China FACE,Liu et al. 2010,,20,0-20 cm,Apr. 2008,OTC,disturbed,Nlow,AM,3,3625,3315,,,2,3,,Tropical_Forest,Tree Stand,21.5,1750,1750,2.03146124,2.63330698,0.528,0.63999999,23.33,N,113.50,E,fig. 3,,380,700
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+China OTC - low N,China FACE,China FACE,Liu et al. 2010,,20,0-20 cm,Aug. 2008,OTC,disturbed,Nlow,AM,3.33,3253,3279,,,2,3,,Tropical_Forest,Tree Stand,21.5,1750,1750,2.03146124,2.63330698,0.528,0.63999999,23.33,N,113.50,E,fig. 3,,380,700
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+China OTC - low N,China FACE,China FACE,Liu et al. 2010,,20,0-20 cm,Nov. 2008,OTC,disturbed,Nlow,AM,3.66,3287,3410,,,2,3,,Tropical_Forest,Tree Stand,21.5,1750,1750,2.03146124,2.63330698,0.528,0.63999999,23.33,N,113.50,E,fig. 3,,380,700
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+China OTC - low N,China FACE,China FACE,"Zhang et al. 2015 (soil), Chen et. al., 2012 (plant)",modeled subtropical forest,20,0-20 cm,April 2005,OTC,disturbed,Nlow,AM,5,2927.4,3305.16,443.64,439.92,2,3,-0.01344891867,Tropical_Forest,Tree Stand,21.5,1750,1750,2.03146124,2.63330698,0.528,0.63999999,23.33,N,113.50,E,soil: Fig. 1; plant: Fig. 3,SE,380,700
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+China OTC - high N,China FACE,China FACE,Liu et al. 2010,,20,0-20 cm,Jul. 2005,OTC,disturbed,Nhigh,AM,0.33,1201,1198,,,2,3,,Tropical_Forest,Tree Stand,21.5,1750,1750,2.03146124,2.63330698,0.528,0.63999999,23.33,N,113.50,E,fig. 3,,380,700
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+China OTC - high N,China FACE,China FACE,Liu et al. 2010,,20,0-20 cm,Nov. 2005,OTC,disturbed,Nhigh,AM,0.67,922,1409,,,2,3,,Tropical_Forest,Tree Stand,21.5,1750,1750,2.03146124,2.63330698,0.528,0.63999999,23.33,N,113.50,E,fig. 3,,380,700
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+China OTC - high N,China FACE,China FACE,Liu et al. 2010,,20,0-20 cm,Apr. 2006,OTC,disturbed,Nhigh,AM,1,1930,2373,,,2,3,,Tropical_Forest,Tree Stand,21.5,1750,1750,2.03146124,2.63330698,0.528,0.63999999,23.33,N,113.50,E,fig. 3,,380,700
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+China OTC - high N,China FACE,China FACE,Liu et al. 2010,,20,0-20 cm,Aug. 2006,OTC,disturbed,Nhigh,AM,1.33,1951,2514,,,2,3,,Tropical_Forest,Tree Stand,21.5,1750,1750,2.03146124,2.63330698,0.528,0.63999999,23.33,N,113.50,E,fig. 3,,380,700
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+China OTC - high N,China FACE,China FACE,Liu et al. 2010,,20,0-20 cm,Nov. 2006,OTC,disturbed,Nhigh,AM,1.66,1587,3054,,,2,3,,Tropical_Forest,Tree Stand,21.5,1750,1750,2.03146124,2.63330698,0.528,0.63999999,23.33,N,113.50,E,fig. 3,,380,700
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+China OTC - high N,China FACE,China FACE,Liu et al. 2010,,20,0-20 cm,Apr. 2007,OTC,disturbed,Nhigh,AM,2,2015,3030,,,2,3,,Tropical_Forest,Tree Stand,21.5,1750,1750,2.03146124,2.63330698,0.528,0.63999999,23.33,N,113.50,E,fig. 3,,380,700
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+China OTC - high N,China FACE,China FACE,Liu et al. 2010,,20,0-20 cm,Aug. 2007,OTC,disturbed,Nhigh,AM,2.33,2273,2725,,,2,3,,Tropical_Forest,Tree Stand,21.5,1750,1750,2.03146124,2.63330698,0.528,0.63999999,23.33,N,113.50,E,fig. 3,,380,700
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+China OTC - high N,China FACE,China FACE,Liu et al. 2010,,20,0-20 cm,Nov. 2007,OTC,disturbed,Nhigh,AM,2.66,2187,2702,,,2,3,,Tropical_Forest,Tree Stand,21.5,1750,1750,2.03146124,2.63330698,0.528,0.63999999,23.33,N,113.50,E,fig. 3,,380,700
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+China OTC - high N,China FACE,China FACE,Liu et al. 2010,,20,0-20 cm,Apr. 2008,OTC,disturbed,Nhigh,AM,3,3602,3947,,,2,3,,Tropical_Forest,Tree Stand,21.5,1750,1750,2.03146124,2.63330698,0.528,0.63999999,23.33,N,113.50,E,fig. 3,,380,700
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+China OTC - high N,China FACE,China FACE,Liu et al. 2010,,20,0-20 cm,Aug. 2008,OTC,disturbed,Nhigh,AM,3.33,3581,4170,,,2,3,,Tropical_Forest,Tree Stand,21.5,1750,1750,2.03146124,2.63330698,0.528,0.63999999,23.33,N,113.50,E,fig. 3,,380,700
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+China OTC - high N,China FACE,China FACE,Liu et al. 2010,,20,0-20 cm,Nov. 2008,OTC,disturbed,Nhigh,AM,3.66,3645,4158,,,2,3,,Tropical_Forest,Tree Stand,21.5,1750,1750,2.03146124,2.63330698,0.528,0.63999999,23.33,N,113.50,E,fig. 3,,380,700
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+China OTC - high N,China FACE,China FACE,"Zhang et al. 2015 (soil), Chen et. al., 2012 (plant)",modeled subtropical forest,20,0-20 cm,April 2005,OTC,disturbed,Nhigh,AM,5,3186.42,3695.7,721.56,436.02,2,3,0.18483613,Tropical_Forest,Tree Stand,21.5,1750,1750,2.03146124,2.63330698,0.528,0.63999999,23.33,N,113.50,E,soil: Fig. 1; plant: Fig. 3,SE,380,700
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+DUKE FACE,Duke FACE,Duke FACE,Lichter et al. 2008,,15,0-15 cm,Aug. 1996,FACE,intact,Nlow,ECM,0,1977,2142,18,94,3,3,,Temperate_Forest,Tree Stand,,NA,,2.54997444,4.89995098,0.58355558,0.81599998,36.2,N,79.15,W,tab. 3,se,,
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+DUKE FACE,Duke FACE,Duke FACE,Lichter et al. 2008,,15,0-15 cm,Oct. 1999,FACE,intact,Nlow,ECM,3.17,1902,2208,52,136,3,3,,Temperate_Forest,Tree Stand,,NA,,2.54997444,4.89995098,0.58355558,0.81599998,36.2,N,79.15,W,tab. 3,se,,
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+DUKE FACE,Duke FACE,Duke FACE,Lichter et al. 2008,,15,0-15 cm,Aug. 2002,FACE,intact,Nlow,ECM,6,2407,2734,141,96,3,3,,Temperate_Forest,Tree Stand,,NA,,2.54997444,4.89995098,0.58355558,0.81599998,36.2,N,79.15,W,tab. 3,se,,
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+DUKE FACE,Duke FACE,Duke FACE,Lichter et al. 2008,,15,0-15 cm,Aug. 2006,FACE,intact,Nlow,ECM,9,2164,2096,152,175,3,3,0.1896534732,Temperate_Forest,Tree Stand,4.9,1140,1140,3.28978181,5.93327379,0.6531111,0.91600001,35.98,N,79.10,W,tab. 3,se,380,570
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+FACTS II - Aspen,Aspen FACE,Aspen FACE,Talhelm et al. 2009,,20,0-20 cm,2001,,,Nlow,ECM,4,3575,3562,241.79,666.6,3,3,,Temperate_Forest,Tree Stand,,NA,,1.85831475,5.13328218,0.412,0.84799999,45.67,N,89.63,W,pers. comm.,se,,
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+FACTS II - Aspen,Aspen FACE,Aspen FACE,Talhelm et al. 2009,,20,0-20 cm,2003,,,Nlow,ECM,6,3625,4435,229.99,188.22,3,3,,Temperate_Forest,Tree Stand,,NA,,1.85831475,5.13328218,0.412,0.84799999,45.67,N,89.63,W,pers. comm.,se,,
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+FACTS II - Aspen,Aspen FACE,Aspen FACE,Talhelm et al. 2009,,20,0-20 cm,2004,,,Nlow,ECM,7,3235,3243,283.03,248.96,3,3,,Temperate_Forest,Tree Stand,,NA,,1.85831475,5.13328218,0.412,0.84799999,45.67,N,89.63,W,pers. comm.,se,,
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+FACTS II - Aspen,Aspen FACE,Aspen FACE,Talhelm et al. 2009,,20,0-20 cm,2005,,,Nlow,ECM,8,3741,3506,144.36,525.37,3,3,,Temperate_Forest,Tree Stand,,NA,,1.85831475,5.13328218,0.412,0.84799999,45.67,N,89.63,W,pers. comm.,se,,
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+FACTS II - Aspen,Aspen FACE,Aspen FACE,Talhelm et al. 2009,,20,0-20 cm,2006,,,Nlow,ECM,9,4243,3841,274.19,637.45,3,3,,Temperate_Forest,Tree Stand,,NA,,1.85831475,5.13328218,0.412,0.84799999,45.67,N,89.63,W,pers. comm.,se,,
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+FACTS II - Aspen,Aspen FACE,Aspen FACE,Talhelm et al. 2009,,20,0-20 cm,2007,,,Nlow,ECM,10,4374,3760,164.63,469.34,3,3,,Temperate_Forest,Tree Stand,,NA,,1.85831475,5.13328218,0.412,0.84799999,45.67,N,89.63,W,pers. comm.,se,,
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+FACTS II - Aspen,Aspen FACE,Aspen FACE,Talhelm et al. 2009,,20,0-20 cm,2008,,,Nlow,ECM,11,5119,3267,1124.86,74.67,3,3,,Temperate_Forest,Tree Stand,,NA,,1.85831475,5.13328218,0.412,0.84799999,45.67,N,89.63,W,pers. comm.,se,,
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+FACTS II - Aspen,Aspen FACE,Aspen FACE,Talhelm et al. 2014,,20,0-20 cm,2009,FACE,intact,Nlow,ECM,11,3318.6,2894,393.72,50.54,3,3,0.2960308576,Temperate_Forest,Tree Stand,4.9,810,810,1.85831475,5.13328218,0.412,0.84799999,45.67,N,89.63,W,Table S2,se,370,532
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+FACTS II - Aspen/Birch,Aspen FACE,Aspen FACE,Talhelm et al. 2009,,20,0-20 cm,2001,,,Nlow,ECM,4,3256,3817,283.37,496.63,3,3,,Temperate_Forest,Tree Stand,,NA,,1.85831475,5.13328218,0.412,0.84799999,45.67,N,89.63,W,pers. comm.,se,,
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+FACTS II - Aspen/Birch,Aspen FACE,Aspen FACE,Talhelm et al. 2009,,20,0-20 cm,2003,,,Nlow,ECM,6,3347,3274,181.02,99,3,3,,Temperate_Forest,Tree Stand,,NA,,1.85831475,5.13328218,0.412,0.84799999,45.67,N,89.63,W,pers. comm.,se,,
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+FACTS II - Aspen/Birch,Aspen FACE,Aspen FACE,Talhelm et al. 2009,,20,0-20 cm,2004,,,Nlow,ECM,7,3408,3457,76.91,286.05,3,3,,Temperate_Forest,Tree Stand,,NA,,1.85831475,5.13328218,0.412,0.84799999,45.67,N,89.63,W,pers. comm.,se,,
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+FACTS II - Aspen/Birch,Aspen FACE,Aspen FACE,Talhelm et al. 2009,,20,0-20 cm,2005,,,Nlow,ECM,8,3653,3436,291.24,208.02,3,3,,Temperate_Forest,Tree Stand,,NA,,1.85831475,5.13328218,0.412,0.84799999,45.67,N,89.63,W,pers. comm.,se,,
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+FACTS II - Aspen/Birch,Aspen FACE,Aspen FACE,Talhelm et al. 2009,,20,0-20 cm,2006,,,Nlow,ECM,9,4433,4196,1077.46,170.2,3,3,,Temperate_Forest,Tree Stand,,NA,,1.85831475,5.13328218,0.412,0.84799999,45.67,N,89.63,W,pers. comm.,se,,
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+FACTS II - Aspen/Birch,Aspen FACE,Aspen FACE,Talhelm et al. 2009,,20,0-20 cm,2007,,,Nlow,ECM,10,4125,3832,837.96,624.94,3,3,,Temperate_Forest,Tree Stand,,NA,,1.85831475,5.13328218,0.412,0.84799999,45.67,N,89.63,W,pers. comm.,se,,
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+FACTS II - Aspen/Birch,Aspen FACE,Aspen FACE,Talhelm et al. 2009,,20,0-20 cm,2008,,,Nlow,ECM,11,3484,3946,261.76,984.48,3,3,,Temperate_Forest,Tree Stand,,NA,,1.85831475,5.13328218,0.412,0.84799999,45.67,N,89.63,W,pers. comm.,se,,
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+FACTS II - Aspen/Birch,Aspen FACE,Aspen FACE,Talhelm et al. 2014,,20,0-20 cm,2009,FACE,intact,Nlow,ECM,11,3035.6,2776.7,184.52,227.85,3,3,0.4213936274,Temperate_Forest,Tree Stand,4.9,810,810,1.85831475,5.13328218,0.412,0.84799999,45.67,N,89.63,W,Table S2,se,370,532
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+GiFACE,GiFACE,GiFACE,Lenhart et al. 2016,,11.3,0-11.3 cm,1998,FACE,intact,Nlow,AM,0,4155,4215,1372,1040,3,3,,Grassland,Grassland,,NA,,1.5092442,4.49995518,0.50199997,0.824,50.53,N,8.74,E,Table 1,sd,,
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+GiFACE,GiFACE,GiFACE,Lenhart et al. 2016,,11.3,0-11.3 cm,2004,FACE,intact,Nlow,AM,6,3620,3500,1315,659,3,3,,Grassland,Grassland,,NA,,1.5092442,4.49995518,0.50199997,0.824,50.53,N,8.74,E,Table 1,sd,,
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+GiFACE,GiFACE,GiFACE,Lenhart et al. 2016,,11.3,0-11.3 cm,2007,FACE,intact,Nlow,AM,9,3670,3690,1356,1014,3,3,,Grassland,Grassland,,NA,,1.5092442,4.49995518,0.50199997,0.824,50.53,N,8.74,E,Table 1,sd,,
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+GiFACE,GiFACE,GiFACE,Keidel et al. 2018,,15,0-15 cm,2013,FACE,intact,Nlow,AM,13.5,3513,3302,586,57,3,3,0.09071741555,Grassland,Grassland,9.4,645,645,1.41017103,3.83329511,0.48133335,0.80800003,50.53,N,8.68,E,Fig. 4,se,380,456
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Hohenheim,Hohenheim,Hohenheim,Marhan et al. 2010,,10,0-10 cm,Mar. 2004,FACE,disturbed,Nhigh,AM,2,1725,1767,20,46,5,5,,Cropland,Agricultural,,NA,,1.00091588,1.93331397,0.32022223,0.57599998,48.7,N,9.18,E,tab. 2,se,,
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Hohenheim,Hohenheim,Hohenheim,Marhan et al. 2010,,10,0-10 cm,Oct. 2004,FACE,disturbed,Nhigh,AM,2.5,1707,1641,34,39,5,5,,Cropland,Agricultural,,NA,,1.00091588,1.93331397,0.32022223,0.57599998,48.7,N,9.18,E,tab. 2,se,,
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Hohenheim,Hohenheim,Hohenheim,Marhan et al. 2010,,10,0-10 cm,Mar. 2005,FACE,disturbed,Nhigh,AM,3,1805,1744,62,26,5,5,,Cropland,Agricultural,,NA,,1.00091588,1.93331397,0.32022223,0.57599998,48.7,N,9.18,E,tab. 2,se,,
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Hohenheim,Hohenheim,Hohenheim,Marhan et al. 2010,,10,0-10 cm,Oct. 2005,FACE,disturbed,Nhigh,AM,3.5,1567,1588,63,19,5,5,,Cropland,Agricultural,,NA,,1.00091588,1.93331397,0.32022223,0.57599998,48.7,N,9.18,E,tab. 2,se,,
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Hohenheim,Hohenheim,Hohenheim,Marhan et al. 2010,,10,0-10 cm,Mar. 2006,FACE,disturbed,Nhigh,AM,4,1680,1717,23,23,5,5,,Cropland,Agricultural,,NA,,1.00091588,1.93331397,0.32022223,0.57599998,48.7,N,9.18,E,tab. 2,se,,
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Hohenheim,Hohenheim,Hohenheim,Marhan et al. 2010,,10,0-10 cm,Oct. 2006,FACE,disturbed,Nhigh,AM,4.5,1721,1763,25,12,5,5,0.09809397375,Cropland,Agricultural,15.3,385,385,1.00091588,1.93331397,0.32022223,0.57599998,48.7,N,9.18,E,tab. 2,se,409,537
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Jasper Ridge - sandstone,Jasper OTC,Jasper OTC,Hungate et al. 1997,,15,0-15 cm,Jan. 1992,OTC,intact,Nlow,AM,0,2646,2646,,,10,10,,Grassland,Grassland,,NA,,1.16665494,2.13331199,0.47022223,0.57999998,37.4,N,122.21,W,"fig. 1, pers. comm.",,,
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Jasper Ridge - sandstone,Jasper OTC,Jasper OTC,Hungate et al. 1997,,15,0-15 cm,May-93,OTC,intact,Nlow,AM,1.41,2646,2354,393.9,358.1,10,10,,Grassland,Grassland,,NA,,1.16665494,2.13331199,0.47022223,0.57999998,37.4,N,122.21,W,"fig. 1, pers. comm.",sd,,
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Jasper Ridge - sandstone,Jasper OTC,Jasper OTC,Hungate et al. 1997,,15,0-15 cm,May-94,OTC,intact,Nlow,AM,2.41,2252,2339,334.2,322.3,10,10,,Grassland,Grassland,,NA,,1.16665494,2.13331199,0.47022223,0.57999998,37.4,N,122.21,W,"fig. 1, pers. comm.",sd,,
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Jasper Ridge - sandstone,Jasper OTC,Jasper OTC,Hungate et al. 1997,,15,0-15 cm,May-95,OTC,intact,Nlow,AM,3.41,2315,2315,346.2,346.2,10,10,,Grassland,Grassland,,NA,,1.16665494,2.13331199,0.47022223,0.57999998,37.4,N,122.21,W,"fig. 1, pers. comm.",sd,,
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Jasper Ridge - sandstone,Jasper OTC,Jasper OTC,Hungate et al. 1997,,15,0-15 cm,May-96,OTC,intact,Nlow,AM,4.41,2497,2486,,,10,10,,Grassland,Grassland,,NA,,1.16665494,2.13331199,0.47022223,0.57999998,37.4,N,122.21,W,"fig. 1, pers. comm.",,,
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Jasper Ridge - sandstone,Jasper OTC,Jasper OTC,Hungate et al. 1997,,15,0-15 cm,May-97,OTC,intact,Nlow,AM,5.41,2612,2750,,,10,10,0.07192345589,Grassland,Grassland,19.3,677,677,1.16665494,2.13331199,0.47022223,0.57999998,37.4,N,122.21,W,"fig. 1, pers. comm.",,360,720
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Jasper Ridge - serpentine,Jasper OTC,Jasper OTC,Hungate et al. 1997,,15,0-15 cm,,OTC,intact,Nlow,AM,3,1877,1989,107,132,10,10,0.06876268,Grassland,Grassland,19.3,677,677,1.16665494,2.13331199,0.47022223,0.57999998,37.4,N,122.21,W,"fig. 1, pers. comm.",se,360,720
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+JRGCE - Control,Jasper FACE,Jasper FACE,Hungate et al. unpublished,,15,0-15 cm,2000,FACE,intact,Nlow,AM,2,2384,2344,,,6,6,,,,,NA,,NA,NA,NA,NA,,,,,pers. comm.,,,
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+JRGCE - Control,Jasper FACE,Jasper FACE,Hungate et al. unpublished,,15,0-15 cm,2006,FACE,intact,Nlow,AM,8,2428,2173,,,6,6,,,,,NA,,NA,NA,NA,NA,,,,,pers. comm.,,,
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+JRGCE - Control,Jasper FACE,Jasper FACE,"JasperCsoil.R pers.comm, more years available",,15,0-15 cm,2012,FACE,intact,Nlow,AM,14,1893.75,2144.713,56.82143,84.21927,6,6,-0.02477074171,Grassland,Grassland,19.3,677,677,1.64350212,2.83330488,0.55355555,0.66399997,37.4,N,122.24,W,pers. comm.,,380,680
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+JRGCE - N,Jasper FACE,Jasper FACE,Hungate et al. unpublished,,15,0-15 cm,2000,FACE,intact,Nhigh,AM,2,2248,2381,,,6,6,,,,,NA,,NA,NA,NA,NA,,,,,pers. comm.,,,
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+JRGCE - N,Jasper FACE,Jasper FACE,Hungate et al. unpublished,,15,0-15 cm,2006,FACE,intact,Nhigh,AM,8,2552,2329,,,6,6,,,,,NA,,NA,NA,NA,NA,,,,,pers. comm.,,,
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+JRGCE - N,Jasper FACE,Jasper FACE,JasperCsoil.R pers.comm; more years available,,15,0-15 cm,2012,FACE,intact,Nhigh,AM,14,2175.075,2251.713,79.74795,125.69286,6,6,0.04563714059,Grassland,Grassland,19.3,677,677,1.64350212,2.83330488,0.55355555,0.66399997,37.4,N,122.24,W,pers. comm.,,380,680
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Merritt Island,Merritt Island,Merritt Island,Hungate et al. 2013,subtropical oak woodland,100,60-100 cm,May 1996,OTC,intact,Nlow,ECM,11,5513.1,5025.6,411.5,647.4,8,8,0.5129051254,Temperate_Forest,Tree Stand,,NA,,1.73794556,2.83330488,0.48933333,0.62800002,28.572123,N,80.92,W,Table 1,SE,,700
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Merritt Island,Merritt Island,Merritt Island,Hungate unpublished,,10,0-10 cm,Dec. 1996,FACE,intact,Nlow,ECM,0.62,1209,1335,453,526,8,8,,,,,NA,,NA,NA,NA,NA,,,,,pers. comm.,sd,,
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Merritt Island,Merritt Island,Merritt Island,Hungate unpublished,,10,0-10 cm,Jun. 1998,FACE,intact,Nlow,ECM,2.09,1131,1220,193,281,8,8,,,,,NA,,NA,NA,NA,NA,,,,,pers. comm.,sd,,
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Merritt Island,Merritt Island,Merritt Island,Hungate unpublished,,10,0-10 cm,Jul. 1998,FACE,intact,Nlow,ECM,2.17,1264,1292,176,175,8,8,,,,,NA,,NA,NA,NA,NA,,,,,pers. comm.,sd,,
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Merritt Island,Merritt Island,Merritt Island,Hungate unpublished,,10,0-10 cm,Aug. 1998,FACE,intact,Nlow,ECM,2.31,1356,1281,312,120,8,8,,,,,NA,,NA,NA,NA,NA,,,,,pers. comm.,sd,,
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Merritt Island,Merritt Island,Merritt Island,Carney et al. 2007,,10,0-10 cm,Nov. 1998,,,Nlow,ECM,2.55,1734,1567,130,387,8,8,,,,,NA,,NA,NA,NA,NA,,,,,"fig. 1, pers. comm.",sd,,
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Merritt Island,Merritt Island,Merritt Island,Carney et al. 2007,,10,0-10 cm,sept. 1999,,,Nlow,ECM,3.36,1782,1712,490,282,8,8,,,,,NA,,NA,NA,NA,NA,,,,,"fig. 1, pers. comm.",sd,,
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Merritt Island,Merritt Island,Merritt Island,Carney et al. 2007,,10,0-10 cm,Mar. 2001,,,Nlow,ECM,4.87,2191,1941,934,306,8,8,,,,,NA,,NA,NA,NA,NA,,,,,"fig. 1, pers. comm.",sd,,
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Merritt Island,Merritt Island,Merritt Island,Carney et al. 2007,,10,0-10 cm,May-02,,,Nlow,ECM,6,2099,1741,433,620,8,8,,,,,NA,,NA,NA,NA,NA,,,,,"fig. 1, pers. comm.",sd,,
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Merritt Island,Merritt Island,Merritt Island,Langley et al. 2009,,10,0-10 cm,May-02,OTC,intact,Nlow,ECM,6,1999,1628,,,8,8,,,,,NA,,NA,NA,NA,NA,,,,,pers. comm.,,,
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Merritt Island,Merritt Island,Merritt Island,McKinley et al. unpublished,,10,0-10 cm,May-07,OTC,intact,Nlow,ECM,11,1512,1411,362,333,8,8,0.5129051254,Temperate_Forest,Tree Stand,22.3,1310,1310,1.73794556,2.83330488,0.48933333,0.62800002,28.572123,N,80.92,W,pers. comm.,sd,370,720
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+NewZealandFACE,NewZealandFACE,NewZealandFACE,Ross et al. 2004,,5,0-5 cm,may/oct. 1997,FACE,intact,Nlow,AM,0,2685,2465,92,113,3,3,,Grassland,Grassland,,NA,,3.48700213,4.96661711,0.77088886,0.86000001,40.23,S,175.27,E,pers. Comm.,se,,
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+NewZealandFACE,NewZealandFACE,NewZealandFACE,Ross et al. 2004,,5,0-5 cm,may/oct. 1998,FACE,intact,Nlow,AM,1,2650,2490,70,95,3,3,,Grassland,Grassland,,NA,,3.48700213,4.96661711,0.77088886,0.86000001,40.23,S,175.27,E,table 1,se,,
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+NewZealandFACE,NewZealandFACE,NewZealandFACE,Ross et al. 2004,,5,0-5 cm,may/oct. 1999,FACE,intact,Nlow,AM,2,2655,2525,85,105,3,3,,Grassland,Grassland,,NA,,3.48700213,4.96661711,0.77088886,0.86000001,40.23,S,175.27,E,table 1,se,,
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+NewZealandFACE,NewZealandFACE,NewZealandFACE,Ross et al. 2004,,5,0-5 cm,may/oct. 2000,FACE,intact,Nlow,AM,3,2675,2565,105,140,3,3,,Grassland,Grassland,,NA,,3.48700213,4.96661711,0.77088886,0.86000001,40.23,S,175.27,E,table 1,se,,
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+NewZealandFACE,NewZealandFACE,NewZealandFACE,Ross et al. 2004,,5,0-5 cm,may/oct. 2001,FACE,intact,Nlow,AM,4,2515,2445,70,105,3,3,,Grassland,Grassland,,NA,,3.48700213,4.96661711,0.77088886,0.86000001,40.23,S,175.27,E,table 1,se,,
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+NewZealandFACE,NewZealandFACE,NewZealandFACE,Ross et al. 2004,,5,0-5 cm,may/oct. 2002,FACE,intact,Nlow,AM,5,2585,2490,85,95,3,3,,Grassland,Grassland,,NA,,3.48700213,4.96661711,0.77088886,0.86000001,40.23,S,175.27,E,table 1,se,,
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+NewZealandFACE,NewZealandFACE,NewZealandFACE,Ross et al. 2013,,5,0-5 cm,may/oct. 2003,FACE,intact,Nlow,AM,6,2519,2510,86,109,3,3,,Grassland,Grassland,,NA,,3.48700213,4.96661711,0.77088886,0.86000001,40.23,S,175.27,E,fig. 3,se,,
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+NewZealandFACE,NewZealandFACE,NewZealandFACE,Ross et al. 2013,,5,0-5 cm,may/oct. 2004,FACE,intact,Nlow,AM,7,2599,2534,94,86,3,3,,Grassland,Grassland,,NA,,3.48700213,4.96661711,0.77088886,0.86000001,40.23,S,175.27,E,fig. 3,se,,
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+NewZealandFACE,NewZealandFACE,NewZealandFACE,Ross et al. 2013,,5,0-5 cm,may/oct. 2005,FACE,intact,Nlow,AM,8,2659,2659,102,102,3,3,,Grassland,Grassland,,NA,,3.48700213,4.96661711,0.77088886,0.86000001,40.23,S,175.27,E,fig. 3,se,,
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+NewZealandFACE,NewZealandFACE,NewZealandFACE,Ross et al. 2013,,5,0-5 cm,may/oct. 2006,FACE,intact,Nlow,AM,9,2657,2722,177,125,3,3,,Grassland,Grassland,,NA,,3.48700213,4.96661711,0.77088886,0.86000001,40.23,S,175.27,E,fig. 3,se,,
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+NewZealandFACE,NewZealandFACE,NewZealandFACE,Ross et al. 2013,,5,0-5 cm,may/oct. 2007,FACE,intact,Nlow,AM,10,2722,2822,121,167,3,3,,Grassland,Grassland,,NA,,3.48700213,4.96661711,0.77088886,0.86000001,40.23,S,175.27,E,fig. 3,se,,
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+NewZealandFACE,NewZealandFACE,NewZealandFACE,Deng et al. 2016,,5,0-5 cm,,FACE,intact,Nlow,AM,13,2216.5,2519.5,78.5,90,4,4,0.04918424,Grassland,Grassland,12.9,875,875,3.48700213,4.96661711,0.77088886,0.86000001,40.23,S,175.27,E,"soil: Fig. 3, plant: Fig. 1",SE,366,475
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+New Zealand Greenhouse,New Zealand Greenhouse,New Zealand Greenhouse,Ross et al. 1995,,5,0-5 cm,-,Chamber,disturbed,Nlow,AM,0,2112.2,2122.4,,,1,1,,Grassland,Grassland,,NA,,3.48700213,4.96661711,0.77088886,0.86000001,40.23,S,175.27,E,fig. 2,,350,700
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+New Zealand Greenhouse,New Zealand Greenhouse,New Zealand Greenhouse,Ross et al. 1995,,5,0-5 cm,-,Chamber,disturbed,Nlow,AM,0.25,2122.4,2142.9,,,1,1,,Grassland,Grassland,,NA,,3.48700213,4.96661711,0.77088886,0.86000001,40.23,S,175.27,E,fig. 2,,350,700
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+New Zealand Greenhouse,New Zealand Greenhouse,New Zealand Greenhouse,Ross et al. 1995,,5,0-5 cm,-,Chamber,disturbed,Nlow,AM,0.5,1969.4,1979.6,,,1,1,,Grassland,Grassland,,NA,,3.48700213,4.96661711,0.77088886,0.86000001,40.23,S,175.27,E,fig. 2,,350,700
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+New Zealand Greenhouse,New Zealand Greenhouse,New Zealand Greenhouse,Ross et al. 1995,,5,0-5 cm,-,Chamber,disturbed,Nlow,AM,0.75,1969.4,2000,,,1,1,0.07076907089,Grassland,Grassland,12.9,875,875,3.48700213,4.96661711,0.77088886,0.86000001,40.23,S,175.27,E,fig. 2/Table 1,,350,700
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+New Zealand OTC - P. radiata,New Zealand OTC,New Zealand OTC,Ross et al. 2006,,10,0-10 cm,Mar. 2000,OTC,intact,Nhigh,ECM,6,412,530,103.9,155.84,2,2,0.002063984221,Temperate_Forest,Tree Stand,11.8,890,890,0.87036169,1.29998696,0.34244445,0.45199999,43.53,S,172.70,E,fig. 2,se,362,654
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+New Zealand OTC - N. fusca,New Zealand OTC,New Zealand OTC,Ross et al. 2006,,10,0-10 cm,Mar. 2000,OTC,intact,Nhigh,ECM,6,2403,3402,194.81,1103.9,3,3,0.002072539602,Temperate_Forest,Tree Stand,11.8,890,890,0.87036169,1.29998696,0.34244445,0.45199999,43.53,S,172.70,E,fig. 2,se,362,654
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+ORNL FACE,ORNL FACE,ORNL FACE,Jastrow et al. 2005,,15,0-15 cm,Oct. 1997,OTC,intact,Nlow,AM,0,2672,2791,160,110,3,2,,Temperate_Forest,Tree Stand,,NA,,2.6323812,5.59994411,0.5931111,0.89999998,35.9,N,84.33,W,fig. 1b,sd,,
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+ORNL FACE,ORNL FACE,ORNL FACE,Jastrow et al. 2005,,15,0-15 cm,Nov. 2000,OTC,intact,Nlow,AM,2.42,2785,2866,141,267,3,2,,Temperate_Forest,Tree Stand,,NA,,2.6323812,5.59994411,0.5931111,0.89999998,35.9,N,84.33,W,fig. 1b,sd,,
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+ORNL FACE,ORNL FACE,ORNL FACE,Jastrow et al. 2005,,15,0-15 cm,Oct. 2002,OTC,intact,Nlow,AM,4.33,2730,2991,141,231,3,2,,Temperate_Forest,Tree Stand,,NA,,2.6323812,5.59994411,0.5931111,0.89999998,35.9,N,84.33,W,fig. 1b,sd,,
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+ORNL FACE,ORNL FACE,ORNL FACE,Iversen et al. 2012,,15,0-15 cm,Jun-09,FACE,intact,Nlow,AM,11,3370,3850,100,215,3,2,0.01460053853,Temperate_Forest,Tree Stand,13.9,1371,1371,2.6323812,5.59994411,0.5931111,0.89999998,35.9,N,84.33,W,tab. 1,se,380,550
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Placerville - low N,Placerville,Placerville,Johnson et al. 2006,,30,0-30 cm,Mar. 1991,OTC,intact,Nlow,ECM,0,9210,7885,489,538,3,3,,Temperate_Forest,Tree Stand,,NA,,1.49998498,2.16664505,0.49422222,0.58399999,38.73,N,120.80,W,fig. 4,se,,
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Placerville - low N,Placerville,Placerville,Johnson et al. 2006,,30,0-30 cm,Mar. 1993,OTC,intact,Nlow,ECM,1.75,8207,7637,321,766,3,3,,Temperate_Forest,Tree Stand,,NA,,1.49998498,2.16664505,0.49422222,0.58399999,38.73,N,120.80,W,fig. 4,se,,
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Placerville - low N,Placerville,Placerville,Johnson et al. 2006,,30,0-30 cm,sept. 1996,OTC,intact,Nlow,ECM,5.5,8021,7639,180,534,3,3,0.3074846997,Temperate_Forest,Tree Stand,14.1,1000,1000,1.49998498,2.16664505,0.49422222,0.58399999,38.73,N,120.80,W,fig. 4,se,352,700
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Placerville - medium N,Placerville,Placerville,Johnson et al. 2006,,30,0-30 cm,Mar. 1991,OTC,intact,Nhigh,ECM,0,8450,8444,442,178,3,3,,Temperate_Forest,Tree Stand,,NA,,1.49998498,2.16664505,0.49422222,0.58399999,38.73,N,120.80,W,fig. 4,se,,
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Placerville - medium N,Placerville,Placerville,Johnson et al. 2006,,30,0-30 cm,Mar. 1993,OTC,intact,Nhigh,ECM,1.75,8311,8022,415,130,3,3,,Temperate_Forest,Tree Stand,,NA,,1.49998498,2.16664505,0.49422222,0.58399999,38.73,N,120.80,W,fig. 4,se,,
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Placerville - medium N,Placerville,Placerville,Johnson et al. 2006,,30,0-30 cm,sept. 1996,OTC,intact,Nhigh,ECM,5.5,8015,8538,352,178,3,3,0.32930375,Temperate_Forest,Tree Stand,14.1,1000,1000,1.49998498,2.16664505,0.49422222,0.58399999,38.73,N,120.80,W,fig. 4,se,352,700
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Placerville - high N,Placerville,Placerville,Johnson et al. 2006,,30,0-30 cm,Mar. 1991,OTC,intact,Nhigh,ECM,0,8075,7598,413,391,3,3,,Temperate_Forest,Tree Stand,,NA,,1.49998498,2.16664505,0.49422222,0.58399999,38.73,N,120.80,W,fig. 4,se,,
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Placerville - high N,Placerville,Placerville,Johnson et al. 2006,,30,0-30 cm,Mar. 1993,OTC,intact,Nhigh,ECM,1.75,7537,8618,606,504,3,3,,Temperate_Forest,Tree Stand,,NA,,1.49998498,2.16664505,0.49422222,0.58399999,38.73,N,120.80,W,fig. 4,se,,
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Placerville - high N,Placerville,Placerville,Johnson et al. 2006,,30,0-30 cm,sept. 1996,OTC,intact,Nhigh,ECM,5.5,7479,8246,47,304,3,3,0.1906203596,Temperate_Forest,Tree Stand,14.1,1000,1000,1.49998498,2.16664505,0.49422222,0.58399999,38.73,N,120.80,W,fig. 4,se,352,700
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+POPFACE - alba,PopFACE,PopFACE,Hoosbeek et al. 2009,,10,0-10 cm,Oct. 2001,FACE,intact,Nlow,ECM,2,1524,1487,119,366,3,3,0.226,Temperate_Forest,Tree Stand,14.1,963.400024,watered,1.30832028,4.7332859,0.51800001,0.83600003,42.37,N,11.80,E,"fig. 5, pers. comm.",sd,385,550
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+EUROFACE - alba,PopFACE,PopFACE,Hoosbeek 2015,P. alba L,10,0-10 cm,,FACE,intact,Nhigh,ECM,6,1677.217,1762.1,61.42702,73.15231,3,3,0.186,Temperate_Forest,Tree Stand,14.1,963.400024,watered,1.30832028,4.7332859,0.51800001,0.83600003,42.37,N,11.80,E,Table 1,SE,370,550
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+POPFACE - euramericana,PopFACE,PopFACE,Hoosbeek et al. 2009,,10,0-10 cm,Oct. 2001,FACE,intact,Nlow,ECM,2,1405,1171,201,272,3,3,0.29137376,Temperate_Forest,Tree Stand,14.1,963.400024,watered,1.30832028,4.7332859,0.51800001,0.83600003,42.37,N,11.80,E,"fig. 5, pers. comm.",sd,385,550
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+POPFACE - euramericana,PopFACE,PopFACE,Hoosbeek 2015,P. euramericana,10,0-10 cm,,FACE,intact,Nhigh,ECM,6,1622.1,1617.21,64.01,122.52,3,3,0.147,Temperate_Forest,Tree Stand,14.1,963.400024,watered,1.30832028,4.7332859,0.51800001,0.83600003,42.37,N,11.80,E,Table 1,SE,370,550
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+POPFACE - nigra,PopFACE,PopFACE,Hoosbeek et al. 2009,,10,0-10 cm,Oct. 2001,FACE,intact,Nlow,ECM,2,1534,1342,240,205,3,3,0.166,Temperate_Forest,Tree Stand,14.1,963.400024,watered,1.30832028,4.7332859,0.51800001,0.83600003,42.37,N,11.80,E,"fig. 5, pers. comm.",sd,385,550
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+POPFACE - nigra,PopFACE,PopFACE,Hoosbeek 2015,P. nigra,10,0-10 cm,,FACE,intact,Nhigh,ECM,6,1554.75,1715.6,43.07489,116.05,3,3,0.243,Temperate_Forest,Tree Stand,14.1,963.400024,watered,1.30832028,4.7332859,0.51800001,0.83600003,42.37,N,11.80,E,Table 1,SE,370,550
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Shortgrass Grassland,Shortgrass Grassland,Shortgrass Grassland,Pendall et al. 2004,,10,0-10 cm,Nov. 1995,OTC,intact,Nlow,AM,0,1137,1185,99,219,3,3,,Grassland,Grassland,,NA,,0.17407234,0.33333001,0.078,0.14,40.66,N,104.75,W,appendix,se,,
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Shortgrass Grassland,Shortgrass Grassland,Shortgrass Grassland,Pendall et al. 2004,,10,0-10 cm,1998,OTC,intact,Nlow,AM,2,1096,1103,104,106,3,3,,Grassland,Grassland,,NA,,0.17407234,0.33333001,0.078,0.14,40.66,N,104.75,W,appendix,se,,
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Shortgrass Grassland,Shortgrass Grassland,Shortgrass Grassland,Pendall et al. 2004,,10,0-10 cm,1999,OTC,intact,Nlow,AM,3,998,992,83,248,3,3,,Grassland,Grassland,,NA,,0.17407234,0.33333001,0.078,0.14,40.66,N,104.75,W,appendix,se,,
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Shortgrass Grassland,Shortgrass Grassland,Shortgrass Grassland,Pendall et al. 2004,,10,0-10 cm,2000,OTC,intact,Nlow,AM,4,1214,1197,155,178,3,3,,Grassland,Grassland,,NA,,0.17407234,0.33333001,0.078,0.14,40.66,N,104.75,W,appendix,se,,
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Shortgrass Grassland,Shortgrass Grassland,Shortgrass Grassland,Pendall et al. 2004,,10,0-10 cm,2001,OTC,intact,Nlow,AM,5,1177,1182,156,79,3,3,0.14,Grassland,Grassland,10.6,249,249,0.17407234,0.33333001,0.078,0.14,40.66,N,104.75,W,appendix. Biomass: Fig. 1,se,360,720
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+SoyFACE,SoyFACE,SoyFACE,Moran and Jastrow 2010,,12.5,0-12.5 cm,spring 2001,FACE,disturbed,Nlow,Nfixer,0,4803,4142,,,3,3,,Cropland,Agricultural,,NA,,1.25183928,5.09994888,0.26377779,0.81199998,40.04,N,88.23,W,pers. comm.,,,
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+SoyFACE,SoyFACE,SoyFACE,Moran and Jastrow 2010,,12.5,0-12.5 cm,spring 2006,FACE,disturbed,Nlow,Nfixer,5,4671,4100,,,3,3,,Cropland,Agricultural,,NA,,1.25183928,5.09994888,0.26377779,0.81199998,40.04,N,88.23,W,pers. comm.,,,
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+SoyFACE,SoyFACE,SoyFACE,Moran and Jastrow 2010,,12.5,0-12.5 cm,spring 2007,FACE,disturbed,Nlow,Nfixer,6,4437,3836,,,3,3,0.1465935802,Cropland,Agricultural,13.2,823,823,1.25183928,5.09994888,0.26377779,0.81199998,40.04,N,88.23,W,pers. comm.,,370,550
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+FACE Stillberg - larix,FACE Stillberg,FACE Stillberg,"soil: Hagedorn et al. 2013, plant: Dawes et. al., 2015",Larix decidua,5,0-5 cm,2000,FACE,intact,Nlow,ECM,9,2010,1960,85,80,10,10,0.4329889453,Alpine_Forest,Tree Stand,8.8,1150,1150,2.72589874,5.59994411,0.65133333,0.88800001,47.46,N,7.50,E,soil: Table 1; plant Table S2,SE,370,545
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+FACE Stillberg - pinus,FACE Stillberg,FACE Stillberg,"soil: Hagedorn et al. 2013, plant: Dawes et. al., 2015",Pinus mugo ssp. uncinata,5,0-5 cm,2000,FACE,intact,Nlow,ECM,9,1900,2020,100,85,10,10,0.1989998789,Alpine_Forest,Tree Stand,8.8,1150,1150,2.72589874,5.59994411,0.65133333,0.88800001,47.46,N,7.50,E,soil: Table 1; plant Table S2,SE,370,545
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+SwissFACE- grass - low N,Swiss FACE,Swiss FACE,"De Graaff et al., 2004",,10,0-10 cm,2002,FACE,intact,Nlow,AM,9,3510,4170,610,800,3,3,-0.02452026137,Grassland,Grassland,12.3,878,878,3.19811606,5.56661081,0.70866668,0.87599999,47.45,N,8.95,E,Table 3,se,350,600
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+SwissFACE- grass - low N,Swiss FACE,Swiss FACE,"De Graaff et al., 2007",,10,0-10 cm,2003,FACE,intact,Nlow,AM,10,3448.8,4653.6,44.4,159.6,3,3,-0.02452026137,Grassland,Grassland,12.3,878,878,3.19811606,5.56661081,0.70866668,0.87599999,47.45,N,8.95,E,Table 3,se,350,600
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+SwissFACE- grass - high N,Swiss FACE,Swiss FACE,"De Graaff et al., 2004",,10,0-10 cm,2002,FACE,intact,Nhigh,AM,9,3630,4040,550,820,3,3,0.1593556537,Grassland,Grassland,12.3,878,878,3.19811606,5.56661081,0.70866668,0.87599999,47.45,N,8.95,E,Table 3,se,350,600
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+SwissFACE- grass - high N,Swiss FACE,Swiss FACE,"De Graaff et al., 2007",,10,0-10 cm,2003,FACE,intact,Nhigh,AM,10,3590.4,3694.8,130.8,434.4,3,3,0.1593556537,Grassland,Grassland,12.3,878,878,3.19811606,5.56661081,0.70866668,0.87599999,47.45,N,8.95,E,Table 3,se,350,600
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+SwissFACE- clover - low N,Swiss FACE,Swiss FACE,"De Graaff et al., 2004",,10,0-10 cm,2002,FACE,intact,Nlow,Nfixer,9,3260,3710,480,820,3,3,0.5552928314,Grassland,Grassland,12.3,878,878,3.19811606,5.56661081,0.70866668,0.87599999,47.45,N,8.95,E,Table 3,se,350,600
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+SwissFACE- clover - low N,Swiss FACE,Swiss FACE,"De Graaff et al., 2007",,10,0-10 cm,2003,FACE,intact,Nlow,Nfixer,10,3489.6,3230.4,121.2,578.4,3,3,0.5552928314,Grassland,Grassland,12.3,878,878,3.19811606,5.56661081,0.70866668,0.87599999,47.45,N,8.95,E,Table 3,se,350,600
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+SwissFACE- clover - high N,Swiss FACE,Swiss FACE,"De Graaff et al., 2004",,10,0-10 cm,2002,FACE,intact,Nhigh,Nfixer,9,3330,3770,610,680,3,3,0.6075227663,Grassland,Grassland,12.3,878,878,3.19811606,5.56661081,0.70866668,0.87599999,47.45,N,8.95,E,Table 3,se,350,600
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+SwissFACE- clover - high N,Swiss FACE,Swiss FACE,"De Graaff et al., 2007",,10,0-10 cm,2003,FACE,intact,Nhigh,Nfixer,10,3208.8,3698.4,108,344.4,3,3,0.6075227663,Grassland,Grassland,12.3,878,878,3.19811606,5.56661081,0.70866668,0.87599999,47.45,N,8.95,E,Table 3,se,350,600
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Swiss Greenhouse,Swiss Greenhouse,Swiss Greenhouse,K_rner and Arnone 1992,,20,0-20 cm,-,Chamber,disturbed,Nhigh,AM,0,1280,1280,23,23,2,2,,Temperate_Forest,Tree Stand,,NA,,1.65553904,3.43329906,0.55644447,0.73199999,47.57,N,8.60,E,table 4,se,,
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Swiss Greenhouse,Swiss Greenhouse,Swiss Greenhouse,K_rner and Arnone 1992,,20,0-20 cm,-,Chamber,disturbed,Nhigh,AM,0.25,1205,980,,,2,2,0.0631964192,Temperate_Forest,Tree Stand,27,1333.30005,watered,1.65553904,3.43329906,0.55644447,0.73199999,47.57,N,8.60,E,table 4,se,340,610
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Tallgrass Grassland,Tallgrass Grassland,Tallgrass Grassland,Rice et al. 1994,,5,0-5 cm,Nov. 1992,OTC,intact,Nhigh,AM,2.5,2985,2860,,,3,3,,Grassland,Grassland,,NA,,0.88239861,1.93331397,0.35444444,0.56800002,39.12,N,96.35,W,table 1,,,
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Tallgrass Grassland,Tallgrass Grassland,Tallgrass Grassland,Williams et al. 2000,,5,0-5 cm,Oct. 1996,OTC,intact,Nhigh,AM,8,2181,2372,,,3,3,0.12213002,Grassland,Grassland,15,840,840,0.88239861,1.93331397,0.35444444,0.56800002,39.12,N,96.35,W,table 4,,340,610
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+UMBS - aspen,UMBS,UMBS,Zak et al. 1993,,15,0-15 cm,May-91,OTC,disturbed,Nhigh,ECM,0,297,297,82,82,4,4,,Temperate_Forest,Tree Stand,,NA,,1.27035761,3.13330197,0.34400001,0.68400002,45.55,N,84.78,W,text (page 107),se,,
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+UMBS - aspen,UMBS,UMBS,Zak et al. 1993,,15,0-15 cm,Oct. 1991,OTC,disturbed,Nhigh,ECM,0.5,242,290,28,59,4,4,0.0408803529,Temperate_Forest,Tree Stand,6,1031.5,watered,1.27035761,3.13330197,0.34400001,0.68400002,45.55,N,84.78,W,table 2,se,342,692
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+"WSL - loam, low N",Birmensdorf,Birmensdorf,Hagedorn et al. 2001,,10,0-10 cm,Jan. 1995,OTC,intact,Nhigh,ECM,0,1511,1511,,,4,4,,Temperate_Forest,Tree Stand,,NA,,1.87868488,3.53329802,0.59866667,0.77600002,47.35,N,8.43,E,"fig. 4, pers. comm.",,370,570
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+"WSL - loam, low N",Birmensdorf,Birmensdorf,Hagedorn et al. 2001,,10,0-10 cm,sept. 1998,OTC,intact,Nhigh,ECM,3.75,1501,1677,52,35,4,4,-0.03969071809,Temperate_Forest,Tree Stand,9.5,691,691,1.87868488,3.53329802,0.59866667,0.77600002,47.35,N,8.43,E,"fig. 4, pers. comm.",se,370,570
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+"WSL - loam, high N",Birmensdorf,Birmensdorf,Hagedorn et al. 2001,,10,0-10 cm,Jan. 1995,OTC,intact,Nhigh,ECM,0,1511,1511,,,4,4,,Temperate_Forest,Tree Stand,,NA,,1.87868488,3.53329802,0.59866667,0.77600002,47.35,N,8.43,E,"fig. 4, pers. comm.",,370,570
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+"WSL - loam, high N",Birmensdorf,Birmensdorf,Hagedorn et al. 2001,,10,0-10 cm,sept. 1998,OTC,intact,Nhigh,ECM,3.75,1689,1763,83,47,4,4,0.02974773393,Temperate_Forest,Tree Stand,9.5,691,691,1.87868488,3.53329802,0.59866667,0.77600002,47.35,N,8.43,E,"fig. 4, pers. comm.",se,370,570
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+"WSL - sand, low N",Birmensdorf,Birmensdorf,Hagedorn et al. 2001,,10,0-10 cm,Jan. 1995,OTC,intact,Nhigh,ECM,0,1542,1542,,,4,4,,Temperate_Forest,Tree Stand,,NA,,1.87868488,3.53329802,0.59866667,0.77600002,47.35,N,8.43,E,"fig. 4, pers. comm.",,370,570
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+"WSL - sand, low N",Birmensdorf,Birmensdorf,Hagedorn et al. 2001,,10,0-10 cm,sept. 1998,OTC,intact,Nhigh,ECM,3.75,1377,1433,49,37,4,4,0.2331631671,Temperate_Forest,Tree Stand,9.5,691,691,1.87868488,3.53329802,0.59866667,0.77600002,47.35,N,8.43,E,"fig. 4, pers. comm.",se,370,570
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+"WSL - sand, high N",Birmensdorf,Birmensdorf,Hagedorn et al. 2001,,10,0-10 cm,Jan. 1995,OTC,intact,Nhigh,ECM,0,1542,1542,,,4,4,,Temperate_Forest,Tree Stand,,NA,,1.87868488,3.53329802,0.59866667,0.77600002,47.35,N,8.43,E,"fig. 4, pers. comm.",,370,570
+,,,,,,,,,,,,,,,,,,,,,,,,,NA,NA,NA,NA,,,,,,,,
+"WSL - sand, high N",Birmensdorf,Birmensdorf,Hagedorn et al. 2001,,10,0-10 cm,sept. 1998,OTC,intact,Nhigh,ECM,3.75,1322,1396,18,96,4,4,0.2349076727,Temperate_Forest,Tree Stand,9.5,691,691,1.87868488,3.53329802,0.59866667,0.77600002,47.35,N,8.43,E,"fig. 4, pers. comm.",se,370,570
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Nevada Desert FACE,Nevada Desert FACE,Nevada Desert FACE,"soil: Koyama et al. 2019; plant: Newingham et. al., 2013","surface soils, L. tridentata",20,0-20,April 1997,FACE,intact,Nlow,AM,10,745.602,1025.882,151.58,117.832,3,3,-0.0840831,Shrubland,Shrubland,15.4,146,146,0.09536941,0.133332,0.03844444,0.052,36.77,N,115.96,W,Fig. 1,SE,380,550
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Bangor FACE,Bangor FACE,Bangor FACE,Hoosbeek et al. 2011,,10,0-10 cm,2004,FACE,intact,Nlow,ECM,1,2828.726,2734.601,38.847,60.537,4,4,,Temperate_Forest,Tree Stand,,NA,,2.38793898,4.93328381,0.61266667,0.83999997,53.23,N,4.02,W,fig 1a,se,330,580
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Bangor FACE,Bangor FACE,Bangor FACE,Hoosbeek et al. 2011,,10,0-10 cm,2005,FACE,intact,Nlow,ECM,2,2824.916,2751.537,54.759,94.636,4,4,,Temperate_Forest,Tree Stand,,NA,,2.38793898,4.93328381,0.61266667,0.83999997,53.23,N,4.02,W,fig 1a,se,330,580
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Bangor FACE,Bangor FACE,Bangor FACE,Hoosbeek et al. 2011,,10,0-10 cm,2006,FACE,intact,Nlow,ECM,3,3230.077,2859.549,76.123,78.731,4,4,,Temperate_Forest,Tree Stand,,NA,,2.38793898,4.93328381,0.61266667,0.83999997,53.23,N,4.02,W,fig 1a,se,330,580
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Bangor FACE,Bangor FACE,Bangor FACE,Hoosbeek et al. 2011,,10,0-10 cm,2007,FACE,intact,Nlow,ECM,4,3163.208,3219.367,87.906,83.4,4,4,,Temperate_Forest,Tree Stand,,NA,,2.38793898,4.93328381,0.61266667,0.83999997,53.23,N,4.02,W,fig 1a,se,330,580
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Bangor FACE,Bangor FACE,Bangor FACE,Hoosbeek et al. 2011,,10,0-10 cm,2008,FACE,intact,Nlow,ECM,5,3360.469,3286.229,50.41,40.353,4,4,,Temperate_Forest,Tree Stand,,NA,,2.38793898,4.93328381,0.61266667,0.83999997,53.23,N,4.02,W,fig 1a,se,330,580
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+BangorFACE - alnus,Bangor FACE,Bangor FACE,"Hoosbeek 2015 (soil), Smith et al., 2013 pers comm (plant)",Soil Alnus,10,0-10 cm,2008,FACE,intact,Nlow,ECM,4,3355.8,3142.9,70.6,66.7,4,4,0.25058653,Temperate_Forest,Tree Stand,11.5,1034,1034,2.38793898,4.93328381,0.61266667,0.83999997,53.23,N,4.02,W,Soil: Table 3. Plant: Table 1,SE,380,580
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+BangorFACE - betula,Bangor FACE,Bangor FACE,"Hoosbeek 2015 (soil), Smith et al., 2013 pers comm (plant)",Soil Betula,10,0-10 cm,2008,FACE,intact,Nlow,ECM,4,3066,3122.5,393.6,261.4,4,4,0.14632001,Temperate_Forest,Tree Stand,11.5,1034,1034,2.38793898,4.93328381,0.61266667,0.83999997,53.23,N,4.02,W,Soil: Table 3. Plant: Table 1,SE,380,580
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+BangorFACE - fagus,Bangor FACE,Bangor FACE,"Hoosbeek 2015 (soil), Smith et al., 2013 pers comm (plant)",Soil Fagus,10,0-10 cm,2008,FACE,intact,Nlow,ECM,4,3687.5,3474.5,149.8,476.4,4,4,0.19956512,Temperate_Forest,Tree Stand,11.5,1034,1034,2.38793898,4.93328381,0.61266667,0.83999997,53.23,N,4.02,W,Soil: Table 3. Plant: Table 1,SE,380,580
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Tas FACE,Tas FACE,Tas FACE,Pendall et al. 2011,,10,0-10 cm,2007,FACE,intact,Nlow,AM,6,3528,4248,234,288,3,3,0.07209261602,Grassland,Grassland,11.6,560,560,1.0648042,1.76664901,0.37400001,0.54799998,42.7,S,147.27,E,"text, C3 plants only",se,372,550
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Ginninderra,Ginninderra,Ginninderra,unpublished - GlobalDB,,10,0-10 cm,2002,Chamber,disturbed,Nhigh,AM,2,1109.6,1138.8,214.62,258.42,3,3,0.02009774388,Grassland,Grassland,14.3,1295.09998,watered,0.94721276,1.49998498,0.4051111,0.50400001,35.22,S,149.13,E,,sd,380,750
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Sky Oaks,Sky Oaks,Sky Oaks,"Del Galdo et al., 2006",,10,0-10 cm,2003,Chamber,intact,Nlow,ECM,6,3397,2494,612,81,2,2,0.331794,Shrubland,Shrubland,12.2,491,491,0.32129309,0.86665797,0.23999999,0.41999999,32.36,N,116.66,W,table 1,se,350,650
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Antwerp OTC,Antwerp OTC,Antwerp OTC,"Carnol et al., 2002",,10,0-15 cm,2000,OTC,disturbed,Nlow,ECM,3.75,1785,1605,426.9,237.15,2,2,0.4929170007,Temperate_Forest,Tree Stand,12,770,770,1.00739729,1.76664901,0.35311112,0.51999998,51.17,N,4.38,E,Tab. 1,sd,380,780
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Lancaster - Abies alba,Lancaster,Lancaster,"Heath et al., 2005",,60,pot,,Chamber,disturbed,Nlow,ECM,1.25,198.6332,186.2018,9.5185175,4.6087835,3,3,-0.115997349,Temperate_Forest,Tree Stand,13,2258,watered,2.20090389,4.69995308,0.68177778,0.83600003,54.02,N,2.78,W,pers. comm,sd,380,580
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Lancaster - Abies alba,Lancaster,Lancaster,"Heath et al., 2005",,60,pot,,Chamber,disturbed,Nhigh,ECM,1.25,200.4176,185.4705,5.4056803,3.5226807,3,3,-0.125055918,Temperate_Forest,Tree Stand,13,2258,watered,2.20090389,4.69995308,0.68177778,0.83600003,54.02,N,2.78,W,pers. comm,sd,380,580
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Lancaster - Betula pendula,Lancaster,Lancaster,"Heath et al., 2005",,60,pot,,Chamber,disturbed,Nlow,ECM,1.25,204.1403,196.6413,13.0942344,5.752343,3,3,0.1563764233,Temperate_Forest,Tree Stand,13,2258,watered,2.20090389,4.69995308,0.68177778,0.83600003,54.02,N,2.78,W,pers. comm,sd,380,580
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Lancaster - Betula pendula,Lancaster,Lancaster,"Heath et al., 2005",,60,pot,,Chamber,disturbed,Nhigh,ECM,1.25,201.0327,209.3765,1.7492085,6.1540788,3,3,0.3942985115,Temperate_Forest,Tree Stand,13,2258,watered,2.20090389,4.69995308,0.68177778,0.83600003,54.02,N,2.78,W,pers. comm,sd,380,580
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Lancaster - Carpinus betulus,Lancaster,Lancaster,"Heath et al., 2005",,60,pot,,Chamber,disturbed,Nlow,ECM,1.25,192.5741,186.1498,6.0535499,3.1052476,3,3,-0.05755012523,Temperate_Forest,Tree Stand,13,2258,watered,2.20090389,4.69995308,0.68177778,0.83600003,54.02,N,2.78,W,pers. comm,sd,380,580
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Lancaster - Carpinus betulus,Lancaster,Lancaster,"Heath et al., 2005",,60,pot,,Chamber,disturbed,Nhigh,ECM,1.25,197.9919,192.9125,6.8520314,5.6925575,3,3,0.2622658996,Temperate_Forest,Tree Stand,13,2258,watered,2.20090389,4.69995308,0.68177778,0.83600003,54.02,N,2.78,W,pers. comm,sd,380,580
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Lancaster - Fagus sylvatica,Lancaster,Lancaster,"Heath et al., 2005",,60,pot,,Chamber,disturbed,Nlow,ECM,1.25,196.3282,186.5584,3.0090137,4.765485,3,3,0.1871250749,Temperate_Forest,Tree Stand,13,2258,watered,2.20090389,4.69995308,0.68177778,0.83600003,54.02,N,2.78,W,pers. comm,sd,380,580
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Lancaster - Fagus sylvatica,Lancaster,Lancaster,"Heath et al., 2005",,60,pot,,Chamber,disturbed,Nhigh,ECM,1.25,193.4781,187.6891,6.1106014,3.1416489,3,3,0.2568661427,Temperate_Forest,Tree Stand,13,2258,watered,2.20090389,4.69995308,0.68177778,0.83600003,54.02,N,2.78,W,pers. comm,sd,380,580
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Lancaster - Pinus sylvestris,Lancaster,Lancaster,"Heath et al., 2005",,60,pot,,Chamber,disturbed,Nlow,ECM,1.25,193.295,188.1157,0.8522622,1.5737757,3,3,0.2645723289,Temperate_Forest,Tree Stand,13,2258,watered,2.20090389,4.69995308,0.68177778,0.83600003,54.02,N,2.78,W,pers. comm,sd,380,580
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Lancaster - Pinus sylvestris,Lancaster,Lancaster,"Heath et al., 2005",,60,pot,,Chamber,disturbed,Nhigh,ECM,1.25,196.4128,189.462,5.4397738,1.9266995,3,3,0.4358105188,Temperate_Forest,Tree Stand,13,2258,watered,2.20090389,4.69995308,0.68177778,0.83600003,54.02,N,2.78,W,pers. comm,sd,380,580
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Lancaster - Quercus robur,Lancaster,Lancaster,"Heath et al., 2005",,60,pot,,Chamber,disturbed,Nlow,ECM,1.25,199.3387,190.0763,6.0615273,3.6828426,3,3,0.2204593065,Temperate_Forest,Tree Stand,13,2258,watered,2.20090389,4.69995308,0.68177778,0.83600003,54.02,N,2.78,W,pers. comm,sd,380,580
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Lancaster - Quercus robur,Lancaster,Lancaster,"Heath et al., 2005",,60,pot,,Chamber,disturbed,Nhigh,ECM,1.25,204.8002,193.6352,9.6755602,2.4935552,3,3,0.4881364878,Temperate_Forest,Tree Stand,13,2258,watered,2.20090389,4.69995308,0.68177778,0.83600003,54.02,N,2.78,W,pers. comm,sd,380,580
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+BioCON - Low N,BioCON,BioCON,http://www.cedarcreek.umn.edu/research/data/dataset?ne141,,14,0-10,,FACE,intact,Nlow,AM,10,1096.102,1121.19,47.88,51.87,3,3,0.06144711427,Grassland,Grassland,5.6,679,679,1.39628232,4.2999568,0.354,0.78399998,45.4,N,93.20,W,web,sd,360,560
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+BioCON - High N,BioCON,BioCON,http://www.cedarcreek.umn.edu/research/data/dataset?ne141,,14,0-10,,FACE,intact,Nhigh,AM,10,1247.23,1220.32,59.85,49.21,3,3,0.1560517384,Grassland,Grassland,5.6,679,679,1.39628232,4.2999568,0.354,0.78399998,45.4,N,93.20,W,web,sd,360,560
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+BioCON - legumes - Low N,BioCON,BioCON,http://www.cedarcreek.umn.edu/research/data/dataset?ne141,,14,0-10,,FACE,intact,Nlow,Nfixer,10,777.92,1027.5,73.44,98.64,3,3,0.11036915,Grassland,Grassland,5.6,679,679,1.39628232,4.2999568,0.354,0.78399998,45.4,N,93.20,W,web,sd,360,560
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+BioCON - legumes - High N,BioCON,BioCON,http://www.cedarcreek.umn.edu/research/data/dataset?ne141,,14,0-10,,FACE,intact,Nhigh,Nfixer,10,971.28,935.88,62.48,62.04,3,3,0.37228308,Grassland,Grassland,5.6,679,679,1.39628232,4.2999568,0.354,0.78399998,45.4,N,93.20,W,web,sd,360,560
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Gainesville - Arachis glabrata,Gainesville,Gainesville,"Allen et al., 2006",,20,0-20cm deep soil samples,2001,Chamber,intact,Nhigh,Nfixer,6,946,1025.8,33.8,37.8,4,4,0.22500145,Cropland,Agricultural,21.6,2020,2020,1.4518373,1.93331397,0.46911111,0.55199999,29.65,N,82.35,W,,sd,360,700
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Gainesville - Paspalum notatum,Gainesville,Gainesville,"Allen et al., 2006",,20,0-20cm deep soil samples,2001,Chamber,intact,Nhigh,AM,6,1105.6,1127.4,33.8,40.8,4,4,0.06130575,Cropland,Agricultural,21.6,2020,2020,1.4518373,1.93331397,0.46911111,0.55199999,29.65,N,82.35,W,,sd,360,700
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Swiss Central Alps,Swiss Central Alps,Swiss Central Alps,"Niklaus & Korner, 1996",,5,0-5cm,1995,OTC,intact,Nlow,AM,3.17,1836.1,1908.715,93.36,93.36,12,12,0.03319806941,Grassland,Grassland,0.558333317,168,168,0.17592417,0.83332503,0.01022222,0.076,46.58,N,8.38,E,fig 5,se,355,680
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Swiss Central Alps F,Swiss Central Alps,Swiss Central Alps,"Niklaus & Korner, 1996",,5,0-5cm,1995,OTC,intact,Nhigh,AM,3.17,1825.725,1960.58,124.48,207.47,4,4,0.09908146864,Grassland,Grassland,0.558333317,168,168,0.17592417,0.83332503,0.01022222,0.076,46.58,N,8.38,E,fig 5,se,355,680
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Swiss Jura,Swiss Jura,Swiss Jura,Niklaus et al. 2001,,10,0-10 cm,1999,Chamber,intact,Nlow,AM,6,4179,4234,242,103,8,8,0.03919726906,Grassland,Grassland,8.7,1063,1063,2.62127018,5.33328009,0.61422223,0.86799997,47.45,N,7.57,E,table 1,se,380,630
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+CLIMAITE,CLIMAITE,CLIMAITE,Haugwitz et al. 2014,,8,0-8cm,2010,FACE,intact,Nlow,AM,5,2487.9,2547.4,262.9,338.4,6,6,,Grassland,Grassland,,NA,,1.67776096,5.89994097,0.46377778,0.85600001,55.88,N,11.97,E,table 1,se,380,510
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+CLIMAITE,CLIMAITE,CLIMAITE,Vestergård et al. 2016,Deschampsia flexuosa,10,0-10 cm,2005,FACE,intact,Nlow,AM,8,3906,4364.8,359.6,409.2,6,6,0.0773332034,Grassland,Grassland,9.7,742,742,1.67776096,5.89994097,0.46377778,0.85600001,55.88,N,11.97,E,Table 1,SE,380,510
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+CLIMAITE D,CLIMAITE,CLIMAITE,Dietzen et al. 2019,Deschampsia flexuosa,30,0-30 cm,2013,FACE,intact,Nlow,AM,8,5000,6150,400,500,6,6,0.10724553,Grassland,Grassland,8,600,600,1.67776096,5.89994097,0.46377778,0.85600001,55.88,N,11.97,E,Fig.2,SE,380,510
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+CLIMAITE T,CLIMAITE,CLIMAITE,Dietzen et al. 2019,Deschampsia flexuosa,30,0-30 cm,2013,FACE,intact,Nlow,AM,8,4900,5600,300,500,6,6,0.1461419,Grassland,Grassland,8,600,600,1.67776096,5.89994097,0.46377778,0.85600001,55.88,N,11.97,E,Fig.2,SE,380,510
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+CLIMAITE TD,CLIMAITE,CLIMAITE,Dietzen et al. 2019,Deschampsia flexuosa,30,0-30 cm,2013,FACE,intact,Nlow,AM,8,4900,6200,400,1000,6,6,0.16395468,Grassland,Grassland,8,600,600,1.67776096,5.89994097,0.46377778,0.85600001,55.88,N,11.97,E,Fig.2,SE,380,510
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+CLIMAITE,CLIMAITE,CLIMAITE,Vestergård et al. 2016,Calluna vulgaris,10,0-10 cm,2005,FACE,intact,Nlow,ER,8,3906,4364.8,359.6,409.2,6,6,-0.145851877,Shrubland,Shrubland,9.7,742,742,1.67776096,5.89994097,0.46377778,0.85600001,55.88,N,11.97,E,Table 1,SE,380,510
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+CLIMAITE D,CLIMAITE,CLIMAITE,Dietzen et al. 2019,Calluna vulgaris,30,0-30 cm,2013,FACE,intact,Nlow,ER,8,5000,6150,400,500,6,6,-0.1791266659,Shrubland,Shrubland,8,600,600,1.67776096,5.89994097,0.46377778,0.85600001,55.88,N,11.97,E,Fig.2,SE,380,510
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+CLIMAITE T,CLIMAITE,CLIMAITE,Dietzen et al. 2019,Calluna vulgaris,30,0-30 cm,2013,FACE,intact,Nlow,ER,8,4900,5600,300,500,6,6,-0.04225980929,Shrubland,Shrubland,8,600,600,1.67776096,5.89994097,0.46377778,0.85600001,55.88,N,11.97,E,Fig.2,SE,380,510
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+CLIMAITE TD,CLIMAITE,CLIMAITE,Dietzen et al. 2019,Calluna vulgaris,30,0-30 cm,2013,FACE,intact,Nlow,ER,8,4900,6200,400,1000,6,6,-0.1241183927,Shrubland,Shrubland,8,600,600,1.67776096,5.89994097,0.46377778,0.85600001,55.88,N,11.97,E,Fig.2,SE,380,510
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+MBS - low N,UMBS,UMBS,"Ambus & Robertson, 1999",,15,0-15 cm,,OTC,disturbed,Nlow,ECM,1.5,510,375,24,70.5,3,3,0.307642815,Temperate_Forest,Tree Stand,8,1031.5,watered,1.39906013,4.2999568,0.32155555,0.86799997,45.57,N,84.67,W,"Tab. 1, personal comm.",sd,367,715
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+MBS - high N,UMBS,UMBS,"Ambus & Robertson, 1999",,15,0-15 cm,,OTC,disturbed,Nhigh,ECM,1.5,1845,2325,435,330,3,3,0.3218150788,Temperate_Forest,Tree Stand,8,1031.5,watered,1.39906013,4.2999568,0.32155555,0.86799997,45.57,N,84.67,W,"Tab. 1, personal comm.",sd,367,715
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Montalto di Castro,Montalto di Castro,Montalto di Castro,Calabritto et al. 2002,,20,5-20 cm,,OTC,intact,Nlow,ECM,6.75,3360,2910,477.6505005,404.165808,3,3,,,,,NA,,NA,NA,NA,NA,,,,,Tab. 1,sd,363,713
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+USDA Beltsville,USDA Beltsville,USDA Beltsville,Islam et al. 2000,,15,0-15 cm,,OTC,intact,Nlow,AM,1.5,1560,1560,524.9056605,653.0232555,2,2,,,,,NA,,NA,NA,NA,NA,,,,,Tab. 1,sd,350,500
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+PHACE - ambient T,PHACE,PHACE,Carrillo et al. 2018,,15,0-15cm,2005: Pre-treatment,FACE,intact,Nlow,AM,0,2494.667,2294,102.9,61.77,5,5,,Grassland,Grassland,17.5,384,384,0.23240508,0.566661,0.10022222,0.2,41.18,N,104.90,W,Fig. 1,SE,400,600
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+PHACE - ambient T,PHACE,PHACE,Carrillo et al. 2018,,15,0-15cm,2013,FACE,intact,Nlow,AM,8,2562,2774.667,95.63,209.46,5,5,0.03131451783,Grassland,Grassland,17.5,384,384,0.23240508,0.566661,0.10022222,0.2,41.18,N,104.90,W,Fig. 1,SE,400,600
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+PHACE - elevated T,PHACE,PHACE,Carrillo et al. 2018,,15,0-15cm,2005: Pre-treatment,FACE,intact,Nlow,AM,0,2672,2532,195.25,255.95,5,5,,Grassland,Grassland,17.5,384,384,0.23240508,0.566661,0.10022222,0.2,41.18,N,104.90,W,Fig. 1,SE,400,600
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+PHACE - elevated T,PHACE,PHACE,Carrillo et al. 2018,,15,0-15cm,2013,FACE,intact,Nlow,AM,8,2634,2680,256.33,174.81,5,5,0.1460886864,Grassland,Grassland,17.5,384,384,0.23240508,0.566661,0.10022222,0.2,41.18,N,104.90,W,Fig. 1,SE,400,600
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Rice-FACE - LN,Rice FACE,Rice FACE,"soil: Wu et. al. 2018a, plant Wu et. al. 2018b",japonica rice WYJ 21,20,0-20 cm,2012,FACE,intact,Nlow,AM,2,3443.112,3855.84,44.544,105.328,3,3,0.01806596021,Cropland,Agricultural,15,1000,1000,2.18979287,5.83327484,0.44866666,0.80000001,32.58,N,119.70,E,soil: Fig.1. plant: Fig. 2,SE,382,582
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Rice-FACE - HN,Rice FACE,Rice FACE,"soil: Wu et. al. 2018a, plant Wu et. al. 2018b",japonica rice WYJ 21,20,0-20 cm,2012,FACE,intact,Nhigh,AM,2,3443.112,3807.352,44.544,43.848,3,3,0.1397406264,Cropland,Agricultural,15,1000,1000,2.18979287,5.83327484,0.44866666,0.80000001,32.58,N,119.70,E,soil: Fig.1. plant: Fig. 2,SE,382,582
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Rice-FACE - LN,Rice FACE,Rice FACE,"soil: Wu et. al. 2018a, plant Wu et. al. 2018b",indica rice IIY084,20,0-20 cm,2012,FACE,intact,Nlow,AM,2,3252.176,3722.44,121.336,15.776,3,3,0.1320571327,Cropland,Agricultural,15,1000,1000,2.18979287,5.83327484,0.44866666,0.80000001,32.58,N,119.70,E,soil: Fig.1. plant: Fig. 2,SE,382,582
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Rice-FACE - HN,Rice FACE,Rice FACE,"soil: Wu et. al. 2018a, plant Wu et. al. 2018b",indica rice IIY084,20,0-20 cm,2012,FACE,intact,Nhigh,AM,2,3252.176,3445.432,121.336,91.64,3,3,0.2017425159,Cropland,Agricultural,15,1000,1000,2.18979287,5.83327484,0.44866666,0.80000001,32.58,N,119.70,E,soil: Fig.1. plant: Fig. 2,SE,382,582
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Rice-FACE2 - LN,Rice FACE,Rice FACE,soil: Cheng et al. 2016; plant: Yang et. al. 2009,Wuxingjing 14 (hybrid japonica rice),20,0-20 cm,2011,FACE,intact,Nhigh,AM,7,3874.4,4176,146.16,406,2,2,0.173821996,Cropland,Agricultural,14.9,980,980,2.18979287,5.83327484,0.44866666,0.80000001,32.58,N,119.70,E,soil: Table 1. plant: Fig 1b,SE,370,570
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Rice-FACE2 - HN,Rice FACE,Rice FACE,soil: Cheng et al. 2016; plant: Yang et. al. 2009,Wuxingjing 14 (hybrid japonica rice),20,0-20 cm,2011,FACE,intact,Nhigh,AM,10,4315.2,4292,361.92,443.12,2,2,0.1193420138,Cropland,Agricultural,14.9,980,980,2.18979287,5.83327484,0.44866666,0.80000001,32.58,N,119.70,E,soil: Table 1. plant: Fig 1b,SE,370,570
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Rice-FACE3,Rice FACE,Rice FACE,"Guo et. al., 2015",rice-wheat cropping paddy,15,0-15 cm,June 2004,FACE,intact,Nhigh,AM,5,3092.154,3485.046,61.77,112.404,3,3,0.1739961805,Cropland,Agricultural,14.9,980,980,2.18979287,5.83327484,0.44866666,0.80000001,32.58,N,119.70,E,"soil: Fig. 3, Plant: Fig. 1",SE,390,590
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+T-FACE - ambient T,T-FACE,T-FACE,soil: Chen et al. 2015; plant: Zhang et. al. 2014,rice–wheat annual rotation,20,0-20 cm,April 2011,FACE,intact,Nhigh,AM,3,3936,4896,312,312,3,3,0.126505476,Cropland,Agricultural,16,1150,1150,0.96295333,1.96664703,0.25177777,0.42399999,31.5,N,120.55,E,"soil: Table 1, plant Table 3",SE,412,500
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+T-FACE - elevated T,T-FACE,T-FACE,soil: Chen et al. 2015; plant: Zhang et. al. 2014,rice–wheat annual rotation,20,0-20 cm,April 2011,FACE,intact,Nhigh,AM,3,3840,5136,240,144,3,3,0.1100886569,Cropland,Agricultural,18,1150,1150,0.96295333,1.96664703,0.25177777,0.42399999,31.5,N,120.55,E,"soil: Table 1, plant Table 3",SE,412,500
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+OTC Changbai Mountain Research,OTC Changbai Mountain Research,OTC Changbai Mountain Research,"Sun et al. 2017 (soil), 2018 (plant)",Quercus mongolica (oak),10,0-10 cm,2004,OTC,intact,Nlow,ECM,10,2890,2910,140,270,3,3,0.2527110766,Temperate_Forest,Tree Stand,10.55,745,745,2.02312803,5.73327589,0.39844444,0.88800001,42.4,N,128.10,E,"soil: Table 2, plant: Table 2",SE,320,500
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Maoxian Field China,Maoxian Field China,Maoxian Field China,Duan et al. 2015,Abies faxoniana,10,0-10 cm,2006,Chamber,intact,Nlow,ECM,6,1830,1770,20,10,3,3,-0.01370092179,Subalpine_Forest,Tree Stand,14.2,1081.40002,watered,1.68979788,4.63328695,0.38511112,0.77200001,31.683,N,104.05,E,Soil: Table 1. Plant: Fig. 1,SE,350,700
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Sichuan - ambient T,Sichuan,Sichuan,Liu and Zang 2019,Abies faxoniana,15,0-15 cm,,Chamber,intact,Nlow,ECM,6,91.39,103.2,,,2,2,,Subalpine_Forest,Tree Stand,14.2,341,341,1.68979788,4.63328695,0.38511112,0.77200001,31.68,N,104.05,E,Table 1,,350,700
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Sichuan - elevated T,Sichuan,Sichuan,Liu and Zang 2019,Abies faxoniana,15,0-15 cm,,Chamber,intact,Nlow,ECM,6,60.96,126.46,,,2,2,,Subalpine_Forest,Tree Stand,14.2,341,341,1.68979788,4.63328695,0.38511112,0.77200001,31.68,N,104.05,E,Table 1,,350,700
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+NSW - wheat,NSW,NSW,Xu et al. 2017,wheat (Triticum aestivum L. cv. Yitpi),10,0-10 cm,,Chamber,disturbed,Nhigh,AM,0.17,2800,2261.062,,,4,4,0.05556985115,Grassland,Grassland,20,1292.90002,watered,0.93795359,1.89998102,0.4491111,0.58399999,32.183,S,149.55,E,Soil: Fig 4. Plant: Table 1,SE,400,800
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+NSW - white lupin,NSW,NSW,Xu et al. 2017,white lupin (Lupinus albus L. cv. Kiev),10,0-10 cm,,Chamber,disturbed,Nhigh,AM,0.17,2800,3419.70095,,,4,4,0.3078146511,Grassland,Grassland,20,1292.90002,watered,0.93795359,1.89998102,0.4491111,0.58399999,32.183,S,149.55,E,Soil: Fig 4. Plant: Table 1,SE,400,800
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+SoilFACE Chromosol,SoilFACE,SoilFACE,Xu et al. 2019,pea-canola-wheat rotation,5,0-5 cm,2009,FACE,intact,Nhigh,AM,8,40.8,37.5,,,4,4,,Cropland,Agricultural,14.95,462,462,1.2629503,5.56661081,0.15644445,0.25999999,36.75,S,142.10,E,Table 1,,395,550
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+SoilFACE Vertosoll,SoilFACE,SoilFACE,Xu et al. 2019,pea-canola-wheat rotation,5,0-5 cm,2009,FACE,intact,Nhigh,AM,8,10.6,11.2,,,4,4,,Cropland,Agricultural,14.95,462,462,1.2629503,5.56661081,0.15644445,0.25999999,36.75,S,142.10,E,Table 1,,390,550
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+SoilFACE Calcarosoll,SoilFACE,SoilFACE,Xu et al. 2019,pea-canola-wheat rotation,5,0-5 cm,2009,FACE,intact,Nhigh,AM,8,4.3,3.8,,,4,4,,Cropland,Agricultural,14.95,462,462,0.29721925,0.69999301,0.13600001,0.2,35.119,S,142.00,E,Table 1,,390,550
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+SoilFACE2 Chromosol,SoilFACE,SoilFACE,Jin et al. 2017,"Wheat-pulse rotation (Triticum aestivum L. cv. Yitpi), field pea (Pisum sativum L. cv. PBATwilight) and canola (Brassica napus L. cv. Hyola 50)",10,0-10 cm,2009,FACE,intact,Nhigh,AM,7,40.288,37.054,1.304,0.183,4,4,,Cropland,Agricultural,14.95,462.5,462.5,1.2629503,5.56661081,0.15644445,0.25999999,36.75,S,142.10,E,Fig. 4,SE,390,550
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+SoilFACE2 Vertosoll,SoilFACE,SoilFACE,Jin et al. 2017,"Wheat-pulse rotation (Triticum aestivum L. cv. Yitpi), field pea (Pisum sativum L. cv. PBATwilight) and canola (Brassica napus L. cv. Hyola 50)",10,0-10 cm,2009,FACE,intact,Nhigh,AM,7,8.331,8.407,0.408,0.186,4,4,,Cropland,Agricultural,14.95,462.5,462.5,1.2629503,5.56661081,0.15644445,0.25999999,36.75,S,142.10,E,Fig. 4,SE,390,550
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+SoilFACE2 Calcarosoll,SoilFACE,SoilFACE,Jin et al. 2017,"Wheat-pulse rotation (Triticum aestivum L. cv. Yitpi), field pea (Pisum sativum L. cv. PBATwilight) and canola (Brassica napus L. cv. Hyola 50)",10,0-10 cm,2009,FACE,intact,Nhigh,AM,7,3.247,3.656,0.129,0.286,4,4,,Cropland,Agricultural,14.95,462.5,462.5,0.95276827,3.73329592,0.16111112,0.248,36.75,S,142.11,E,Fig. 4,SE,390,550
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+SoilFACE3 Calcarosoll,SoilFACE,SoilFACE,Butterly et al. 2016 Soil Biology and Biochemistry,"wheat, field pea, canola",5,0-5 cm,2009,FACE,disturbed,Nlow,AM,5,4.321,5.033,0.08,0.296,4,4,,Cropland,Agricultural,14.95,436,436,0.95276827,3.73329592,0.16111112,0.248,36.75,S,142.11,E,Fig. 1,SD,390,550
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+SoilFACE3 Chromosol,SoilFACE,SoilFACE,Butterly et al. 2016 Soil Biology and Biochemistry,"wheat, field pea, canola",5,0-5 cm,2009,FACE,disturbed,Nhigh,AM,5,47.239,43.097,2.228,0.763,4,4,,Cropland,Agricultural,14.95,436,436,0.95276827,3.73329592,0.16111112,0.248,36.75,S,142.11,E,Fig. 1,SD,390,550
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+SoilFACE3 Vertosoll,SoilFACE,SoilFACE,Butterly et al. 2016 Soil Biology and Biochemistry,"wheat, field pea, canola",5,0-5 cm,2009,FACE,disturbed,Nhigh,AM,5,11.331,10.092,0.519,0.583,4,4,,Cropland,Agricultural,14.95,436,436,0.95276827,3.73329592,0.16111112,0.248,36.75,S,142.11,E,Fig. 1,SD,390,550
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+SoilFACE4 - LN,SoilFACE,SoilFACE,Butterly et al. 2015,field pea (Pisum sativum L.) maturity and filling; bulk soil,10,0-10 cm,2011,FACE,disturbed,Nhigh,Nfixer,0.5,733.04,722.33,,,4,4,0.2030391754,Cropland,Agricultural,14.95,222,222,1.2629503,5.56661081,0.15644445,0.25999999,36.75,S,142.10,E,"Soil: Table S3, S4/Plant: Fig. 2",SE,390,550
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+SoilFACE4 - HN,SoilFACE,SoilFACE,Butterly et al. 2015,field pea (Pisum sativum L.) maturity and filling; bulk soil,10,0-10 cm,2011,FACE,disturbed,Nhigh,Nfixer,0.5,680.68,736.015,,,4,4,0.2481523968,Cropland,Agricultural,14.95,222,222,1.2629503,5.56661081,0.15644445,0.25999999,36.75,S,142.10,E,"Soil: Table S3, S4/Plant: Fig. 2",SE,390,550
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+SoilFACE4 - LN,SoilFACE,SoilFACE,Butterly et al. 2015,wheat (Triticum aestivum L.) maturity and filling; bulk soil,10,0-10 cm,2011,FACE,disturbed,Nhigh,AM,0.5,708.05,708.05,,,4,4,0.2791514899,Cropland,Agricultural,14.95,222,222,1.2629503,5.56661081,0.15644445,0.25999999,36.75,S,142.10,E,"Soil: Table S3, S4/Plant: Fig. 2",SE,390,550
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+SoilFACE4 - HN,SoilFACE,SoilFACE,Butterly et al. 2015,wheat (Triticum aestivum L.) maturity and filling; bulk soil,10,0-10 cm,2011,FACE,disturbed,Nhigh,AM,0.5,699.72,767.55,,,4,4,0.3585112868,Cropland,Agricultural,14.95,222,222,1.2629503,5.56661081,0.15644445,0.25999999,36.75,S,142.10,E,"Soil: Table S3, S4/Plant: Fig. 2",SE,390,550
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+SoilFACE5,SoilFACE,SoilFACE,Butterly et al. 2016 Plant and Soil,wheat (Triticum aestivum cv. Yitpi),10,0-10 cm,2011,FACE,disturbed,Nhigh,AM,0.17,1500,1520,,,4,4,0.07796154147,Cropland,Agricultural,22.8,737.600037,watered,1.2629503,5.56661081,0.15644445,0.25999999,36.75,S,142.10,E,"Soil: Table 3, 4; Plant: Table 1, 2",,390,550
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+SoilFACE5,SoilFACE,SoilFACE,Butterly et al. 2016 Plant and Soil,wheat (Triticum aestivum cv. Yitpi),10,0-10 cm,2011,FACE,disturbed,Nlow,AM,0.17,1560,1440,,,4,4,-0.03636764417,Cropland,Agricultural,22.8,737.600037,watered,1.2629503,5.56661081,0.15644445,0.25999999,36.75,S,142.10,E,"Soil: Table 3, 4; Plant: Table 1, 2",,390,550
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+SoilFACE5 wheat residue-low N,SoilFACE,SoilFACE,Butterly et al. 2016 Plant and Soil,wheat (Triticum aestivum cv. Yitpi),10,0-10 cm,2011,FACE,disturbed,Nlow,AM,0.17,1920,1870,,,4,4,0.3337731797,Cropland,Agricultural,22.8,737.600037,watered,1.2629503,5.56661081,0.15644445,0.25999999,36.75,S,142.10,E,"Soil: Table 3, 4; Plant: Table 1, 2",,390,550
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+SoilFACE5 wheat residue-high N,SoilFACE,SoilFACE,Butterly et al. 2016 Plant and Soil,wheat (Triticum aestivum cv. Yitpi),10,0-10 cm,2011,FACE,disturbed,Nhigh,AM,0.17,1930,1920,,,4,4,0.2067944133,Cropland,Agricultural,22.8,737.600037,watered,1.2629503,5.56661081,0.15644445,0.25999999,36.75,S,142.10,E,"Soil: Table 3, 4; Plant: Table 1, 2",,390,550
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+SoilFACE5 pea residue-low N,SoilFACE,SoilFACE,Butterly et al. 2016 Plant and Soil,wheat (Triticum aestivum cv. Yitpi),10,0-10 cm,2011,FACE,disturbed,Nlow,AM,0.17,2090,1980,,,4,4,0.1144103512,Cropland,Agricultural,22.8,737.600037,watered,1.2629503,5.56661081,0.15644445,0.25999999,36.75,S,142.10,E,"Soil: Table 3, 4; Plant: Table 1, 2",,390,550
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+SoilFACE5 pea residue-high N,SoilFACE,SoilFACE,Butterly et al. 2016 Plant and Soil,wheat (Triticum aestivum cv. Yitpi),10,0-10 cm,2011,FACE,disturbed,Nhigh,AM,0.17,1770,1920,,,4,4,0.02666824708,Cropland,Agricultural,22.8,737.600037,watered,1.2629503,5.56661081,0.15644445,0.25999999,36.75,S,142.10,E,"Soil: Table 3, 4; Plant: Table 1, 2",,390,550
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+SoilFACE5 wheat residue-low N,SoilFACE,SoilFACE,Butterly et al. 2016 Plant and Soil,wheat (Triticum aestivum cv. Yitpi) + N,10,0-10 cm,2011,FACE,disturbed,Nlow,AM,0.17,2060,2290,,,4,4,0.3586338084,Cropland,Agricultural,22.8,737.600037,watered,1.2629503,5.56661081,0.15644445,0.25999999,36.75,S,142.10,E,"Soil: Table 3, 4; Plant: Table 1, 2",,390,550
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+SoilFACE5 wheat residue-high N,SoilFACE,SoilFACE,Butterly et al. 2016 Plant and Soil,wheat (Triticum aestivum cv. Yitpi) + N,10,0-10 cm,2011,FACE,disturbed,Nhigh,AM,0.17,2020,2000,,,4,4,0.2363887781,Cropland,Agricultural,22.8,737.600037,watered,1.2629503,5.56661081,0.15644445,0.25999999,36.75,S,142.10,E,"Soil: Table 3, 4; Plant: Table 1, 2",,390,550
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+SoilFACE5 pea residue-low N,SoilFACE,SoilFACE,Butterly et al. 2016 Plant and Soil,wheat (Triticum aestivum cv. Yitpi) + N,10,0-10 cm,2011,FACE,disturbed,Nlow,AM,0.17,1850,1980,,,4,4,0.2397381637,Cropland,Agricultural,22.8,737.600037,watered,1.2629503,5.56661081,0.15644445,0.25999999,36.75,S,142.10,E,"Soil: Table 3, 4; Plant: Table 1, 2",,390,550
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+SoilFACE5 pea residue-high N,SoilFACE,SoilFACE,Butterly et al. 2016 Plant and Soil,wheat (Triticum aestivum cv. Yitpi) + N,10,0-10 cm,2011,FACE,disturbed,Nhigh,AM,0.17,2040,1920,,,4,4,0.2846654789,Cropland,Agricultural,22.8,737.600037,watered,1.2629503,5.56661081,0.15644445,0.25999999,36.75,S,142.10,E,"Soil: Table 3, 4; Plant: Table 1, 2",,390,550
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+SoilFACE5,SoilFACE,SoilFACE,Butterly et al. 2016 Plant and Soil,field pea (Pisum sativum L.),10,0-10 cm,2011,FACE,disturbed,Nlow,Nfixer,0.17,1310,1620,,,4,4,0.1541506798,Cropland,Agricultural,22.8,737.600037,watered,1.2629503,5.56661081,0.15644445,0.25999999,36.75,S,142.10,E,"Soil: Table 3, 4; Plant: Table 1, 2",,390,550
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+SoilFACE5,SoilFACE,SoilFACE,Butterly et al. 2016 Plant and Soil,field pea (Pisum sativum L.),10,0-10 cm,2011,FACE,disturbed,Nhigh,Nfixer,0.17,1360,1510,,,4,4,0.08701137699,Cropland,Agricultural,22.8,737.600037,watered,1.2629503,5.56661081,0.15644445,0.25999999,36.75,S,142.10,E,"Soil: Table 3, 4; Plant: Table 1, 2",,390,550
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+SoilFACE5 wheat residue-low N,SoilFACE,SoilFACE,Butterly et al. 2016 Plant and Soil,field pea (Pisum sativum L.),10,0-10 cm,2011,FACE,disturbed,Nlow,Nfixer,0.17,1840,2160,,,4,4,0.1351258655,Cropland,Agricultural,22.8,737.600037,watered,1.2629503,5.56661081,0.15644445,0.25999999,36.75,S,142.10,E,"Soil: Table 3, 4; Plant: Table 1, 2",,390,550
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+SoilFACE5 wheat residue-high N,SoilFACE,SoilFACE,Butterly et al. 2016 Plant and Soil,field pea (Pisum sativum L.),10,0-10 cm,2011,FACE,disturbed,Nhigh,Nfixer,0.17,2100,2010,,,4,4,0.0597192347,Cropland,Agricultural,22.8,737.600037,watered,1.2629503,5.56661081,0.15644445,0.25999999,36.75,S,142.10,E,"Soil: Table 3, 4; Plant: Table 1, 2",,390,550
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+SoilFACE5 pea residue-low N,SoilFACE,SoilFACE,Butterly et al. 2016 Plant and Soil,field pea (Pisum sativum L.),10,0-10 cm,2011,FACE,disturbed,Nlow,Nfixer,0.17,1960,1970,,,4,4,0.2823713855,Cropland,Agricultural,22.8,737.600037,watered,1.2629503,5.56661081,0.15644445,0.25999999,36.75,S,142.10,E,"Soil: Table 3, 4; Plant: Table 1, 2",,390,550
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+SoilFACE5 pea residue-high N,SoilFACE,SoilFACE,Butterly et al. 2016 Plant and Soil,field pea (Pisum sativum L.),10,0-10 cm,2011,FACE,disturbed,Nhigh,Nfixer,0.17,1940,1910,,,4,4,0.1798401659,Cropland,Agricultural,22.8,737.600037,watered,1.2629503,5.56661081,0.15644445,0.25999999,36.75,S,142.10,E,"Soil: Table 3, 4; Plant: Table 1, 2",,390,550
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+OTC New Delhi,SoilFACE,SoilFACE,Saha et al. 2016,chickpea (C. arietinum L.; cv. Pusa 1105 - kabuli type),15,0-15 cm,2010,OTC,intact,Nhigh,Nfixer,2,3465.45,3791.55,838.05,753.6,2,2,0.174562546,Cropland,Agricultural,19.5,710,710,0.77499223,1.43331897,0.21377778,0.27599999,28.583,N,77.20,E,"Soil: Table 2/Plant: Table 3, 4",SE,400,580
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+FACE NBRI - teak,SoilFACE,SoilFACE,Singh et al. 2018,Tectona grandis (Teak),15,15 cm,2012,FACE,intact,Nhigh,AM,3.83,2248.08,2535.72,212.16,240.72,5,5,0.15936355,Tropical_Forest,Tree Stand,25,700,700,1.0722115,1.89998102,0.32022223,0.428,26.916,N,80.98,E,Soil: Table 3; Plant: Table 1,SE,395,550
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+FACE NBRI - butea,SoilFACE,SoilFACE,Singh et al. 2018,Butea monosperma (Butea),15,15 cm,2012,FACE,intact,Nlow,Nfixer,3.83,2144.04,2301.12,189.72,204,5,5,0.09716374845,Tropical_Forest,Tree Stand,25,700,700,1.0722115,1.89998102,0.32022223,0.428,26.916,N,80.98,E,Soil: Table 3; Plant: Table 1,SE,395,550
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+OTC Hyperaba India - 550ppm - C4,SoilFACE,SoilFACE,Srinivasarao et al. 2016,"C4 crops (sorghum, pearl millet) 550 eCO2",20,0-20 cm,2005,OTC,intact,Nhigh,AM,5,4260,5036,260,300,3,3,0.05705088118,Cropland,Agricultural,26,1161,watered,1.02591562,1.93331397,0.31400001,0.57599998,28,N,78.00,E,Soil: Table 5/Plant: Table 1,SE,380,550
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+OTC Hyperaba India - 700ppm - C4,SoilFACE,SoilFACE,Srinivasarao et al. 2016,"C4 crops (sorghum, pearl millet) 700 eCO2",20,0-20 cm,2005,OTC,intact,Nhigh,AM,5,4260,4126,260,250,3,3,0.1660610359,Cropland,Agricultural,26,1161,watered,1.02591562,1.93331397,0.31400001,0.57599998,28,N,78.00,E,Soil: Table 5/Plant: Table 1,SE,380,550
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+OTC Hyperaba India - 550ppm - C3,SoilFACE,SoilFACE,Srinivasarao et al. 2016,"C3 crops (sunflower, groundnut, pigeonpea, black gram, castor) 550 eCO2",20,0-20 cm,2005,OTC,intact,Nhigh,AM,5,4260,5036,260,300,3,3,0.1524977869,Cropland,Agricultural,26,1161,watered,1.02591562,1.93331397,0.31400001,0.57599998,28,N,78.00,E,Soil: Table 5/Plant: Table 2,SE,380,550
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+OTC Hyperaba India - 700ppm - C3,SoilFACE,SoilFACE,Srinivasarao et al. 2016,"C3 crops (sunflower, groundnut, pigeonpea, black gram, castor) 700 eCO2",20,0-20 cm,2005,OTC,intact,Nhigh,AM,5,4260,4126,260,250,3,3,0.6811817037,Cropland,Agricultural,26,1161,watered,1.02591562,1.93331397,0.31400001,0.57599998,28,N,78.00,E,Soil: Table 5/Plant: Table 2,SE,380,700
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+OTC CRRI Cuttack India,SoilFACE,SoilFACE,Bhattacharyya et al. 2014,Rice (Oryza sativa L.),30,0–30 cm,2009,OTC,intact,Nhigh,AM,1,1848,2016,,,2,2,0.1561420512,Cropland,Agricultural,31.8,1500,1500,1.16387725,1.83331501,0.3011111,0.37200001,20.45,N,85.94,E,Soil: Table 4/Plant: Table 3,,394,550
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+OTC CRRI Cuttack India,SoilFACE,SoilFACE,Bhattacharyya et al. 2014,Rice (Oryza sativa L.),30,0–30 cm,2010,OTC,intact,Nhigh,AM,2,1848,2058,,,2,2,0.1639464815,Cropland,Agricultural,31.8,1500,1500,1.16387725,1.83331501,0.3011111,0.37200001,20.45,N,85.94,E,Soil: Table 4/Plant: Table 3,,394,550
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+OTC CRRI Cuttack India,SoilFACE,SoilFACE,Bhattacharyya et al. 2014,Rice (Oryza sativa L.),30,0–30 cm,2011,OTC,intact,Nhigh,AM,3,1932,2142,,,2,2,0.1854293429,Cropland,Agricultural,31.8,1500,1500,1.16387725,1.83331501,0.3011111,0.37200001,20.45,N,85.94,E,Soil: Table 4/Plant: Table 3,,394,550
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+FACE Sapporo - brown soil,SoilFACE,SoilFACE,unpublished,mixed AGB species,5,0-5cm,2013,FACE,intact,Nlow,ECM,10,1385,1385,75,95,3,3,0.2971276525,Temperate_Forest,Tree Stand,9.46,1285,1285,1.93794358,4.69995308,0.3431111,0.81999999,43.01,N,141.33,E,,,370,500
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+FACE Sapporo - volcanic ash,SoilFACE,SoilFACE,unpublished,Fagus crenata & Quercus mongolica,5,0-5cm,2013,FACE,disturbed,Nlow,ECM,10,1020,900,65,60,3,3,0.06624861725,Temperate_Forest,Tree Stand,9.3,1150,1150,1.93794358,4.69995308,0.3431111,0.81999999,43.01,N,141.33,E,,,370,500
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Glasshouse University of Paris XI,Glasshouse University of Paris XI,Glasshouse University of Paris XI,Niboyet et al. 2017,post rewetting: Dactylis glomerata,10,0-10 cm,April 2012,Chamber,disturbed,Nhigh,AM,0.67,220,170,,,6,6,0.2655006515,Grassland,Agricultural,23.9,1076.20007,watered,1.05832279,3.63329697,0.37866667,0.76800001,48.6977,N,21.77,E,"DOC: Fig. 2, aboveground: Fig.1, shoot & root: Fig. 4",SE,463,702
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+Glasshouse University of Paris XI,Glasshouse University of Paris XI,Glasshouse University of Paris XI,Niboyet et al. 2017,"post rewetting: mixtures (Dactylis glomerata, Lolium perenne, Festuca arundinacea, Trifolium repens)",10,0-10 cm,April 2012,Chamber,disturbed,Nhigh,AM,0.67,220,178,,,6,6,0.2328626574,Grassland,Agricultural,23.9,1076.20007,watered,1.05832279,3.63329697,0.37866667,0.76800001,48.6977,N,21.77,E,"DOC: Fig. 2, aboveground: Fig.1, shoot & root: Fig. 4",SE,463,702
+,,,,,,,,,,,,,,,,,,,,,,,NA,,NA,NA,NA,NA,,,,,,,,
+SAWFACE Spain,SAWFACE,SAWFACE,Sanchez-Carrillo et al. 2017,P. australis (Cav.) Trin. ex Steudel (common reed) by Cladium mariscus (L.) Pohl (cut sedge) (<5%),20,0– 20 cm,2013,FACE,disturbed,Nhigh,NM,2,2718.9,3304,244.3,160.4,6,6,0.21,Wetland,Wetland,,NA,,0.65554899,1.39998603,0.26133335,0.396,39.13,N,5.38,W,"soil: Figure 8, plant: Figure 2, 3",SE,399,582

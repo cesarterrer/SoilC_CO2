@@ -95,6 +95,17 @@ cellStats(absSEpixel,"sum", na.rm=T) * 10^(-9)   # Pg soil C at 0-30cm
 writeRaster(absESpixel,"maps/CO2abslEffect_RF_pixel.tif",format="GTiff",overwrite=TRUE)
 writeRaster(absSEpixel,"maps/CO2abslEffect.SE_RF_pixel.tif",format="GTiff",overwrite=TRUE)
 
+### PERCENTAGE ###
+soc <- raster("~/OneDrive/OneDrive - Universitat Autònoma de Barcelona/IIASA/maps/SOC_030cm_aggregated0p25_gm2_zenodo.tif") # g/m2
+soc.tha <- soc*0.01 # Mg/ha
+soc.tha <- mask(soc.tha, absEStha)
+perc <- (absEStha*100)/soc.tha
+perc <- raster::calc(perc, fun= function(x) ifelse (x>40,40,x)) # Max value in dataset
+writeRaster(perc,"maps/CO2relEffect_RF_tha.tif",format="GTiff",overwrite=TRUE)
+percSE <- (absSEtha*100)/soc.tha
+percSE <- raster::calc(percSE, fun= function(x) ifelse (x>16,16,x)) # Max value in dataset
+writeRaster(percSE,"maps/CO2relEffect.SE_RF_tha.tif",format="GTiff",overwrite=TRUE)
+
 ##### ECOSYSTEM C ######
 plus <- function(x) {
   if(all(is.na(x))){
