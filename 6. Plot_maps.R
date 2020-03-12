@@ -28,18 +28,6 @@ library(mapproj)
 options(bitmapType="cairo")
 nord <- read_palette("~/OneDrive/OneDrive - Universitat Autònoma de Barcelona/IIASA/nord.ase")
 
-# Absolute Effect
-abs <- raster("maps/CO2abslEffect_RF_tha.tif")  # Mg/ha
-abs_robin <- projectRaster(abs,crs="+proj=robin",over=T)
-abs.df = as.data.frame(abs_robin,xy=TRUE)
-range(abs.df$CO2abslEffect_RF_tha, na.rm=T)
-
-# Absolute Error
-se <- raster("maps/CO2abslEffect.SE_RF_tha.tif")  # Mg/ha
-se <- projectRaster(se,crs="+proj=robin",over=T)
-se.df = as.data.frame(se,xy=TRUE)
-range(se.df$CO2abslEffect.SE_RF_tha, na.rm=T)
-
 # map the bbox
 bbox <- shapefile("~/OneDrive/OneDrive - Universitat Autònoma de Barcelona/IIASA/maps/ne_110m_wgs84_bounding_box.VERSION/ne_110m_wgs84_bounding_box.shp") 
 bbox <- spTransform(bbox, CRS("+proj=robin"))
@@ -110,14 +98,16 @@ scale_fill_discrete_gradient <- function(..., colours, bins = 11, na.value = "tr
     ...
   )
 }
+# -----------------------------------------------------------------------
+# ABSOLUTE EFFECT
+abs <- raster("maps/CO2abslEffect_RF_tha.tif")  # Mg/ha
+abs_robin <- projectRaster(abs,crs="+proj=robin",over=T)
+abs.df = as.data.frame(abs_robin,xy=TRUE)
+range(abs.df$CO2abslEffect_RF_tha, na.rm=T)
 
 find_cpt("temperature")
-#myinterval <- seq(-3,11,1)
-#abs.df$colbreaks <- findInterval(abs.df$CO2abslEffect_RF_tha, vec = myinterval)
 mycols <- cpt(pal = "arendal_temperature", rev=T, n=12)
-#mycols <- mycols[c(2,4:12)]
 mycols <- mycols[2:12]
-#mycols[4] <- "#ffffff"
 show_col(mycols)
 
 p <- ggplot()+ 
@@ -146,19 +136,20 @@ perc <- raster("maps/CO2relEffect_RF_tha.tif")
 perc_robin <- projectRaster(perc,crs="+proj=robin",over=T)
 perc.df = as.data.frame(perc_robin,xy=TRUE)
 range(perc.df$CO2relEffect_RF_tha, na.rm=T)
-mycols.perc <- cpt(pal = "arendal_temperature", rev=T, n=20)
+mycols.perc <- cpt(pal = "arendal_temperature", rev=T, n=25)
 show_col(mycols.perc)
-mycols.perc <- mycols.perc[7:20]
+mycols.perc <- mycols.perc[c(3,6:22)]
+
 p.perc <- ggplot()+ 
   geom_polypath(data=oceanmap_df, aes(long,lat,group=group),fill= nord["nord5"], size = 0.1) +
   geom_raster(data=perc.df,aes(x,y,fill=CO2relEffect_RF_tha)) +
   geom_polypath(data=wmap_wgs_df, aes(long,lat,group=group),fill="transparent", color="black", size = 0.1) +
   geom_polygon(data=bbox_df, aes(x=long, y=lat), colour=nord["nord3"], fill="transparent", size = 0.3) +
   scale_fill_discrete_gradient(
-    bins = 14,
+    bins = 18,
     colours = mycols.perc,
-    breaks=seq(-5,30,5),
-    limits = c(-5, 30),
+    breaks=seq(0,15,5),
+    limits = c(-1, 17),
     guide = guide_colourbar(nbin = 100, raster = FALSE, frame.colour = "black", ticks.colour = NA)) +
   xlab(expression(paste("Change in soil C stock (%) in response to ", CO[2] ,sep=""))) +
   coord_equal() + 
@@ -168,7 +159,70 @@ p.perc
 save_plot("graphs/CO2relEffect.pdf", p.perc, base_aspect_ratio = 1.5, dpi=300)
 save_plot("graphs/CO2relEffect.png", p.perc, dpi= 1200,type = "cairo-png",base_aspect_ratio = 1.5)
 
+### FACE - EXPECTED ###
+# Absolute
+dif.abs <- raster("maps/Diff_obs_exp_tha.tif")
+dif.abs_robin <- projectRaster(dif.abs,crs="+proj=robin",over=T)
+dif.abs.df = as.data.frame(dif.abs_robin,xy=TRUE)
+range(dif.abs.df$Diff_obs_exp_tha, na.rm=T)
+
+find_cpt("BlueYellowRed")
+difcol <- cpt(pal = "ncl_BlueYellowRed", rev=T, n=20)
+difcol <- cpt(pal = "arendal_temperature", rev=T, n=20)
+difcol <- cpt(pal = "ncl_BlueDarkRed18", rev=T, n=8)
+#show_col(difcol)
+
+p.dif.abs <- ggplot()+ 
+  geom_polypath(data=oceanmap_df, aes(long,lat,group=group),fill= nord["nord5"], size = 0.1) +
+  geom_raster(data=dif.abs.df,aes(x,y,fill=Diff_obs_exp_tha)) +
+  geom_polypath(data=wmap_wgs_df, aes(long,lat,group=group),fill="transparent", color="black", size = 0.1) +
+  geom_polygon(data=bbox_df, aes(x=long, y=lat), colour=nord["nord3"], fill="transparent", size = 0.3) +
+  scale_fill_discrete_gradient(
+    bins = 8,
+    colours = difcol,
+    breaks=seq(-10,10,5),
+    limits = c(-10, 10),
+    guide = guide_colourbar(nbin = 100, raster = FALSE, frame.colour = "black", ticks.colour = NA)) +
+  xlab(expression(paste("(Upscaled - Expected) change in SOC (Mg ", ha^-1,")",sep=""))) +
+  coord_equal() + 
+  theme_classic(base_size = 8) + 
+  theme_opts
+save_plot("graphs/Diff_obs_exp_tha.pdf", p.dif.abs, base_aspect_ratio = 1.5, dpi=300)
+save_plot("graphs/Diff_obs_exp_tha.png", p.dif.abs, dpi= 1200,type = "cairo-png",base_aspect_ratio = 1.5)
+
+# Relative
+dif.rel <- raster("maps/Diff_obs_exp_perc.tif")
+dif.rel_robin <- projectRaster(dif.rel,crs="+proj=robin",over=T)
+dif.rel.df = as.data.frame(dif.rel_robin,xy=TRUE)
+range(dif.rel.df$Diff_obs_exp_perc, na.rm=T)
+
+difcol.rel <- cpt(pal = "ncl_BlueDarkRed18", rev=T, n=40)
+p.dif.rel <- ggplot()+ 
+  geom_polypath(data=oceanmap_df, aes(long,lat,group=group),fill= nord["nord5"], size = 0.1) +
+  geom_raster(data=dif.rel.df,aes(x,y,fill=Diff_obs_exp_perc)) +
+  geom_polypath(data=wmap_wgs_df, aes(long,lat,group=group),fill="transparent", color="black", size = 0.1) +
+  geom_polygon(data=bbox_df, aes(x=long, y=lat), colour=nord["nord3"], fill="transparent", size = 0.3) +
+  scale_fill_discrete_gradient(
+    bins = 40,
+    colours = difcol.rel,
+    breaks=seq(-20,20,5),
+    limits = c(-20, 20),
+    guide = guide_colourbar(nbin = 100, raster = FALSE, frame.colour = "black", ticks.colour = NA)) +
+  xlab("(Upscaled - Expected) change in SOC (%)") +
+  coord_equal() + 
+  theme_classic(base_size = 8) + 
+  theme_opts
+save_plot("graphs/Diff_rel_exp_tha.pdf", p.dif.rel, base_aspect_ratio = 1.5, dpi=300)
+save_plot("graphs/Diff_rel_exp_tha.png", p.dif.rel, dpi= 1200,type = "cairo-png",base_aspect_ratio = 1.5)
+
+# ------------------------------------------------------------------------
 ### UNCERTAINTIES ###
+# Absolute Error
+se <- raster("maps/CO2abslEffect.SE_RF_tha.tif")  # Mg/ha
+se_robin <- projectRaster(se,crs="+proj=robin",over=T)
+se.df = as.data.frame(se_robin,xy=TRUE)
+range(se.df$CO2abslEffect.SE_RF_tha, na.rm=T)
+
 uncert.col <- plasma(n=10, direction=-1)
 uncert.col.cequal <- cpt(pal = "imagej_cequal", rev=T, n=10)
 error <- ggplot()+ 
@@ -183,38 +237,130 @@ error <- ggplot()+
     breaks=seq(0,2.5,0.5),
     limits = c(0, 2.5),
     guide = guide_colourbar(nbin = 100, raster = FALSE, frame.colour = "black", ticks.colour = NA)) +
-  xlab(expression(paste("Uncertainty in soil estimate (Mg ", ha^-1,")",sep=""))) +
+  xlab(expression(paste("Uncertainty in SOC estimate (Mg ", ha^-1,")",sep=""))) +
   coord_equal() + 
-  theme_classic(base_size = 10) + 
+  theme_classic(base_size = 8) + 
   theme_opts
 save_plot("graphs/CO2absEffect_uncertainties.pdf", error, base_aspect_ratio = 1.5, dpi=300)
 save_plot("graphs/CO2absEffect_uncertainties.png", error, dpi= 1200,type = "cairo-png",base_aspect_ratio = 1.5)
 
-# Percentage
+# Percentage error
 perc.se <- raster("maps/CO2relEffect.SE_RF_tha.tif")
 perc.se_robin <- projectRaster(perc.se,crs="+proj=robin",over=T)
 perc.se.df = as.data.frame(perc.se_robin,xy=TRUE)
 range(perc.se.df$CO2relEffect.SE_RF_tha, na.rm=T)
-uncert.col.se<- cpt(pal = "imagej_cequal", rev=T, n=10)
+uncert.col.se<- cpt(pal = "imagej_cequal", rev=T, n=12)
 error.perc <- ggplot()+ 
   geom_polypath(data=oceanmap_df, aes(long,lat,group=group),fill= nord["nord5"], size = 0.1) +
   geom_raster(data=perc.se.df,aes(x,y,fill=CO2relEffect.SE_RF_tha)) +
   geom_polypath(data=wmap_wgs_df, aes(long,lat,group=group),fill="transparent", color="black", size = 0.1) +
   geom_polygon(data=bbox_df, aes(x=long, y=lat), colour=nord["nord3"], fill="transparent", size = 0.3) +
   scale_fill_discrete_gradient(
-    bins = 10,
+    bins = 12,
     colours = uncert.col.se,
     #breaks=-3:11,
-    breaks=0:5,
-    limits = c(0, 5),
+    breaks=seq(0,3,1),
+    limits = c(0, 3),
     guide = guide_colourbar(nbin = 100, raster = FALSE, frame.colour = "black", ticks.colour = NA)) +
   xlab("Uncertainty in soil estimate (%)") +
   coord_equal() + 
-  theme_classic(base_size = 10) + 
+  theme_classic(base_size = 8) + 
   theme_opts
 save_plot("graphs/CO2relEffect_uncertainties.pdf", error.perc, base_aspect_ratio = 1.5, dpi=300)
 save_plot("graphs/CO2relEffect_uncertainties.png", error.perc, dpi= 1200,type = "cairo-png",base_aspect_ratio = 1.5)
 
+# multiplot
+uncert.p <- plot_grid( error + theme(plot.margin = unit(c(0,-.5,-1,-.5), "cm")), 
+                       p.eco.se + theme(plot.margin = unit(c(-1,-.5,0,-.5), "cm")) , 
+                       align = 'h', 
+                       #label_size = 8,
+                       labels = "AUTO",
+                       hjust = -3, 
+                       #vjust= 4,
+                       nrow = 2,
+                       ncol=1
+)
+
+save_plot("graphs/uncertainties.png", uncert.p, dpi=1200, base_width = 210/2, base_height = ((3/5)*210)/2, units="mm", nrow=2, ncol = 1,type = "cairo-png")
+save_plot("graphs/uncertainties.pdf", uncert.p, dpi=600, base_width = 210/2, base_height = ((3/5)*210)/2, units="mm",nrow=2, ncol = 1, device = cairo_pdf, fallback_resolution = 1200)
+save_plot("graphs/uncertainties.eps", uncert.p, dpi=600, base_width = 210/2, base_height = ((3/5)*210)/2, units="mm",nrow=2, ncol = 1, device = cairo_ps, fallback_resolution = 1200)
+
+# -------------------------------------------------------------------------
+### BOXPLOT ###
+library(tidyverse)
+esa <- raster("~/OneDrive/OneDrive - Universitat Autònoma de Barcelona/IIASA/maps/ESA_2012_aggregated0p25.tif")
+esa_pan <- raster("~/OneDrive/OneDrive - Universitat Autònoma de Barcelona/IIASA/maps/ESA_PAN.tif")
+legend <- read.csv("ESA_classes.csv")
+s.eco <- stack(esa, abs, perc, dif.abs, dif.rel, se)
+eco.df <- as.data.frame(s.eco)
+names(eco.df) <- c("ESA", "abs", "perc", "dif.abs", "dif.rel", "se")
+eco.df <- left_join(eco.df,legend, by=c("ESA" = "NB_LAB")) %>% drop_na()
+
+box.abs <- ggplot(data=eco.df,aes(ESAagg, abs)) + 
+  geom_boxplot(show.legend = F,outlier.alpha = 0.1) +
+  scale_fill_brewer(palette="Set3") +
+  ylab(expression(paste(eCO[2], " effect on SOC (Mg ", ha^-1,")" ,sep="")))+ xlab("") +
+  theme_classic(base_size = 8) +
+  theme(axis.text.x = element_text(size=8,angle = 35, hjust = 1))
+box.rel <- ggplot(data=eco.df,aes(ESAagg, perc)) + 
+  geom_boxplot(show.legend = F,outlier.alpha = 0.1) +
+  scale_fill_brewer(palette="Set3") + 
+  ylab(expression(paste(eCO[2], " effect on SOC (%)" ,sep="")))+ xlab("") +
+  theme_classic(base_size = 8) +
+  theme(axis.text.x = element_text(size=8,angle = 35, hjust = 1))
+box.dif.abs <- ggplot(data=eco.df,aes(ESAagg, dif.abs)) + 
+  geom_boxplot(show.legend = F,outlier.alpha = 0.1) +
+  scale_fill_brewer(palette="Set3") + 
+  ylab(expression(paste("(Upscaled - Expected) change in SOC (Mg ", ha^-1,")",sep=""))) + xlab("") +
+  theme_classic(base_size = 8) +
+  theme(axis.text.x = element_text(size=8,angle = 35, hjust = 1))
+box.dif.rel <- ggplot(data=eco.df,aes(ESAagg, dif.rel)) + 
+  geom_boxplot(show.legend = F,outlier.alpha = 0.1) +
+  scale_fill_brewer(palette="Set3") + 
+  ylab("(Upscaled - Expected) change in SOC (%)") + xlab("") +
+  theme_classic(base_size = 8) +
+  theme(axis.text.x = element_text(size=8,angle = 35, hjust = 1))
+box.uncert.abs <- ggplot(data=eco.df,aes(ESAagg, se)) + 
+  geom_boxplot(show.legend = F,outlier.alpha = 0.1) +
+  scale_fill_brewer(palette="Set3") + 
+  ylab(expression(paste("Uncertainty (Mg ", ha^-1,")",sep=""))) + xlab("") +
+  theme_classic(base_size = 8) +
+  theme(axis.text.x = element_text(size=8,angle = 35, hjust = 1))
+# -------------------------------------------------------------------------
+# FIGURE 3
+boxes <- plot_grid( box.rel + theme(plot.margin = unit(c(0.2,0.1,-1,0), "cm")),
+                    box.dif.abs + theme(plot.margin = unit(c(0,0.1,0,0), "cm")) + ylab(expression(paste("Upscaled - Expected (Mg ", ha^-1,")",sep=""))),
+                    box.uncert.abs + theme(plot.margin = unit(c(-1,0.1,0,0), "cm")), 
+                    align = 'vh', 
+                    label_size = 8,
+                    labels = c("B","D","F"),
+                    hjust = 2, 
+                    #vjust= 4,
+                    nrow = 3,
+                    ncol=1)
+
+maps <- plot_grid( p.perc + theme(plot.margin = unit(c(0,-.5,-1,-.5), "cm")) + xlab(expression(paste("Upscaled ",eCO[2], " effect on SOC (%)" ,sep=""))), 
+                   p.dif.abs + theme(plot.margin = unit(c(0,-.5,0,-.5), "cm")) ,
+                   error + theme(plot.margin = unit(c(-1,-.5,0,-.5), "cm")),
+                   align = 'h', 
+                   label_size = 8,
+                   labels = c("A","C","E"),
+                   hjust = -3, 
+                   #vjust= 4,
+                   nrow = 3,
+                   ncol=1
+)
+
+fig3 <- plot_grid(maps+ theme(plot.margin = unit(c(0,0,0,0), "cm")),
+                  boxes + theme(plot.margin = unit(c(0,0,0,0), "cm")),
+                  labels =NULL ,
+                  rel_widths = c(1, .4),
+                  nrow = 1, ncol=2)
+save_plot("graphs/Fig3.png", fig3, dpi=1200, ncol=2, nrow=1, base_height = 6, base_width = 2.25,type = "cairo-png")
+save_plot("graphs/Fig3.pdf", fig3, dpi=600, base_width = 210/2, base_height = ((3/5)*210)/2, units="mm",nrow=2, ncol = 1, device = cairo_pdf, fallback_resolution = 1200)
+save_plot("graphs/Fig3.eps", fig3, dpi=600, base_width = 210/2, base_height = ((3/5)*210)/2, units="mm",nrow=2, ncol = 1, device = cairo_ps, fallback_resolution = 1200)
+
+# -------------------------------------------------------------------------
 ##### ECOSYSTEM C ######
 eco<- raster("maps/CO2abslEffect_RF_Ecosystem_tha.tif")  # Mg/ha
 eco <- projectRaster(eco,crs="+proj=robin",over=T)
@@ -272,72 +418,5 @@ p.eco.se <- ggplot()+
   theme_opts
 p.eco.se
 
-### BOXPLOT ###
-library(tidyverse)
-esa <- raster("~/OneDrive/OneDrive - Universitat Autònoma de Barcelona/IIASA/maps/ESA_2012_aggregated0p25.tif")
-legend <- read.csv("ESA_classes.csv")
-s.eco <- stack(esa, abs, perc)
-eco.df <- as.data.frame(s.eco)
-names(eco.df) <- c("ESA", "abs", "perc")
-eco.df <- left_join(eco.df,legend, by=c("ESA" = "NB_LAB")) %>% drop_na()
-
-box.abs <- ggplot(data=eco.df,aes(ESAagg, abs)) + 
-  geom_boxplot(show.legend = F,outlier.alpha = 0.1) +
-  scale_fill_brewer(palette="Set3") +
-  ylab(expression(paste(eCO[2], " effect on soil C (Mg ", ha^-1,")" ,sep="")))+ xlab("") +
-  theme_classic(base_size = 8) +
-  theme(axis.text.x = element_text(size=8,angle = 25, hjust = 1))
-box.rel <- ggplot(data=eco.df,aes(ESAagg, perc)) + 
-  geom_boxplot(show.legend = F,outlier.alpha = 0.1) +
-  scale_fill_brewer(palette="Set3") + 
-  ylab(expression(paste(eCO[2], " effect on soil C (%)" ,sep="")))+ xlab("") +
-  theme_classic(base_size = 8) +
-  theme(axis.text.x = element_text(size=8,angle = 25, hjust = 1))
-boxes <- plot_grid( box.abs + theme(plot.margin = unit(c(0.2,0.1,-1,0), "cm")), 
-                   box.rel + theme(plot.margin = unit(c(-1,0.1,0,0), "cm")), 
-                   align = 'vh', 
-                   label_size = 8,
-                   labels = c("C","D"),
-                   hjust = 2, 
-                   #vjust= 4,
-                   nrow = 2,
-                   ncol=1)
-
-# FIGURE 3
-maps <- plot_grid( p + theme(plot.margin = unit(c(0,-.5,-1,-.5), "cm")) + xlab(expression(paste(eCO[2], " effect on soil C (Mg ", ha^-1,")" ,sep=""))), 
-                   p.perc + theme(plot.margin = unit(c(-1,-.5,0,-.5), "cm")) + xlab(expression(paste(eCO[2], " effect on soil C (%)" ,sep=""))), 
-                   align = 'h', 
-                   label_size = 8,
-                   labels = "AUTO",
-                   hjust = -3, 
-                   #vjust= 4,
-                   nrow = 2,
-                   ncol=1
-)
-
-fig3 <- plot_grid(maps+ theme(plot.margin = unit(c(0,0,0,0), "cm")),
-                  boxes + theme(plot.margin = unit(c(0,0,0,0), "cm")),
-                  labels =NULL ,
-                  rel_widths = c(1, .5),
-                  nrow = 1, ncol=2)
-save_plot("graphs/Fig3.png", fig3, dpi=1200, ncol=2, nrow=1, base_height = 4, base_width = 2.5,type = "cairo-png")
-save_plot("graphs/Fig3.pdf", fig3, dpi=600, base_width = 210/2, base_height = ((3/5)*210)/2, units="mm",nrow=2, ncol = 1, device = cairo_pdf, fallback_resolution = 1200)
-save_plot("graphs/Fig3.eps", fig3, dpi=600, base_width = 210/2, base_height = ((3/5)*210)/2, units="mm",nrow=2, ncol = 1, device = cairo_ps, fallback_resolution = 1200)
-
-# UNCERTAINTIES
-uncert.p <- plot_grid( error + theme(plot.margin = unit(c(0,-.5,-1,-.5), "cm")), 
-                   p.eco.se + theme(plot.margin = unit(c(-1,-.5,0,-.5), "cm")) , 
-                   align = 'h', 
-                   #label_size = 8,
-                   labels = "AUTO",
-                   hjust = -3, 
-                   #vjust= 4,
-                   nrow = 2,
-                   ncol=1
-)
-
-save_plot("graphs/uncertainties.png", uncert.p, dpi=1200, base_width = 210/2, base_height = ((3/5)*210)/2, units="mm", nrow=2, ncol = 1,type = "cairo-png")
-save_plot("graphs/uncertainties.pdf", uncert.p, dpi=600, base_width = 210/2, base_height = ((3/5)*210)/2, units="mm",nrow=2, ncol = 1, device = cairo_pdf, fallback_resolution = 1200)
-save_plot("graphs/uncertainties.eps", uncert.p, dpi=600, base_width = 210/2, base_height = ((3/5)*210)/2, units="mm",nrow=2, ncol = 1, device = cairo_ps, fallback_resolution = 1200)
 
 

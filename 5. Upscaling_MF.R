@@ -1,7 +1,7 @@
 library(devtools)
-devtools::install_github("imbs-hl/ranger")
+#devtools::install_github("imbs-hl/ranger")
 devtools::install_github("cjvanlissa/metaforest")
-library(ranger)
+#library(ranger)
 library(metaforest)
 library(tidyverse)
 library(metafor)
@@ -47,6 +47,7 @@ Myc.df$max_myc <- as.numeric(Myc.df$max_myc)
 myc <- rasterFromXYZ(Myc.df[,c("x", "y", "max_myc")],crs="+proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0")
 myc <- resample(myc,biomass,method="ngb")
 levels(myc) <- data.frame(ID = 1:length(lev), code = lev)
+writeRaster(myc,"maps/Myco_AMEM.tif",format="GTiff",overwrite=TRUE)
 
 s<- stack(biomass, lai, fpar, soc, fert, myc, disturbance, ecotype)
 names(s) <- c("Effect.biomass","LAImax","fPARmax","Cstock","Nitrogen.fertilization",
@@ -62,6 +63,15 @@ s.df <- as.data.frame(s,xy=TRUE) %>% rename("Nitrogen.fertilization"=Nitrogen.fe
 
 r.dfNA <- s.df[complete.cases(s.df),]
 
+s.df15cm <- as.data.frame(s,xy=TRUE) %>% rename("Nitrogen.fertilization"=Nitrogen.fertilization_category, "Symbiotic.type" = Symbiotic.type_code,  
+                                            "Disturbance"=Disturbance_category, "Ecosystem.type"=Ecosystem.type_category) %>%
+  mutate(Nitrogen.fertilization=factor(Nitrogen.fertilization), 
+         Symbiotic.type=factor(Symbiotic.type),
+         Soil.depth=15,
+         Experiment.type=factor("FACE", levels=c("Chamber","FACE","OTC")),
+         Disturbance=factor(Disturbance),
+         Ecosystem.type=factor(Ecosystem.type))
+r.dfNA15cm <- s.df15cm[complete.cases(s.df15cm),]
 ## PREDICT ##
 number_of_chunks = 200
 pred_se <- lapply(seq(1, NROW(r.dfNA), ceiling(NROW(r.dfNA)/number_of_chunks)),
@@ -100,10 +110,11 @@ soc <- raster("~/OneDrive/OneDrive - Universitat Autònoma de Barcelona/IIASA/ma
 soc.tha <- soc*0.01 # Mg/ha
 soc.tha <- mask(soc.tha, absEStha)
 perc <- (absEStha*100)/soc.tha
-perc <- raster::calc(perc, fun= function(x) ifelse (x>40,40,x)) # Max value in dataset
+perc <- raster::calc(perc, fun= function(x) ifelse (x>quantile(perc,.95),quantile(perc,.95),x)) 
+cellStats(perc,"mean", na.rm=T)
 writeRaster(perc,"maps/CO2relEffect_RF_tha.tif",format="GTiff",overwrite=TRUE)
 percSE <- (absSEtha*100)/soc.tha
-percSE <- raster::calc(percSE, fun= function(x) ifelse (x>16,16,x)) # Max value in dataset
+percSE <- raster::calc(percSE, fun= function(x) ifelse (x>quantile(percSE,.95),quantile(percSE,.95),x))
 writeRaster(percSE,"maps/CO2relEffect.SE_RF_tha.tif",format="GTiff",overwrite=TRUE)
 
 ##### ECOSYSTEM C ######
@@ -137,3 +148,46 @@ eco.se.pix<- stack(absSEpixel,total.biomasstpix.se)
 eco.se.pix.sum <- calc(eco.se.pix, plus.se)
 writeRaster(eco.se.pix.sum,"maps/CO2abslEffect.SE_RF_Ecosystem_tpix.tif",format="GTiff",overwrite=TRUE)
 cellStats(eco.se.pix.sum,"sum", na.rm=T) * 10^(-9)
+
+### 15 CM ###
+pred_se15cm <- lapply(seq(1, NROW(r.dfNA15cm), ceiling(NROW(r.dfNA15cm)/number_of_chunks)),
+                  function(i) {
+                    df_tmp <- r.dfNA15cm[i:min(i + ceiling(NROW(r.dfNA15cm)/number_of_chunks) - 1, NROW(r.dfNA15cm)),]
+                    predict(forest.abs, data = df_tmp, type="se")
+                  })
+RFpred <- unlist(lapply(pred_se15cm, `[[`, "predictions"))
+RFpredSE <- unlist(lapply(pred_se15cm, `[[`, "se"))
+absES <- cbind(r.dfNA[c("x","y")], RFpred)
+absES <- left_join(s.df,absES)
+absES <- rasterFromXYZ(absES[,c("x", "y", "RFpred")],crs="+proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0")
+plot(absES)
+absSE <- cbind(r.dfNA[c("x","y")], RFpredSE)
+absSE <- left_join(s.df,absSE)
+absSE <- rasterFromXYZ(absSE[,c("x", "y", "RFpredSE")],crs="+proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0")
+plot(absSE)
+cellStats(absES,"mean", na.rm=T) # g/m2
+cellStats(absSE,"mean", na.rm=T) # g/m2
+writeRaster(absES,"maps/CO2abslEffect_RF_gm2_15cm.tif",format="GTiff",overwrite=TRUE)
+writeRaster(absSE,"maps/CO2abslEffect.SE_RF_gm2_15cm.tif",format="GTiff",overwrite=TRUE)
+absEStha <- absES*0.01 # Mg/ha == tonnes/ha. I need to compute the total Mg in the world, so I need Mg/pixel:
+absSEtha <- absSE*0.01 # Mg/ha == tonnes/ha. I need to compute the total Mg in the world, so I need Mg/pixel:
+writeRaster(absEStha,"maps/CO2abslEffect_RF_tha_15cm.tif",format="GTiff",overwrite=TRUE)
+writeRaster(absSEtha,"maps/CO2abslEffect.SE_RF_tha_15cm.tif",format="GTiff",overwrite=TRUE)
+a <- area(absEStha) # get area of projected raster.
+absESpixel <- absEStha * a * 100 # area is in km2 multiply by 100 to get ha 
+absSEpixel <- absSEtha * a * 100 # area is in km2 multiply by 100 to get ha 
+cellStats(absESpixel,"sum", na.rm=T) * 10^(-9)   
+cellStats(absSEpixel,"sum", na.rm=T) * 10^(-9)  
+writeRaster(absESpixel,"maps/CO2abslEffect_RF_pixel_15cm.tif",format="GTiff",overwrite=TRUE)
+writeRaster(absSEpixel,"maps/CO2abslEffect.SE_RF_pixel_15cm.tif",format="GTiff",overwrite=TRUE)
+
+# PERCENTAGE 15cm #
+soc <- raster("~/OneDrive/OneDrive - Universitat Autònoma de Barcelona/IIASA/maps/SOC_015cm_aggregated0p25_gm2.tif") # g/m2
+soc.tha <- soc*0.01 # Mg/ha
+soc.tha <- mask(soc.tha, absEStha)
+perc <- (absEStha*100)/soc.tha
+perc <- raster::calc(perc, fun= function(x) ifelse (x>quantile(perc,.95),quantile(perc,.95),x)) # Max value in dataset
+writeRaster(perc,"maps/CO2relEffect_RF_tha_15cm.tif",format="GTiff",overwrite=TRUE)
+percSE <- (absSEtha*100)/soc.tha
+percSE <- raster::calc(percSE, fun= function(x) ifelse (x>quantile(percSE,.95),quantile(percSE,.95),x)) # Max value in dataset
+writeRaster(percSE,"maps/CO2relEffect.SE_RF_tha_15cm.tif",format="GTiff",overwrite=TRUE)

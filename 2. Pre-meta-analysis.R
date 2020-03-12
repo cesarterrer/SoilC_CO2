@@ -14,7 +14,8 @@ make_pct <- function(x) (exp(x) - 1) * 100
 dat <- filter(dat, biomass != "NA") # Remove experiments with missing biomass data
 dat <- filter(dat, nyears >= 0.5) # Remove experiments of less than 6 months duration
 dat$obs <- 1:nrow(dat)
-
+weighted.mean(dat$elevCO2,dat$vi); weighted.mean(dat$ambCO2,dat$vi)
+weighted.mean(dat$nyears,dat$vi); median(dat$nyears)
 ### Global effect of eCO2 on SOC
 summary(global <- rma.mv(yi, vi, data=dat, random = ~ 1 | Site / obs))
 make_pct(coef(summary(global)))
@@ -76,25 +77,16 @@ Mycm.df <- coef(summary(Mycm)) %>% mutate(type="Nutrient-acquisition strategy",
 #### META PLOT ####
 meta.df <- bind_rows(Ecom.df, Nm.df, Expm.df, Disturbancem.df, Mycm.df)
 
-pdf("graphs/figure1.pdf",height=5, width=3, useDingbats=FALSE)
+png("graphs/figure1.png",height=5, width=5, units ="in", res = 300, type = "cairo")
 par(mar=c(4,4,1,2))
-forest(x=meta.df$estimate,sei=meta.df$se,slab=meta.df$factor, annotate=FALSE, xlim=c(-30, 10),
-       ilab=paste0("(",meta.df$size,")"),ilab.xpos=-11,
-       psize=1,transf=make_pct, at=c(-10, 0, 10, 20), xlab=expression(paste(CO[2]," effect on soil C (%)", sep="")),
-       subset=15:1, rows=c(1:4,7:8,11:13,16:17,20:23),ylim=c(-1, 27),cex=0.75)
-op <- par(cex=.75, font=4)
-text(-30, c(5,9,14,18,24), pos=4, c("Nutrient strategy","Disturbance","Experiment type", "Nitrogen fertilization", "Ecosystem type"))
-par(cex=0.75, font=1)
-dev.off()
-
-png("graphs/figure1.png",height=5, width=3, units ="in", res = 300, type = "cairo")
-par(mar=c(4,4,1,2))
-forest(x=meta.df$estimate,sei=meta.df$se,slab=meta.df$factor, annotate=FALSE, xlim=c(-30, 10),
-       ilab=paste0("(",meta.df$size,")"),ilab.xpos=-11,
+forest(x=meta.df$estimate,sei=meta.df$se,slab=meta.df$factor, annotate=TRUE, xlim=c(-30, 40),
+       ilab=paste0("(",meta.df$size,")"),ilab.xpos=-15,
        psize=1,transf=make_pct, at=c(-10, 0, 10, 20), xlab=expression(paste(CO[2]," effect on soil C (%)", sep="")),
        subset=15:1, rows=c(1:4,7:8,11:13,16:17,20:23),ylim=c(-1, 27),cex=0.75)
 text(-30, c(5,9,14,18,24), pos=4, c("Nutrient strategy","Disturbance","Experiment type", "Nitrogen fertilization", "Ecosystem type"),
      font=2, cex=0.75)
+addpoly(global, row= -1, cex=0.75, transf=make_pct, mlab="")
+text(-30, -1, pos=4, font=2, cex=0.75, "Overall effect")
 dev.off()
 
 
