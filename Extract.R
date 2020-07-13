@@ -1,6 +1,6 @@
 library(raster)
-
-df <- read.csv("~/Documents/SoilC_CO2/soilC - combined.csv",na.strings = "")
+setwd("~/Documents/Documents - seatac14/SoilC_CO2")
+df <- read.csv("soilC - combined.csv",na.strings =c("","NA"))
 df$obs <- 1:nrow(df)
 dat = df %>% filter(!is.na(Latitude)) %>% dplyr::rename(biomass=yi)  # Remove empty rows
 dat$LAT <- ifelse(dat$Lat %in% "S",dat$Latitude * -1,dat$Latitude)
@@ -24,8 +24,8 @@ new$MAP <- ifelse(new$MAPraw == "watered", new$MAPmax, new$MAP2)
 setwd("~/OneDrive/OneDrive - Universitat Autònoma de Barcelona/TBCFvsSOC")
 source("scripts/Pmodel.R")
 # Merge GPP with dat
-gpp <- left_join(dplyr::select(dat, -GPP), unique(GPPextract[,c("LAT", "LONG", "GPP")]), by=c("LAT", "LONG"))
-new <- left_join(dplyr::select(new, -GPP), dplyr::select(gpp,obs,GPP),)
+gpp <- left_join(dplyr::select(dat, obs,LAT, LONG), unique(GPPextract[,c("LAT", "LONG", "GPP")]), by=c("LAT", "LONG"))
+new <- left_join(new, dplyr::select(gpp,obs,GPP),)
 
 ### LAI ###
 # https://land.copernicus.eu/global/products/fapar
@@ -43,7 +43,7 @@ laimean <- raster("~/OneDrive/OneDrive - Universitat Autònoma de Barcelona/IIAS
 lai <- raster::stack(laimean,laimax)
 names(lai) <- c("LAImean", "LAImax")
 lai.df <- data.frame(obs=points$obs, raster::extract(lai,points))
-new <- left_join(dplyr::select(new,-LAImax), lai.df)
+new <- left_join(dplyr::select(new,-LAImax,-LAImean), lai.df)
 
 ### FPAR ###
 # https://land.copernicus.eu/global/products/fapar
@@ -61,7 +61,7 @@ fparmax <- raster("~/OneDrive/OneDrive - Universitat Autònoma de Barcelona/IIAS
 fpar <- raster::stack(fparmean,fparmax)
 names(fpar) <- c("fPARmean", "fPARmax")
 fpar.df <- data.frame(obs=points$obs, raster::extract(fpar,points))
-new <- left_join(new, fpar.df)
+new <- left_join(dplyr::select(new,-fPARmean,-fPARmax), fpar.df)
 
-setwd("~/Documents/SoilC_CO2")
+setwd("~/Documents/Documents - seatac14/SoilC_CO2")
 write.csv(new,"~/Downloads/extract.csv")
