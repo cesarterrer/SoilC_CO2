@@ -5,3 +5,7 @@
 graphs/
 maps/*
 .xlsx
+*.tif
+maps/*.tif
+
+
