@@ -30,6 +30,9 @@ Relationship between βsoil and βplant in model ensembles (Fig. 4)
 ## Aboveground_prod.R
 Plotting the relationship between βsoil and CO2-driven changes in ANPP
 
+## CMIP.R
+Calculate expected βsoil with CMIP models
+
 ## Litter.R
 Plotting the relationship between the effects of eCO2 on litter production and biomass production
 
