@@ -27,11 +27,17 @@ Table showing ecosystem-level βsoil derived from the global results.
 ## 8. Models and observations.R
 Relationship between βsoil and βplant in model ensembles (Fig. 4)
 
+## Cveg_RF.R
+Upscale aboveground plant biomass from experiments using a meta-forest approach. More info in Terrer et al. 2019, Nature Climate Change.
+
 ## Aboveground_prod.R
 Plotting the relationship between βsoil and CO2-driven changes in ANPP
 
 ## CMIP.R
 Calculate expected βsoil with CMIP models
+
+## Trendyv7_Csoil_expected.r
+Calculate expected βsoil with TRENDY models
 
 ## Litter.R
 Plotting the relationship between the effects of eCO2 on litter production and biomass production
