@@ -1,0 +1,83 @@
+id,Site.Name,Source.Reference,SPECIES,Myc,N,ambco2,co2conc,Fumigation.type,System.Type,nyears,amb.rep,elev.rep,Country,es,var,newN,Classification,weightsTime,deltaco2
+BioCON_c_perennial grassland-AM_Nlow,BioCON,"Reich & Hobbie, 2013",perennial grassland,AM,Nlow,360,560,FACE,Grassland,16,3,3,USA,0.102395433,0.005253205,Nlow,low,9.5,0.441832752
+BioCON_f_perennial grassland-AM_Nhigh,BioCON F,"Reich & Hobbie, 2013",perennial grassland,AM,Nhigh,360,560,FACE,Grassland,16,3,3,USA,0.194680751,0.002110902,Nhigh,high,9.5,0.441832752
+"Birmensdorf_c_a_Fagus sylvatica, Picea abies-ECM_",Birmensdorf - Acidic loam,"Spinnler et al., 2002","Fagus sylvatica, Picea abies",ECM,,370,570,OTC,Tree Stand,3,3,3,Switzerland,-0.033491896,0.052176769,Nlow,medium,3,0.432133355
+"Birmensdorf_c_c_Fagus sylvatica, Picea abies-ECM_",Birmensdorf - Calcareous sand,"Spinnler et al., 2002","Fagus sylvatica, Picea abies",ECM,,370,570,OTC,Tree Stand,3,3,3,Switzerland,0.229368921,0.047628785,Nhigh,high,3,0.432133355
+"Birmensdorf_cf_a_Fagus sylvatica, Picea abies-ECM_",Birmensdorf F - Acidic loam,"Spinnler et al., 2002","Fagus sylvatica, Picea abies",ECM,,370,570,OTC,Tree Stand,3,3,3,Switzerland,0.011107828,0.023299876,Nhigh,high,3,0.432133355
+"Birmensdorf_cf_c_Fagus sylvatica, Picea abies-ECM_",Birmensdorf F - Calcareous sand,"Spinnler et al., 2002","Fagus sylvatica, Picea abies",ECM,,370,570,OTC,Tree Stand,3,3,3,Switzerland,0.128554836,0.051074502,Nhigh,high,3,0.432133355
+DUKE_c_Pinus taeda-ECM_Nlow,DUKE FACE,"Drake et al., 2011",Pinus taeda,ECM,Nlow,380,570,FACE,Tree Stand,11,3,3,USA,0.186250835,0.027790858,Nlow,medium,7,0.405465108
+DUKE-Ph_pine1_c_Pinus taeda-ECM_Nlow,DUKE Phytotron,"Larigauderie et al., 1994",Pinus taeda,ECM,Nlow,375,710,G,Tree Stand,0.47,2,2,USA,0.540801076,0.011552489,Nlow,medium,1.235,0.638338944
+DUKE-Ph_pine1_cf_Pinus taeda-ECM_Nhigh,DUKE Phytotron F,"Larigauderie et al., 1994",Pinus taeda,ECM,Nhigh,375,710,G,Tree Stand,0.47,2,2,USA,0.602148419,0.008533735,Nhigh,high,1.235,0.638338944
+DUKE-Ph_pine2_pp_c_Pinus ponderosa-ECM_Nlow,DUKE Phytotron III,"King et al., 1996",Pinus ponderosa,ECM,Nlow,350,700,G,Tree Stand,0.43,2,2,USA,0.894365371,0.053064013,Nlow,medium,1.215,0.693147181
+DUKE-Ph_pine2_pt_c_Pinus taeda-ECM_Nlow,DUKE Phytotron III,"King et al., 1996",Pinus taeda,ECM,Nlow,350,700,G,Tree Stand,0.43,2,2,USA,0.701465707,0.012523288,Nlow,medium,1.215,0.693147181
+DUKE-Ph_pine2_pp_c_f_Pinus ponderosa-ECM_Nhigh,DUKE Phytotron III F,"King et al., 1996",Pinus ponderosa,ECM,Nhigh,350,700,G,Tree Stand,0.43,2,2,USA,0.615945147,0.038758984,Nhigh,high,1.215,0.693147181
+DUKE-Ph_pine2_pt_c_f_Pinus taeda-ECM_Nhigh,DUKE Phytotron III F,"King et al., 1996",Pinus taeda,ECM,Nhigh,350,700,G,Tree Stand,0.43,2,2,USA,0.494377885,0.027525946,Nhigh,high,1.215,0.693147181
+DUKE-Ph_robinia_c_Robinia pseudoacacia-ECM_Nlow,DUKE Phytotron II,"Uselman et al., 2000",Robinia pseudoacacia,ECM,Nlow,350,700,G,Tree Stand,0.27,2,2,USA,0.503676844,0.115068665,Nlow,medium,1.135,0.693147181
+DUKE-Ph_robinia_cf_Robinia pseudoacacia-ECM_Nhigh,DUKE Phytotron II F,"Uselman et al., 2000",Robinia pseudoacacia,ECM,Nhigh,350,700,G,Tree Stand,0.27,2,2,USA,0.119626502,0.0713523,Nhigh,high,1.135,0.693147181
+ETH FACE_c_Betula pendula-ECM_Nlow,ETH FACE,"Ineson et al., 1996",Betula pendula,ECM,Nlow,380,600,FACE,Tree Stand,1,3,3,Switzerland,0.442255317,0.00616865,Nlow,medium,2,0.456758402
+FACTS II FACE3_pt_c_Populus tremuloides-ECM_Nlow,FACTS II FACE,"Talhelm et al., 2014",Populus tremuloides,ECM,Nlow,370,532,FACE,Tree Stand,11,3,3,USA,0.217348278,0.002939983,Nlow,medium,7,0.363140484
+FACTS II FACE3_pt_c_Populus tremuloides-Betula papyrifera-ECM_Nlow,FACTS II FACE,"Talhelm et al., 2014",Populus tremuloides-Betula papyrifera,ECM,Nlow,370,532,FACE,Tree Stand,11,3,3,USA,0.291978993,0.002227579,Nlow,medium,7,0.363140484
+GES_c_Phalaris aquatica-AM_Nhigh,Ginninderra,"Volder et al., 2007",Phalaris aquatica,AM,Nhigh,380,750,G,Grassland,2,3,3,Australia,0.153051174,0.007422987,Nhigh,high,2.5,0.679901954
+HGC_ap_c_Acer pensylvanicum-AM_Nlow,Harvard,"Bazzaz & Miao, 1993",Acer pensylvanicum,AM,Nlow,350,700,G,Tree Stand,0.45,3,3,USA,0.693147181,0.013149244,Nlow,low,1.725,0.693147181
+HGC_ap_cf_Acer pensylvanicum-AM_Nhigh,Harvard F,"Bazzaz & Miao, 1993",Acer pensylvanicum,AM,Nhigh,350,700,G,Tree Stand,0.45,3,3,USA,0.705886206,0.006350674,Nhigh,high,1.725,0.693147181
+HGC_ar_c_Acer rubrum-AM_Nlow,Harvard,"Bazzaz & Miao, 1993",Acer rubrum,AM,Nlow,350,700,G,Tree Stand,0.45,3,3,USA,0.066139803,0.005264822,Nlow,low,1.725,0.693147181
+HGC_ar_cf_Acer rubrum-AM_Nhigh,Harvard F,"Bazzaz & Miao, 1993",Acer rubrum,AM,Nhigh,350,700,G,Tree Stand,0.45,3,3,USA,0.395641846,0.004085189,Nhigh,high,1.725,0.693147181
+HGC_ba_c_Betula alleghaniensis-ECM_Nlow,Harvard II,"Berntson et al., 1997",Betula alleghaniensis,ECM,Nlow,350,700,G,Tree Stand,0.45,3,3,USA,0.157659093,0.009115893,Nlow,low,1.725,0.693147181
+HGC_ba2_c_Betula alleghaniensis-ECM_Nlow,Harvard,"Bazzaz & Miao, 1993",Betula alleghaniensis,ECM,Nlow,350,700,G,Tree Stand,0.45,3,3,USA,0.356674944,0.011932477,Nlow,low,1.725,0.693147181
+HGC_ba2_cf_Betula alleghaniensis-ECM_Nhigh,Harvard F,"Bazzaz & Miao, 1993",Betula alleghaniensis,ECM,Nhigh,350,700,G,Tree Stand,0.45,3,3,USA,0.374266737,0.008676404,Nhigh,high,1.725,0.693147181
+HGC_bp_cf_Betula populifolia-ECM_Nhigh,Harvard F,"Bazzaz & Miao, 1993",Betula populifolia,ECM,Nhigh,350,700,G,Tree Stand,0.45,3,3,USA,0.230220399,0.001132094,Nhigh,high,1.725,0.693147181
+HGC_fa_c_Fraxinus americana-AM_Nlow,Harvard,"Bazzaz & Miao, 1993",Fraxinus americana,AM,Nlow,350,700,G,Tree Stand,0.45,3,3,USA,-0.484745911,0.008653431,Nlow,low,1.725,0.693147181
+HGC_fa_cf_Fraxinus americana-AM_Nhigh,Harvard F,"Bazzaz & Miao, 1993",Fraxinus americana,AM,Nhigh,350,700,G,Tree Stand,0.45,3,3,USA,0.341749294,0.00200764,Nhigh,high,1.725,0.693147181
+HGC_qr_c_Quercus rubra-ECM_Nlow,Harvard,"Bazzaz & Miao, 1993",Quercus rubra,ECM,Nlow,350,700,G,Tree Stand,0.45,3,3,USA,1.185623666,0.009733701,Nlow,low,1.725,0.693147181
+HGC_qr_cf_Quercus rubra-ECM_Nhigh,Harvard F,"Bazzaz & Miao, 1993",Quercus rubra,ECM,Nhigh,350,700,G,Tree Stand,0.45,3,3,USA,0.78679554,0.056518033,Nhigh,high,1.725,0.693147181
+HGC2_bp_c_Betula populifolia-ECM_Nlow,Harvard,"Bazzaz & Miao, 1993",Betula populifolia,ECM,Nlow,350,700,G,Tree Stand,0.45,3,3,USA,0.120627988,0.00559356,Nlow,low,1.725,0.693147181
+JRBP_FACE3_c_annual grassland-AM_Nlow,Jasper Ridge FACE,"Dukes et al., 2005",annual grassland,AM,Nlow,380,680,FACE,Grassland,6,8,8,USA,-0.149443193,0.034427098,Nlow,low,7,0.581921545
+JRBP_FACE3_cf_annual grassland-AM_Nhigh,Jasper Ridge FACE F,"Dukes et al., 2005",annual grassland,AM,Nhigh,380,680,FACE,Grassland,6,8,8,USA,-0.042417765,0.039144172,Nhigh,high,7,0.581921545
+JRBP_OTC2sand_c_Sandstone grassland-AM_Nlow,Jasper Ridge OTC - sandstone,"Hungate et al., 1997; Higgins et al. 2002",Sandstone grassland,AM,Nlow,360,720,OTC,Grassland,4,10,10,USA,0.079671967,0.009721948,Nlow,low,7,0.693147181
+JRBP_OTC2ser_c_Serpentine grassland-AM_Nlow,Jasper Ridge OTC - serpentine,"Hungate et al., 1997",Serpentine grassland,AM,Nlow,360,720,OTC,Grassland,4,10,10,USA,0.113018183,0.04645272,Nlow,low,7,0.693147181
+Lancaster_c2_Carpinus betulus -ECM_Nlow,Lancaster Solardomes,"Heath et al., 2005",Carpinus betulus ,ECM,Nlow,380,580,G,Tree Stand,1.25,3,3,UK,-0.260216036,0.094665347,Nlow,low,2.125,0.422856851
+Lancaster_c2_Fagus sylvatica-ECM_Nlow,Lancaster Solardomes,"Heath et al., 2005",Fagus sylvatica,ECM,Nlow,380,580,G,Tree Stand,1.25,3,3,UK,0.045787683,0.143161112,Nlow,low,2.125,0.422856851
+Lancaster_c2_Abies alba-ECM_Nlow,Lancaster Solardomes,"Heath et al., 2005",Abies alba,ECM,Nlow,380,580,G,Tree Stand,1.25,3,3,UK,-0.162795134,0.047643322,Nlow,low,2.125,0.422856851
+Lancaster_c2_Pinus sylvestris -ECM_Nlow,Lancaster Solardomes,"Heath et al., 2005",Pinus sylvestris ,ECM,Nlow,380,580,G,Tree Stand,1.25,3,3,UK,0.266841783,0.047426388,Nlow,low,2.125,0.422856851
+Lancaster_c2_Quercus robur-ECM_Nlow,Lancaster Solardomes,"Heath et al., 2005",Quercus robur,ECM,Nlow,380,580,G,Tree Stand,1.25,3,3,UK,0.263619836,0.077342477,Nlow,low,2.125,0.422856851
+Lancaster_c2_Betula pendula -ECM_Nlow,Lancaster Solardomes,"Heath et al., 2005",Betula pendula ,ECM,Nlow,380,580,G,Tree Stand,1.25,3,3,UK,0.121941424,0.011625923,Nlow,low,2.125,0.422856851
+Lancaster_c2f_Fagus sylvatica-ECM_Nhigh,Lancaster Solardomes F,"Heath et al., 2005",Fagus sylvatica,ECM,Nhigh,380,580,G,Tree Stand,1.25,3,3,UK,0.470445829,0.089855449,Nhigh,high,2.125,0.422856851
+Lancaster_c2f_Carpinus betulus -ECM_Nhigh,Lancaster Solardomes F,"Heath et al., 2005",Carpinus betulus ,ECM,Nhigh,380,580,G,Tree Stand,1.25,3,3,UK,0.29331435,0.13855803,Nhigh,high,2.125,0.422856851
+Lancaster_c2f_Betula pendula -ECM_Nhigh,Lancaster Solardomes F,"Heath et al., 2005",Betula pendula ,ECM,Nhigh,380,580,G,Tree Stand,1.25,3,3,UK,0.119724337,0.014010149,Nhigh,high,2.125,0.422856851
+Lancaster_c2f_Abies alba-ECM_Nhigh,Lancaster Solardomes F,"Heath et al., 2005",Abies alba,ECM,Nhigh,380,580,G,Tree Stand,1.25,3,3,UK,-0.037740328,0.07135072,Nhigh,high,2.125,0.422856851
+Lancaster_c2f_Pinus sylvestris -ECM_Nhigh,Lancaster Solardomes F,"Heath et al., 2005",Pinus sylvestris ,ECM,Nhigh,380,580,G,Tree Stand,1.25,3,3,UK,0.243119684,0.078719625,Nhigh,high,2.125,0.422856851
+Lancaster_c2f_Quercus robur-ECM_Nhigh,Lancaster Solardomes F,"Heath et al., 2005",Quercus robur,ECM,Nhigh,380,580,G,Tree Stand,1.25,3,3,UK,0.415344707,0.024303738,Nhigh,high,2.125,0.422856851
+MBS_alnus_c_Alnus glutinosa-mixed_Nlow,UMBS_alnus,"Vogel et al., 1997",Alnus glutinosa,ECM,Nlow,350,695,OTC,Tree Stand,0.44,5,5,USA,0.239672853,0.068415319,Nlow,medium,2.72,0.685978691
+MBS_pe_c_Populus euramericana-ECM/AM_Nlow,UMBS,"Pregitzer et al., 1995",Populus euramericana,ECM,Nlow,345,690,OTC,Tree Stand,1,5,5,USA,0.277925898,0.129952914,Nlow,low,3,0.693147181
+MBS_pe_cf_Populus euramericana-ECM/AM_Nhigh,UMBS F,"Pregitzer et al., 1995",Populus euramericana,ECM,Nhigh,345,690,OTC,Tree Stand,1,5,5,USA,0.530628251,0.054467993,Nhigh,high,3,0.693147181
+MBS_pg_c_Populus grandidentata-ECM/AM_Nhigh,UMBS II,"Zak et al., 1993",Populus grandidentata,ECM,Nhigh,342,692,OTC,Tree Stand,1,4,4,USA,0.472638677,0.029655009,Nlow,low,2.5,0.704775219
+MBS_pt_c_Populus tremuloides-ECM/AM_Nlow,UMBS III,"Mikan et al., 2000",Populus tremuloides,ECM,Nlow,367,715,OTC,Tree Stand,2,4,4,USA,0.085766822,0.068819003,Nlow,medium,3,0.666920695
+MBS_pt_cf_Populus tremuloides-ECM/AM_Nhigh,UMBS III F,"Mikan et al., 2000",Populus tremuloides,ECM,Nhigh,367,715,OTC,Tree Stand,2,4,4,USA,0.224623936,0.110884034,Nhigh,high,3,0.666920695
+MI_c_Shrub Oak system-ECM_Nlow,Merrit Island,"Hungate et al., 2013",Shrub Oak system,ECM,Nlow,370,720,OTC,Tree Stand,11,8,8,USA,-0.123310158,0.007669963,Nlow,low,9.5,0.665748206
+New Zealand FACE_c_temperate pasture-AM_Nlow,New Zealand FACE,"Allard et al., 2005",temperate pasture,AM,Nlow,366,470,FACE,Grassland,4,3,3,New Zealand,-0.316197759,0.038490621,Nlow,medium,3.5,0.250099361
+PHACE_c_Mixed-grass prairie-AM_Nlow,PHACE,Mueller et al. 2016,Mixed-grass prairie,AM,Nlow,385,600,FACE,Grassland,6,5,5,USA,0.118976972,0.024163577,Nlow,low,5.5,0.443686321
+POPFACE_pa_c_Populus alba-mixed_Nhigh,POPFACE,"Gielen et al., 2005",Populus alba,ECM,Nhigh,385,550,FACE,Tree Stand,3,3,3,Italy,0.104847884,0.027487166,Nhigh,high,3,0.356674944
+POPFACE_pe_c_Populus euramericana-mixed_Nhigh,POPFACE,"Gielen et al., 2005",Populus euramericana,ECM,Nhigh,385,550,FACE,Tree Stand,3,3,3,Italy,0.307366831,0.018145766,Nhigh,high,3,0.356674944
+POPFACE_pn_c_Populus nigra-mixed_Nhigh,POPFACE,"Gielen et al., 2005",Populus nigra,ECM,Nhigh,385,550,FACE,Tree Stand,3,3,3,Italy,0.522004308,0.01148569,Nhigh,high,3,0.356674944
+RNL2_c_Pisum sativum-AM_Nhigh,Riso,"Gavito et al., 2003",Pisum sativum,AM,Nhigh,368,688,G,Agricultural,0.2,4,4,Denmark,-0.028765166,0.026819158,Nhigh,high,2.1,0.6257059
+SCA_c_Alpine grassland-AM_Nlow,Swiss Central Alps,"Schappi & Korner, 1996",Alpine grassland,AM,Nlow,355,680,OTC,Grassland,3,12,12,Switzerland,-0.110984635,0.014561674,Nlow,low,7.5,0.649975009
+SCA_cf_Alpine grassland-AM_Nhigh,Swiss Central Alps F,"Schappi & Korner, 1996",Alpine grassland,AM,Nhigh,355,680,OTC,Grassland,3,4,4,Switzerland,0.139715688,0.020369815,Nhigh,high,3.5,0.649975009
+Swiss Jura_c_Bromus erectus-AM_Nlow,Swiss Jura,"Leadley et al., 1999",Bromus erectus,AM,Nlow,380,630,Screen Aided CO2 Control (SACC),Grassland,3,8,8,Switzerland,0.150845487,0.020605774,Nlow,low,5.5,0.505548567
+SwissFACE_lolium2_c_Lolium perenne-AM_Nlow,Swiss FACE,"Bazot et al., 2006",Lolium perenne,AM,Nlow,350,600,FACE,Grassland,1,3,3,Switzerland,0.174153347,0.082128084,Nlow,medium,2,0.538996501
+SwissFACE_lolium2_cf_Lolium perenne-AM_Nhigh,Swiss FACE FF,"Bazot et al., 2006",Lolium perenne,AM,Nhigh,350,600,FACE,Grassland,1,3,3,Switzerland,0.083527042,0.068795067,Nhigh,high,2,0.538996501
+TasFACE_c_Temperate grassland-AM_Nlow,Tas FACE,"Pendall et al., 2011",Temperate grassland,AM,Nlow,372,550,FACE,Grassland,6,3,3,Australia,-0.393041224,0.101546021,Nlow,low,4.5,0.391024424
+UA_OTC_c_Pinus sylvestris-ECM_Nlow,Antwerp OTC,"Janssens et al., 2005",Pinus sylvestris,ECM,Nlow,380,780,OTC,Tree Stand,3,2,2,Belgium,0.867096702,0.03413994,Nlow,low,2.5,0.719122667
+UB_tropical_c_Trop forest-AM_Nhigh,Basel tropical,"Kê_rner & Arnone, 1992",Trop forest,AM,Nhigh,340,610,model ecosystem,Tree Stand,0.25,2,2,Switzerland,0.485507816,0.027742465,Nlow,medium,1.125,0.58451334
+UG_c_Artemisia tridentata-AM_Nhigh,Guelph,"Klironomos et al., 1998",Artemisia tridentata,AM,Nhigh,350,700,G,Grassland,0.33,2,2,Canada,0.192536331,0.025080062,Nhigh,high,1.165,0.693147181
+USEPA_pseudo_c_Pseudotsuga menziesii-ECM/AM_Nlow,USEPA,"Olszyk et al., 2003",Pseudotsuga menziesii,ECM,Nlow,380,560,G,Tree Stand,4,3,3,USA,0.016667052,0.002456873,Nlow,medium,3.5,0.387765531
+ORNL_Liquidambar styraciflua-AM_Nlow,ORNL FACE,"Iversen et al., 2012",Liquidambar styraciflua,AM,Nlow,380,550,FACE,Tree Stand,11,3,2,USA,0.451985124,0.037649374,Nlow,medium,6.7,0.369747026
+Nevada_Desert scrub-AM_Nlow,Nevada FACE,"Evans et al., 2014",Desert scrub,AM,Nlow,380,550,FACE,Scrubland,10,3,3,USA,-0.377762506,0.081132815,Nlow,low,6.5,0.369747026
+DRI_c_Pinus ponderosa-ECM_Nlow,USDA Placerville,"Walker et al., 1997",Pinus ponderosa,ECM,Nlow,352,700,OTC,Tree Stand,3,3,3,USA,0.193968346,0.059115064,Nlow,medium,3,0.687449159
+DRI_cf_Pinus ponderosa-ECM_Nhigh,USDA Placerville FF,"Walker et al., 1997",Pinus ponderosa,ECM,Nhigh,352,700,OTC,Tree Stand,3,3,3,USA,0.429839108,0.093351831,Nhigh,high,3,0.687449159
+DRI_cMf_Pinus ponderosa-ECM_Nhigh,USDA Placerville F,"Walker et al., 1997",Pinus ponderosa,ECM,Nhigh,352,700,OTC,Tree Stand,3,3,3,USA,0.218979745,0.043006694,Nhigh,high,3,0.687449159
+Glendevon_ps_c_Pinus sylvestris-ECM_Nlow,Glendevon,"Temperton, 1998; Jarvis et al., 1998",Pinus sylvestris,ECM,Nlow,350,700,OTC,Tree Stand,4,4,4,UK,0.321072677,0.069765988,Nlow,medium,4,0.693147181
+Glendevon_ps_cf_Pinus sylvestris-ECM_Nhigh,Glendevon F,"Temperton, 1998; Jarvis et al., 1998",Pinus sylvestris,ECM,Nhigh,350,700,OTC,Tree Stand,4,4,4,UK,0.535906317,0.070933523,Nhigh,high,4,0.693147181
+Glendevon2_psi_c_Picea sitchensis-ECM_Nlow,Glendevon,"Temperton, 1998; Jarvis et al., 1998",Picea sitchensis,ECM,Nlow,350,700,OTC,Tree Stand,4,4,4,UK,0.279220286,0.081238991,Nlow,medium,4,0.693147181
+Glendevon2_psi_cf_Picea sitchensis-ECM_Nhigh,Glendevon F,"Temperton, 1998; Jarvis et al., 1998",Picea sitchensis,ECM,Nhigh,350,700,OTC,Tree Stand,4,4,4,UK,0.516602951,0.098971991,Nhigh,high,4,0.693147181
+Suonenjoki2_bp80_c_Betula pendula-ECM_Nhigh,Suonenjoki,"Kasurinen et al., 2005",Betula pendula,ECM,Nhigh,360,720,OTC,Tree Stand,3,4,4,Finland,0.157088035,0.039322218,Nlow,medium,3.5,0.693147181
+USDA_citrus_pooled_c_Citrus aurantium-AM_Nhigh,USDA,"Prior et al., 2012",Citrus aurantium,AM,Nhigh,380,680,OTC,Tree Stand,17,2,2,USA,0.333018426,0.00515355,Nhigh,high,9.5,0.581921545

@@ -10,10 +10,6 @@ mycols <- carto_pal(12, "Bold")[c(4,2,1,7)]
 mycols_vegsoil <- carto_pal(12, "Bold")[c(2,4)]
 make_pct <- function(x) (exp(x) - 1) * 100
 
-#dat <- read.csv("soilC_meta.csv")
-dat <- filter(dat, biomass != "NA") # Remove experiments with missing biomass data
-dat <- filter(dat, nyears >= 0.5) # Remove experiments of less than 6 months duration
-dat$obs <- 1:nrow(dat)
 weighted.mean(dat$elevCO2,dat$vi); weighted.mean(dat$ambCO2,dat$vi)
 weighted.mean(dat$nyears,dat$vi); median(dat$nyears)
 ### Global effect of eCO2 on SOC
@@ -28,6 +24,17 @@ Nm.n <- dat %>%  group_by(N) %>% summarise(n = n())
 Nm.df <- coef(summary(Nm)) %>% mutate(type="Nitrogen fertilization", 
                                           factor=as.factor(c("Yes", "No")),
                                           size=Nm.n$n)
+
+# Soil C stocks
+library(funModeling)
+dat$stocks_categorical <- funModeling::equal_freq(dat$amb, 3)
+stocks <- rma.mv(yi, vi, data=dat, mods=~stocks_categorical -1, random = ~ 1 | Site / obs)
+stocks
+make_pct(coef(summary(stocks)))
+stocks.n <- dat %>%  group_by(stocks_categorical) %>% summarise(n = n())
+stocks.df <- coef(summary(stocks)) %>% mutate(type="Soil C stocks", 
+                                      factor=levels(dat$stocks_categorical),
+                                      size=stocks.n$n)
 # Ecosystem.type
 Ecom <- rma.mv(yi, vi, data=dat, mods=~Ecosystem.type -1,  random = ~ 1 | Site / obs, subset= Ecosystem.type !="Wetland")
 Ecom
@@ -37,6 +44,7 @@ Ecom.n <- dat %>%  group_by(Ecosystem.type) %>% summarise(n = n())
 Ecom.df <- coef(summary(Ecom)) %>% mutate(type="Ecosystem type", 
                                           factor=levels(as.factor(dat$Ecosystem.type))[1:4],
                                           size=Ecom.n$n[1:4])
+
 # Experiment.type
 Expm <- rma.mv(yi, vi, data=dat, mods=~Experiment_type -1,  random = ~ 1 | Site / obs)
 Expm
@@ -73,24 +81,26 @@ make_pct(coef(summary(Mycm)))
 Mycm.n <- dat %>%  group_by(Myc) %>% summarise(n = n()) %>% filter(Myc != "NM")
 Mycm.df <- coef(summary(Mycm)) %>% mutate(type="Nutrient-acquisition strategy", 
                                           factor=c("AM","AM-ER","ECM","N-fixer"),
-                                          size=Mycm.n$n)
+                                          size=Mycm.n$n) %>%
+        mutate(factor =  factor(factor, levels = c("AM", "ECM", "AM-ER", "N-fixer"))) %>%
+        arrange(factor) 
 NMyc <- rma.mv(yi, vi, data=dat, mods=~Myc -1, random = ~ 1 | Site / obs, subset=N=="Nlow")
 NMyc
 make_pct(coef(summary(NMyc)))
 #### META PLOT ####
-meta.df <- bind_rows(Ecom.df, Nm.df, Expm.df, Disturbancem.df, Mycm.df)
+meta.df <- bind_rows(Ecom.df, Nm.df, stocks.df, Expm.df, Disturbancem.df, Mycm.df)
 
-png("graphs/figure1.png",height=5, width=3, units ="in", res = 300, type = "cairo")
+png("graphs/figure1.png",height=6, width=3, units ="in", res = 800, type = "cairo")
 par(mar=c(4,4,1,2))
 forest(x=meta.df$estimate,sei=meta.df$se,slab=meta.df$factor, 
        annotate=FALSE, 
-       #xlim=c(-30, 40),
        xlim=c(-30, 20),
        ilab=paste0("(",meta.df$size,")"),ilab.xpos=-13,
        psize=1,transf=make_pct, at=c(-10, 0, 10, 20), xlab=expression(paste(CO[2]," effect on soil C (%)", sep="")),
-       subset=15:1, rows=c(1:4,7:8,11:13,16:17,20:23),ylim=c(-1, 27),cex=0.75)
-text(-30, c(5,9,14,18,24), pos=4, c("Nutrient strategy","Disturbance","Experiment type", "Nitrogen fertilization", "Ecosystem type"),
+       subset=18:1, rows=c(1:4,7:8,11:13,16:18,21:22,25:28),ylim=c(-1, 32),cex=0.75)
+text(-30, c(5,9,14,23,29), pos=4, c("Nutrient strategy","Disturbance","Experiment type",  "Nitrogen fertilization","Ecosystem type"),
      font=2, cex=0.75)
+text(-30, 19, pos=4, expression(bold(paste("Soil C stocks (g m" ^-2,")"))),cex=0.75)
 addpoly(global, row= -1, cex=0.75, transf=make_pct, mlab="",annotate=FALSE)
 text(-30, -1, pos=4, font=2, cex=0.75, "Overall effect")
 dev.off()

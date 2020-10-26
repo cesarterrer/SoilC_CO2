@@ -1,0 +1,139 @@
+"","Experiment.Name","SITE","Myc","N","Biome","System.Type","Source.Reference","yi","vi"
+"1","FACTS II FACE3_pt_c","Aspen","ECM","Nlow","Temperate_Forest","Tree Stand","Talhelm et al., 2014",0.29603085763985,0.00496277337027962
+"2","FACTS II FACE3_ptas_c","Aspen","ECM","Nlow","Temperate_Forest","Tree Stand","Talhelm et al., 2014",0.421393627439682,0.0130962311273343
+"3","DUKE_c","DUKE","ECM","Nlow","Temperate_Forest","Tree Stand","McCarthy et al., 2010",0.189653473156549,0.0180149624217804
+"4","ORNERP_liqui_c","ORNL","AM","Nlow","Temperate_Forest","Tree Stand","Norby et al., 2010",0.0146005385254565,0.000940260355630108
+"5","POPFACE_pa_c","PopFACE","ECM","Nhigh","Temperate_Forest","Tree Stand","Gielen et al., 2005",0.226685054608428,0.0134568083459063
+"6","POPFACE_pe_c","PopFACE","ECM","Nhigh","Temperate_Forest","Tree Stand","Gielen et al., 2005",0.291373762079697,0.00139708925143695
+"7","POPFACE_pn_c","PopFACE","ECM","Nhigh","Temperate_Forest","Tree Stand","Gielen et al., 2005",0.166533544378467,0.000725862546533828
+"8","BangorFACE_c","Bangor","ECM","Nlow","Temperate_Forest","Tree Stand","Smith et al., 2013 pers comm",0.250586529054368,0.00670831011660164
+"9","BangorFACE_c","Bangor","ECM","Nlow","Temperate_Forest","Tree Stand","Smith et al., 2013 pers comm",0.146320008054403,0.0190783110089115
+"10","BangorFACE_c","Bangor","ECM","Nlow","Temperate_Forest","Tree Stand","Smith et al., 2013 pers comm",0.199565119644333,0.0641568910090007
+"11",NA,"BCI","AM","Nhigh","Tropical_Forest","Tree Stand","Winter & Lovelock 1999",0.244690629827358,0.0960931815543166
+"12",NA,"BCI3","AM","Nlow","Tropical_Forest","Tree Stand","Lovelock et al. 1999a Biotropica",0.280713403135687,0.0215309352029114
+"13",NA,"BCI4","AM","Nlow","Tropical_Forest","Tree Stand","Lovelock et al., 1996",0.284931039079891,0.037006025323493
+"14","BioCON_f","BioCON_nolegumes","AM","Nhigh","Grassland","Grassland","Reich & Hobbie 2013",0.156051738382793,0.0246696057530372
+"15","BioCON_c","BioCON_nolegumes","AM","Nlow","Grassland","Grassland","Reich & Hobbie 2013",0.0614471142694601,0.0281895327565556
+"16",NA,"Braunschweig FACE F","AM","Nhigh","Cropland","Agricultural","Weigel & Manderscheid, 2012",0.152448489461789,0.0244972110157295
+"17",NA,"Braunschweig FACE F","AM","Nhigh","Cropland","Agricultural","Weigel & Manderscheid, 2012",0.191915167359772,0.0244972110157295
+"18",NA,"Braunschweig FACE F","AM","Nhigh","Cropland","Agricultural","Weigel & Manderscheid, 2012",0.0956289715988773,0.0244972110157295
+"19",NA,"Braunschweig FACE F","AM","Nhigh","Cropland","Agricultural","Weigel & Manderscheid, 2012",0.0568315794074275,0.0244972110157295
+"20",NA,"Braunschweig FACE FF","AM","Nhigh","Cropland","Agricultural","Weigel & Manderscheid, 2012",0.119997375174625,0.0244972110157295
+"21",NA,"Braunschweig FACE FF","AM","Nhigh","Cropland","Agricultural","Weigel & Manderscheid, 2012",0.0636949951491319,0.0244972110157295
+"22",NA,"Braunschweig FACE FF","AM","Nhigh","Cropland","Agricultural","Weigel & Manderscheid, 2012",0.0844648390267531,0.0244972110157295
+"23",NA,"Braunschweig FACE FF","AM","Nhigh","Cropland","Agricultural","Weigel & Manderscheid, 2012",0.136128985491999,0.0244972110157295
+"24",NA,"Braunschweig FACE_DRY","AM","Nhigh","Cropland","Agricultural","Manderscheid et al., 2014",0.110046547872435,0.0163314740104863
+"25",NA,"Braunschweig FACE","AM","Nlow","Cropland","Agricultural","Dier et al. 2018",0.0539426757382895,0.0163314740104863
+"26",NA,"Braunschweig FACE_WET","AM","Nhigh","Cropland","Agricultural","Manderscheid et al., 2014",0.0106436226399025,0.0163314740104863
+"27","China mini-FACE","China mini-FACE","AM","Nhigh","Cropland","Agricultural","Hao et al. 2016",0.222630318449703,0.0163314740104863
+"28","China mini-FACE","China mini-FACE","AM","Nhigh","Cropland","Agricultural","Lam et al. 2012",0.249370793072335,0.0163314740104863
+"29","ClimapestFACE","ClimapestFACE","AM","Nhigh","Cropland","Agricultural","Ghini et al. 2015",0.124399215790343,0.00816573700524317
+"30","EucFACE","EucFACE","ECM","Nlow","Temperate_Forest","Tree Stand","Ellsworth et al. 2017",-0.0819047677231083,0.0121596544795352
+"31","FL2_c","Flakaliden II high T","ECM","Nlow","Boreal_Forest","Tree Stand","Sigurdsson et al. 2013",0.15963948187092,0.0653909966557582
+"32","FL2_c","Flakaliden II","ECM","Nlow","Boreal_Forest","Tree Stand","Sigurdsson et al. 2013",-0.154628141843561,0.0514610437228611
+"33","FL_cf","Flakaliden","ECM","Nhigh","Boreal_Forest","Tree Stand","Sigurdsson et al. 2013",0.201121044198443,0.0231592619167496
+"34","FL_c","Flakaliden","ECM","Nlow","Boreal_Forest","Tree Stand","Sigurdsson et al. 2013",0.0867981239977565,0.0108989891148006
+"35","GiFACE","GiFACE","AM","Nlow","Grassland","Grassland","Andresen et al. 2017",0.0907174155520312,0.00733924546881524
+"36",NA,"Headley","AM","Nlow","Temperate_Forest","Tree Stand","Broadmeadow & Jackson, 2001",-0.00910839722963996,0.024840462815842
+"37",NA,"Headley","ECM","Nlow","Temperate_Forest","Tree Stand","Broadmeadow & Jackson, 2002",0.460409878699101,0.0200593245060489
+"38",NA,"Headley","ECM","Nlow","Temperate_Forest","Tree Stand","Broadmeadow & Jackson, 2000",0.102263170234185,0.0482199372557158
+"39","Heidfeldhof","Heidfeldhof","AM","Nhigh","Cropland","Agricultural","Franzaring et al. 2008",0.23648657493805,0.0128173803695351
+"40","Heidfeldhof","Heidfeldhof","AM","Nhigh","Cropland","Agricultural","Franzaring et al. 2010",0.102701307287476,0.00521676009247369
+"41","Horsham","Horsham","AM","Nhigh","Cropland","Agricultural","Fitzgerald et al. 2016",0.183497487140191,0.0197220235438536
+"42","Horsham","Horsham","AM","Nhigh","Cropland","Agricultural","Fitzgerald et al. 2016",0.166785960826561,0.0222639769361299
+"43","Horsham","Horsham3_i","AM","Nhigh","Cropland","Agricultural","Bourgault et al 2016",0.235219823441209,0.104303352298813
+"44","Horsham","Horsham3","AM","Nhigh","Cropland","Agricultural","Bourgault et al 2016",0.269037019663714,0.126294015508601
+"45","Hyderabad","Hyderabad","AM","Nhigh","Tropical_Forest","Tree Stand","Reddy et al., 2010",0.300421166817678,0.00501604019735141
+"46","IMAGINE","IMAGINE","AM","Nlow","Grassland","Grassland","Cantarel et al. 2012",0.0939606887518592,0.0206725883835193
+"47","JRBP_FACE3_cf","Jasper_FACE","AM","Nhigh","Grassland","Grassland","Zhu et al. 2016",0.0456371405850418,0.0137614016217725
+"48","JRBP_FACE3_c","Jasper_FACE","AM","Nlow","Grassland","Grassland","Zhu et al. 2016",-0.0247707417129551,0.0140676578897484
+"49","JRBP_OTC2sand_c","Jasper_OTC3","AM","Nlow","Grassland","Grassland","Hungate et al., 1997; Higgins et al., 2002",0.0719234558912148,0.0545249897258628
+"50","JRBP_OTC2ser_c","Jasper_OTC3","AM","Nlow","Grassland","Grassland","Hungate et al., 1997",0.0687626836396127,0.0263460273066528
+"51","Kangbo FACE","Kangbo FACE","AM","Nhigh","Cropland","Agricultural","Cai et al. 2016",0.105474794239794,0.00216241826968929
+"52","Kangbo FACE","Kangbo FACE","AM","Nhigh","Cropland","Agricultural","Cai et al. 2016",0.111649337479611,0.00229820685346066
+"53",NA,"LYCOG_clay","AM","Nlow","Grassland","Grassland","Polley et al. 2018",0.202984172491682,0.00631819520260897
+"54",NA,"LYCOG_sandyloam","AM","Nlow","Grassland","Grassland","Polley et al. 2018",0.242116103637544,0.0181186179859093
+"55",NA,"LYCOG_siltyclay","AM","Nlow","Grassland","Grassland","Polley et al. 2018",0.208217901097534,0.0215953955904059
+"56","Maricopa FACE","Maricopa","AM","Nhigh","Cropland","Agricultural","Wood et al 1994",0.312917412922686,0.00570424879397229
+"57","Maricopa FACE","Maricopa_dry","AM","Nhigh","Cropland","Agricultural","Ottman et al. 2001",0.145059199541505,0.0122486055078648
+"58","Maricopa FACE","Maricopa_dry","AM","Nhigh","Cropland","Agricultural","Kimball et al. MS",0.086606298851782,0.0166574726507457
+"59","Maricopa FACE","Maricopa_wet","AM","Nhigh","Cropland","Agricultural","Ottman et al. 2001",0.027577545696719,0.0122486055078648
+"60","Maricopa FACE","Maricopa_wet","AM","Nhigh","Cropland","Agricultural","Kimball et al. MS",0.0512677797503372,0.0141465545747645
+"61","Maricopa FACE","Maricopa_wet","AM","Nlow","Cropland","Agricultural","Kimball et al. MS",0.0320495461455912,0.0142400720494824
+"62","Maricopa FACE","Maricopa2","AM","Nhigh","Cropland","Agricultural","Derner et al. 2003",0.127395696540641,0.00753145468304752
+"63","Mekrijarvi","Mekrijarvi","ECM","Nlow","Boreal_Forest","Tree Stand","Peltola et al, 2002",0.370911491660458,0.119398600452476
+"64","New Zealand FACE_c","NZ","AM","Nlow","Grassland","Grassland","pers.com. Paul Newton, NZFACE.R, non legumes species only",0.0491842389171603,0.0536039292499949
+"65","ORNERP_grassland_c","ORNERP_grassland_pooled","AM","Nlow","Grassland","Grassland","Kardol et al., 2010",0.174543203504215,0.0193490611366524
+"66","PHACE_c","PHACE","AM","Nlow","Grassland","Grassland","Mueller et al., 2016",0.0313145178329433,0.0147835321053845
+"67","PHACE_c","PHACE_t","AM","Nlow","Grassland","Grassland","Mueller et al., 2016",0.146088686355936,0.0120253453165651
+"68","DRI_c","Placerville","ECM","Nlow","Temperate_Forest","Tree Stand","Johnson et al 2006",0.307484699747961,0.0163314740104863
+"69","DRI_cf","PlacervilleF","ECM","Nhigh","Temperate_Forest","Tree Stand","Johnson et al 2006",0.19062035960865,0.0163314740104863
+"70",NA,"PlacervilleHNHP","ECM","Nhigh","Temperate_Forest","Tree Stand","Walker et al., 1998",0.338454397825204,0.00748103753894741
+"71",NA,"PlacervilleHNLP","ECM","Nhigh","Temperate_Forest","Tree Stand","Walker et al., 1998",0.204483128596807,0.0387803975990478
+"72",NA,"PlacervilleLNHP","ECM","Nhigh","Temperate_Forest","Tree Stand","Walker et al., 1998",0.190403664822407,0.00764396264755799
+"73",NA,"PlacervilleLNLP","ECM","Nhigh","Temperate_Forest","Tree Stand","Walker et al., 1998",0.153629167429519,0.0176984281686383
+"74","DRI_cMf","PlacervilleMF","ECM","Nhigh","Temperate_Forest","Tree Stand","Johnson et al 2006",0.3293037471426,0.0163314740104863
+"75",NA,"PNM","AM","Nlow","Tropical_Forest","Tree Stand","Lovelock et al. 1998",-0.0176076452620678,0.0424335649723533
+"76",NA,"PNM2","AM","Nlow","Tropical_Forest","Tree Stand","Winter et al. 2000",0.0601875748397541,0.134656431292837
+"77",NA,"PNM3","AM","Nhigh","Tropical_Forest","Tree Stand","Winter et al. 2001",0.346476361305432,0.00895888489066713
+"78",NA,"PNM4","AM","Nlow","Tropical_Forest","Tree Stand","Lovelock et al. 1999b Plant, Cell & Environment",-0.0294861656544634,0.327573094577912
+"79",NA,"SantaCruz_Mangrove, low N","AM","Nlow","Shrubland","Shrubland","Reef et al. 2016",0.0964750023006178,0.0941430982475155
+"80",NA,"SantaCruz, fertilised","AM","Nhigh","Tropical_Forest","Tree Stand","Cernusak et al., 2011",0.782955843868385,0.0424015894338376
+"81",NA,"SantaCruz, unfertilised","AM","Nlow","Tropical_Forest","Tree Stand","Cernusak et al., 2011",0.129592864831261,0.0348292636812098
+"82",NA,"SantaCruz2","AM","Nlow","Tropical_Forest","Tree Stand","Dalling et al. 2016",0.0644924993081391,0.00196404761599893
+"83",NA,"SaoPaulo - high N","AM","Nhigh","Tropical_Forest","Tree Stand","de Oliveira et al., 2012",0.292223881818302,0.0163314740104863
+"84",NA,"SaoPaulo - low N","AM","Nlow","Tropical_Forest","Tree Stand","de Oliveira et al., 2012",0.19058620776956,0.0163314740104863
+"85","Sapporo - brown soil","Sapporo - brown soil","ECM","Nhigh","Temperate_Forest","Tree Stand","unpublished",0.293356980919022,0.323500258571783
+"86","Sapporo - brown soil","Sapporo - brown soil","ECM","Nhigh","Temperate_Forest","Tree Stand","Watanabe et al. 2013",0.137058239820485,0.0101636898361228
+"87","Sapporo - volcanic ash","Sapporo - volcanic ash","ECM","Nlow","Temperate_Forest","Tree Stand","unpublished",0.320471927079596,0.35925084149811
+"88","Sapporo - volcanic ash","Sapporo - volcanic ash","ECM","Nlow","Temperate_Forest","Tree Stand","Watanabe et al. 2013",0.223619374062704,0.0102721198211785
+"89","SCBG_cf","SCBG","AM","Nhigh","Tropical_Forest","Tree Stand","Chen et al. 2012",0.184836133736428,0.0110473512056758
+"90","SCBG_c","SCBG","AM","Nlow","Tropical_Forest","Tree Stand","Chen et al. 2012",-0.0134489186747283,0.00255719341746612
+"91","SwissFACE_lolium2_cf","Swiss","AM","Nhigh","Grassland","Grassland","Schneider et al 2004",0.159355653662903,0.00721255706152026
+"92","SwissFACE_lolium2_c","Swiss","AM","Nlow","Grassland","Grassland","Schneider et al 2004",-0.0245202613661744,0.0149109282515705
+"93","SwissFACE_lolium2_cf","Swiss","AM","Nhigh","Grassland","Grassland","Luscher et al. 2000",0.248820365436198,0.0163314740104863
+"94","SwissFACE_lolium2_c","Swiss","AM","Nlow","Grassland","Grassland","Luscher et al. 2000",0.0625299793851399,0.0163314740104863
+"95","TasFACE_c","TasFACE","AM","Nlow","Grassland","Grassland","Hovenden et al., 2014",0.0720926160237653,0.0748703285275168
+"96","Tsukuba FACE","Tsukuba FACE","AM","Nlow","Cropland","Agricultural","Zhang et al. 2013",0.138273328171925,0.00479030942747078
+"97","Walpeup","Walpeup","AM","Nhigh","Cropland","Agricultural","Fitzgerald et al. 2016",0.345496949172648,0.0395004355792832
+"98","AGFACE","AG_FACE","AM","Nhigh","Cropland","Agricultural","O'Leary et al. 2015",0.170415683466161,0.0387790574463859
+"99","Birmensdorf  acidic","Birmensdorf  acidic","ECM","Nlow","Temperate_Forest","Tree Stand","Spinnler et al., 2002",-0.287318919407836,0.00997789089155498
+"100","Birmensdorf  acidic","Birmensdorf  acidic","ECM","Nlow","Temperate_Forest","Tree Stand","Spinnler et al., 2002",0.207937483228907,0.00928124381998638
+"101","Birmensdorf calcareous","Birmensdorf calcareous","ECM","Nlow","Temperate_Forest","Tree Stand","Spinnler et al., 2002",0.190143660810163,0.0145009450673482
+"102","Birmensdorf calcareous","Birmensdorf calcareous","ECM","Nlow","Temperate_Forest","Tree Stand","Spinnler et al., 2002",0.276182673435993,0.00652956018299188
+"103","2 levels of high N","ChinaFACE_HN","AM","Nhigh","Cropland","Agricultural","Kou et al. 2007",0.182541699887854,0.00381577089375579
+"104","2 levels of high N","ChinaFACE_LN","AM","Nhigh","Cropland","Agricultural","Kou et al. 2007",0.0762975156294238,0.00776020045910573
+"105","Brandjberg_c","CLIMAITE","AM","Nlow","Shrubland","Scrubland","Kongstad et al 2011, Andresen et al 2009 and 2010. Inger Kappel Schmidt & Klaus Larsen emails. Ask for data",0.0773332034031703,0.0304365525074216
+"106","Brandjberg_c","CLIMAITE_d","AM","Nlow","Shrubland","Scrubland","Kongstad et al 2011, Andresen et al 2009 and 2010. Inger Kappel Schmidt & Klaus Larsen emails. Ask for data",0.107245530353598,0.041182950810426
+"107","Glendevon","Glendevon","ECM","Nlow","Temperate_Forest","Tree Stand","Dieleman et al. 2012; More in Baig et al.",0.32075358541748,0.110705177803624
+"108","Gunnarsholt","Gunnarsholt","ECM","Nhigh","Boreal_Forest","Tree Stand","Sigurdsson et al, 2001",0.362664873575803,0.0576538348777718
+"109","Gunnarsholt","Gunnarsholt","ECM","Nlow","Boreal_Forest","Tree Stand","Sigurdsson et al, 2001",-0.0865925288159671,0.0625171635976251
+"110",NA,"Hohenheim","AM","Nhigh","Cropland","Agricultural","Hogy et al. 2010",0.0980939737455964,0.0196287678287489
+"111",NA,"Jasper_FACEp","AM","Nhigh","Grassland","Grassland","Zhu et al. 2016",0.0896644896107534,0.0107919020018491
+"112",NA,"Jasper_FACEp","AM","Nlow","Grassland","Grassland","Zhu et al. 2016",0.0870304143611104,0.0106637195366588
+"113",NA,"Jasper_FACEw","AM","Nhigh","Grassland","Grassland","Zhu et al. 2016",0.0104797695831173,0.00532585418922379
+"114",NA,"Jasper_FACEw","AM","Nlow","Grassland","Grassland","Zhu et al. 2016",-0.112243656597774,0.00640531942747604
+"115",NA,"Jasper_FACEwp","AM","Nhigh","Grassland","Grassland","Zhu et al. 2016",0.0421690447084452,0.0109330339116207
+"116",NA,"Jasper_FACEwp","AM","Nlow","Grassland","Grassland","Zhu et al. 2016",0.0240446202897549,0.0118341011360975
+"117","MI_c","Merrit_Island","ECM","Nlow","Temperate_Forest","Tree Stand","Hungate et al. 2013",0.51290512543514,0.0131652117394448
+"118","Nevada_Desert","Nevada_pooled","AM","Nlow","Shrubland","Scrubland","Smith et al. 2014",-0.0840831172105414,0.0367011830102851
+"119",NA,"PopFACEII","ECM","Nhigh","Temperate_Forest","Tree Stand","Liberloo et al. 2006",0.186308318839249,0.00947904166717649
+"120",NA,"PopFACEII","ECM","Nhigh","Temperate_Forest","Tree Stand","Liberloo et al. 2006",0.147936083867325,0.00813569411386797
+"121",NA,"PopFACEII","ECM","Nhigh","Temperate_Forest","Tree Stand","Liberloo et al. 2006",0.243792477087184,0.00444289889858652
+"122","RNL2_c","RNL_Denmark_fieldgungi","AM","Nhigh","Cropland","Agricultural","Gavito et al., 2003",0.188085566300987,0.0483552424390791
+"123","Sapporo - brown soil","Sapporo - brown soil","ECM","Nhigh","Temperate_Forest","Tree Stand","Watanabe et al. 2016",0.625169403695832,0.0673007030900184
+"124","Sapporo - brown soil","Sapporo - brown soil","ECM","Nhigh","Temperate_Forest","Tree Stand","unpublished",0.452084019082201,0.0479904102357951
+"125","Sapporo - brown soil","Sapporo - brown soil","AM","Nhigh","Temperate_Forest","Tree Stand","Watanabe et al. 2016",0.166741802016446,0.245898616865138
+"126","Sapporo - brown soil","Sapporo - brown soil","ECM","Nhigh","Temperate_Forest","Tree Stand","Watanabe et al. 2016",0.217836235313289,0.240046081413733
+"127","Sapporo - brown soil","Sapporo - brown soil","ECM","Nhigh","Temperate_Forest","Tree Stand","unpublished",0.371563556432483,0.0677104429156067
+"128","Sapporo - volcanic ash","Sapporo - volcanic ash","ECM","Nlow","Temperate_Forest","Tree Stand","unpublished",-0.125065005463303,0.0722951145386066
+"129","Sapporo - volcanic ash","Sapporo - volcanic ash","ECM","Nlow","Temperate_Forest","Tree Stand","unpublished",0.257562239967863,0.0854876701692962
+"130","Suonenjoki2_bp80_c","Suonenjoki","ECM","Nhigh","Boreal_Forest","Tree Stand","Riikonen et al., 2004",-0.00246305543239786,0.0496806959944248
+"131","Suonenjoki2_bp80_c","Suonenjoki","ECM","Nhigh","Boreal_Forest","Tree Stand","Riikonen et al., 2004",0.325552346507191,0.022478393723115
+"132","Tsukuba FACE","Tsukuba FACE","AM","Nhigh","Cropland","Agricultural","Usui et al. 2016",0.131290076781509,0.0122486055078648
+"133","MBS_pe_cf","UMBS","ECM","Nhigh","Temperate_Forest","Tree Stand","Pregitzer et al., 1995",0.381240606108843,0.0521209786580004
+"134","MBS_pe_c","UMBS","ECM","Nlow","Temperate_Forest","Tree Stand","Pregitzer et al., 1995",0.19337350462531,0.282298667080106
+"135","MBS_pg_c","UMBS","ECM","Nhigh","Temperate_Forest","Tree Stand","Zak et al., 1993",0.0408803528990759,0.0151428845076692
+"136","MBS_pt_cf","UMBS","ECM","Nhigh","Temperate_Forest","Tree Stand","Mikan et al., 2000",0.321815078821239,0.00992945920656693
+"137","MBS_pt_c","UMBS","ECM","Nlow","Temperate_Forest","Tree Stand","Mikan et al., 2000",0.307642815014319,0.0145544965304081
+"138","USDA_citrus_c","USDA_citrus_Pooled","AM","Nhigh","Cropland","Tree Stand","Kimball et al., 2007",0.408328064934477,0.00270031470358796

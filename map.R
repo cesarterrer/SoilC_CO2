@@ -5,14 +5,14 @@ library(ggplot2)
 library(cowplot)
 library(cruts)
 library(ncdf4)
-library(ggbiome)
+#library(ggbiome)
 library(rgdal)
 library(maps)
 library(ggmap)
 library(ggalt)
 library(viridis)
 require(Cairo)
-library(plotbiomes)
+#library(plotbiomes)
 library(rcartocolor)
 
 theme_opts <- list(theme(panel.grid.minor = element_blank(),
@@ -54,7 +54,7 @@ studies <- ggplot() +
              alpha=0.6, colour="black",position = "jitter",
              shape=21, size=4) +
   scale_fill_manual(values = my_bold)+
-  coord_proj(paste0("+proj=robin")) +
+  #coord_proj(paste0("+proj=robin")) +
   theme_cowplot(font_size = 12) +
   #geom_text_repel(data=effects, size = 1, aes(y=Latitude, x=Longitude,label=Experiment)) +
   theme_opts + theme(legend.title=element_text(size=11),

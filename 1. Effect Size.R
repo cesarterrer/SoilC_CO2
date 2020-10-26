@@ -6,7 +6,7 @@ library(ggplot2)
 library(metagear)
 make_pct <- function(x) (exp(x) - 1) * 100
 
-df <- read.csv("soilC - combined.csv",na.strings =c("","NA")) %>% 
+df <- read.csv("soilC - combined.csv",na.strings =c("","NA"),stringsAsFactors=TRUE) %>% 
   filter(Experiment != "") %>% rename(biomass=yi) %>% # Remove empty rows
   mutate(SE.SD = as.factor(SE.SD),
          id=paste0(Experiment,sep="_",N,sep="_",Myc)) %>% 
@@ -19,8 +19,8 @@ df <- df %>%
   group_by(id) %>%
   filter(row_number()==n())
 
-#df <- df %>% filter(biomass != "NA", # Remove experiments with missing biomass data
- #                   nyears >= 0.5) # Remove experiments of less than 6 months duration
+df <- df %>% filter(biomass != "NA", # Remove experiments with missing biomass data
+                    nyears >= 0.5) # Remove experiments of less than 6 months duration
 
 # Weights based on the number of years and n of the experiments
 df$weightsTime <- with(df, ((amb.n * elev.n)/(amb.n + elev.n)) + ((nyears^2)/(2*nyears)))
@@ -46,6 +46,10 @@ library(VIM)
 vi_rom <- kNN(rom,variable="vi",dist_var=c("elev.n","nyears","yi"), weights = "auto")
 vi_md <- kNN(md,variable="abs.var",dist_var=c("elev.n","nyears","abs"), weights = "auto")
 
-dat <- left_join(vi_rom,vi_md)
+dat <- left_join(vi_rom,vi_md) %>% 
+  mutate(Vegetation.type=recode(Ecosystem.type, Agricultural="Herbaceous", Grassland="Herbaceous", 
+                                Shrubland="Woody", 'Tree Stand' = "Woody", Wetland="Herbaceous"),
+         obs=row_number())
+  
 
 write.csv(dat,"soilC_meta.csv")

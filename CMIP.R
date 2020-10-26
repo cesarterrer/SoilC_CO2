@@ -1,4 +1,5 @@
 library(raster)
+make_pct <- function(x) (exp(x) - 1) * 100
 plus <- function(x) {
   if(all(is.na(x))){
     c(x[0],NA)} else {
@@ -57,30 +58,29 @@ r_sd.rel <- calc(Model_stack, sd,na.rm = TRUE) #Calculate standard deviation acr
 
 ############################## DIFFERENCE ##################################
 # Absolute
-Cveg.abs <- raster("~/OneDrive/OneDrive - Universitat Autònoma de Barcelona/IIASA/Upscaling_Biomass/Maps/CO2absEffect_TotalBiomass_tha.tif")
+Cveg.abs <- raster("maps/Bbiomass_tha.tif")
 Cveg.abs[is.na(Cveg.abs)] <- 1
 Csoil.abs <- raster("maps/CO2abslEffect_RF_tha.tif")  # Mg/ha
 Cveg.abs <- mask(Cveg.abs, Csoil.abs)
 #my_ratio<- Cveg.abs/Csoil.abs
 Csoil_expected.abs<-Cveg.abs/r_mean.abs
-Csoil_expected.abs[Csoil_expected.abs>quantile(Csoil_expected.abs,.95)]<-quantile(Csoil_expected.abs,.95)
-Csoil_expected.abs[Csoil_expected.abs<quantile(Csoil_expected.abs,.05)]<-quantile(Csoil_expected.abs,.05)
-stack.abs<- stack(Csoil.abs,-Csoil_expected.abs)
+Csoil_expected.abs[Csoil_expected.abs>quantile(Csoil_expected.abs,.99)]<-quantile(Csoil_expected.abs,.99)
+Csoil_expected.abs[Csoil_expected.abs<quantile(Csoil_expected.abs,.01)]<-quantile(Csoil_expected.abs,.01)
+stack.abs<- stack(-Csoil.abs,Csoil_expected.abs)
 dif.abs <- calc(stack.abs,plus)
 writeRaster(dif.abs,"maps/Diff_obs_exp_tha.tif",format="GTiff",overwrite=TRUE)
 
 # Relative
 load("maps/CMIP_SOC_2002_kgc_m2.rda")
-Cveg.rel <- raster("~/OneDrive/OneDrive - Universitat Autònoma de Barcelona/IIASA/Upscaling_Biomass/Maps/CO2relEffect.tif") # %
+Cveg.rel <- make_pct(raster("maps/Bbiomass.tif")) # %
 Cveg.rel[is.na(Cveg.rel)] <- 1
 Csoil.rel <- (Csoil.abs*100)/(CMIP_SOC*10)  # %
 Csoil.rel <- raster::calc(Csoil.rel, fun= function(x) ifelse (x>quantile(Csoil.rel,.95),quantile(Csoil.rel,.95),x)) 
 Cveg.rel <- mask(Cveg.rel, Csoil.rel)
 Csoil_expected.rel<-Cveg.rel/r_median.rel
-Csoil_expected.rel[Csoil_expected.rel>quantile(Csoil_expected.rel,.95)]<-quantile(Csoil_expected.rel,.95)
-Csoil_expected.rel[Csoil_expected.rel<quantile(Csoil_expected.rel,.05)]<-quantile(Csoil_expected.rel,.05)
-stack.rel<- stack(Csoil.rel,-Csoil_expected.rel)
+Csoil_expected.rel[Csoil_expected.rel>quantile(Csoil_expected.rel,.99)]<-quantile(Csoil_expected.rel,.99)
+Csoil_expected.rel[Csoil_expected.rel<quantile(Csoil_expected.rel,.01)]<-quantile(Csoil_expected.rel,.01)
+stack.rel<- stack(-Csoil.rel,Csoil_expected.rel)
 dif.rel <- calc(stack.rel,plus)
 writeRaster(dif.rel,"maps/Diff_obs_exp_perc.tif",format="GTiff",overwrite=TRUE)
-
 

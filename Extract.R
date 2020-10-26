@@ -1,6 +1,8 @@
 library(raster)
-setwd("~/Documents/Documents - seatac14/SoilC_CO2")
-df <- read.csv("soilC - combined.csv",na.strings =c("","NA"))
+library(dplyr)
+library(missRanger)
+#setwd("~/Documents/Documents - seatac14/SoilC_CO2")
+df <- read.csv("/Users/terrermoreno1/OneDrive - LLNL/SoilC_CO2/soilC - combined.csv",na.strings =c("","NA"))
 df$obs <- 1:nrow(df)
 dat = df %>% filter(!is.na(Latitude)) %>% dplyr::rename(biomass=yi)  # Remove empty rows
 dat$LAT <- ifelse(dat$Lat %in% "S",dat$Latitude * -1,dat$Latitude)
@@ -63,5 +65,26 @@ names(fpar) <- c("fPARmean", "fPARmax")
 fpar.df <- data.frame(obs=points$obs, raster::extract(fpar,points))
 new <- left_join(dplyr::select(new,-fPARmean,-fPARmax), fpar.df)
 
-setwd("~/Documents/Documents - seatac14/SoilC_CO2")
+### C:N ratio
+cn <- raster("~/OneDrive/OneDrive - Universitat Autònoma de Barcelona/IIASA/maps/cnr_wise30/w001000.adf")
+cn.df <- data.frame(obs=points$obs, CNr=raster::extract(cn,points))
+cn.df[cn.df$CNr<0,"CNr"] <- NA
+cn.df<- missRanger(cn.df,num.trees = 500)
+new <- left_join(dplyr::select(new, -CNr), cn.df)
+
+### Amount of Phosphorus by Bray1 method ppm of weight at 30sec res.
+# The Global Soil Dataset for Earth System Modelling (GSDE), Shangguan et al. 2014
+# http://globalchange.bnu.edu.cn/research/soilw
+pBray <- raster("/Users/terrermoreno1/OneDrive - LLNL/IIASA/maps/PamountBray1_0_9cm.tif")
+p.df <- data.frame(obs=points$obs, P=raster::extract(pBray,points))
+p.df[!is.na(p.df$P) & p.df$P<0,"P"] <- NA
+p.df<- missRanger(p.df,num.trees = 500)
+new <- left_join(dplyr::select(new,-P), p.df)
+
+### Ph ###
+ph <- raster("~/OneDrive/OneDrive - Universitat Autònoma de Barcelona/TBCFvsSOC/maps/PHIHOX_M_sl6_250m.tif")
+ph.df <- data.frame(obs=points$obs, pH=(raster::extract(ph,points)*0.1))
+ph.df<- missRanger(ph.df,num.trees = 500)
+new <- left_join(dplyr::select(new,-pH), ph.df)
+
 write.csv(new,"~/Downloads/extract.csv")
