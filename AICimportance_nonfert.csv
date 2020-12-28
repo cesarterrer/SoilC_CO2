@@ -1,0 +1,16 @@
+"","predictor","importance"
+"Ecosystem.type:Effect.biomass","Ecosystem.type:Effect.biomass",0.00292585671138235
+"Ecosystem.type:Experiment.type","Ecosystem.type:Experiment.type",0.00322007286098202
+"Ecosystem.type:Symbiotic.type","Ecosystem.type:Symbiotic.type",0.00563272317815235
+"Effect.biomass:Symbiotic.type","Effect.biomass:Symbiotic.type",0.00880614687824905
+"Cstock:Ecosystem.type","Cstock:Ecosystem.type",0.0444685697104815
+"Experiment.type:Symbiotic.type","Experiment.type:Symbiotic.type",0.053638404480538
+"Ecosystem.type","Ecosystem.type",0.062101105475736
+"Cstock:Symbiotic.type","Cstock:Symbiotic.type",0.0767214516377494
+"Effect.biomass:Experiment.type","Effect.biomass:Experiment.type",0.0853446531763664
+"Cstock:Experiment.type","Cstock:Experiment.type",0.158729163199875
+"Experiment.type","Experiment.type",0.277863148855897
+"Effect.biomass","Effect.biomass",0.46417896064411
+"Symbiotic.type","Symbiotic.type",0.6648554289116
+"Cstock:Effect.biomass","Cstock:Effect.biomass",0.78353040945045
+"Cstock","Cstock",0.82141943032327

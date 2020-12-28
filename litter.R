@@ -4,10 +4,10 @@ library(cowplot)
 lit <- read.csv("Litter_Database.csv",na.strings ="NA") %>% mutate(litter=log(T_M/C_M)) %>% 
   group_by(id=Experiment) %>% summarise (litter=mean(litter))
 
-soc_all <- read.csv("/Users/terrermoreno1/Documents/SOC-prod/soilC_prod_meta.csv") %>% 
+soc_all <- read.csv("soilC_prod_meta.csv") %>% 
   right_join(lit)
 
-soc_intact <- read.csv("/Users/terrermoreno1/Documents/SOC-prod/soilC_prod_meta.csv") %>% 
+soc_intact <- read.csv("soilC_prod_meta.csv") %>% 
   right_join(lit) %>%
   filter(N=="Nlow", Experiment_type != "Chamber", Disturbance=="intact")
   

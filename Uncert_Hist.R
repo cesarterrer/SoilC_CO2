@@ -50,7 +50,7 @@ myc.p<-ggplot(myc.df, aes(x=Myco_AMEM_category)) +
   stat_count(aes(y=..prop.., group=1),colour="#999999", fill="#999999",alpha=.2) +
   stat_count(data=data.myc, aes(y=..prop.., x=Myc, group=1),alpha=.2, fill="#EFC000FF", col="#EFC000FF", size = 1) +
   ylab("proportion") +
-  xlab(expression(paste("Soil C stocks  (g ", m^-2,")",sep="")))+
+  xlab("Mycorrhizal type")+
     theme_cowplot()
 
 # Fertilization

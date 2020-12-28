@@ -1,5 +1,6 @@
 source("1. Effect Size.R")
-install_github("cjvanlissa/metaforest")
+remotes::install_github("cjvanlissa/metaforest")
+#install_github("cjvanlissa/metaforest")
 library(metaforest)
 library(caret)
 library(ggplot2)
@@ -78,6 +79,7 @@ mf_cv_abs <- train(y = data.abs$yi,
                    verbose=TRUE,
                    num.trees = 10000)
 saveRDS(mf_cv_abs, "mf_cv_abs.RData")
+mf_cv_abs <- readRDS("mf_cv_abs.RData")
 # Check result
 mf_cv_abs # The final values used for the model were whichweights = unif, mtry = 2 and min.node.size = 4
 mf_cv_abs$results[which.min(mf_cv_abs$results$RMSE), ]
@@ -104,18 +106,21 @@ arr <- as.list(newnames)
 names(arr) <- moderators
 mylabel <- function(val) { return(lapply(val, function(x) arr[x])) }
 
-pi <- PartialDependence(forest.abs, vars = names(forest.abs$forest$variable.importance)[order(forest.abs$forest$variable.importance, decreasing = TRUE)], 
-                        rawdata = T, pi = NULL, output = "list",  plot_int = TRUE, bw=TRUE)
+pi <- PartialDependence(forest.abs, vars = names(forest.abs$forest$variable.importance)[order(forest.abs$forest$variable.importance, decreasing = TRUE)][1:6], 
+                        rawdata = T, pi = 0.95, output = "list",  plot_int = TRUE, bw=F)
 p <- lapply(pi, function(x){
-  x + facet_wrap(~Variable,labeller=mylabel,ncol = 3) + ylim(c(-300,600)) +
-    ylab(expression(paste("Change in soil C stock  (g ", m^-2,")", " in response to ", CO[2] ,sep="")))
+  x + facet_wrap(~Variable,labeller=mylabel,ncol = 3) + 
+    coord_cartesian(ylim=c(-500,1100)) +
+    ylab(expression(paste("Absolute change in soil C (g ", m^-2,")", " under ", eCO[2] ,sep=""))) + 
+    theme_cowplot(font_size=8) + xlab(NULL) + panel_border() +
+    background_grid()
 })
 p[[3]] <- p[[3]]+scale_x_discrete(labels = c("AM", "AMER", "ECM","Nfix"))
 p[[4]] <- p[[4]]+scale_x_discrete(labels = c("N-fert.", "non-fert."))
-p[[10]] <- p[[10]]+scale_x_discrete(labels = c("Ag", "Gr", "Shr", "For"))
-png("graphs/PartialDependence_Absolute.png",width =  8, height = 8, units="in", res=1200)
+#p[[10]] <- p[[10]]+scale_x_discrete(labels = c("Ag", "Gr", "Shr", "For"))
+#png("graphs/PartialDependence_Absolute.png",width =  8, height = 8, units="in", res=1200)
 p.p <- metaforest:::merge_plots(p)
-dev.off()
+#dev.off()
 
 ################ RELATIVE ###############
 set.seed(36326)
@@ -150,6 +155,7 @@ mf_cv <- train(y = data$yi,
                verbose=TRUE,
                num.trees = 10000)
 saveRDS(mf_cv, "mf_cv_rel.RData")
+mf_cv <- readRDS("mf_cv_rel.RData")
 importance.export.rel <- varImp(mf_cv)$importance
 write.csv(importance.export.rel,"VI_rel.csv")
 final <- mf_cv$final
@@ -160,17 +166,21 @@ ggsave("graphs/VI_Rel_metaforest.pdf", imp, width =  6.875, units = "in")
 ggsave("graphs/VI_Rel_metaforest.png", imp, width =  6.875, units = "in")
 
 # Plot partial dependence
-p.rel <- PartialDependence(final, vars = names(final$forest$variable.importance)[order(final$forest$variable.importance, decreasing = TRUE)], 
-                           rawdata = T, pi = NULL, output = "list",  plot_int = TRUE, bw=TRUE)
-p.rel <- lapply(p.rel, function(x){
-  x + facet_wrap(~Variable,labeller=mylabel)
+p.reli <- PartialDependence(final, vars = names(final$forest$variable.importance)[order(final$forest$variable.importance, decreasing = TRUE)][1:6], 
+                            rawdata = T, pi = 0.95, output = "list",  plot_int = TRUE, bw=FALSE)
+p.rel <- lapply(p.reli, function(x){
+  x + facet_wrap(~Variable,labeller=mylabel) + 
+    coord_cartesian(ylim=c(-0.15,0.25)) +
+    ylab(expression(paste("Relative change in soil C under ", eCO[2] ,sep=""))) +
+    theme_cowplot(font_size=8) + xlab(NULL) + panel_border() +
+    background_grid()
 })
 p.rel[[4]] <- p.rel[[4]]+scale_x_discrete(labels = c("AM", "AMER", "ECM","Nfix"))
-p.rel[[3]] <- p.rel[[3]]+scale_x_discrete(labels = c("N-fer", "non-fert"))
-p.rel[[14]] <- p.rel[[14]]+scale_x_discrete(labels = c("Ag", "Gr", "Shr", "For"))
+p.rel[[3]] <- p.rel[[3]]+scale_x_discrete(labels = c("N-fert.", "non-fert."))
+#p.rel[[14]] <- p.rel[[14]]+scale_x_discrete(labels = c("Ag", "Gr", "Shr", "For"))
 p.rel <- metaforest:::merge_plots(p.rel)
-save_plot("graphs/PartialDependence_Relative.pdf", p.rel, base_width =  7, base_height = 6)
-save_plot("graphs/PartialDependence_Relative.png", p.rel, base_width =  7, base_height = 6)
+#save_plot("graphs/PartialDependence_Relative.pdf", p.rel, base_width =  7, base_height = 6)
+#save_plot("graphs/PartialDependence_Relative.png", p.rel, base_width =  7, base_height = 6)
 
 # Reduced version
 newmods <- c(preselect_vars(pre.abs, cutoff = .95), "MAT", "MAP")
@@ -181,6 +191,57 @@ reduced <- MetaForest(as.formula(paste0("yi~", paste(newmods, collapse = "+"))),
 saveRDS(reduced, "reduced_rel.RData")
 
 ############## MULTIPLOT #################
+library(iml)
+predictor <- Predictor$new(mf_cv, data=dplyr::select(X,-vi), y = data$yi)
+effect = FeatureEffects$new(predictor)
+effect$plot(features = c("Effect.biomass", "Nitrogen.fertilization", "Symbiotic.type"))
+imp <- FeatureImp$new(predictor, loss = "mae")
+plot(imp)
+ale <- FeatureEffect$new(predictor, feature = "Effect.biomass")
+ale$plot()
+interact <- Interaction$new(predictor)
+plot(interact)
+interact <- Interaction$new(predictor, feature = "Effect.biomass")
+plot(interact)
+effs <- FeatureEffects$new(predictor)
+plot(effs)
+
+library(pdp)
+library(randomForest)
+rel.part <- partial(mf_cv, pred.var = c("Effect.biomass","Nitrogen.fertilization"),parallel = TRUE)
+levels(rel.part$Nitrogen.fertilization) <- c("N-fert.","non-fert.")
+rel.plot <- ggplot(rel.part, aes(Effect.biomass,yhat)) + geom_line() + facet_wrap(~Nitrogen.fertilization) +
+  xlab("CO2 effect on biomass") + theme_cowplot(font_size=8) + ylab(NULL) + ylim(-0.05,0.15) + panel_border() +
+  background_grid()
+
+abs.part <- partial(mf_cv_abs, pred.var = c("Effect.biomass","Nitrogen.fertilization"),parallel = TRUE)
+levels(abs.part$Nitrogen.fertilization) <- c("N-fert.","non-fert.")
+abs.plot <- ggplot(abs.part, aes(Effect.biomass,yhat)) + geom_line() + facet_wrap(~Nitrogen.fertilization) +
+  xlab("CO2 effect on biomass") + theme_cowplot(font_size=8) + ylab(NULL) + ylim(-150,500) + panel_border() +
+  background_grid()
+
+stripwidth <- p.p$grobs[[5]]$widths
+p.rel$grobs[[1]]$widths <- stripwidth
+p.rel$grobs[[2]]$widths <- stripwidth
+p.rel$grobs[[3]]$widths <- stripwidth
+p.rel$grobs[[4]]$widths <- stripwidth
+p.rel$grobs[[5]]$widths <- stripwidth
+p.rel$grobs[[6]]$widths <- stripwidth
+
+left <- plot_grid(ggdraw() + draw_grob(p.rel), 
+                           ggdraw() + draw_grob(p.p),
+                           nrow=2, ncol=1, align="v", axis="l",
+                           hjust = -1,vjust =1, labels = c("a","b"))
+right <- plot_grid(NULL,rel.plot,NULL,
+                   NULL,abs.plot,NULL,
+                           nrow=6, ncol=1, align="v", axis="l",
+                           hjust = -1,vjust =1, rel_heights = c(1,3,1,1,3,1))
+multi <- plot_grid(left, right, nrow=1, ncol=2, align="h", rel_widths = c(1, 0.5),
+                           hjust = -1,vjust =1, labels = "")
+save_plot("graphs/Partial_multi.png",multi, ncol=2, nrow=1, dpi= 800, base_width =  5, base_height = 8, 
+          type = "cairo-png", bg="white")
+
+
 vi.rel <- read.csv("VI_rel.csv") %>% mutate(Predictor=recode(X,"Ecosystem.type"="Ecosystem type", "Symbiotic.type"="Symbiotic type", "Effect.biomass"="CO2 effect on biomass", "Experiment.type"="Experiment type",       
                                                              "Nitrogen.fertilization"="Nitrogen fertilization", "Cstock"="Soil C stock","Soil.depth"="Soil depth"))
 RVIrel <- ggplot(vi.rel, aes(x=reorder(Predictor,Overall), y=Overall)) +

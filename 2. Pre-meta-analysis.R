@@ -96,7 +96,7 @@ forest(x=meta.df$estimate,sei=meta.df$se,slab=meta.df$factor,
        annotate=FALSE, 
        xlim=c(-30, 20),
        ilab=paste0("(",meta.df$size,")"),ilab.xpos=-13,
-       psize=1,transf=make_pct, at=c(-10, 0, 10, 20), xlab=expression(paste(CO[2]," effect on soil C (%)", sep="")),
+       psize=1,transf=make_pct, at=c(-10, 0, 10, 20), xlab=expression(paste(CO[2]," effect on soil carbon (%)", sep="")),
        subset=18:1, rows=c(1:4,7:8,11:13,16:18,21:22,25:28),ylim=c(-1, 32),cex=0.75)
 text(-30, c(5,9,14,23,29), pos=4, c("Nutrient strategy","Disturbance","Experiment type",  "Nitrogen fertilization","Ecosystem type"),
      font=2, cex=0.75)
@@ -106,5 +106,18 @@ text(-30, -1, pos=4, font=2, cex=0.75, "Overall effect")
 dev.off()
 
 
-
+cairo_pdf("graphs/figure1.pdf", height=6, width=3, bg="transparent",fallback_resolution = 800)
+par(mar=c(4,4,1,2))
+forest(x=meta.df$estimate,sei=meta.df$se,slab=meta.df$factor, 
+       annotate=FALSE, 
+       xlim=c(-30, 20),
+       ilab=paste0("(",meta.df$size,")"),ilab.xpos=-13,
+       psize=1,transf=make_pct, at=c(-10, 0, 10, 20), xlab=expression(paste(CO[2]," effect on soil carbon (%)", sep="")),
+       subset=18:1, rows=c(1:4,7:8,11:13,16:18,21:22,25:28),ylim=c(-1, 32),cex=0.75)
+text(-30, c(5,9,14,23,29), pos=4, c("Nutrient strategy","Disturbance","Experiment type",  "Nitrogen fertilization","Ecosystem type"),
+     font=2, cex=0.75)
+text(-30, 19, pos=4, expression(bold(paste("Soil C stocks (g m" ^-2,")"))),cex=0.75)
+addpoly(global, row= -1, cex=0.75, transf=make_pct, mlab="",annotate=FALSE)
+text(-30, -1, pos=4, font=2, cex=0.75, "Overall effect")
+dev.off()
 

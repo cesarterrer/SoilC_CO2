@@ -1,5 +1,6 @@
-library(devtools) 
-install_github("wviechtb/metafor") 
+#library(devtools) 
+#install_github("wviechtb/metafor") 
+
 library(metafor)
 library(dplyr) 
 library(ggplot2)

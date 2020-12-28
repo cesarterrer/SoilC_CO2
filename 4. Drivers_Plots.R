@@ -21,7 +21,7 @@ filtered <- filter(dat, N=="non-fertilized", Experiment_type != "Chamber", Distu
 fertilized <- filter(dat, N=="N-fertilized", Experiment_type != "Chamber", Disturbance=="intact")
 intact <- filter(dat, Experiment_type != "Chamber", Disturbance=="intact")
 ## BIOMASS ##
-summary(intact.m<-rma.mv(yi, vi, mods= ~biomass*N, data=intact,  random = ~ 1 | Site / obs)) # Significant interaction
+summary(intact.m<-rma.mv(yi, vi, mods= ~biomass*N + I(biomass^2)*N, data=intact,  random = ~ 1 | Site / obs)) # Significant interaction
 summary(fert.m<-rma.mv(yi, vi, mods= ~biomass + I(biomass^2), data=fertilized, random = ~ 1 | Site / obs))
 anova(fert.m)
 summary(natural.m<-rma.mv(yi, vi, mods= ~biomass + I(biomass^2), data=filtered, random = ~ 1 | Site / obs)) # In natural soils
@@ -136,7 +136,7 @@ myco <- ggplot(filter(all, factor!="N-fixer", factor!="AM-ER", factor!="N-fertil
   scale_color_manual(values=mycols_vegsoil) +
   geom_pointrange(aes(ymin=make_pct(ci.lb), ymax=make_pct(ci.ub)), 
                   position = position_dodge(width = 0),  size=.8) +
-  ylab(expression(paste(CO[2]," effect on C pools (%)", sep=""))) + xlab("Nutrient-acquisition strategy") +
+  ylab(expression(paste(CO[2]," effect on carbon pools (%)", sep=""))) + xlab("Nutrient-acquisition strategy") +
   #scale_y_continuous(breaks = seq(-20, 40, by = 10), limits = c(-23,40)) +
   theme_cowplot(font_size=8) +
   theme(legend.title = element_blank(),legend.direction = "horizontal",
@@ -185,7 +185,7 @@ maom.p <- ggplot(mod.maom.myc.df,aes(factor, make_pct(estimate))) +
   theme(legend.position="none",
         axis.title.y = element_text(margin = margin(r=1)))
 
-## POP META##
+## POM META##
 frac2 <- read.csv("eCO2 POM-MAOM - Sheet1.csv") %>% filter(Myc != "Nfixer") %>%
   mutate(amb.SD= POM.amb.se/sqrt(POM.amb.n), elev.SD=POM.elev.se/sqrt(POM.elev.n))
 frac2$obs <- 1:nrow(frac2)
@@ -308,6 +308,8 @@ soc.Veg <- ggplot(filter(filtered, Ecosystem.type=="Grassland" | Ecosystem.type=
   theme(legend.position="none")
 
 ######### LITTER CN #######
+read.csv("DB_litter_CNP.csv") %>% filter(response=="leaf_litter_cn", is.na(nutrient_av) | nutrient_av=="poor") %>%
+  mutate(id=paste0(exp, dominant_species)) %>% group_by(id) %>% summarise(n())
 read.csv("DB_litter_CNP.csv") %>% filter(response=="leaf_litter_cn", is.na(nutrient_av) | nutrient_av=="poor") %>%
   mutate(yi=log(x_t/x_c)) %>% summarise(make_pct(mean(yi)))
 read.csv("DB_litter_CNP.csv") %>% filter(response=="leaf_litter_cn", is.na(nutrient_av) | nutrient_av=="poor") %>%

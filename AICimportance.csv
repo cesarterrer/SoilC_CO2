@@ -1,0 +1,15 @@
+"","predictor","importance"
+"Effect.biomass:Symbiotic.type","Effect.biomass:Symbiotic.type",0.00298873553956889
+"Experiment.type:Nitrogen.fertilization","Experiment.type:Nitrogen.fertilization",0.0325824002901688
+"Nitrogen.fertilization:Symbiotic.type","Nitrogen.fertilization:Symbiotic.type",0.0442744039518632
+"Symbiotic.type","Symbiotic.type",0.100501191586818
+"Cstock:Nitrogen.fertilization","Cstock:Nitrogen.fertilization",0.153323697305334
+"Effect.biomass:Experiment.type","Effect.biomass:Experiment.type",0.185962283637795
+"Cstock:Experiment.type","Cstock:Experiment.type",0.188670978010917
+"Experiment.type","Experiment.type",0.203243292179573
+"Cstock:Symbiotic.type","Cstock:Symbiotic.type",0.312491012574892
+"Cstock:Effect.biomass","Cstock:Effect.biomass",0.350532951342345
+"Nitrogen.fertilization","Nitrogen.fertilization",0.459471600999514
+"Effect.biomass:Nitrogen.fertilization","Effect.biomass:Nitrogen.fertilization",0.738657048072222
+"Cstock","Cstock",0.82733605081024
+"Effect.biomass","Effect.biomass",0.922910549551604

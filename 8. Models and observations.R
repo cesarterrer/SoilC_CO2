@@ -6,17 +6,31 @@ library(dplyr)
 require(mgcv)
 require(metafor)
 make_pct <- function(x) (exp(x) - 1) * 100
+library(parallel)
+library(doParallel)
+registerDoParallel(31) # Run in parallel -> 31 cores
+
+
 #### FACE-MDS ####
 data <- read.csv("model_data_mean.csv")
 summary(lm(Csoil~Cabove, data=data))
 summary(lm(soil~biomass + I(biomass^2), data=data))
+summary(observed.m<-rma(soil, var, mods= ~biomass + I(biomass^2), data=data))
+#Brange <- seq(min(data$biomass), max(data$biomass), .001)
+obs.new <- data.frame(biomass = seq(min(data$biomass), max(data$biomass), .001))
+obs.mods <- model.matrix(~ biomass + I(biomass^2), obs.new)[,-1]
+obs.pred <- as.data.frame(predict(observed.m, newmods = obs.mods, addx=T, transf=make_pct))
+
+
+
 models <- read.csv("models.csv")
 model_data <- left_join(dplyr::select(models, -Cplant),dplyr::select(data,Site,Cplant), by = c("site" = "Site"))
 datalong <- read.csv("model_data_mean_long.csv")
 
 obs.mods <- ggplot(datalong, aes(make_pct(Cabove), make_pct(Csoil), colour=type)) +
   geom_smooth(size=.5,data=filter(datalong,type=="modeled"), method = "lm", se=FALSE, color="#e41a1c", formula = y ~ x) +
-  stat_smooth(size=.5,data=filter(datalong,type=="observed"), method = "lm", se=FALSE, color="#377eb8", formula = y ~ poly(x, 3)) + # orthogonal polynomials, in this case with a 3rd order
+  #stat_smooth(size=.5,data=filter(datalong,type=="observed"), method = "lm", se=FALSE, color="#377eb8", formula = y ~ poly(x, 2)) + # orthogonal polynomials, in this case with a 3rd order
+  geom_line(size=.5,data=obs.pred, aes(make_pct(X.biomass), pred), color="#377eb8") +
   geom_errorbar(aes(ymin=make_pct(Csoil)-make_pct(SE.soil), ymax=make_pct(Csoil)+make_pct(SE.soil)), width=1,size=.3,colour="black") +
   geom_point(aes(shape=Site),size=1.8,fill="white",alpha=.7) +
   scale_shape_manual(values=c(21:25,4)) + guides(colour=guide_legend(title=NULL)) +
@@ -103,6 +117,7 @@ p <- plot_grid(obs.mods + theme(plot.margin = unit(c(5,-5,0,5), "points")),
                         nrow = 1)
 
 save_plot("graphs/ModelsVSObs_2panel.png",p, ncol=3, nrow=1, type = "cairo-png", base_width = 2.75, base_height = 2.5, dpi=1200, bg="white")
+save_plot("graphs/Fig4.pdf", p, ncol=3, nrow=1, bg="white", device = cairo_pdf, base_width = 2.75, base_height = 2.5, fallback_resolution = 1200)
 
 
 ######################### INDIVIDUAL MODELS ##########################

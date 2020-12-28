@@ -1,9 +1,9 @@
 library(raster)
-esa.new <- raster("~/OneDrive/OneDrive - Universitat Autònoma de Barcelona/IIASA/maps/ESA_2012_aggregated0p25.tif")
+esa.new <- raster("~/OneDrive - LLNL/IIASA/maps/ESA_2012_aggregated0p25.tif")
 r <- as(esa.new, "SpatialPixelsDataFrame")
 str(r@data)
 head(r@data)
-levels(factor(r@data$ESACCI.LC.L4.LCCS.Map.300m.P1Y.2012.v2.0.7))
+levels(factor(r@data$ESA_2012_aggregated0p25))
 
 legend <- read.csv("ESA_Disturbance.csv")
 

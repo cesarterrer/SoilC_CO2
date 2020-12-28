@@ -189,7 +189,7 @@ p.dif.trendy <- ggplot()+
   coord_equal() + 
   theme_classic(base_size = 8) + 
   theme_opts
-save_plot("graphs/Diff_rel_trendy.pdf", p.dif.trendy, base_aspect_ratio = 1.5, dpi=300)
+save_plot("graphs/Diff_rel_trendy.png", p.dif.trendy, dpi= 1200,type = "cairo-png",base_aspect_ratio = 1.5)
 # ------------------------------------------------------------------------
 ### UNCERTAINTIES ###
 effects <- read.csv("soilC_meta.csv") %>% filter(biomass != "NA", nyears >= 0.5)
@@ -238,7 +238,7 @@ error.perc <- ggplot()+
 # -------------------------------------------------------------------------
 ### BOXPLOT ###
 library(tidyverse)
-esa <- raster("~/OneDrive/OneDrive - Universitat Autònoma de Barcelona/IIASA/maps/ESA_2012_aggregated0p25.tif")
+esa <- raster("~/OneDrive - LLNL/IIASA/maps/ESA_2012_aggregated0p25.tif")
 esa <- mask(esa,rc,maskvalue=1)
 #esa_pan <- raster("~/OneDrive/OneDrive - Universitat Autònoma de Barcelona/IIASA/maps/ESA_PAN.tif")
 legend <- read.csv("ESA_classes.csv")
@@ -302,5 +302,5 @@ fig3 <- plot_grid(maps+ theme(plot.margin = unit(c(0,0,0,0), "cm")),
                   rel_widths = c(1, .4),
                   nrow = 1, ncol=2)
 save_plot("graphs/Fig3.png", fig3, dpi=1200, ncol=2, nrow=1, base_height = 6, base_width = 2.25,type = "cairo-png", bg="white")
-#save_plot("graphs/Fig3.pdf", fig3, dpi=600, base_width = 210/2, base_height = ((3/5)*210)/2, units="mm",nrow=2, ncol = 1, device = cairo_pdf, fallback_resolution = 1200)
+save_plot("graphs/Fig3.pdf", fig3, dpi=800, bg="white", base_height = 6, base_width = 2.25,nrow=1, ncol = 2, device = cairo_pdf, fallback_resolution = 1200)
 #save_plot("graphs/Fig3.eps", fig3, dpi=600, base_width = 210/2, base_height = ((3/5)*210)/2, units="mm",nrow=2, ncol = 1, device = cairo_ps, fallback_resolution = 1200)
