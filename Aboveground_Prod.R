@@ -15,7 +15,7 @@ mycols3 <- carto_pal(12, "Bold")[c(1,3)]
 mycols_vegsoil <- carto_pal(12, "Bold")[c(2,4)]
 make_pct <- function(x) (exp(x) - 1) * 100
 
-dat <- read.csv("/Users/terrermoreno1/Documents/SOC-prod/soilC_prod_meta.csv") %>%
+dat <- read.csv("soilC_prod_meta.csv") %>%
   filter(biomass != "NA", # Remove experiments with missing biomass data
               nyears >= 0.5, # Remove experiments of less than 6 months duration
               biomass.type == "ABI" |biomass.type == "ANPP" |
@@ -24,7 +24,7 @@ dat <- read.csv("/Users/terrermoreno1/Documents/SOC-prod/soilC_prod_meta.csv") %
          Myc= recode(Myc, Nfixer = "N-fixer"), 
          N=recode(N,Nlow = "non-fertilized",
                   Nhigh = "N-fertilized"))
-write.csv(dat, "SOC_Prod.csv")
+#write.csv(dat, "SOC_Prod.csv")
 dplyr::select(dat,Experiment,Experiment_type,Ecosystem.type,nyears,Citation) %>% write.csv("metadata.csv")
 filtered <- filter(dat, N=="non-fertilized", Experiment_type != "Chamber", Disturbance=="intact")
 fertilized <- filter(dat, N=="N-fertilized", Experiment_type != "Chamber", Disturbance=="intact")
@@ -54,14 +54,14 @@ p1 <- ggplot(unfert.pred, aes(make_pct(X.biomass), pred)) +
   geom_line (size=0.8) + 
   #geom_line (data=predsfert,aes(make_pct(X.rcs.biomass..knots.biomass), pred), size=0.8, col="red") + 
   geom_ribbon(aes(ymax= ci.ub, ymin=ci.lb), alpha=0.1) +
-  labs(x=expression(paste(CO[2]," effect on aboveground biomass production (%)", sep="")),
-       y=expression(paste(CO[2]," effect on soil carbon (%)", sep=""))) +
+  labs(x=expression(paste(eCO[2]," effect on aboveground biomass production (%)", sep="")),
+       y=expression(paste(eCO[2]," effect on soil carbon stocks (%)", sep=""))) +
   scale_size(range = c(1, 5)) +
   guides(size=FALSE,col = guide_legend(title = NULL)) + 
   theme_cowplot(font_size=8)
 p1
 
-save_plot("ANPP_regression.png",p1, type = "cairo-png",base_aspect_ratio = 1.3)
+#save_plot("ANPP_regression.png",p1, type = "cairo-png",base_aspect_ratio = 1.3)
 
 source("litter.R")
 
@@ -73,4 +73,4 @@ multi <- plot_grid(lit_prod + theme(plot.margin = unit(c(10,5,5,5), "points")),
                         vjust = 1.2,
                         rel_widths = c(.7, 1),
                         nrow = 1, ncol=2)
-save_plot("graphs/litter_prod_regression.png",multi, ncol=2, nrow=1, dpi= 1200, base_height = 3, base_width = 3, type = "cairo-png")
+save_plot("graphs/litter_prod_regression.png",multi, ncol=2, nrow=1, dpi= 1200, base_height = 3, base_width = 3, type = "cairo-png", bg="white")

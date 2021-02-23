@@ -191,21 +191,6 @@ reduced <- MetaForest(as.formula(paste0("yi~", paste(newmods, collapse = "+"))),
 saveRDS(reduced, "reduced_rel.RData")
 
 ############## MULTIPLOT #################
-library(iml)
-predictor <- Predictor$new(mf_cv, data=dplyr::select(X,-vi), y = data$yi)
-effect = FeatureEffects$new(predictor)
-effect$plot(features = c("Effect.biomass", "Nitrogen.fertilization", "Symbiotic.type"))
-imp <- FeatureImp$new(predictor, loss = "mae")
-plot(imp)
-ale <- FeatureEffect$new(predictor, feature = "Effect.biomass")
-ale$plot()
-interact <- Interaction$new(predictor)
-plot(interact)
-interact <- Interaction$new(predictor, feature = "Effect.biomass")
-plot(interact)
-effs <- FeatureEffects$new(predictor)
-plot(effs)
-
 library(pdp)
 library(randomForest)
 rel.part <- partial(mf_cv, pred.var = c("Effect.biomass","Nitrogen.fertilization"),parallel = TRUE)

@@ -124,6 +124,8 @@ save_plot("graphs/Fig4.pdf", p, ncol=3, nrow=1, bg="white", device = cairo_pdf, 
 
 ###### FACE MDS #####
 summary(lm(Csoil~Cabove, data=models))
+models <- models %>% mutate(model=recode(as.factor(model), 
+            CABL="CABLE", LPJG="LPJ-GUESS", ORCH="ORCHIDEE"))
 face.ind <- ggplot(data, aes(make_pct(Cabove), make_pct(Csoil))) + 
   geom_point(data=models,aes(colour=model,shape=site), size=3) + 
   stat_smooth(data=models,method = "lm",col="black", size=1, linetype="dashed") +
@@ -155,6 +157,7 @@ trendy.ind <- gdf %>%
   unnest(data) %>%
   dplyr::filter(dcsoil_star < 2 & dcsoil_star > -2 & dcveg_ag < 2 & dcveg_ag > -2) %>%
   dplyr::filter(!is.nan(dnpp), !is.nan(dcveg_ag), !is.infinite(dnpp), !is.infinite(dcveg_ag)) %>%
+  mutate(modl=recode(as.factor(modl),CLM="CLM5")) %>%
   ggplot(aes(x = make_pct(dcveg_ag), y = make_pct(dcsoil_star))) +
   stat_density_2d(aes(fill = after_stat(ndensity)),contour = FALSE, geom = "raster") +
   stat_smooth(size=.5, method = "lm", color="#377eb8") +
